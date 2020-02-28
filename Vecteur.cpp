@@ -8,6 +8,9 @@
 
 double const PREC(1e-10);
 
+Vecteur::Vecteur(){}
+
+Vecteur::Vecteur(std::initializer_list<double> il) : m_coords(il) {}         /// Constructeur à base d'une liste de double
 
 
 void Vecteur::augmente(double coordSupplementaire){
@@ -169,9 +172,11 @@ Vecteur Vecteur::prodVectoriel(Vecteur const& vecteur2) const{
 
     Vecteur sortie;
 
-    if (m_coords.size() != 3 || vecteur2.m_coords.size() != 3){ // le produit vectoriel n'est défini que comme
-                                            // opération R^3 --> R^3
-        throw "taille incompatible";
+    if (m_coords.size() != 3 || vecteur2.m_coords.size() != 3){ // le produit vectoriel n'est défini que comme opération R^3 --> R^3
+
+        std::string alerte("taille incompatible");
+
+        throw alerte;
 
     } else { // opérations du produit vectoriel
 
@@ -215,11 +220,13 @@ Vecteur Vecteur::unitaire() const{
 
     /// Renvoie le vecteur unitaire (même direction, même sens)
 
+
     double longueur(norme());
 
     if (longueur == 0) { // Eviter la future division par 0
 
-        throw "Le vecteur nul n'a pas de direction";
+        std::string alerte("Le vecteur nul n'a pas de direction");
+        throw alerte;
 
     }
 
@@ -230,3 +237,119 @@ Vecteur Vecteur::unitaire() const{
 
     return sortie;
 }
+
+
+
+unsigned int Vecteur::getDim() const{return m_coords.size();}       /// Accesseur à la dimension du vecteur
+
+
+
+
+//=====================================  OPERATEURS SURCHARGES  ============================================
+
+
+
+bool operator==(Vecteur const& v1, Vecteur const& v2){
+
+    /// Surcharge de l'opérateur de comparaison exacte
+
+    return v1.compare(v2);
+}
+
+
+
+
+Vecteur operator+(Vecteur const& v1, Vecteur const& v2){
+
+    /// Surcharge de l'opérateur de l'addition
+
+    return v1.addition(v2);
+
+}
+
+
+
+Vecteur operator-(Vecteur const& v1, Vecteur const& v2){
+
+    /// Surcharge de l'opérateur de la soustraction
+
+    return v1.soustr(v2);
+
+}
+
+
+
+Vecteur operator*(Vecteur const& v1, Vecteur const& v2){
+
+    /// Surcharge de l'opérateur du produit scalaire
+
+    return v1.prodScalaire(v2);
+
+}
+
+
+Vecteur operator*(double lambda, Vecteur const& v1){
+
+    /// Surcharge de l'opérateur de multiplication par scalaire
+
+    return v1.mult(lambda);
+
+}
+
+
+
+Vecteur operator^(Vecteur const& v1, Vecteur const& v2){
+
+    /// Surcharge de l'opérateur "^" pour le produit vectoriel
+
+    try{
+
+       return v1.prodVectoriel(v2);
+    }
+
+    catch(std::string const& message){
+
+        std::cerr << message << std::endl;
+
+        return Vecteur({0,0,0});
+    }
+
+
+}
+
+
+//==============================================  TESTS  ==============================================
+
+
+
+
+
+// Test de la classe (flemme de faire le makefile de testVecteur.cpp)
+
+int main(){
+
+    Vecteur v1, resultat;
+    Vecteur v2({2,4,5}), v3({8,2,3});
+    Vecteur v4({2,1});
+
+
+    resultat = v2 ^ v3;
+
+    resultat.affiche();
+
+    resultat = v4 ^ v2;
+
+    resultat.affiche();
+
+    if (v2 == v3) {std::cout << "top" << std::endl;}
+    else {std::cout << "pas top" << std::endl;}
+
+    v4.affiche();
+
+    v2.unitaire().affiche();
+
+    (v4+v2).affiche();
+
+return 0;
+}
+

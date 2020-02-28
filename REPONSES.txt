@@ -1,7 +1,13 @@
 Série projet 1
 
 QUESTION P1.1: 
-
+	
+	Les vecteurs sont représentés par un vector de double, qui est pour l'instant leur seul attribut. On a choisi le
+	tableau dynamique pour jouer sur les dimensions. Ades fins évidentes d'encapsulation tous les attributs sont et
+	seront privés. Les méthodes sont pour l'instant toutes publiques, mais lorsqu'on aura surchargé les opérateurs
+	mathématiques comme ^ pour le produit vectoriel, on pourra se permettre d'en passer certaines comme additionner() 
+	en privé. Une pratique à modérer toutefois puisque passer une méthode en privé en cours de projet se rapproche d'une
+	hérésie en POO.
 
 QUESTION P1.2:
 
@@ -9,5 +15,5 @@ QUESTION P1.2:
 	est considéré comme un vecteur de même dimension dont les coordonnées supplémentaires valent 0.
 	En jouant sur la variable d'itération dans les boucles for, on optimise facilement la compexité en O(n).
 
-	Pour le produit scalaire, cette manière de voir conduit à n'itérer que jusqu'à la plus petite dimension. On remplit
-	ensuite le vecteur-sortie de 0 pour atteindre la dimension voulue.
+	Pour le produit scalaire, cette manière de voir conduit à n'itérer que jusqu'à la plus petite dimension, les 
+	coordonnées manquantes au plus "petit" vecteur étant considérées comme des 0.

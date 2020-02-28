@@ -16,7 +16,9 @@ Chapitre 2:     28/02/2020
   Ceci permettra de ne pas avoir de détails superflus (comme des unités) dont on devrait prendre compte durant le reste de la conception.
   Après une première écriture de Vecteur.cpp entreprise par David, Leonard a nettement amélioré le code pour parvenir à la dernière
   version du code.
-  Leonard, motivé, a essayé de maîtriser une interface graphique.
+  Leonard, motivé, a essayé de maîtriser une interface graphique. Bilan mitigé toutefois.
+
+  Dans la soirée, Léonard s'intéresse à la surcherge d'opérateur pour améliorer la maniabilité des vecteurs.
 
   
   

@@ -10,59 +10,79 @@ class Vecteur{
 
     public:
 
+        Vecteur();                                                          // Constructeur par défaut
 
-        void augmente(double coordSupplementaire); // augmente la taille du Vecteur. Met coordSupplementaire en derniere
-        // place
-
-
-        void setCoord(unsigned int nEmeCoord, double nouvelleValeur); // modifie la coordonnée n du vecteur en mettant
-        // nouvelleValeur à sa place
+        Vecteur(std::initializer_list<double> il);                          // Constructeur à base d'une liste
 
 
-        void affiche() const; // affiche les coordonnées du vecteur dans le terminal
+        unsigned int getDim() const;                                        // Accesseur à la dimension du vecteur
 
 
-        bool compare(Vecteur const& vecteur) const; // sort true si les vecteurs ont la même dimension et si les coordonnées
-        // des deux vecteurs sont au plus éloignées de 1e-10 une-à-une. sort false sinon
-        // Les méthodes suivantes font d'abord un test de compabilité
-
-        Vecteur addition(Vecteur const& vecteur2) const; // addition de deux vecteurs
+        void augmente(double coordSupplementaire);                          // augmente la taille du Vecteur.
 
 
-        Vecteur soustr(Vecteur const& vecteur2) const; // soustraction de deux vecteurs
+        void setCoord(unsigned int nEmeCoord, double nouvelleValeur);
 
 
-        Vecteur oppose() const; // sort l'opposé (donc signe négatif) du vecteur
+        void affiche() const;                                               // affiche les coordonnées du vecteur dans le terminal
 
 
-        Vecteur mult(double scalaire) const; // multiplie un vecteur par un scalaire (un réel)
+        bool compare(Vecteur const& vecteur) const;                         // Comparaison : dimensions, coordonnées.
 
 
-        double prodScalaire(Vecteur const &vecteur2) const; // produit scalaire entre deux vecteurs
+        Vecteur addition(Vecteur const& vecteur2) const;                    // Addition de deux vecteurs
 
 
-        Vecteur prodVectoriel(Vecteur const& vecteur2) const; // produit vectoriel classique somme toutes
-
-            // A noter :
-                // si on veut faire 3*v, il faudra écrire v = v.mult(3.0)...
+        Vecteur soustr(Vecteur const& vecteur2) const;                      // Soustraction de deux vecteurs
 
 
-        double norme() const; // calcule la norme d'un vecteur
+        Vecteur oppose() const;                                             // Retourne l'opposé (donc signe négatif) du vecteur
 
 
-        double norme2() const; // calcule la norme au carré d'un vecteur
+        Vecteur mult(double scalaire) const;                                // Multiplie un vecteur par un scalaire (un réel)
 
 
-        Vecteur unitaire() const; // sort un vecteur unitaire de même dimension et direction, mais de longueur 1
+        double prodScalaire(Vecteur const &vecteur2) const;                 // Produit scalaire entre deux vecteurs
+
+
+        Vecteur prodVectoriel(Vecteur const& vecteur2) const;               // Produit vectoriel classique somme toutes
+
+
+        double norme() const;                                               // Calcule la norme d'un vecteur
+
+
+        double norme2() const;                                              // Calcule la norme au carré d'un vecteur
+
+
+        Vecteur unitaire() const;                                           // Retourne le vecteur unitaire (même dimension, même sens)
 
 
 
     private:
 
-        std::vector <double> m_coords; // les coordonées du vecteur sont mises dans un vector afin de pouvoir
-        // modifier la dimensionnalité du vecteur à souhait
+        std::vector <double> m_coords;                 // Stockage des coordonnées en tableau dynamique
 
 
 };
+
+
+//=====================================  OPERATEURS SURCHARGES  ============================================
+
+
+bool operator==(Vecteur const& v1, Vecteur const& v2);      // Comparaison
+
+Vecteur operator+(Vecteur const& v1, Vecteur const& v2);    // Addition
+
+Vecteur operator-(Vecteur const& v1, Vecteur const& v2);    // Soustraction
+
+Vecteur operator*(Vecteur const& v1, Vecteur const& v2);    // Produit scalaire
+
+Vecteur operator*(double lambda, Vecteur const& v1)         // Multiplication par scalaire
+
+Vecteur operator^(Vecteur const& v1, Vecteur const& v2);    // Produit vectoriel
+
+
+
+//==========================================================================================================
 
 #endif // DEF_VECTEUR
