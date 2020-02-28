@@ -42,12 +42,18 @@ class Vecteur{
                 // si on veut faire 3*v, il faudra écrire v = v.mult(3.0)...
 
 
+        double norme() const; // calcule la norme d'un vecteur
+        double norme2() const; // calcule la norme au carré d'un vecteur
+
+
+        Vecteur unitaire() const; // sort un vecteur unitaire de même dimension et direction, mais de longueur 1
+
     private:
 
-        vector <double> m_coords; // les coordonées du vecteur sont mises dans un vector afin de pouvoir
+        std::vector <double> m_coords; // les coordonées du vecteur sont mises dans un vector afin de pouvoir
         // modifier la dimensionnalité du vecteur à souhait
 
 
-        string m_libelle; // donner un type au vecteur pour faciliter son utilisation future
+        std::string m_libelle; // donner un type au vecteur pour faciliter son utilisation future
         // ex: vitesse, force, moment cinétique, etc...
 };
