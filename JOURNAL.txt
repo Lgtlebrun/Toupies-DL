@@ -9,7 +9,14 @@ Chapitre 1:     27/02/2020
   qu'ils répondent à l'appel.
 
 
-modiftest
+Chapitre 2:     28/02/2020
+
+  C'est donc après un premier jour de préparation, que nous avons commencé à coder. Le fichier Vecteur.h définissant la classe Vecteur
+  a été écrit en premier, favorisant avant tout la simplicité et la sobriété, supposant que ce soit une classe fondamentale du projet.
+  Ceci permettra de ne pas avoir de détails superflus (comme des unités) dont on devrait prendre compte durant le reste de la conception.
+  Après une première écriture de Vecteur.cpp entreprise par David, Leonard a nettement amélioré le code pour parvenir à la dernière
+  version du code.
+  Leonard, motivé, a essayé de maîtriser une interface graphique.
 
   
   
