@@ -213,6 +213,8 @@ double Vecteur::norme() const{ // Pythagore à n dimensions
 
 Vecteur Vecteur::unitaire() const{
 
+    /// Renvoie le vecteur unitaire (même direction, même sens)
+
     double longueur(norme());
 
     if (longueur == 0) { // Eviter la future division par 0
