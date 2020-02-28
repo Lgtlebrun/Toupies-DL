@@ -6,136 +6,172 @@
 
 
 
-double precision(1e-10);
+double const PREC(1e-10);
 
 
 
 void Vecteur::augmente(double coordSupplementaire){
-    m_coords.push_back(coordSupplementaire); // avantage d'avoir pris vector
+
+    /// Ajoute une dimension au Vecteur en augmentant le vector d'une case
+
+    m_coords.push_back(coordSupplementaire);
+
 }
 
 
 
-void Vecteur::setCoord(unsigned int nEmeCoord, double nouvelleValeur){ // on numérote les coordonnées d'un
-    m_coords[nEmeCoord] = nouvelleValeur;                              // Vecteur comme celles d'un vector
+void Vecteur::setCoord(unsigned int nEmeCoord, double nouvelleValeur){
+
+    /// Permet de modifier la valeur d'une coordonnée
+
+
+    m_coords[nEmeCoord] = nouvelleValeur;
+
 }
 
 
 
 void Vecteur::affiche() const{
-    for (size_t k(0); k < m_coords.size(); ++k) {
-        std::cout << m_coords[k] << " , "; // affichage avec virgules entre (plus clair pour nous)
+
+    /// Affichage de type "[x1, x2, ... , xN]"
+
+
+    unsigned int taille(m_coords.size());
+
+    std::cout << "[";
+
+    if(taille != 0) {
+
+        std::cout << m_coords[0];
+
+        for (size_t i(1); i < taille; i++){
+
+            std::cout << ", " << m_coords[i];
+
+        }
+
     }
-    std::cout << std::endl;
+
+    std::cout << "]" << std::endl;
 }
 
 
 
-bool Vecteur::compare(Vecteur vecteur2) const{
-    bool egalite(true);
-    size_t k(0); // deux indicateurs pour ne pas tester des égalités pour rien
+bool Vecteur::compare(Vecteur const& vecteur2) const{
 
-    if ( m_libelle == vecteur2.m_libelle ){ // Il faut qu'ils soient du même type. On ne compare pas les physiciens
-            // et les SV, alors pas les forces et les vitesses non plus !
-        if (vecteur2.m_coords.size() == m_coords.size()){ // test que ce soient bien le même nombre de ooordonnées
-            while (k < m_coords.size() and egalite){ // on arrête si tout a été testé ou si on sait que ce
-                                                    // n'est pas égal
-                if (abs( vecteur2.m_coords[k] - m_coords[k] ) > precision) egalite = false;
-                ++k;
-            }
-        } else {
-            egalite = false;
-        }
-    } else {
-        egalite = false;
-        throw "taille incompatible"; // nous avons envie de déclarer l'erreur : nous avons mal utilisé la fonction...
-                                    // De plus, dans les autres fonctions nous allons aussi utiliser cette erreur
-    }
+    /// Comparaison des deux vecteurs : nombre de dimensions, coordonnées
 
-    return egalite;
+     if(m_coords.size() != vecteur2.m_coords.size())  {return false;}       // Comparaison des dimensions
+
+     for (size_t i(0); i < m_coords.size(); i++){
+
+        if (m_coords[i] - vecteur2.m_coords[i] > PREC) {return false;}      // Comparaison des coordonnées
+
+     }
+
+     return true;
 }
 
 
 
-Vecteur Vecteur::addition(Vecteur vecteur2) const{
-    if (m_coords.size() != vecteur2.m_coords.size()){
-        throw "taille incompatible";
-        return vecteur2; // il y a erreur donc quoique l'on choisisse de retourner, ce sera un mauvais choix...
-    } else {
-        Vecteur sortie;
-        sortie.m_libelle = vecteur2.m_libelle; // on n'additionne que des vecteurs du même type (mêmes unités...)
-        for (size_t k(0); k < m_coords.size(); ++k){
-            sortie.augmente(m_coords[k]+vecteur2.m_coords[k]);
-        }
-        return sortie;
+Vecteur Vecteur::addition(Vecteur const& vecteur2) const{
+
+    /// Permet l'addition de deux vecteurs. Priorise la plus grande dimension.
+
+
+    Vecteur sortie;
+
+    double dim1(m_coords.size()), dim2(vecteur2.m_coords.size());
+
+    size_t i(0);
+
+    for (i; i < std::min(dim1, dim2); i++){
+
+            sortie.augmente(m_coords[i] + vecteur2.m_coords[i]);
+
     }
+
+
+    for (i; i < std::max(dim1, dim2); i++){
+
+        if (i < dim1) {sortie.augmente(m_coords[i]);}
+
+        else {sortie.augmente(vecteur2.m_coords[i]);}
+
+    }
+
+
+    return sortie;
 }
 
 
 
 Vecteur Vecteur::mult(double scalaire) const{ // on multiplie chaque coordonnée par le scalaire
+
     Vecteur sortie;
-    sortie.m_libelle = m_libelle;
-    for (size_t k(0); k < m_coords.size(); ++k){
+
+    for (size_t k(0); k < m_coords.size(); k++){
+
         sortie.augmente(scalaire*m_coords[k]);
+
     }
+
     return sortie;
 }
 
 
 
-Vecteur Vecteur::soustr(Vecteur vecteur2) const{ // Je ne sais pas comment faire ref au vecteur que l'on traite
-                                                // dans la fonction, donc c'est du copié-collé :/
-    if (m_coords.size() != vecteur2.m_coords.size()){
-        throw "taille incompatible";
-        return vecteur2; // il y a erreur donc quoique l'on choisisse de retourner, ce sera un mauvais choix...
-    } else {
-        Vecteur sortie;
-        sortie.m_libelle = vecteur2.m_libelle; // on n'additionne que des vecteurs du même type (mêmes unités...)
-        for (size_t k(0); k < m_coords.size(); ++k){
-            sortie.augmente(m_coords[k]-vecteur2.m_coords[k]);
-        }
+Vecteur Vecteur::soustr(Vecteur const& vecteur2) const{
+
+    /// Soustraction du vecteur 2
+
+        Vecteur sortie(addition(vecteur2.mult(-1)));
+
         return sortie;
-    }
 }
 
 
 
 Vecteur Vecteur::oppose() const{
-    Vecteur sortie;
-    sortie.m_libelle = m_libelle;
-    for (size_t k(0); k < m_coords.size(); ++k){
-        sortie.augmente(-1*m_coords[k]);
-    }
+
+    /// Retourne le vecteur opposé
+
+    Vecteur sortie(mult(-1));
+
     return sortie;
 }
 
 
 
-double Vecteur::prodScalaire(Vecteur vecteur2) const{
+double Vecteur::prodScalaire(Vecteur const& vecteur2) const{
 
-    if (m_coords.size() != vecteur2.m_coords.size()){
-        throw "taille incompatible";
-        return 1e10; // un exemple... très mauvais! Il faut return qqch de mieux... (exemples sur progmaph)
-    } else {
-        double sortie;
-        for (size_t k(0); k < m_coords.size(); ++k){
-            sortie += m_coords[k]*vecteur2.m_coords[k]; // definition du produit scalaire dans les coordonnées
-                                                        // carthésiennes
-        }
-        return sortie;
+    /// Retourne le produit scalaire de deux vecteurs
+
+    double sortie(0);
+    unsigned int dim1(m_coords.size()), dim2(vecteur2.m_coords.size());
+
+    for(size_t i(0); i < std::min(dim1,dim2); i++){
+
+        sortie += m_coords[i] * vecteur2.m_coords[i];
     }
+
+
+    return sortie;
 }
 
 
 
-Vecteur Vecteur::prodVectoriel(Vecteur vecteur2) const{
+Vecteur Vecteur::prodVectoriel(Vecteur const& vecteur2) const{
+
+    /// Retourne le produit vectoriel de deux vecteurs
+
+    /*  /!\ Méthode prévue pour des vecteurs à 3 dimensions seulement /!\  */
+
     Vecteur sortie;
 
-    if (m_coords.size() != 3 or vecteur2.m_coords.size() != 3){ // le produit vectoriel n'est défini que comme
+    if (m_coords.size() != 3 || vecteur2.m_coords.size() != 3){ // le produit vectoriel n'est défini que comme
                                             // opération R^3 --> R^3
         throw "taille incompatible";
-        return sortie;
 
     } else { // opérations du produit vectoriel
 
@@ -151,38 +187,44 @@ Vecteur Vecteur::prodVectoriel(Vecteur vecteur2) const{
 
 
 
-double Vecteur::norme() const{ // Pythagore à n dimensions
+double Vecteur::norme2() const{
+
+    /// Calcule le carré de la norme
+
     double sortie(0);
-    for (size_t k(0); k < m_coords.size(); ++k) sortie += m_coords[k]*m_coords[k];
-    return sqrt(sortie);
-}
 
+    for (size_t k(0); k < m_coords.size(); ++k) {sortie += m_coords[k]*m_coords[k];}
 
-
-double Vecteur::norme2() const{ // idem que norme() sauf pas de racine sur le résultat final
-    double sortie(0);
-    for (size_t k(0); k < m_coords.size(); ++k) sortie += m_coords[k]*m_coords[k];
     return sortie;
 }
 
 
+
+double Vecteur::norme() const{ // Pythagore à n dimensions
+
+    /// Calcule la norme
+
+    return sqrt(norme2());
+
+}
+
+
+
+
 Vecteur Vecteur::unitaire() const{
-    double longueur(0);
-    for (size_t k(0); k < m_coords.size(); ++k) longueur += m_coords[k]*m_coords[k]; // Eviter de mettre des arguments
-                                                                    // supplementaires pour la facilité d'utilisation
-                                                                    // vs l'efficacité
-    longueur = sqrt(longueur);
+
+    double longueur(norme());
+
     if (longueur == 0) { // Eviter la future division par 0
+
         throw "Le vecteur nul n'a pas de direction";
-        Vecteur sortie2;
-        sortie2.m_libelle = m_libelle;
-        for (size_t k(0); k < m_coords.size(); ++k){
-          sortie2.m_coords[k] = 0.0;
-        }
-        return sortie2;
+
     }
+
+
     Vecteur sortie;
-    sortie.m_libelle = m_libelle;
-    for (size_t k(0); k < m_coords.size(); ++k) sortie.m_coords[k] = m_coords[k] / longueur;
+
+    for (size_t k(0); k < m_coords.size(); ++k) {sortie.augmente(m_coords[k] / longueur);}
+
     return sortie;
 }

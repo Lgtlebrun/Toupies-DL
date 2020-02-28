@@ -5,4 +5,9 @@ QUESTION P1.1:
 
 QUESTION P1.2:
 
+	Pour l'addition, nous avons choisi de prioriser la plus grande dimension : le vecteur de plus petite dimension
+	est considéré comme un vecteur de même dimension dont les coordonnées supplémentaires valent 0.
+	En jouant sur la variable d'itération dans les boucles for, on optimise facilement la compexité en O(n).
 
+	Pour le produit scalaire, cette manière de voir conduit à n'itérer que jusqu'à la plus petite dimension. On remplit
+	ensuite le vecteur-sortie de 0 pour atteindre la dimension voulue.
