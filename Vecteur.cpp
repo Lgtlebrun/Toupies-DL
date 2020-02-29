@@ -33,79 +33,13 @@ void Vecteur::setCoord(unsigned int nEmeCoord, double nouvelleValeur){
 }
 
 
+double Vecteur::getCoord(unsigned int nEmeCoord) const{
 
-void Vecteur::affiche() const{
+    /// Envoie la valeur d'une coordonnée
 
-    /// Affichage de type "[x1, x2, ... , xN]"
-
-
-    unsigned int taille(m_coords.size());
-
-    std::cout << "[";
-
-    if(taille != 0) {
-
-        std::cout << m_coords[0];
-
-        for (size_t i(1); i < taille; i++){
-
-            std::cout << ", " << m_coords[i];
-
-        }
-
-    }
-
-    std::cout << "]" << std::endl;
-}
+    return m_coords[nEmeCoord];
 
 
-
-bool Vecteur::compare(Vecteur const& vecteur2) const{
-
-    /// Comparaison des deux vecteurs : nombre de dimensions, coordonnées
-
-     if(m_coords.size() != vecteur2.m_coords.size())  {return false;}       // Comparaison des dimensions
-
-     for (size_t i(0); i < m_coords.size(); i++){
-
-        if (m_coords[i] - vecteur2.m_coords[i] > PREC) {return false;}      // Comparaison des coordonnées
-
-     }
-
-     return true;
-}
-
-
-
-Vecteur Vecteur::addition(Vecteur const& vecteur2) const{
-
-    /// Permet l'addition de deux vecteurs. Priorise la plus grande dimension.
-
-
-    Vecteur sortie;
-
-    double dim1(m_coords.size()), dim2(vecteur2.m_coords.size());
-
-    size_t i(0);
-
-    for (i; i < std::min(dim1, dim2); i++){
-
-            sortie.augmente(m_coords[i] + vecteur2.m_coords[i]);
-
-    }
-
-
-    for (i; i < std::max(dim1, dim2); i++){
-
-        if (i < dim1) {sortie.augmente(m_coords[i]);}
-
-        else {sortie.augmente(vecteur2.m_coords[i]);}
-
-    }
-
-    sortie.rationnalise();                          // Fixe les valeurs en dessous de PREC à 0
-
-    return sortie;
 }
 
 
@@ -126,25 +60,35 @@ Vecteur Vecteur::mult(double scalaire) const{
 }
 
 
+Vecteur Vecteur::addition(Vecteur const& v2) const{
 
-Vecteur Vecteur::soustr(Vecteur const& vecteur2) const{
+        /// Addition de v1 et v2 dans v3
 
-    /// Soustraction du vecteur 2
+    Vecteur sortie;
 
-        Vecteur sortie(addition(vecteur2.mult(-1)));
+    double dim1(m_coords.size()), dim2(v2.m_coords.size());
 
-        return sortie;
-}
+    size_t i(0);
+
+    for (i; i < std::min(dim1, dim2); i++){
+
+            sortie.augmente(m_coords[i] + v2.m_coords[i]);
+
+    }
 
 
+    for (i; i < std::max(dim1, dim2); i++){
 
-Vecteur Vecteur::oppose() const{
+        if (i > dim1) {sortie.augmente(v2.m_coords[i]);}
 
-    /// Retourne le vecteur opposé
+        else {sortie.augmente(m_coords[i]);}
+    }
 
-    Vecteur sortie(mult(-1));
+    sortie.rationnalise();                          // Fixe les valeurs en dessous de PREC à 0
+
 
     return sortie;
+
 }
 
 
@@ -265,73 +209,126 @@ void Vecteur::rationnalise() {
 //=====================================  OPERATEURS SURCHARGES  ============================================
 
 
+Vecteur& Vecteur::operator+=(Vecteur const& v2){
 
-bool operator==(Vecteur const& v1, Vecteur const& v2){
+        /// Surcharge de l'opérateur +=. Addition de v2 à v1, modifie ce dernier
+
+    addition(v2);
+
+}
+
+
+Vecteur& Vecteur::operator-=(Vecteur const& v2){
+
+        /// Surchage de l'opérateur -= .On soustrait v2 de v1 en modifiant v1
+
+    addition(-1*v2);
+
+}
+
+
+const Vecteur Vecteur::operator-(){
+
+        /// Surcharge du négatif. Sort l'opposé
+
+    Vecteur sortie;
+
+    for (size_t k(0); k < m_coords.size() ; ++k) { sortie.m_coords[k] = - m_coords[k]; }
+
+    return sortie;
+
+}
+
+
+bool Vecteur::operator==(Vecteur const& v2){
 
     /// Surcharge de l'opérateur de comparaison exacte
 
-    return v1.compare(v2);
+    if(m_coords.size() != v2.m_coords.size())  {return false;}       // Comparaison des dimensions
+
+     for (size_t i(0); i < m_coords.size(); i++){
+
+        if (m_coords[i] - v2.m_coords[i] > PREC) {return false;}      // Comparaison des coordonnées
+
+     }
+
+     return true;
 }
 
 
-bool operator!=(Vecteur const& v1, Vecteur const& v2){
+bool Vecteur::operator!=(Vecteur const& v2){
 
     /// Surcharge de l'opérateur d'anti-comparaison
 
-    return !(v1 == v2);
+    return !(operator==(v2));
 }
 
 
 
-Vecteur operator+(Vecteur const& v1, Vecteur const& v2){
+const Vecteur operator+(Vecteur const& v1, Vecteur const& v2){
 
     /// Surcharge de l'opérateur de l'addition
 
-    return v1.addition(v2);
+    Vecteur sortie;
+
+    sortie += v1;
+    sortie += v2;
+
+    return sortie;
 
 }
 
 
 
-Vecteur operator-(Vecteur const& v1, Vecteur const& v2){
+const Vecteur operator-(Vecteur const& v1, Vecteur const& v2){
 
     /// Surcharge de l'opérateur de la soustraction
 
-    return v1.soustr(v2);
+    Vecteur sortie;
+
+    sortie += v1;
+
+    sortie += v2;
+
+    return sortie;
 
 }
 
 
 
-double operator*(Vecteur const& v1, Vecteur const& v2){
+double Vecteur::operator*(Vecteur const& v2){
 
     /// Surcharge de l'opérateur du produit scalaire
 
-    return v1.prodScalaire(v2);
+    return prodScalaire(v2);
 
 }
 
 
-Vecteur operator*(double lambda, Vecteur const& v1){
+const Vecteur operator*(double lambda, Vecteur v1){
 
     /// Surcharge de l'opérateur de multiplication par scalaire à gauche
 
-    return v1.mult(lambda);
+    return v1*lambda;
 
 }
 
 
-Vecteur operator*(Vecteur const& v1, double lambda){
+const Vecteur Vecteur::operator*(double const& lambda){
 
     /// Surcharge de l'opérateur de multiplication par scalaire à droite
 
-    return lambda*v1;
+    Vecteur sortie;
+
+    sortie = mult(lambda);
+
+    return sortie;
 
 }
 
 
 
-Vecteur operator^(Vecteur const& v1, Vecteur const& v2){
+const Vecteur Vecteur::operator^(Vecteur const& v2){
 
     /// Surcharge de l'opérateur "^" pour le produit vectoriel
 
@@ -340,7 +337,7 @@ Vecteur operator^(Vecteur const& v1, Vecteur const& v2){
 
     try{
 
-       return v1.prodVectoriel(v2);
+       return prodVectoriel(v2);
     }
 
     catch(std::string const& message){
@@ -352,6 +349,31 @@ Vecteur operator^(Vecteur const& v1, Vecteur const& v2){
 
 
 }
+
+
+std::ostream& operator<<(std::ostream& sortie, Vecteur const& v){
+        /// Surcharge de l'opérateur <<
+
+    unsigned int taille(v.getDim());
+
+    sortie << "[";
+
+    if(taille != 0) {
+
+        sortie << v.getCoord(0);
+
+        for (size_t i(1); i < taille; i++){
+
+            sortie << ", " << v.getCoord(i);
+
+        }
+
+    }
+
+    sortie << "]" << std::endl;
+
+}
+
 
 
 //==============================================  TESTS  ==============================================
@@ -371,27 +393,27 @@ int main(){
 
     resultat = v2 ^ v3;
 
-    resultat.affiche();
+    std::cout << resultat;
 
     resultat = v4 ^ v2;
 
-    resultat.affiche();
+    std::cout << resultat;
 
     if (v2 == v3) {std::cout << "top" << std::endl;}
     else {std::cout << "pas top" << std::endl;}
 
-    v4.affiche();
+    std::cout << v4;
 
     v4 = 3*v4;
-    v4.affiche();
+    std::cout<<v4;
 
     std::cout << "Test scalaire à droite : ";
     v4 = v4*3;
-    v4.affiche();
+    std::cout << v4;
 
-    v2.unitaire().affiche();
+    std::cout << v2.unitaire();
 
-    (v4+v2).affiche();
+    std::cout << (v4+v2);
 
 return 0;
 }
