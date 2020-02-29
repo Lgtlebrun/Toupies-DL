@@ -77,9 +77,11 @@ Vecteur operator+(Vecteur const& v1, Vecteur const& v2);    // Addition
 
 Vecteur operator-(Vecteur const& v1, Vecteur const& v2);    // Soustraction
 
-double operator*(Vecteur const& v1, Vecteur const& v2);    // Produit scalaire
+double operator*(Vecteur const& v1, Vecteur const& v2);     // Produit scalaire
 
-Vecteur operator*(double lambda, Vecteur const& v1);         // Multiplication par scalaire
+Vecteur operator*(double lambda, Vecteur const& v1);        // Multiplication par scalaire à gauche
+
+Vecteur operator*(Vecteur const& v1, double lambda);        // Multiplication par scalaire à droite
 
 Vecteur operator^(Vecteur const& v1, Vecteur const& v2);    // Produit vectoriel
 

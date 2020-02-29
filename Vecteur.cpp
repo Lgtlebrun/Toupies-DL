@@ -307,9 +307,18 @@ double operator*(Vecteur const& v1, Vecteur const& v2){
 
 Vecteur operator*(double lambda, Vecteur const& v1){
 
-    /// Surcharge de l'opérateur de multiplication par scalaire
+    /// Surcharge de l'opérateur de multiplication par scalaire à gauche
 
     return v1.mult(lambda);
+
+}
+
+
+Vecteur operator*(Vecteur const& v1, double lambda){
+
+    /// Surcharge de l'opérateur de multiplication par scalaire à droite
+
+    return lambda*v1;
 
 }
 
@@ -361,6 +370,13 @@ int main(){
     if (v2 == v3) {std::cout << "top" << std::endl;}
     else {std::cout << "pas top" << std::endl;}
 
+    v4.affiche();
+
+    v4 = 3*v4;
+    v4.affiche();
+
+    std::cout << "Test scalaire à droite : ";
+    v4 = v4*3;
     v4.affiche();
 
     v2.unitaire().affiche();
