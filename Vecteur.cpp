@@ -328,6 +328,9 @@ Vecteur operator^(Vecteur const& v1, Vecteur const& v2){
 
     /// Surcharge de l'opérateur "^" pour le produit vectoriel
 
+    /* En cas de dimensions incompatibles, on renvoie le vecteur nul
+                        (voir bloc catch)                         */
+
     try{
 
        return v1.prodVectoriel(v2);
@@ -337,7 +340,7 @@ Vecteur operator^(Vecteur const& v1, Vecteur const& v2){
 
         std::cerr << message << std::endl;
 
-        return Vecteur({0,0,0});
+        return Vecteur({0,0,0});                // Vecteur nul
     }
 
 
