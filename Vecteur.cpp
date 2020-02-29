@@ -274,6 +274,13 @@ bool operator==(Vecteur const& v1, Vecteur const& v2){
 }
 
 
+bool operator!=(Vecteur const& v1, Vecteur const& v2){
+
+    /// Surcharge de l'opérateur d'anti-comparaison
+
+    return !(v1 == v2);
+}
+
 
 
 Vecteur operator+(Vecteur const& v1, Vecteur const& v2){

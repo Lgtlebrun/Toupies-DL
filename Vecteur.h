@@ -73,6 +73,8 @@ class Vecteur{
 
 bool operator==(Vecteur const& v1, Vecteur const& v2);      // Comparaison
 
+bool operator!=(Vecteur const& v1, Vecteur const& v2);      // Anti-comparaison
+
 Vecteur operator+(Vecteur const& v1, Vecteur const& v2);    // Addition
 
 Vecteur operator-(Vecteur const& v1, Vecteur const& v2);    // Soustraction
