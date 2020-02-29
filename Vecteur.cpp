@@ -103,13 +103,16 @@ Vecteur Vecteur::addition(Vecteur const& vecteur2) const{
 
     }
 
+    sortie.rationnalise();                          // Fixe les valeurs en dessous de PREC à 0
 
     return sortie;
 }
 
 
 
-Vecteur Vecteur::mult(double scalaire) const{ // on multiplie chaque coordonnée par le scalaire
+Vecteur Vecteur::mult(double scalaire) const{
+
+    /// Multiplication par un scalaire
 
     Vecteur sortie;
 
@@ -174,7 +177,7 @@ Vecteur Vecteur::prodVectoriel(Vecteur const& vecteur2) const{
 
     if (m_coords.size() != 3 || vecteur2.m_coords.size() != 3){ // le produit vectoriel n'est défini que comme opération R^3 --> R^3
 
-        std::string alerte("taille incompatible");
+        std::string alerte("ERREUR: dimensions incompatibles avec le produit scalaire");
 
         throw alerte;
 
@@ -184,6 +187,7 @@ Vecteur Vecteur::prodVectoriel(Vecteur const& vecteur2) const{
         sortie.augmente(m_coords[3]*vecteur2.m_coords[1] - m_coords[1]*vecteur2.m_coords[3]);
         sortie.augmente(m_coords[1]*vecteur2.m_coords[2] - m_coords[2]*vecteur2.m_coords[1]);
 
+        sortie.rationnalise();
     }
 
 
@@ -225,7 +229,7 @@ Vecteur Vecteur::unitaire() const{
 
     if (longueur == 0) { // Eviter la future division par 0
 
-        std::string alerte("Le vecteur nul n'a pas de direction");
+        std::string alerte("ERREUR: Le vecteur nul n'a pas de direction");
         throw alerte;
 
     }
@@ -243,6 +247,19 @@ Vecteur Vecteur::unitaire() const{
 unsigned int Vecteur::getDim() const{return m_coords.size();}       /// Accesseur à la dimension du vecteur
 
 
+
+void Vecteur::rationnalise() {
+
+    /// Méthode permettant d'atteindre zéro
+    /// dans les opérations entre double
+
+    for (auto& elt : m_coords){
+
+        if (elt <= PREC) {elt = 0;}
+
+    }
+
+}
 
 
 //=====================================  OPERATEURS SURCHARGES  ============================================
@@ -279,7 +296,7 @@ Vecteur operator-(Vecteur const& v1, Vecteur const& v2){
 
 
 
-Vecteur operator*(Vecteur const& v1, Vecteur const& v2){
+double operator*(Vecteur const& v1, Vecteur const& v2){
 
     /// Surcharge de l'opérateur du produit scalaire
 

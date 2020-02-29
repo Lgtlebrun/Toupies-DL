@@ -62,6 +62,8 @@ class Vecteur{
 
         std::vector <double> m_coords;                 // Stockage des coordonnées en tableau dynamique
 
+        void rationnalise();                           // Méthode arrondissant les petites coordonnées à 0
+
 
 };
 
@@ -75,9 +77,9 @@ Vecteur operator+(Vecteur const& v1, Vecteur const& v2);    // Addition
 
 Vecteur operator-(Vecteur const& v1, Vecteur const& v2);    // Soustraction
 
-Vecteur operator*(Vecteur const& v1, Vecteur const& v2);    // Produit scalaire
+double operator*(Vecteur const& v1, Vecteur const& v2);    // Produit scalaire
 
-Vecteur operator*(double lambda, Vecteur const& v1)         // Multiplication par scalaire
+Vecteur operator*(double lambda, Vecteur const& v1);         // Multiplication par scalaire
 
 Vecteur operator^(Vecteur const& v1, Vecteur const& v2);    // Produit vectoriel
 
