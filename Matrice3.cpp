@@ -2,7 +2,7 @@
 #include <iostream>
 #include <cmath>
 #include <vector>
-
+#include "Vecteur.cpp"
 
 
 
