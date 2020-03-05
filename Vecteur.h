@@ -19,28 +19,28 @@ class Vecteur{
         Vecteur(std::initializer_list<double> il);                          // Constructeur à base d'une liste
 
 
+        double getCoord(unsigned int nEmeCoord) const;                      // Accesseur à la nème coordonnée
+
+
         unsigned int getDim() const;                                        // Accesseur à la dimension du vecteur
 
 
-        void augmente(double coordSupplementaire);                          // augmente la taille du Vecteur.
+        void setCoord(unsigned int nEmeCoord, double nouvelleValeur);       // Set pour une seule coordonnée
 
 
-        void setCoord(unsigned int nEmeCoord, double nouvelleValeur);       // get et set pour une seule coordonnée
-
-
-        double getCoord(unsigned int nEmeCoord) const;
-
-
-        double norme() const;                                               // Calcule la norme d'un vecteur
+        void augmente(double coordSupplementaire);                          // Ajoute une coordonnée au vecteur
 
 
         double norme2() const;                                              // Calcule la norme au carré d'un vecteur
 
 
+        double norme() const;                                               // Calcule la norme d'un vecteur
+
+
         Vecteur unitaire() const;                                           // Retourne le vecteur unitaire (même dimension, même sens)
 
 
-    // ================ OPERATEURS INTERNES ==================================================================
+    // ======================================= OPERATEURS INTERNES ===========================================
 
 
         bool operator==(Vecteur const& v2);                         // Comparaison
@@ -76,20 +76,21 @@ class Vecteur{
 
         std::vector <double> m_coords;                 // Stockage des coordonnées en tableau dynamique
 
-        void rationnalise();                           // Méthode arrondissant les petites coordonnées à 0
 
 
 
     /* Méthodes nécessaires en interne */
 
-        Vecteur prodVectoriel(Vecteur const& vecteur2) const;               // Produit vectoriel classique somme toutes
-
-        double prodScalaire(Vecteur const &vecteur2) const;                 // Produit scalaire entre deux vecteurs
 
         Vecteur mult(double scalaire) const;                                // Multiplie un vecteur par un scalaire (un réel)
 
         Vecteur addition(Vecteur const& vecteur2) const;                    // Addition de deux vecteurs
 
+        Vecteur prodVectoriel(Vecteur const& vecteur2) const;               // Produit vectoriel classique somme toutes
+
+        double prodScalaire(Vecteur const &vecteur2) const;                 // Produit scalaire entre deux vecteurs
+
+        void rationnalise();                                                // Méthode arrondissant les petites coordonnées à 0
 
 
 };

@@ -5,22 +5,50 @@
 
 
 
+// VARIABLE GLOBALE
 
 double const PREC(1e-14);
 
-Vecteur::Vecteur(){}
 
-Vecteur::Vecteur(std::initializer_list<double> il) : m_coords(il) {}         /// Constructeur à base d'une liste de double
+//=========================================  CONSTRUCTEURS  ================================================
 
 
-void Vecteur::augmente(double coordSupplementaire){
 
-    /// Ajoute une dimension au Vecteur en augmentant le vector d'une case
+Vecteur::Vecteur() : Vecteur({0,0,0}) {}                                    // Par défaut (vecteur nul 3D)
 
-    m_coords.push_back(coordSupplementaire);
+Vecteur::Vecteur(std::initializer_list<double> il) : m_coords(il) {}        // Format : Vecteur v1({x1, ... , xn})
+
+
+
+
+//==========================================  METHODES PUBLIQUES  ==================================================
+
+
+
+// Accesseurs
+
+
+double Vecteur::getCoord(unsigned int nEmeCoord) const{
+
+    /// Retourne la valeur d'une coordonnée
+
+    return m_coords[nEmeCoord];
 
 }
 
+
+
+
+unsigned int Vecteur::getDim() const{
+
+    /// Retourne la dimension du vecteur
+
+    return m_coords.size();
+
+}
+
+
+// Setteur
 
 
 void Vecteur::setCoord(unsigned int nEmeCoord, double nouvelleValeur){
@@ -33,14 +61,75 @@ void Vecteur::setCoord(unsigned int nEmeCoord, double nouvelleValeur){
 }
 
 
-double Vecteur::getCoord(unsigned int nEmeCoord) const{
+// Autre
 
-    /// Envoie la valeur d'une coordonnée
 
-    return m_coords[nEmeCoord];
+void Vecteur::augmente(double coordSupplementaire){
 
+    /// Ajoute une dimension au Vecteur en augmentant le vector d'une case
+
+    m_coords.push_back(coordSupplementaire);
 
 }
+
+
+
+double Vecteur::norme2() const{
+
+    /// Calcule le carré de la norme
+
+    double sortie(0);
+
+    for (size_t k(0); k < m_coords.size(); ++k) {sortie += m_coords[k]*m_coords[k];}
+
+    return sortie;
+}
+
+
+
+
+
+double Vecteur::norme() const{ // Pythagore à n dimensions
+
+    /// Calcule la norme
+
+    return sqrt(norme2());
+
+}
+
+
+
+
+
+
+Vecteur Vecteur::unitaire() const{
+
+    /// Renvoie le vecteur unitaire (même direction, même sens)
+
+
+    double longueur(norme());
+
+    if (longueur == 0) { // Eviter la future division par 0
+
+        std::string alerte("ERREUR: Le vecteur nul n'a pas de direction");
+        throw alerte;
+
+    }
+
+
+    Vecteur sortie;
+
+    for (size_t k(0); k < m_coords.size(); ++k) {sortie.augmente(m_coords[k] / longueur);}
+
+    return sortie;
+}
+
+
+
+
+//==============================================  METHODES PROTECTED  ==================================================
+
+
 
 
 
@@ -58,6 +147,8 @@ Vecteur Vecteur::mult(double scalaire) const{
 
     return sortie;
 }
+
+
 
 
 Vecteur Vecteur::addition(Vecteur const& v2) const{
@@ -93,6 +184,8 @@ Vecteur Vecteur::addition(Vecteur const& v2) const{
 
 
 
+
+
 double Vecteur::prodScalaire(Vecteur const& vecteur2) const{
 
     /// Retourne le produit scalaire de deux vecteurs
@@ -108,6 +201,10 @@ double Vecteur::prodScalaire(Vecteur const& vecteur2) const{
 
     return sortie;
 }
+
+
+
+
 
 
 
@@ -140,55 +237,6 @@ Vecteur Vecteur::prodVectoriel(Vecteur const& vecteur2) const{
 
 
 
-double Vecteur::norme2() const{
-
-    /// Calcule le carré de la norme
-
-    double sortie(0);
-
-    for (size_t k(0); k < m_coords.size(); ++k) {sortie += m_coords[k]*m_coords[k];}
-
-    return sortie;
-}
-
-
-
-double Vecteur::norme() const{ // Pythagore à n dimensions
-
-    /// Calcule la norme
-
-    return sqrt(norme2());
-
-}
-
-
-
-
-Vecteur Vecteur::unitaire() const{
-
-    /// Renvoie le vecteur unitaire (même direction, même sens)
-
-
-    double longueur(norme());
-
-    if (longueur == 0) { // Eviter la future division par 0
-
-        std::string alerte("ERREUR: Le vecteur nul n'a pas de direction");
-        throw alerte;
-
-    }
-
-
-    Vecteur sortie;
-
-    for (size_t k(0); k < m_coords.size(); ++k) {sortie.augmente(m_coords[k] / longueur);}
-
-    return sortie;
-}
-
-
-
-unsigned int Vecteur::getDim() const{return m_coords.size();}       /// Accesseur à la dimension du vecteur
 
 
 
@@ -204,6 +252,12 @@ void Vecteur::rationnalise() {
     }
 
 }
+
+
+
+
+
+
 
 
 //=====================================  OPERATEURS SURCHARGES  ============================================
