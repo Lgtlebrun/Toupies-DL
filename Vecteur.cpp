@@ -6,7 +6,7 @@
 
 
 
-double const PREC(1e-10);
+double const PREC(1e-14);
 
 Vecteur::Vecteur(){}
 

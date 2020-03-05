@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef DEF_VECTEUR
 #define DEF_VECTEUR
 
