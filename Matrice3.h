@@ -6,6 +6,9 @@
 #include "Vecteur.h"
 
 
+
+
+
 class Matrice3
 {
     public:
@@ -43,7 +46,7 @@ class Matrice3
 
     protected:
 
-        vector<Vecteur> m_coords(3);       // La matrice est ordonnées en Vecteurs-lignes
+        std::vector<Vecteur> m_coords;                            // La matrice est ordonnées en Vecteurs-lignes
 
 };
 

@@ -9,6 +9,13 @@
 #include <iostream>
 #include <initializer_list>
 
+
+// VARIABLE GLOBALE
+
+double const PREC(1e-14);
+
+
+
 class Vecteur{
 
 
