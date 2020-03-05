@@ -20,3 +20,60 @@ Matrice3::~Matrice3()
 {
     //dtor
 }
+
+
+
+
+
+
+
+
+
+
+
+Matrice3& Matrice3::operator+=(Matrice3 const& autre){
+
+    /// Surcharge de l'addition interne
+
+    m_c1 += autre.m_c1;
+    m_c2 += autre.m_c2;
+    m_c3 += autre.m_c3;
+
+    return *this;
+}
+
+
+Matrice3& Matrice3::operator-=(Matrice3 const& autre){
+
+    operator+=((-1)*autre);
+
+    return *this;
+}
+
+
+
+
+
+Matrice3& Matrice3::operator*=(double const& lambda){
+
+    /// Multiplication par sclaire à droite
+
+    m_c1 *= lambda;
+    m_c2 *= lambda;
+    m_c3 *= lambda;
+
+    return *this;
+}
+
+
+
+
+
+
+const Matrice3 operator*(double const& lambda, Matrice3 mat1){
+
+    /// Multiplication par scalaire à gauche
+
+    mat1 *= lambda      // On procède par copie : mat1 n'est pas modifiée hors de la fonction
+    return mat1;
+}
