@@ -20,6 +20,17 @@ Chapitre 2:     28/02/2020
 
   Dans la soirée, Léonard s'intéresse à la surcherge d'opérateur pour améliorer la maniabilité des vecteurs.
 
+
+Chapitre 3:	05.03.2020
+  
+  Durant les jours qui se sont écoulés depuis la dernière mise-à-jour, nous avons essayé de pauffiner Vecteur.cpp et son header pour
+  que les opérateurs +=, -= et *= marchent. Une fois leur efficacité démontrée, nous avons remplacé le coprs des opérateurs +, - et *
+  pour qu'ils dépendent des opérations élémentaires récemment créées.
+
+  Ainsi, les seuls moyens de faire des opérations arithmétiques sur les vecteurs sont les opérateurs surchargés.
+
+  Nous sommes donc heureux de pouvoir passer à la suite, sachant que notre classe Vecteur est opérationnelle.
+
   
   
 
