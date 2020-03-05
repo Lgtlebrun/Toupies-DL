@@ -33,11 +33,17 @@ class Matrice3
 
 
 
+        Matrice3 transp() const;                                // Transposée d'une matrice
+
+        Matrice3 inv() const;                                   // Inverse d'une matrice
+
+        double det() const;                                     // Déterminant d'une matrice
+
+
+
     protected:
 
-        Vecteur m_c1;       // La matrice est ordonnées en Vecteurs-colonnes
-        Vecteur m_c2;
-        Vecteur m_c3;
+        vector<Vecteur> m_coords(3);       // La matrice est ordonnées en Vecteurs-lignes
 
 };
 
