@@ -50,10 +50,10 @@ class Vecteur{
     // ======================================= OPERATEURS INTERNES ===========================================
 
 
-        bool operator==(Vecteur const& v2);                         // Comparaison
+        bool operator==(Vecteur const& v2) const;                         // Comparaison
 
 
-        bool operator!=(Vecteur const& v2);                         // Anti-comparaison
+        bool operator!=(Vecteur const& v2) const;                         // Anti-comparaison
 
 
         double operator*(Vecteur const& v2);                        // Produit scalaire
@@ -91,7 +91,7 @@ class Vecteur{
 
         Vecteur mult(double scalaire) const;                                // Multiplie un vecteur par un scalaire (un réel)
 
-        Vecteur addition(Vecteur const& vecteur2) const;                    // Addition de deux vecteurs
+        Vecteur addition(Vecteur const& vecteur2) const;                    // Addition de deux vecteurs /!\ OBSOLÈTE /!\
 
         Vecteur prodVectoriel(Vecteur const& vecteur2) const;               // Produit vectoriel classique somme toutes
 
@@ -106,16 +106,16 @@ class Vecteur{
 //=====================================  OPERATEURS EXTERNES  ============================================
 
 
-        const Vecteur operator+(Vecteur const& v1, Vecteur const& v2);                 // Addition
+        const Vecteur operator+(Vecteur v1, Vecteur const& v2);                     // Addition
 
 
-        const Vecteur operator-(Vecteur const& v1, Vecteur const& v2);                 // Soustraction
+        const Vecteur operator-(Vecteur v1, Vecteur const& v2);                     // Soustraction
 
 
-        const Vecteur operator*(double const& lambda, Vecteur v1);        // Multiplication par scalaire à gauche
+        const Vecteur operator*(double const& lambda, Vecteur v1);           // Multiplication par scalaire à gauche
 
 
-        std::ostream& operator<<(std::ostream& sortie, Vecteur const& v); // Affichage du vecteur
+        std::ostream& operator<<(std::ostream& sortie, Vecteur const& v);           // Affichage du vecteur
 
 
         const Vecteur operator-(Vecteur const& v);                                  // Opposé

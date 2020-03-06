@@ -29,10 +29,20 @@ class Matrice3
         Matrice3& operator*=(double const& lambda);             // Multiplication par scalaire à droite
 
 
+        bool operator==(Matrice3 const& autre) const;           // Comparaison
+
+        bool operator!=(Matrice3 const& autre) const;           // Anti-comparaison
+
+
 
 
 
         virtual ~Matrice3();
+
+
+
+        Vecteur getLigne(size_t indice) const;
+
 
 
 

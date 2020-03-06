@@ -108,19 +108,33 @@ Vecteur Vecteur::unitaire() const{
 
     double longueur(norme());
 
-    if (longueur == 0) { // Eviter la future division par 0
+    try{
 
-        std::string alerte("ERREUR: Le vecteur nul n'a pas de direction");
-        throw alerte;
+        if (longueur == 0) {                    // Eviter la future division par 0
 
-    }
+            std::string vecnul("ERREUR: Le vecteur nul n'a pas de direction");
+            throw vecnul;
+
+        }
 
 
-    Vecteur sortie;
+
+    Vecteur sortie({});
 
     for (size_t k(0); k < m_coords.size(); ++k) {sortie.augmente(m_coords[k] / longueur);}
 
     return sortie;
+
+    }
+
+    // En cas d'exception...
+
+    catch(std::string const& vecnul){
+
+        std::cerr << vecnul << std::endl;
+        return Vecteur({0, 0, 0});              // ... retourne le vecteur nul
+    }
+
 }
 
 
@@ -136,7 +150,7 @@ Vecteur Vecteur::mult(double scalaire) const{
 
     /// Multiplication par un scalaire
 
-    Vecteur sortie;
+    Vecteur sortie({});
 
     for (size_t k(0); k < m_coords.size(); k++){
 
@@ -162,19 +176,19 @@ Vecteur Vecteur::addition(Vecteur const& v2) const{
 
     for (i; i < std::min(dim1, dim2); i++){
 
-            sortie.augmente(m_coords[i] + v2.m_coords[i]);
+            sortie.augmente(m_coords[i] + v2.m_coords[i]);      // Tant qu'il existe des coordonnées communes, on additionne
 
     }
 
 
-    for (i; i < std::max(dim1, dim2); i++){
+    for (i; i < std::max(dim1, dim2); i++){                     // Si diff de taille, on ajoute des coordonnées
 
         if (i >= dim1) {sortie.augmente(v2.m_coords[i]);}
 
         else {sortie.augmente(m_coords[i]);}
     }
 
-    sortie.rationnalise();                          // Fixe les valeurs en dessous de PREC à 0
+    sortie.rationnalise();               // Fixe les valeurs en dessous de PREC à 0
 
 
     return sortie;
@@ -213,7 +227,7 @@ Vecteur Vecteur::prodVectoriel(Vecteur const& vecteur2) const{
 
     /*  /!\ Méthode prévue pour des vecteurs à 3 dimensions seulement /!\  */
 
-    Vecteur sortie;
+    Vecteur sortie({});
 
     if (m_coords.size() != 3 || vecteur2.m_coords.size() != 3){ // le produit vectoriel n'est défini que comme opération R^3 --> R^3
 
@@ -228,6 +242,7 @@ Vecteur Vecteur::prodVectoriel(Vecteur const& vecteur2) const{
         sortie.augmente(m_coords[1]*vecteur2.m_coords[2] - m_coords[2]*vecteur2.m_coords[1]);
 
         sortie.rationnalise();
+
     }
 
 
@@ -278,6 +293,7 @@ Vecteur& Vecteur::operator+=(Vecteur const& v2){
 
         if (i >= dim1) {m_coords.push_back(v2.m_coords[i]);}
 
+
     }
 
     return *this;
@@ -285,24 +301,11 @@ Vecteur& Vecteur::operator+=(Vecteur const& v2){
 }
 
 
-Vecteur& Vecteur::operator-=(Vecteur const& v2){            // je sais qu'en tous cas comme ça, malgré la ressemblance
-                                                            // à +=, ça marche...
+Vecteur& Vecteur::operator-=(Vecteur const& v2){
 
-        /// Surchage de l'opérateur -= .On soustrait v2 de v1 en modifiant v1
+        /// Surchage de l'opérateur -= .
 
-    double dim1(m_coords.size()), dim2(v2.m_coords.size());
-
-    size_t i(0);
-
-    for (i; i < std::min(dim1, dim2); i++){m_coords[i] -= v2.m_coords[i];}
-
-
-    for (i; i < std::max(dim1, dim2); i++){
-
-        if (i >= dim1) {m_coords.push_back((-1)*v2.m_coords[i]);}
-
-    }
-
+    operator+=(-v2);
 
     return *this;
 
@@ -314,7 +317,7 @@ Vecteur& Vecteur::operator*=(double const& lambda){
         /// Surcharge de l'opérateur *= pour la multiplication par scalaire
 
 
-    for (size_t k(0); k<m_coords.size(); ++k) { this->m_coords[k]*=lambda ;}
+    for (size_t k(0); k < m_coords.size(); ++k) {m_coords[k] *= lambda ;}
 
 
     return *this;
@@ -333,7 +336,7 @@ const Vecteur operator-(Vecteur const& v){
 }
 
 
-bool Vecteur::operator==(Vecteur const& v2){
+bool Vecteur::operator==(Vecteur const& v2) const{
 
     /// Surcharge de l'opérateur de comparaison exacte
 
@@ -349,7 +352,7 @@ bool Vecteur::operator==(Vecteur const& v2){
 }
 
 
-bool Vecteur::operator!=(Vecteur const& v2){
+bool Vecteur::operator!=(Vecteur const& v2) const{
 
     /// Surcharge de l'opérateur d'anti-comparaison
 
@@ -358,31 +361,27 @@ bool Vecteur::operator!=(Vecteur const& v2){
 
 
 
-const Vecteur operator+(Vecteur const& v1, Vecteur const& v2){
+const Vecteur operator+(Vecteur v1, Vecteur const& v2){
 
     /// Surcharge de l'opérateur de l'addition
 
-    Vecteur sortie(v1);
+    v1 += v2;               // On procède par copie : v1 n'est pas modifié après l'appel
 
-    sortie += v2;
-
-    return sortie;
+    return v1;
 
 
 }
 
 
 
-const Vecteur operator-(Vecteur const& v1, Vecteur const& v2){
+const Vecteur operator-(Vecteur v1, Vecteur const& v2){
 
     /// Surcharge de l'opérateur de la soustraction
 
 
-    Vecteur sortie(v1);
+    v1 -= v2;
 
-    sortie -= v2;
-
-    return sortie;
+    return v1;
 
 }
 
@@ -402,7 +401,7 @@ const Vecteur operator*(double const& lambda, Vecteur v1){
     /// Surcharge de l'opérateur de multiplication par scalaire à gauche
 
 
-    return v1*lambda;
+    return (v1*lambda);
 
 }
 
@@ -430,9 +429,9 @@ const Vecteur Vecteur::operator^(Vecteur const& v2){
        return prodVectoriel(v2);
     }
 
-    catch(std::string const& message){
+    catch(std::string const& alerte){
 
-        std::cerr << message << std::endl;
+        std::cerr << alerte << std::endl;
 
         return Vecteur({0,0,0});                // Vecteur nul
     }
@@ -482,6 +481,8 @@ int main(){
     Vecteur v4({2,1});
 
 
+    std::cout << v2 << " " << v3 << std::endl;
+
     resultat = v2 ^ v3;
 
     std::cout << resultat << std::endl;
@@ -518,6 +519,15 @@ int main(){
 
     std::cout << "soustraction: ";
     std::cout << (v4-v2) <<std::endl;
+
+
+    // Test de rationnalise()
+
+
+    Vecteur v6({2.78, 4.3, 7.10928}), v7({2*1.39, 4.3, 7.});
+    v6 -= v7;
+
+    std::cout << v6 << std::endl;
 
 return 0;
 }

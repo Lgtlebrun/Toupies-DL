@@ -42,12 +42,17 @@ Matrice3& Matrice3::operator+=(Matrice3 const& autre){
 
     /// Surcharge de l'addition interne
 
-    m_coords[0] += autre.m_coords[0];
-    m_coords[1] += autre.m_coords[1];
-    m_coords[2] += autre.m_coords[2];
+
+    for (size_t i(0); i < 3; i++){
+
+        m_coords[i] += autre.m_coords[i];                   // Note : besoin d'un .rationnalise()? Pour l'instant il semble que non
+    }
 
     return *this;
 }
+
+
+
 
 
 Matrice3& Matrice3::operator-=(Matrice3 const& autre){
@@ -65,23 +70,57 @@ Matrice3& Matrice3::operator*=(double const& lambda){
 
     /// Multiplication par sclaire à droite
 
-    m_coords[0] *= lambda;
-    m_coords[1] *= lambda;
-    m_coords[2] *= lambda;
+    for (size_t i(0); i < 3; i++){
+
+        m_coords[i] *= lambda;                   // Note : besoin d'un .rationnalise()?
+    }
 
     return *this;
 }
 
 
 
+bool Matrice3::operator==(Matrice3 const& autre) const{
 
-const Matrice3 operator*(double const& lambda, Matrice3 mat1){
+    /// Opérateur de comparaison
 
-    /// Multiplication par scalaire à gauche
 
-    mat1 *= lambda;      // On procède par copie : mat1 n'est pas modifiée hors de la fonction
-    return mat1;
+    for (size_t i(0); i < m_coords.size(); i++){
+
+        if (m_coords[i] != autre.m_coords[i])  {return false;}
+
+    }
+
+    return true;
 }
+
+
+
+
+
+bool Matrice3::operator!=(Matrice3 const& autre) const{
+
+    /// Opérateur de comparaison
+
+
+    return !(operator==(autre));
+}
+
+
+
+
+
+
+Vecteur Matrice3::getLigne(size_t indice) const{
+
+    if (m_coords.size() <= indice) {return Vecteur();}
+
+    return m_coords[indice];
+
+}
+
+
+
 
 
 
@@ -179,5 +218,14 @@ Matrice3 Matrice3::inv() const {
 
 
 
+
+
+const Matrice3 operator*(double const& lambda, Matrice3 mat1){
+
+    /// Multiplication par scalaire à gauche
+
+    mat1 *= lambda;      // On procède par copie : mat1 n'est pas modifiée hors de la fonction
+    return mat1;
+}
 
 
