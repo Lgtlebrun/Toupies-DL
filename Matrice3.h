@@ -31,6 +31,8 @@ class Matrice3
 
         Matrice3& operator*=(double const& lambda);             // Multiplication par scalaire à droite
 
+        const Matrice3 operator*(Matrice3 const& m2);
+
 
         bool operator==(Matrice3 const& autre) const;           // Comparaison
 

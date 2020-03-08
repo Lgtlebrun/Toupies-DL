@@ -461,12 +461,13 @@ std::ostream& operator<<(std::ostream& sortie, Vecteur const& v){
     }
 
     sortie << "]";
+    return sortie;
 
 }
 
 
 
-//==============================================  TESTS  ==============================================
+
 
 
 

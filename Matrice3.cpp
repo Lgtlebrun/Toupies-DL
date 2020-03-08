@@ -251,19 +251,25 @@ const Matrice3 operator*(double const& lambda, Matrice3 mat1){
 
 
 
-const Matrice3 operator*(Matrice3 const& m1, Matrice3 const& m2){
+const Matrice3 Matrice3::operator*(Matrice3 const& m2){
+
+        /// Surcharge du produit matriciel
 
     Matrice3 sortie;
 
     Matrice3 m2_transp(m2.transp());
 
     for (size_t colonne(0); colonne < 3; colonne++){
-        for(size_t ligne(0); ligne < 3; ligne++){
 
-            sortie.setCoord(ligne, colonne, m1.getLigne(ligne)*m2_transp.getLigne(colonne));
+        for(size_t ligne(0); ligne < 3; ligne++){       //L'utilisation de la transposée de m2 permet l'appel au produit scalaire
 
+            sortie.setCoord(ligne, colonne, (m_coords[ligne]) * m2_transp.m_coords[colonne]);
+            std::cout << "test : " << (m_coords[ligne] * m2_transp.m_coords[colonne]) << std::endl;
         }
     }
+
+
+    for (auto& elt : sortie.m_coords) {elt.rationnalise();}
 
     return sortie;
 
@@ -286,6 +292,9 @@ const std::ostream& operator<<(std::ostream& flux, Matrice3 const& m1){
 }
 
 
+
+
+//==============================================  TESTS  ==============================================
 
 // Test de la classe (flemme de faire le makefile de testVecteur.cpp)
 
@@ -366,8 +375,10 @@ int main(){
     std::cout<< m2.det() << std::endl;
 
 
-    Matrice3 m3(m1 * m2);
-    std::cout << m3 << std::endl;
+    Matrice3 m3;
+    m3 = m1 * m2;
+
+    std::cout << m3;
 
 return 0;
 }

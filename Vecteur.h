@@ -47,6 +47,9 @@ class Vecteur{
         Vecteur unitaire() const;                                           // Retourne le vecteur unitaire (même dimension, même sens)
 
 
+        void rationnalise();                                                // Méthode arrondissant les petites coordonnées à 0
+
+
     // ======================================= OPERATEURS INTERNES ===========================================
 
 
@@ -96,8 +99,6 @@ class Vecteur{
         Vecteur prodVectoriel(Vecteur const& vecteur2) const;               // Produit vectoriel classique somme toutes
 
         double prodScalaire(Vecteur const &vecteur2) const;                 // Produit scalaire entre deux vecteurs
-
-        void rationnalise();                                                // Méthode arrondissant les petites coordonnées à 0
 
 
 };
