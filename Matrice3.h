@@ -22,7 +22,7 @@ class Matrice3
 
 
 
-
+        void setCoord(size_t ligne, size_t colonne, double valeur);
 
 
         Matrice3& operator+=(Matrice3 const& autre);            // Addition matricielle
@@ -70,6 +70,8 @@ class Matrice3
 
 
 const Matrice3 operator*(double const& lambda, Matrice3 mat1);      // Multiplication par scalaire à gauche
+
+const Matrice3 operator*(Matrice3 const& m1, Matrice3 const& m2);
 
 const std::ostream& operator<<(std::ostream& flux, Matrice3 const& m1);
 

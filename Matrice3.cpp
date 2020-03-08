@@ -30,7 +30,11 @@ Matrice3::~Matrice3()
 
 
 
+void Matrice3::setCoord(size_t ligne, size_t colonne, double valeur){
 
+    m_coords[ligne].setCoord(colonne, valeur);
+
+}
 
 
 
@@ -246,6 +250,29 @@ const Matrice3 operator*(double const& lambda, Matrice3 mat1){
 
 
 
+
+const Matrice3 operator*(Matrice3 const& m1, Matrice3 const& m2){
+
+    Matrice3 sortie;
+
+    Matrice3 m2_transp(m2.transp());
+
+    for (size_t colonne(0); colonne < 3; colonne++){
+        for(size_t ligne(0); ligne < 3; ligne++){
+
+            sortie.setCoord(ligne, colonne, m1.getLigne(ligne)*m2_transp.getLigne(colonne));
+
+        }
+    }
+
+    return sortie;
+
+
+}
+
+
+
+
 const std::ostream& operator<<(std::ostream& flux, Matrice3 const& m1){
 
     flux << std::endl;
@@ -338,8 +365,13 @@ int main(){
 
     std::cout<< m2.det() << std::endl;
 
+
+    Matrice3 m3(m1 * m2);
+    std::cout << m3 << std::endl;
+
 return 0;
 }
+
 
 
 
