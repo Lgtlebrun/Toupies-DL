@@ -165,19 +165,21 @@ Matrice3 Matrice3::inv() const {
 
     double deter(det());
 
-    std::cout << "test1" << std::endl;
+    std::cout << deter << std::endl;
+
+
     if (abs(deter) < PREC && deter >= 0) { deter = PREC; }
 
     else if (abs(deter) < PREC && deter < 0) { deter = -PREC; }
-
-    std::cout << "test2" << std::endl;
 
 
     Matrice3 cofacteurs;
 
     int t(0);
 
-    for(size_t k(0); k < 3; k++) {
+    for(int k(0); k < 3; k++) {
+
+        for (int t(0); t < 3 ; ++t) {
 
         int MAX_k (std::max((k-1)%3, (k+1)%3));
         int MIN_k (std::min((k-1)%3, (k+1)%3));
@@ -185,23 +187,37 @@ Matrice3 Matrice3::inv() const {
         int MAX_t (std::max((t-1)%3, (t+1)%3));
         int MIN_t (std::min((t-1)%3, (t+1)%3));
 
+        if (MIN_k == -1) {
 
-        std::cout << "test3" << std::endl;
+            MIN_k = MAX_k;
 
-        cofacteurs.m_coords[k].setCoord(t, pow(-1, k+t) * ( m_coords[MAX_k].getCoord(MAX_t) * m_coords[MIN_k].getCoord(MIN_t)
+            MAX_k = 2;
+
+        }
+
+        if (MIN_t == -1) {
+
+            MIN_t = MAX_t;
+
+            MAX_t = 2;
+
+        }
+
+
+
+
+
+        std::cout << "En " << k << ", " << t << " Nous prenons : " << std::endl;
+        std::cout << MAX_k << " , " << MIN_k << " , " << MAX_t << " , " << MIN_t << std::endl;
+
+
+        cofacteurs.m_coords[t].setCoord(k, pow(-1, k+t) * ( m_coords[MAX_k].getCoord(MAX_t) * m_coords[MIN_k].getCoord(MIN_t)
                                        - m_coords[MAX_k].getCoord(MIN_t) * m_coords[MIN_k].getCoord(MAX_t) )        );
 
             // Dans la ligne ci-dessus, nous pouvons ne pas écrire k+1 et t+1 car alors ce serait k+t+2 , ce qui ne
             // modifie pas la parité. De plus, empiriquement, en inversant une matrice par la méthode des cofacteurs,
             // la structure utilisée tient. Elle casserait pour des matrices 4x4
 
-        std::cout << "test4" << std::endl;
-
-        if ( k == 2 and t < 2 ) {
-
-            k = 0;
-
-            ++t;
 
         }
 
@@ -307,7 +323,7 @@ int main(){
 
 
 
-        Matrice3 m1(34, 0, 5, 8, 6, 7, 21 , 8, 0);
+    Matrice3 m1(34, 0, 5, 8, 6, 7, 21 , 8, 0);
 
     Matrice3 m2;
 
@@ -316,7 +332,11 @@ int main(){
 
     m2 = m1.inv();
 
-    std::cout << m1;
+    std::cout << m1.det() << std::endl;
+
+    std::cout << m2;
+
+    std::cout<< m2.det() << std::endl;
 
 return 0;
 }
