@@ -165,12 +165,12 @@ Matrice3 Matrice3::inv() const {
 
     double deter(det());
 
-
+    std::cout << "test1" << std::endl;
     if (abs(deter) < PREC && deter >= 0) { deter = PREC; }
 
     else if (abs(deter) < PREC && deter < 0) { deter = -PREC; }
 
-
+    std::cout << "test2" << std::endl;
 
 
     Matrice3 cofacteurs;
@@ -186,7 +186,7 @@ Matrice3 Matrice3::inv() const {
         int MIN_t (std::min((t-1)%3, (t+1)%3));
 
 
-
+        std::cout << "test3" << std::endl;
 
         cofacteurs.m_coords[k].setCoord(t, pow(-1, k+t) * ( m_coords[MAX_k].getCoord(MAX_t) * m_coords[MIN_k].getCoord(MIN_t)
                                        - m_coords[MAX_k].getCoord(MIN_t) * m_coords[MIN_k].getCoord(MAX_t) )        );
@@ -195,7 +195,7 @@ Matrice3 Matrice3::inv() const {
             // modifie pas la parité. De plus, empiriquement, en inversant une matrice par la méthode des cofacteurs,
             // la structure utilisée tient. Elle casserait pour des matrices 4x4
 
-
+        std::cout << "test4" << std::endl;
 
         if ( k == 2 and t < 2 ) {
 
@@ -227,5 +227,102 @@ const Matrice3 operator*(double const& lambda, Matrice3 mat1){
     mat1 *= lambda;      // On procède par copie : mat1 n'est pas modifiée hors de la fonction
     return mat1;
 }
+
+
+
+const std::ostream& operator<<(std::ostream& flux, Matrice3 const& m1){
+
+    flux << std::endl;
+
+    for (size_t i(0); i < 3; i++){
+
+        flux << m1.getLigne(i) << std::endl;
+    }
+
+    return flux;
+}
+
+
+
+// Test de la classe (flemme de faire le makefile de testVecteur.cpp)
+
+int main(){
+
+    Vecteur v1, resultat;
+    Vecteur v2({2,4,5}), v3({8,2,3});
+    Vecteur v4({2,1});
+
+
+    std::cout << v2 << " " << v3 << std::endl;
+
+    resultat = v2 ^ v3;
+
+    std::cout << resultat << std::endl;
+
+    resultat = v4 ^ v2;
+
+    std::cout << resultat << std::endl;
+
+    if (v2 == v3) {std::cout << "top" << std::endl;}
+    else {std::cout << "pas top" << std::endl;}
+
+    std::cout << v4 << std::endl;
+
+    v4 = 3*v4;
+    std::cout<< v4 << std::endl;
+
+    std::cout << "Test scalaire à droite : ";
+    v4 = v4*3;
+    std::cout << v4 << std::endl;
+
+    std::cout << v2.unitaire() << std::endl;
+
+    v3*=2.0;
+
+    std::cout << v3 << std::endl;
+
+    std::cout << -v4 << std::endl;
+
+    std::cout << "addition de: ";
+
+    std::cout << v4 << " " << v2 << std::endl;
+
+    std::cout << (v4+v2) << std::endl;
+
+    std::cout << "soustraction: ";
+    std::cout << (v4-v2) <<std::endl;
+
+
+    // Test de rationnalise()
+
+
+    Vecteur v6({2.78, 4.3, 7.10928}), v7({2*1.39, 4.3, 7.});
+    v6 -= v7;
+
+    std::cout << v6 << std::endl;
+
+
+
+    std::cout << "Test matrices" << std::endl;
+
+
+
+        Matrice3 m1(34, 0, 5, 8, 6, 7, 21 , 8, 0);
+
+    Matrice3 m2;
+
+    std::cout << m1;
+
+
+    m2 = m1.inv();
+
+    std::cout << m1;
+
+return 0;
+}
+
+
+
+
 
 

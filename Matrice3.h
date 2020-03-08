@@ -22,6 +22,9 @@ class Matrice3
 
 
 
+
+
+
         Matrice3& operator+=(Matrice3 const& autre);            // Addition matricielle
 
         Matrice3& operator-=(Matrice3 const& autre);            // Soustraction matricielle
@@ -67,6 +70,8 @@ class Matrice3
 
 
 const Matrice3 operator*(double const& lambda, Matrice3 mat1);      // Multiplication par scalaire à gauche
+
+const std::ostream& operator<<(std::ostream& flux, Matrice3 const& m1);
 
 
 
