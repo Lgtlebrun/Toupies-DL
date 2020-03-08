@@ -61,6 +61,8 @@ Matrice3& Matrice3::operator+=(Matrice3 const& autre){
 
 Matrice3& Matrice3::operator-=(Matrice3 const& autre){
 
+        /// Surcharge de la soustraction interne
+
     operator+=((-1)*autre);
 
     return *this;
@@ -91,7 +93,8 @@ bool Matrice3::operator==(Matrice3 const& autre) const{
 
     for (size_t i(0); i < m_coords.size(); i++){
 
-        if (m_coords[i] != autre.m_coords[i])  {return false;}
+        if (m_coords[i] != autre.m_coords[i])  {return false;}      // utilisation de la comparaison vectorielle
+                                                                    // qui a une precision de 1e-14
 
     }
 
@@ -117,9 +120,11 @@ bool Matrice3::operator!=(Matrice3 const& autre) const{
 
 Vecteur Matrice3::getLigne(size_t indice) const{
 
-    if (m_coords.size() <= indice) {return Vecteur();}
+        /// Accesseur du indice-ème vecteur
 
-    return m_coords[indice];
+    if (m_coords.size() <= indice) {return Vecteur();}          // sort le vecteur nul si l'indice est trop grand
+
+    return m_coords[indice];                                    // sinon sort le vecteur-ligne associé
 
 }
 
@@ -159,6 +164,9 @@ double Matrice3::det() const {
 
     return sortie;
 
+    // Utilise la définition du déterminant à l'aide des permutations de l'ensemble {0,1,2} pour arriver à ce code.
+    // Plus d'explications dans le chapitre 4 de JOURNAL.txt
+
 }
 
 
@@ -166,6 +174,8 @@ double Matrice3::det() const {
 Matrice3 Matrice3::inv() const {
 
         /// Retourne l'inverse d'une matrice
+
+        // Explications à la fin du code et dans le chapitre 4 de JOURNAL.txt
 
     double deter(det());
 
@@ -208,19 +218,8 @@ Matrice3 Matrice3::inv() const {
         }
 
 
-
-
-
-        std::cout << "En " << k << ", " << t << " Nous prenons : " << std::endl;
-        std::cout << MAX_k << " , " << MIN_k << " , " << MAX_t << " , " << MIN_t << std::endl;
-
-
         cofacteurs.m_coords[t].setCoord(k, pow(-1, k+t) * ( m_coords[MAX_k].getCoord(MAX_t) * m_coords[MIN_k].getCoord(MIN_t)
                                        - m_coords[MAX_k].getCoord(MIN_t) * m_coords[MIN_k].getCoord(MAX_t) )        );
-
-            // Dans la ligne ci-dessus, nous pouvons ne pas écrire k+1 et t+1 car alors ce serait k+t+2 , ce qui ne
-            // modifie pas la parité. De plus, empiriquement, en inversant une matrice par la méthode des cofacteurs,
-            // la structure utilisée tient. Elle casserait pour des matrices 4x4
 
 
         }
@@ -229,6 +228,16 @@ Matrice3 Matrice3::inv() const {
 
 
     return (1.0/deter) * cofacteurs;
+
+
+    // Ce code utilise un algorithme pour calculer un inverse d'une matrice via la méthode des cofacteurs et ne marche
+    // Que dans le case des matrices 3x3. Il s'appuie sur le fait que pour cahcher une des colonnes, alors les colonnes
+    // restantes sont (k-1)%3 et (k+1)%3 (idem pour les lignes) puis utilise le "produit en croix" du déterminant d'une
+    // matrice 2x2 pour calculer le terme de chaque case de la matrice des cofacteurs.
+
+
+            // Plus de détails dans JOURNAL.txt
+
 
 
 }
@@ -264,7 +273,7 @@ const Matrice3 Matrice3::operator*(Matrice3 const& m2){
         for(size_t ligne(0); ligne < 3; ligne++){       //L'utilisation de la transposée de m2 permet l'appel au produit scalaire
 
             sortie.setCoord(ligne, colonne, (m_coords[ligne]) * m2_transp.m_coords[colonne]);
-            std::cout << "test : " << (m_coords[ligne] * m2_transp.m_coords[colonne]) << std::endl;
+
         }
     }
 
@@ -285,8 +294,8 @@ const std::ostream& operator<<(std::ostream& flux, Matrice3 const& m1){
 
     for (size_t i(0); i < 3; i++){
 
-        flux << m1.getLigne(i) << std::endl;
-    }
+        flux << m1.getLigne(i) << std::endl;            // on utilise notre opérateur d'affichage de vecteurs pour
+    }                                                   // les matrices
 
     return flux;
 }

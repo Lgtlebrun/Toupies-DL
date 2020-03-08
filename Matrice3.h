@@ -31,7 +31,7 @@ class Matrice3
 
         Matrice3& operator*=(double const& lambda);             // Multiplication par scalaire à droite
 
-        const Matrice3 operator*(Matrice3 const& m2);
+        const Matrice3 operator*(Matrice3 const& m2);           // Multiplication de deux matrices
 
 
         bool operator==(Matrice3 const& autre) const;           // Comparaison
@@ -46,7 +46,7 @@ class Matrice3
 
 
 
-        Vecteur getLigne(size_t indice) const;
+        Vecteur getLigne(size_t indice) const;                  // accesseur de la indice-ème ligne
 
 
 
@@ -73,9 +73,9 @@ class Matrice3
 
 const Matrice3 operator*(double const& lambda, Matrice3 mat1);      // Multiplication par scalaire à gauche
 
-const Matrice3 operator*(Matrice3 const& m1, Matrice3 const& m2);
+const Matrice3 operator*(Matrice3 const& m1, Matrice3 const& m2);   // Multiplication de deux matrices
 
-const std::ostream& operator<<(std::ostream& flux, Matrice3 const& m1);
+const std::ostream& operator<<(std::ostream& flux, Matrice3 const& m1);   //
 
 
 
