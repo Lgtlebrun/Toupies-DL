@@ -44,9 +44,6 @@ class Vecteur{
         double norme() const;                                               // Calcule la norme d'un vecteur
 
 
-        Vecteur unitaire() const;                                           // Retourne le vecteur unitaire (même dimension, même sens)
-
-
         void rationnalise();                                                // Méthode arrondissant les petites coordonnées à 0
 
 
@@ -77,6 +74,9 @@ class Vecteur{
         const Vecteur operator^(Vecteur const& v2);                 // Produit vectoriel
 
 
+        const Vecteur operator~();                                  // Vecteur unitaire
+
+
     //=============================================================================================
 
 
@@ -99,6 +99,8 @@ class Vecteur{
         Vecteur prodVectoriel(Vecteur const& vecteur2) const;               // Produit vectoriel classique somme toutes
 
         double prodScalaire(Vecteur const &vecteur2) const;                 // Produit scalaire entre deux vecteurs
+
+        Vecteur unitaire() const;                                           // Retourne le vecteur unitaire (même dimension, même sens)
 
 
 };

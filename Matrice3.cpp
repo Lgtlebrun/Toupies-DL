@@ -336,7 +336,7 @@ int main(){
     v4 = v4*3;
     std::cout << v4 << std::endl;
 
-    std::cout << v2.unitaire() << std::endl;
+    std::cout << ~v2 << std::endl;
 
     v3*=2.0;
 

@@ -467,7 +467,13 @@ std::ostream& operator<<(std::ostream& sortie, Vecteur const& v){
 
 
 
+ const Vecteur Vecteur::operator~(){
 
+        /// Surcharge de l'opérateur unaire permettant de sortir le vecteur unitaire
+
+    return unitaire();
+
+}
 
 
 
