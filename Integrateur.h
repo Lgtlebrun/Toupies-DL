@@ -11,7 +11,7 @@ class Integrateur{
 
     public :
 
-        virtual void integre(Toupie& toupie, double dt) const =0;
+        virtual void integre(Toupie& toupie, double const& dt) const =0;
 
 
     protected :
@@ -26,7 +26,7 @@ class IntegrateurEulerCromer: public Integrateur
 
     public :
 
-        virtual void integre(Toupie& toupie, double dt) const;
+        virtual void integre(Toupie& toupie, double const& dt) const;
 
 
 };

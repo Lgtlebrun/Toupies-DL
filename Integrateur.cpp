@@ -3,7 +3,7 @@
 
 
 
-void IntegrateurEulerCromer::integre(Toupie& toupie, double dt) const {
+void IntegrateurEulerCromer::integre(Toupie& toupie, double const& dt) const {
 
         /// Intègre numériquement selon la méthode d'Euler Cromer
 
