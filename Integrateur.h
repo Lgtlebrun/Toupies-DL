@@ -11,7 +11,7 @@ class Integrateur{
 
     public :
 
-        virtual void integre(Toupie& toupie, double const& dt) const =0;
+        virtual void integre(Integrable& integrable, double const& dt) const =0;
 
 
     protected :
@@ -26,10 +26,34 @@ class IntegrateurEulerCromer: public Integrateur
 
     public :
 
-        virtual void integre(Toupie& toupie, double const& dt) const;
+        virtual void integre(Integrable& integrable, double const& dt) const;
 
 
 };
+
+
+class IntegrateurNewmark: public Integrateur
+{
+
+    public :
+
+        virtual void integre(Integrable& integrable, double const& dt) const;
+
+
+};
+
+
+
+class IntegrateurRK4: public Integrateur
+{
+
+    public :
+
+        virtual void integre(Integrable& integrable, double const& dt) const;
+
+
+};
+
 
 
 #endif // INTEGRATEUR_H
