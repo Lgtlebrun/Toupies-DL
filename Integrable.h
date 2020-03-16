@@ -16,7 +16,21 @@ class Integrable
 
         virtual Vecteur equEvol(double const& temps) const = 0;
 
+
+        Vecteur getParam() const;
+        void setParam(Vecteur const& newV);
+
+
+
+        Vecteur getVitesse() const;
+        void setVitesse(Vecteur const& newV);
+
+
     protected:
+
+
+        Vecteur m_P;                // P est le vecteur paramètres
+        Vecteur m_Ppoint;           // Ppoint est le vecteur dérivée temporelle de P
 
 };
 
