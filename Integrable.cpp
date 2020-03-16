@@ -12,12 +12,12 @@ Integrable::~Integrable()
 
 
 
-Vecteur Toupie::getParam() const{
+Vecteur Integrable::getParam() const{
 
     return m_P;
 }
 
-void Toupie::setParam(Vecteur const& newV){
+void Integrable::setParam(Vecteur const& newV){
 
 
     m_P = newV;
@@ -26,13 +26,13 @@ void Toupie::setParam(Vecteur const& newV){
 
 
 
-Vecteur Toupie::getVitesse() const{
+Vecteur Integrable::getVitesse() const{
 
     return m_Ppoint;
 }
 
 
-void Toupie::setVitesse(Vecteur const& newV){
+void Integrable::setVitesse(Vecteur const& newV){
 
     m_Ppoint = newV;
 }
