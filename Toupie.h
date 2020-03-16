@@ -5,14 +5,23 @@
 
 #include "Vecteur.h"
 
-class Toupie
+class Toupie : public Integrable
 {
     public:
 
         Toupie();
         virtual ~Toupie();
 
-        virtual Vecteur equEvol() const;
+        virtual Vecteur equEvol(double const& temps) const;
+
+
+        Vecteur getParam() const;
+        void setParam(Vecteur const& newV);
+
+
+
+        Vecteur getVitesse() const;
+        void setVitesse(Vecteur const& newV);
 
 
     protected:
