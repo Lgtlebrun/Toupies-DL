@@ -37,7 +37,7 @@ class IntegrateurNewmark: public Integrateur
 
     public :
 
-        virtual void integre(Integrable& integrable, double const& dt) const;
+        virtual void integre(Integrable& integrable, double const& dt, double const& epsilon) const;
 
 
 };
