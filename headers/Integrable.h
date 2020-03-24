@@ -9,7 +9,7 @@ class Integrable
 {
     public:
 
-        Integrable();
+        Integrable(Vecteur const&, Vecteur const&);
 
         virtual ~Integrable();
 

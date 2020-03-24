@@ -1,9 +1,10 @@
 #include "../headers/Integrable.h"
+#include "../headers/Vecteur.h"
 
-Integrable::Integrable()
-{
-    //ctor
-}
+
+Integrable::Integrable(Vecteur const& param, Vecteur const& vit)
+    : m_P(param), m_Ppoint(vit)
+{}
 
 Integrable::~Integrable()
 {

@@ -1,8 +1,12 @@
 #include "../headers/Integrateur.h"
-#include "../headers/Integrable.h"
+#include "../headers/Toupie.h"
 #include "Toupie.cpp"
 #include "Integrable.cpp"
+#include "Vecteur.cpp"
 #include <iostream>
+
+
+
 
 IntegrateurNewmark::IntegrateurNewmark(double const& t0)
     : Integrateur(t0)
@@ -101,43 +105,84 @@ void IntegrateurRK4::integre(Integrable& integrable, double const& dt) const {
 int main(){
 
 
-    IntegrateurNewmark N(0.0);
-    IntegrateurEulerCromer EC(0.0);
+    IntegrateurNewmark N1(0.0);
+    IntegrateurEulerCromer EC1(0.0);
 
     double dt(0.1);
 
-    Toupie toupie1;
-    Toupie toupie2;
+    Bille bille1({0,0,0}, {10,0,10});
+    Bille bille2({0,0,0}, {10,0,10});
 
 
-    std::cout << "Test Euleur-Cromer : " << std::endl;
+    std::cout << "Test Euleur-Cromer bille: " << std::endl;
 
      do {
 
         std::cout << "######################" << std::endl;
-        std::cout << EC.getTemps() << std::endl;
-        std::cout << toupie1.getParam() << "      parametre" << std::endl;
-        std::cout << toupie1.getVitesse() << "     vitesse" << std::endl;
-        EC.integre(toupie1, dt);
-        EC.augmente_t(dt);
+        std::cout << EC1.getTemps() << std::endl;
+        std::cout << bille1.getParam() << "      parametre" << std::endl;
+        std::cout << bille1.getVitesse() << "     vitesse" << std::endl;
+        EC1.integre(bille1, dt);
+        EC1.augmente_t(dt);
 
-    } while ( EC.getTemps() <= 2 );
+    } while ( EC1.getTemps() <= 2 );
 
 
     std::cout << "########################" << std::endl;
 
-    std::cout << "Test Newmark : " << std::endl;
+    std::cout << "Test Newmark bille: " << std::endl;
 
      do {
 
         std::cout << "######################" << std::endl;
-        std::cout << N.getTemps() << std::endl;
-        std::cout << toupie2.getParam() << "      parametre" << std::endl;
-        std::cout << toupie2.getVitesse() << "     vitesse" << std::endl;
-        N.integre(toupie2, dt);
-        N.augmente_t(dt);
+        std::cout << N1.getTemps() << std::endl;
+        std::cout << bille2.getParam() << "      parametre" << std::endl;
+        std::cout << bille2.getVitesse() << "     vitesse" << std::endl;
+        N1.integre(bille2, dt);
+        N1.augmente_t(dt);
 
-    } while ( N.getTemps() <= 2 );
+    } while ( N1.getTemps() <= 2 );
+
+
+
+    IntegrateurNewmark N2(0.0);
+    IntegrateurEulerCromer EC2(0.0);
+
+    OH oh1({1,0,0}, {0,1,0});
+    OH oh2({1,0,0}, {0,1,0});
+
+
+    std::cout << "Test Euleur-Cromer OH : " << std::endl;
+
+     do {
+
+        std::cout << "######################" << std::endl;
+        std::cout << EC2.getTemps() << std::endl;
+        std::cout << bille1.getParam() << "      parametre" << std::endl;
+        std::cout << bille1.getVitesse() << "     vitesse" << std::endl;
+        EC2.integre(bille1, dt);
+        EC2.augmente_t(dt);
+
+    } while ( EC2.getTemps() <= 2 );
+
+
+    std::cout << "########################" << std::endl;
+
+    std::cout << "Test Newmark bille: " << std::endl;
+
+     do {
+
+        std::cout << "######################" << std::endl;
+        std::cout << N2.getTemps() << std::endl;
+        std::cout << bille2.getParam() << "      parametre" << std::endl;
+        std::cout << bille2.getVitesse() << "     vitesse" << std::endl;
+        N2.integre(bille2, dt);
+        N2.augmente_t(dt);
+
+    } while ( N2.getTemps() <= 2 );
+
+
+    std::cout << "######## FIN DES TESTS #########" << std::endl;
 
 
     return 0;
