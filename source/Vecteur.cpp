@@ -227,7 +227,7 @@ Vecteur Vecteur::prodVectoriel(Vecteur const& vecteur2) const{
 
     /*  /!\ Méthode prévue pour des vecteurs à 3 dimensions seulement /!\  */
 
-    Vecteur sortie({});
+    Vecteur sortie;
 
     if (m_coords.size() != 3 || vecteur2.m_coords.size() != 3){ // le produit vectoriel n'est défini que comme opération R^3 --> R^3
 
@@ -237,9 +237,9 @@ Vecteur Vecteur::prodVectoriel(Vecteur const& vecteur2) const{
 
     } else { // opérations du produit vectoriel
 
-        sortie.augmente(m_coords[2]*vecteur2.m_coords[3] - m_coords[3]*vecteur2.m_coords[2]);
-        sortie.augmente(m_coords[3]*vecteur2.m_coords[1] - m_coords[1]*vecteur2.m_coords[3]);
-        sortie.augmente(m_coords[1]*vecteur2.m_coords[2] - m_coords[2]*vecteur2.m_coords[1]);
+        sortie.setCoord(0, m_coords[1]*vecteur2.m_coords[2] - m_coords[2]*vecteur2.m_coords[1]);
+        sortie.setCoord(1, m_coords[2]*vecteur2.m_coords[0] - m_coords[0]*vecteur2.m_coords[2]);
+        sortie.setCoord(2, m_coords[0]*vecteur2.m_coords[1] - m_coords[1]*vecteur2.m_coords[0]);
 
         sortie.rationnalise();
 
@@ -261,7 +261,7 @@ void Vecteur::rationnalise() {
 
     for (auto& elt : m_coords){
 
-        if (elt <= PREC) {elt = 0;}
+        if ( abs(elt) <= PREC) {elt = 0;}
 
     }
 

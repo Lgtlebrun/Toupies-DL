@@ -1,5 +1,6 @@
-#include "Vecteur.h"
+#include "../headers/Vecteur.h"
 #include <iostream>
+#include "Vecteur.cpp"
 
 using namespace std;
 
@@ -12,11 +13,11 @@ int main(){
 
     resultat = v2 ^ v3;
 
-    resultat.affiche();
+    cout << resultat << endl;
 
     resultat = v4 ^ v2;
 
-    resultat.affiche();
+    cout << resultat << endl;
 
 
 return 0;
