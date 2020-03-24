@@ -310,7 +310,7 @@ const std::ostream& operator<<(std::ostream& flux, Matrice3 const& m1){
 int main(){
 
     Vecteur v1, resultat;
-    Vecteur v2({2,4,5}), v3({8,2,3});
+    Vecteur v2({1,9,8}), v3({2,3,4});
     Vecteur v4({2,1});
 
 

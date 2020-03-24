@@ -1,0 +1,2 @@
+Erreur produit vectoriel (1,2,3) ^ (2,3,4) . Attendu (2,2,-1).  Constaté (0.000000, 0.000000, 0.000000) 
+
