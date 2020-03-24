@@ -1,4 +1,4 @@
-#include "Integrateur.h"
+#include "../headers/Integrateur.h"
 #include "Toupie.cpp"
 
 
