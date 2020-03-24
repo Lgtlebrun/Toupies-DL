@@ -4,6 +4,8 @@
 #define TOUPIE_H
 
 #include "Vecteur.h"
+#include "Integrable.h"
+
 
 class Toupie : public Integrable
 {

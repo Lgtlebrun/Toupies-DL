@@ -6,12 +6,22 @@
 #include "Toupie.h"
 
 
+const double EPSILON (1e-4) ;
+
 
 class Integrateur{
 
     public :
 
+        Integrateur(double const& t0)
+            : m_t(t0)
+        {}
+
         virtual void integre(Integrable& integrable, double const& dt) const =0;
+
+        virtual void augmente_t(double const& dt);
+
+        virtual double getTemps() const ;
 
 
     protected :
@@ -26,7 +36,9 @@ class IntegrateurEulerCromer: public Integrateur
 
     public :
 
-        virtual void integre(Integrable& integrable, double const& dt) const;
+        IntegrateurEulerCromer(double const& t0);
+
+        void integre(Integrable& integrable, double const& dt) const;
 
 
 };
@@ -37,7 +49,9 @@ class IntegrateurNewmark: public Integrateur
 
     public :
 
-        virtual void integre(Integrable& integrable, double const& dt, double const& epsilon) const;
+        IntegrateurNewmark (double const& t0);
+
+        virtual void integre(Integrable& integrable, double const& dt) const;
 
 
 };
