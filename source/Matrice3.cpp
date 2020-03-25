@@ -2,7 +2,6 @@
 #include <iostream>
 #include <cmath>
 #include <vector>
-#include "Vecteur.cpp"
 
 
 
@@ -299,101 +298,6 @@ const std::ostream& operator<<(std::ostream& flux, Matrice3 const& m1){
 
     return flux;
 }
-
-
-
-
-//==============================================  TESTS  ==============================================
-
-// Test de la classe (flemme de faire le makefile de testVecteur.cpp)
-
-int main(){
-
-    Vecteur v1, resultat;
-    Vecteur v2({1,9,8}), v3({2,3,4});
-    Vecteur v4({2,1});
-
-
-    std::cout << v2 << " " << v3 << std::endl;
-
-    resultat = v2 ^ v3;
-
-    std::cout << resultat << std::endl;
-
-    resultat = v4 ^ v2;
-
-    std::cout << resultat << std::endl;
-
-    if (v2 == v3) {std::cout << "top" << std::endl;}
-    else {std::cout << "pas top" << std::endl;}
-
-    std::cout << v4 << std::endl;
-
-    v4 = 3*v4;
-    std::cout<< v4 << std::endl;
-
-    std::cout << "Test scalaire à droite : ";
-    v4 = v4*3;
-    std::cout << v4 << std::endl;
-
-    std::cout << ~v2 << std::endl;
-
-    v3*=2.0;
-
-    std::cout << v3 << std::endl;
-
-    std::cout << -v4 << std::endl;
-
-    std::cout << "addition de: ";
-
-    std::cout << v4 << " " << v2 << std::endl;
-
-    std::cout << (v4+v2) << std::endl;
-
-    std::cout << "soustraction: ";
-    std::cout << (v4-v2) <<std::endl;
-
-
-    // Test de rationnalise()
-
-
-    Vecteur v6({2.78, 4.3, 7.10928}), v7({2*1.39, 4.3, 7.});
-    v6 -= v7;
-
-    std::cout << v6 << std::endl;
-
-
-
-    std::cout << "Test matrices" << std::endl;
-
-
-
-    Matrice3 m1(34, 0, 5, 8, 6, 7, 21 , 8, 0);
-
-    Matrice3 m2;
-
-    std::cout << m1;
-
-
-    m2 = m1.inv();
-
-    std::cout << m1.det() << std::endl;
-
-    std::cout << m2;
-
-    std::cout<< m2.det() << std::endl;
-
-
-    Matrice3 m3;
-    m3 = m1 * m2;
-
-    std::cout << m3;
-
-return 0;
-}
-
-
-
 
 
 

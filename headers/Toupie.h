@@ -13,7 +13,7 @@ class Toupie : public Integrable
 
         Toupie(Vecteur const&, Vecteur const&);
 
-        virtual Vecteur equEvol(double const& temps) const;
+        virtual Vecteur equEvol(double const& temps) const = 0;
 
         virtual void calculeI(double const&, double const&, double const&) =0 ;
 

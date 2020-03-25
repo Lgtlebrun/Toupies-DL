@@ -1,6 +1,6 @@
 #include "../headers/Toupie.h"
-#include "Vecteur.cpp"
-#include "Integrable.cpp"
+#include "../headers/Vecteur.h"
+#include "../headers/Integrable.h"
 
 
 Toupie::Toupie (Vecteur const& param, Vecteur const& vit)
@@ -14,19 +14,15 @@ ConeSimple::ConeSimple(Vecteur const& param, Vecteur const& vit, double const& r
 {}
 
 
+
+
+
 // ============  classes pour les tests  ================================
 
 
 OH::OH(Vecteur const& param, Vecteur const& vit)
     : Integrable(param, vit)
 {}
-
-
-Vecteur OH::equEvol(double const& temps) const{
-
-    return -m_P;
-
-}
 
 
 Bille::Bille(Vecteur const& pos, Vecteur const& vit)
