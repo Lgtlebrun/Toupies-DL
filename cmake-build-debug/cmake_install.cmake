@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/lgtle/Desktop/C++/programmes/projet/Toupies-DL/Toupies-DL
+# Install script for directory: E:/C++/Tous pires/Toupies-DL/Toupies-DL
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/lgtle/Desktop/C++/programmes/projet/Toupies-DL/Toupies-DL/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "E:/C++/Tous pires/Toupies-DL/Toupies-DL/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

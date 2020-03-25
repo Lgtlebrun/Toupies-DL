@@ -24,49 +24,4 @@ class Toupie : public Integrable
 };
 
 
-class ConeSimple : public Toupie
-{
-    public :
-
-        ConeSimple(Vecteur const& param, Vecteur const& vit, double const& rayon, double const& hauteur, double const& masse);
-
-    protected :
-
-        double m_I1;
-        double m_I3;
-
-
-};
-
-
-
-
-// =====================  classes de test  ===========================
-
-
-class OH : public Integrable
-{
-    public :
-
-        OH(Vecteur const&, Vecteur const&);
-
-        virtual Vecteur equEvol(double const& temps) const;
-
-};
-
-
-class Bille : public Integrable
-{
-    public :
-
-        Bille(Vecteur const&, Vecteur const&);
-
-        virtual Vecteur equEvol(double const& temps) const;
-
-    protected :
-
-
-};
-
-
 #endif // TOUPIE_H

@@ -6,3 +6,95 @@
 
 #IncludeRegexTransform: 
 
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Integrable.h
+Vecteur.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Vecteur.h
+
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Integrateur.h
+Toupie.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Toupie.h
+
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Matrice3.h
+Vecteur.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Vecteur.h
+
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Tests/TestVecteur.h
+Unittest.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Tests/Unittest.h
+../Vecteur.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Vecteur.h
+
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Tests/Unittest.h
+string
+-
+
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Toupie.h
+Vecteur.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Vecteur.h
+Integrable.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Integrable.h
+
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Vecteur.h
+vector
+-
+string
+-
+iostream
+-
+initializer_list
+-
+
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Integrable.cpp
+../headers/Integrable.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Integrable.h
+../headers/Vecteur.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Vecteur.h
+
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Integrateur.cpp
+../headers/Integrateur.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Integrateur.h
+../headers/Toupie.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Toupie.h
+../headers/Integrable.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Integrable.h
+iostream
+-
+
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Matrice3.cpp
+../headers/Matrice3.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Matrice3.h
+iostream
+-
+cmath
+-
+vector
+-
+
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Tests/TestVecteur.cpp
+../../headers/Tests/TestVecteur.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Tests/TestVecteur.h
+../../headers/Tests/Unittest.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Tests/Unittest.h
+../../headers/Vecteur.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Vecteur.h
+iostream
+-
+fstream
+-
+string
+-
+
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Tests/Unittest.cpp
+../../headers/Tests/Unittest.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Tests/Unittest.h
+
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Vecteur.cpp
+../headers/Vecteur.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Vecteur.h
+vector
+-
+iostream
+-
+cmath
+-
+
