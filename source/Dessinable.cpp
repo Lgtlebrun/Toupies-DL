@@ -1,4 +1,10 @@
-//
-// Created by lgtle on 26/03/2020.
-//
+#include "../headers/Dessinable.h"
+
+
+Dessinable::Dessinable(SupportADessin *support) : m_support(support) {}
+
+Dessinable::~Dessinable() {
+
+    delete m_support;
+}
 

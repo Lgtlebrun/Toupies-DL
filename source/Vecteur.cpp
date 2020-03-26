@@ -231,7 +231,7 @@ Vecteur Vecteur::prodVectoriel(Vecteur const& vecteur2) const{
 
     if (m_coords.size() != 3 || vecteur2.m_coords.size() != 3){ // le produit vectoriel n'est défini que comme opération R^3 --> R^3
 
-        std::string alerte("ERREUR: dimensions incompatibles avec le produit scalaire");
+        std::string alerte("ERREUR: dimensions incompatibles avec le produit Vectoriel");
 
         throw alerte;
 
