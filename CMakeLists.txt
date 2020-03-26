@@ -29,25 +29,10 @@ set(TEST_FILES
         source/Vecteur.cpp)
 
 add_executable(Toupies_DL
-        headers/Bille.h
-        headers/Integrable.h
-        headers/Integrateur.h
-        headers/Matrice3.h
-        headers/Oscillateur.h
-        headers/Toupie.h
-        headers/Vecteur.h
-        headers/Dessinable.h
-        headers/SupportADessin.h
-        headers/ConeSimple.h
+
         ${FILES}
         main.cpp)
 
 add_executable(testAll
 
-        headers/Tests/Unittest.h
-        headers/Matrice3.h
-        headers/Vecteur.h
-        headers/Tests/TestVecteur.h
-        headers/Tests/TestMatrice.h
-        headers/Systeme.h
         ${TEST_FILES})
