@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/lgtle/Desktop/C++/programmes/projet/Toupies-DL/Toupies-DL/headers/Matrice3.h
+Vecteur.h
+C:/Users/lgtle/Desktop/C++/programmes/projet/Toupies-DL/Toupies-DL/headers/Vecteur.h
+string
+-
+
+C:/Users/lgtle/Desktop/C++/programmes/projet/Toupies-DL/Toupies-DL/headers/Vecteur.h
+vector
+-
+string
+-
+iostream
+-
+initializer_list
+-
+
+C:/Users/lgtle/Desktop/C++/programmes/projet/Toupies-DL/Toupies-DL/source/Matrice3.cpp
+../headers/Matrice3.h
+C:/Users/lgtle/Desktop/C++/programmes/projet/Toupies-DL/Toupies-DL/headers/Matrice3.h
+iostream
+-
+cmath
+-
+vector
+-
+

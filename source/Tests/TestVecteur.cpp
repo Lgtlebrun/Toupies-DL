@@ -136,7 +136,7 @@ bool TestVecteur::test_prodVect(){
     v1 = v2 ^ v3;
     if (v1 != Vecteur({2,2,-1})){
 
-        m_comment += ("Erreur produit vectoriel (1,2,3) ^ (2,3,4) . Attendu (2,2,-1).  Constaté (" + std::to_string(v1.getCoord(0)) + ", " + std::to_string(v1.getCoord(1)) + ", " + std::to_string(v1.getCoord(1)) + ") \n");
+        m_comment += ("Erreur produit vectoriel (1,2,3) ^ (2,3,4) . Attendu (2,2,-1).  Constaté (" + std::to_string(v1.getCoord(0)) + ", " + std::to_string(v1.getCoord(1)) + ", " + std::to_string(v1.getCoord(2)) + ") \n");
         succes = false;
     }
 
@@ -168,7 +168,6 @@ int main(){
 
 
     TestVecteur test1;
-
     test1.run();
 
     return 0;

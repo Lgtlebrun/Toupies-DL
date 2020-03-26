@@ -475,6 +475,11 @@ std::ostream& operator<<(std::ostream& sortie, Vecteur const& v){
 
 }
 
+std::string Vecteur::to_str() {
+
+    return ("[" + std::to_string(getCoord(0)) + ", " + std::to_string(getCoord(1)) + ", " + std::to_string(getCoord(2)) + "]");
+}
+
 
 
 

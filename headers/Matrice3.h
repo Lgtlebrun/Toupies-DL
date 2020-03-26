@@ -4,6 +4,7 @@
 #define MATRICE3_H
 
 #include "Vecteur.h"
+#include <string>
 
 
 
@@ -23,6 +24,8 @@ class Matrice3
 
 
         void setCoord(size_t ligne, size_t colonne, double valeur);
+
+        std::string to_str();
 
 
         Matrice3& operator+=(Matrice3 const& autre);            // Addition matricielle

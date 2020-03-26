@@ -46,7 +46,7 @@ class Vecteur{
 
         void rationnalise();                                                // M�thode arrondissant les petites coordonn�es � 0
 
-
+        std::string to_str();
     // ======================================= OPERATEURS INTERNES ===========================================
 
 

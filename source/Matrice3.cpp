@@ -243,11 +243,6 @@ Matrice3 Matrice3::inv() const {
 
 
 
-
-
-
-
-
 const Matrice3 operator*(double const& lambda, Matrice3 mat1){
 
     /// Multiplication par scalaire à gauche
@@ -284,7 +279,10 @@ const Matrice3 Matrice3::operator*(Matrice3 const& m2){
 
 }
 
+std::string Matrice3::to_str() {
 
+    return (m_coords[0].to_str() + "\n" + m_coords[1].to_str() + "\n" + m_coords[2].to_str());
+}
 
 
 const std::ostream& operator<<(std::ostream& flux, Matrice3 const& m1){
