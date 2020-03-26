@@ -133,11 +133,3 @@ bool TestMatrice::testDet() {
 }
 
 
-
-int main(){
-
-    TestMatrice test1;
-    test1.run();
-
-    return 0;
-}

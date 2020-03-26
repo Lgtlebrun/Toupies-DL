@@ -162,13 +162,3 @@ bool TestVecteur::test_prodScal(){
 }
 
 
-
-
-int main(){
-
-
-    TestVecteur test1;
-    test1.run();
-
-    return 0;
-}
