@@ -178,19 +178,16 @@ Matrice3 Matrice3::inv() const {
 
     double deter(det());
 
-    std::cout << deter << std::endl;
-
-
     if (abs(deter) < PREC && deter >= 0) { deter = PREC; }
 
     else if (abs(deter) < PREC && deter < 0) { deter = -PREC; }
 
 
-    Matrice3 cofacteurs;
+    Matrice3 cofacteurs(0,0,0,0,0,0,0,0,0);
 
     int t(0);
 
-    for(int k(0); k < 3; k++) {
+    for(int k(0); k < 3; ++k) {
 
         for (int t(0); t < 3 ; ++t) {
 

@@ -102,6 +102,9 @@
 		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Oscillateur.h">
 			<Option target="Toupies_DL"/>
 		</Unit>
+		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Tests/TestMatrice.h">
+			<Option target="Toupies_DL"/>
+		</Unit>
 		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Tests/TestVecteur.h">
 			<Option target="Toupies_DL"/>
 		</Unit>
@@ -130,6 +133,9 @@
 			<Option target="Toupies_DL"/>
 		</Unit>
 		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Oscillateur.cpp">
+			<Option target="Toupies_DL"/>
+		</Unit>
+		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Tests/TestMatrice.cpp">
 			<Option target="Toupies_DL"/>
 		</Unit>
 		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Tests/TestVecteur.cpp">

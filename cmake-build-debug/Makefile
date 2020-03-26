@@ -284,6 +284,33 @@ source/Oscillateur.cpp.s:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Oscillateur.cpp.s
 .PHONY : source/Oscillateur.cpp.s
 
+source/Tests/TestMatrice.obj: source/Tests/TestMatrice.cpp.obj
+
+.PHONY : source/Tests/TestMatrice.obj
+
+# target to build an object file
+source/Tests/TestMatrice.cpp.obj:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/TestMatrice.cpp.obj
+.PHONY : source/Tests/TestMatrice.cpp.obj
+
+source/Tests/TestMatrice.i: source/Tests/TestMatrice.cpp.i
+
+.PHONY : source/Tests/TestMatrice.i
+
+# target to preprocess a source file
+source/Tests/TestMatrice.cpp.i:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/TestMatrice.cpp.i
+.PHONY : source/Tests/TestMatrice.cpp.i
+
+source/Tests/TestMatrice.s: source/Tests/TestMatrice.cpp.s
+
+.PHONY : source/Tests/TestMatrice.s
+
+# target to generate assembly for a file
+source/Tests/TestMatrice.cpp.s:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/TestMatrice.cpp.s
+.PHONY : source/Tests/TestMatrice.cpp.s
+
 source/Tests/TestVecteur.obj: source/Tests/TestVecteur.cpp.obj
 
 .PHONY : source/Tests/TestVecteur.obj
@@ -419,6 +446,9 @@ help:
 	@echo ... source/Oscillateur.obj
 	@echo ... source/Oscillateur.i
 	@echo ... source/Oscillateur.s
+	@echo ... source/Tests/TestMatrice.obj
+	@echo ... source/Tests/TestMatrice.i
+	@echo ... source/Tests/TestMatrice.s
 	@echo ... source/Tests/TestVecteur.obj
 	@echo ... source/Tests/TestVecteur.i
 	@echo ... source/Tests/TestVecteur.s

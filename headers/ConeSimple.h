@@ -12,6 +12,8 @@ class ConeSimple : public Toupie
 {
 public :
 
+    virtual Vecteur equEvol(double const& temps) const = 0;
+
     ConeSimple(Vecteur const& param, Vecteur const& vit, double const& rayon, double const& hauteur, double const& masse);
 
 protected :

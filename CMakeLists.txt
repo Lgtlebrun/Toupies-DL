@@ -7,6 +7,7 @@ include_directories(headers)
 include_directories(headers/Tests)
 
 add_executable(Toupies_DL
+        headers/Tests/TestMatrice.h
         headers/Tests/TestVecteur.h
         headers/Tests/Unittest.h
         headers/Bille.h
@@ -17,6 +18,7 @@ add_executable(Toupies_DL
         headers/Oscillateur.h
         headers/Toupie.h
         headers/Vecteur.h
+        source/Tests/TestMatrice.cpp
         source/Tests/TestVecteur.cpp
         source/Tests/Unittest.cpp
         source/Bille.cpp

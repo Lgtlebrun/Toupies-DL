@@ -31,6 +31,12 @@ CMakeFiles/Toupies_DL.dir/source/Oscillateur.cpp.obj: ../headers/Oscillateur.h
 CMakeFiles/Toupies_DL.dir/source/Oscillateur.cpp.obj: ../headers/Vecteur.h
 CMakeFiles/Toupies_DL.dir/source/Oscillateur.cpp.obj: ../source/Oscillateur.cpp
 
+CMakeFiles/Toupies_DL.dir/source/Tests/TestMatrice.cpp.obj: ../headers/Matrice3.h
+CMakeFiles/Toupies_DL.dir/source/Tests/TestMatrice.cpp.obj: ../headers/Tests/TestMatrice.h
+CMakeFiles/Toupies_DL.dir/source/Tests/TestMatrice.cpp.obj: ../headers/Tests/Unittest.h
+CMakeFiles/Toupies_DL.dir/source/Tests/TestMatrice.cpp.obj: ../headers/Vecteur.h
+CMakeFiles/Toupies_DL.dir/source/Tests/TestMatrice.cpp.obj: ../source/Tests/TestMatrice.cpp
+
 CMakeFiles/Toupies_DL.dir/source/Tests/TestVecteur.cpp.obj: ../headers/Tests/TestVecteur.h
 CMakeFiles/Toupies_DL.dir/source/Tests/TestVecteur.cpp.obj: ../headers/Tests/Unittest.h
 CMakeFiles/Toupies_DL.dir/source/Tests/TestVecteur.cpp.obj: ../headers/Vecteur.h
