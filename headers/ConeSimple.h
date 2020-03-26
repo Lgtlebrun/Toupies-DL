@@ -12,14 +12,13 @@ class ConeSimple : public Toupie
 {
 public :
 
-    virtual Vecteur equEvol(double const& temps) const = 0;
-
-    ConeSimple(Vecteur const& param, Vecteur const& vit, double const& rayon, double const& hauteur, double const& masse);
+    ConeSimple(Vecteur const&, Vecteur const&, double const&, double const&, double const&);
 
 protected :
 
-    double m_I1;
-    double m_I3;
+    virtual double calculeIA1(double const&, double const&, double const&) const;
+
+    virtual double calculeI3(double const&, double const&) const;
 
 
 };
