@@ -8,6 +8,8 @@
 
 TestMatrice::TestMatrice() : Unittest() {}
 
+TestMatrice::~TestMatrice(){}
+
 
 
 bool TestMatrice::run() {
@@ -45,9 +47,9 @@ bool TestMatrice::run() {
     else{
 
         std::ofstream flux;
-        flux.open("Reports/TestMatrice_ErrReport.txt");
+        flux.open("TestMatrice_ErrReport.txt");
 
-        std::cout << "Echec du test." ;
+        std::cout << "Echec du test." << std::endl;
 
         if(flux){
 
@@ -55,6 +57,7 @@ bool TestMatrice::run() {
             std::cout << "Rapport d'erreur enregistré." << std::endl;
 
         }
+        else {std::cout << "Erreur : ErrReport n'a pas pu etre ecrit." << std::endl;}
     }
 
 
@@ -98,7 +101,7 @@ bool TestMatrice::testTranspo() {
 bool TestMatrice::testInv() {
 
     Matrice3 m1(1,2,3,4,5,6,7,8,10), attendu((-2./3.), (-4./3.), 1, (-2./3.), (11./3.), -2, 1, -2, 1);
-    m1 = m1.transp();
+    m1 = m1.inv();
 
     if(m1 != attendu){
 
@@ -116,7 +119,7 @@ bool TestMatrice::testDet() {
     Matrice3 m1(1,2,3,4,5,6,7,8,9), m2(1,2,3,4,5,6,7,8,10);
     double det1(m1.det()), det2(m2.det());
 
-    if(abs(det1) != PREC){
+    if(abs(det1) > PREC){
 
         m_comment += ("Erreur dans la méthode Det : Attendu : " + std::to_string(PREC) + "Observé : " + std::to_string(det1));
         return false;

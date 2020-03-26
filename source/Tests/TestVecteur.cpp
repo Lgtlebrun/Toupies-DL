@@ -57,7 +57,7 @@ bool TestVecteur::run(){
     else{
 
         std::ofstream flux;
-        flux.open("Reports/TestVecteur_ErrReport.txt");
+        flux.open("TestVecteur_ErrReport.txt");
 
         std::cout << "Echec du test." ;
 
@@ -67,6 +67,7 @@ bool TestVecteur::run(){
             std::cout << "Rapport d'erreur enregistré." << std::endl;
 
         }
+        else{ std::cout << "Erreur : ErrReport n'a pas pu etre ecrit." << std::endl;}
     }
 
 

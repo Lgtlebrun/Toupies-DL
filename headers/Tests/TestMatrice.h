@@ -15,6 +15,7 @@ class TestMatrice : public Unittest
         {
         public:
             TestMatrice();
+            virtual ~TestMatrice();
 
             virtual bool run();
 
