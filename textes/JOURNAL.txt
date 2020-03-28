@@ -65,7 +65,40 @@ Chapitre 4:    08.03.2020
   Pour reprendre la formule, il ne reste plus qu'à transposer la matrice pour avoir la matrice inverse. Donc il nous suffit de dire que
   Cof(A^T)[k][t]=Cof(A)[t][k] et de multiplier Cof(A^T) par 1/det(A).
 
-  
+
+Chapitre 5:    14/03/2020
+
+  C'est ainsi munis de la classe matrice que nous continuous, optimistes, le projet. Léornard développe la classe Toupie, tandis que David travaille sur
+  Integrateur.
+
+  Nous avons fait un choix crucial: nous décidons que l'intégrateur modifie la toupie, mais aussi que la toupie n'est pas le seul type d'objet modifiable
+  par un intégrateur. En effet, nous pourrions imaginer une bille, lancée dans les airs, une masse attachée par un ressort. Plus généralement, n'importe
+  quel objet (même purement mathématique) qui possède une équation différentielle régissant son évolution, que l'on essaierai d'approcher numériquement à
+  l'aide de méthodes de résolution numériques comme avec la méthode d'Euler-Cromer. Cette classe s'appelle "Integrable", dont héritent les toupies puisqu'
+  elles sont intégrables.
+
+  De plus, tout intégrateur est considéré comme une machine à résoudre des équations différentielles. On le met donc à un temps donné, et, en l'aidant à 
+  faire monter son temps, tout en le plaçant à une position initiale (t0, x(t0), x'(t0)) et, par x''(t)=f(t, x(t), x'(t)), nous avons les conditions 
+  initiales et la loi du mouvement des vecteurs paramètre et vitesse
+
+  L'intégrateur de Newmark a, de plus déjà été écrit par David.
+
+
+Chapitre 6:    28/03/2020
+
+  Pendnat la première semaine de confinement, où nous avons profité de notre avance pour ne pas être aussi investi dans le projet, Léonard a créé une classe
+  Unittest, permettant de faire des tests de chaque classe. Les tests créent des fichiers qui nous disent si les tests se sont bien passés comme prévu. Il a
+  préparé ceci pour Vecteur, Matrice3.
+
+  Nous avons d'ailleurs changé d'IDE : nous sommes passés de CodeBlocks à CLion, suite aux suggestions d'une amie commune.
+
+  Durant cette semaine, nous avons fait les exercices 8 et 9. Léonard ayant des bases beaucoup plus solides en pointeurs que ne les a David, le premier
+  a corrigé les erreurs exécrables de son ami.
+
+  De plus, nous avons préparé les classes de test des intégrateurs avec la bille jetée dans les airs et avec l'oscillateur harmonique. Ces tests se sont bien
+  montrés concluants. Nous pouvons désormais considérer l'intégrateur d'Euler-Cromer ainsi que la classe intégrable opérationnelle.
+
+  Il ne nous reste plus qu'à terminer la classe test de l'exercice 9 pour terminer la semaine.
 
 
 
