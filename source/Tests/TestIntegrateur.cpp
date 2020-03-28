@@ -60,11 +60,22 @@ bool TestIntegrateur::testBille() {
     Bille B(0,1,1,2);
     IntegrateurEulerCromer I(0);
 
+    std::ofstream file("StatsBille.txt");
+    std::string stats("0 1\n");
+
     double dt(0.01);
 
     for (size_t i(0); i < 68 ; i++){
 
         I.integre(B, dt);
+        stats += (std::to_string(B.getParam().getCoord(0)) + " " + std::to_string(B.getParam().getCoord(1)) + "\n");
+    }
+
+
+    //On inscrit les stats dans un fichier
+
+    if (file){
+        file << stats;
     }
 
     Vecteur attendu({0.68, 0.058574});
