@@ -5,8 +5,8 @@ Y = data(:,2);
 
 figure;
 plot(X,Y, "rx", "Markersize", 10)
-xlabel("Temps")
-ylabel("Paramètre")
+xlabel("Paramètre x")
+ylabel("Paramètre y")
 ;
 
 pause;
