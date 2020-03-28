@@ -5,6 +5,7 @@
 
 #include "Vecteur.h"
 #include "Integrable.h"
+#include "string"
 
 
 const Vecteur g({0,0,9.81}) ; // (x,y,z)
@@ -14,9 +15,13 @@ class Toupie : public Integrable
 {
     public:
 
-        Toupie(Vecteur const&, Vecteur const&, double const&, double const&, double const&, double const&);
+        Toupie(Vecteur const&, Vecteur const&, double const&, double const&, double const&, double const&, double const&);
 
         virtual Vecteur equEvol(double const& temps) const override;
+
+        virtual std::string typeToupie() const = 0 ;
+
+        virtual void statsToupie(std::ostream& sortie) const;
 
 
     protected:
@@ -24,6 +29,7 @@ class Toupie : public Integrable
     double m_IA1;
     double m_I3;
     double m_masse;
+    double m_masseVolumique;
     double m_d;
 
     virtual double calculeIA1() const;

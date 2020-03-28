@@ -7,6 +7,8 @@
 #define TOUPIES_DL_SUPPORTADESSIN_H
 
 #include "ConeSimple.h"
+#include "Bille.h"
+#include "Oscillateur.h"
 
 
 class Systeme;
@@ -20,6 +22,9 @@ public:
 
     virtual void dessine(ConeSimple const&) = 0;
     virtual void dessine(Systeme const&) = 0;
+    virtual void dessine(Toupie const&) = 0;
+    virtual void dessine(Oscillateur const&) = 0;
+    virtual void dessine(Bille const&) = 0;
     // ... autres choses que vous voudriez dessiner...
 
 

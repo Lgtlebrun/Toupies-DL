@@ -7,25 +7,41 @@
 #include "SupportADessin.h"
 #include <vector>
 #include "Dessinable.h"
+#include <iostream>
+#include "Integrateur.h"
 
 class Systeme : public Dessinable {
 
 public:
 
-    Systeme(SupportADessin *support);
+    Systeme(SupportADessin *support, IntegrateurNewmark*);
+    Systeme(SupportADessin *support, IntegrateurEulerCromer*);
+    Systeme(SupportADessin *support, IntegrateurRK4*);
+
+    /// Nous n'avons pas envie que quelqu'un, un jour utilise un intégrateur de base
+    /// puisqu'il ne fait pas de sens, étant une classe abstraite
 
     virtual ~Systeme();
 
     virtual void dessine() override;
 
+    void affiche(std::ostream& sortie);
+
+    Toupie * getToupie(const int&, bool&) const;
+
+    void evolue(double const&) ;
+
 protected:
 
     std::vector<Toupie*> m_toupies;
+
+    Integrateur* m_integrateur;
 
 
 };
 
 
+    std::ostream& operator<<(std::ostream& sortie, Systeme& s);
 
 
 
