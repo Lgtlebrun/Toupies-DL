@@ -1,8 +1,8 @@
 #include "../headers/TextViewer.h"
 #include <iostream>
+#include <fstream>
 
-
-void TextViewer::dessine(Systeme const & S) {
+void TextViewer::dessine(Systeme const& S, std::ostream& flux) {
 
     /// Affiche textuellement chaque paramètre et vitesse de chaque toupie
 
@@ -10,37 +10,16 @@ void TextViewer::dessine(Systeme const & S) {
 
     for (size_t k(0); k < taille; k++){
 
-        std::cout << "Toupie " << k+1 << " :  ";
-        dessine(*S.getToupie(k));
+        flux << "Toupie " << k+1 << " :  ";
+        dessine(*S.getToupie(k), flux);
     }
 
 }
 
 
-void TextViewer::dessine(Toupie const& T){
-
-    std::cout << "Parametre : " << T.getParam() << "  ;  Vitesse : " << T.getVitesse() << std::endl;
-
-}
 
 
-void TextViewer::dessine(const ConeSimple & C) {
+void TextViewer::dessine(Integrable const& integrable, std::ostream& flux){
 
-    /// Affiche textuellement l'état de paramètre et de la vitesse
-
-    dessine(C);
-
-
-}
-
-void TextViewer::dessine(const Oscillateur & O){
-
-    dessine(O);
-
-}
-
-void TextViewer::dessine(const Bille & B){
-
-    dessine(B);
-
+    flux << "Parametre : " << integrable.getParam() << "  ;  Vitesse : " << integrable.getVitesse() << std::endl;
 }

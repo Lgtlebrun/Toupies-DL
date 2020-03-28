@@ -1,7 +1,6 @@
 #include "../../headers/Tests/TestIntegrateur.h"
 #include <fstream>
 #include <iostream>
-#include <iomanip>
 #include <climits>
 
 
@@ -92,6 +91,11 @@ bool TestIntegrateur::testBille() {
 bool TestIntegrateur::testOH() {
 
     Oscillateur OH(Vecteur({1}), Vecteur({0}));
+
+    std::ofstream file("StatsOH.txt");
+
+    std::string stats("0 1\n");
+
     IntegrateurEulerCromer I(0);
     double dt(0.01);
 
@@ -105,7 +109,17 @@ bool TestIntegrateur::testOH() {
         double newErr_rel(fabs((cos(I.getTemps()) - OH.getParam().getCoord(0))/cos(I.getTemps())));
 
         if(newErr_rel > err_rel) {err_rel = newErr_rel;}
+
+        stats += (std::to_string(I.getTemps()) + " " + std::to_string(OH.getParam().getCoord(0)) + "\n");
+
     }
+    // On écrit les stats dans un fichier pour les plotter
+
+    if (file){
+        file << stats;
+    }
+
+    // Etude de l'erreur relative observée par rapport à la fonction cos(t)
 
     double precision(0.005);
     if (err_rel > precision){

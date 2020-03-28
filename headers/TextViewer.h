@@ -16,14 +16,9 @@ public :
 
     virtual ~TextViewer() {}
 
-    virtual void dessine(Systeme const&) ;
+    virtual void dessine(Systeme const&, std::ostream&) ;
 
-    virtual void dessine(Toupie const&) ;
-
-    virtual void dessine(ConeSimple const&) ;
-    virtual void dessine(Oscillateur const&) ;
-    virtual void dessine(Bille const&) ;
-
+    virtual void dessine(Integrable const&, std::ostream&);
 
 };
 
