@@ -82,8 +82,10 @@ void Systeme::evolue(double const& dt) {
     for (auto& elt: m_toupies){
 
         m_integrateur->integre(*elt , dt);
-        m_integrateur->augmente_t(dt);
+
     }
+
+    m_integrateur->augmente_t(dt);
 
 }
 
