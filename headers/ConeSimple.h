@@ -9,6 +9,7 @@
 
 
 class ConeSimple : public Toupie
+
 {
 public :
 

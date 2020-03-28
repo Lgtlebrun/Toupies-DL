@@ -25,7 +25,7 @@ class Matrice3
 
         void setCoord(size_t ligne, size_t colonne, double valeur);
 
-        std::string to_str();
+        std::string to_str() const;
 
 
         Matrice3& operator+=(Matrice3 const& autre);            // Addition matricielle

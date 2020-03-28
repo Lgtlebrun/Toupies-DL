@@ -9,26 +9,34 @@ include_directories(headers)
 include_directories(source)
 
 set(FILES
+        source/constantes.cpp
         source/Integrable.cpp
         source/Integrateur.cpp
         source/Matrice3.cpp
-        source/Oscillateur.cpp
+        source/Tests/Oscillateur.cpp
         source/Toupie.cpp
         source/Vecteur.cpp
         source/Systeme.cpp
-        source/Bille.cpp
+        source/Tests/Bille.cpp
         source/Dessinable.cpp
         source/ConeSimple.cpp
-        source/TextViewer.cpp)
+        source/TextViewer.cpp source/constantes.cpp)
 
 
 set(TEST_FILES
+        source/constantes.cpp
         source/Tests/TestMatrice.cpp
         source/Tests/Unittest.cpp
         source/Matrice3.cpp
         source/Tests/testAll.cpp
         source/Tests/TestVecteur.cpp
-        source/Vecteur.cpp)
+        source/Vecteur.cpp headers/Tests/TestIntegrateur.h
+        source/Tests/TestIntegrateur.cpp
+        source/Integrable.cpp
+        source/Integrateur.cpp
+        source/Tests/Bille.cpp
+        source/Tests/Oscillateur.cpp
+        )
 
 add_executable(Toupies_DL
 

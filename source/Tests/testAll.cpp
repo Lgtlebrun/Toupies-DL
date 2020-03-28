@@ -1,17 +1,23 @@
+#include <vector>
+#include "Tests/TestIntegrateur.h"
 #include "../../headers/Tests/TestVecteur.h"
 #include "../../headers/Tests/TestMatrice.h"
 
+
 int main() {
 
-    TestVecteur test1;
-    TestMatrice test2;
+    std::vector<Unittest*> Tests;
 
-
+    Tests.push_back(new TestVecteur);
+    Tests.push_back(new TestMatrice);
+    Tests.push_back(new TestIntegrateur);
 
     std::cout << "Début du test." << std::endl;
 
-    test1.run();
-    test2.run();
+  for (auto& ptr:Tests){
+      ptr->run();
+      delete ptr;
+  }
 
     return 0;
 }

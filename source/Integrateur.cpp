@@ -1,7 +1,5 @@
 #include "../headers/Integrateur.h"
-#include "../headers/Toupie.h"
-#include "../headers/Integrable.h"
-#include <iostream>
+
 
 
 

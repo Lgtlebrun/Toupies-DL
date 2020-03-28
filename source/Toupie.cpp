@@ -6,18 +6,6 @@ Toupie::Toupie (Vecteur const& param, Vecteur const& vit, double const& IA1, dou
     : Integrable(param, vit), m_IA1(IA1), m_I3(I3), m_masse(masse), m_d(d), m_masseVolumique(masseVolumique)
 {}
 
-double Toupie::calculeIA1() const{
-
-    return 1.0;
-
-}
-
-double Toupie::calculeI3() const{
-
-    return 3.0;
-
-}
-
 
 Vecteur Toupie::equEvol(double const& temps) const {
 

@@ -2,6 +2,7 @@
 #define UNITTEST_H
 
 #include <string>
+#include <iostream>
 
 
 class Unittest

@@ -6,8 +6,8 @@
 #include "SupportADessin.h"
 #include "Systeme.h"
 #include "ConeSimple.h"
-#include "Oscillateur.h"
-#include "Bille.h"
+#include "Tests/Oscillateur.h"
+#include "Tests/Bille.h"
 
 
 class TextViewer : public SupportADessin

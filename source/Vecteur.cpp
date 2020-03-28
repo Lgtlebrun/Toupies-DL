@@ -446,23 +446,9 @@ std::ostream& operator<<(std::ostream& sortie, Vecteur const& v){
 
     unsigned int taille(v.getDim());
 
-    sortie << "[";
+    sortie << v.to_str();
 
-    if(taille != 0) {
-
-        sortie << v.getCoord(0);
-
-        for (size_t i(1); i < taille; i++){
-
-            sortie << ", " << v.getCoord(i);
-
-        }
-
-    }
-
-    sortie << "]";
     return sortie;
-
 }
 
 
@@ -475,9 +461,16 @@ std::ostream& operator<<(std::ostream& sortie, Vecteur const& v){
 
 }
 
-std::string Vecteur::to_str() {
+std::string Vecteur::to_str() const{
 
-    return ("[" + std::to_string(getCoord(0)) + ", " + std::to_string(getCoord(1)) + ", " + std::to_string(getCoord(2)) + "]");
+    std::string str("[");
+    for(auto const& elt : m_coords){
+        str += std::to_string(elt);
+    }
+
+    str += "]";
+
+    return str;
 }
 
 

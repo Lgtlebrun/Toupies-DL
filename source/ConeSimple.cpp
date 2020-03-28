@@ -7,11 +7,13 @@ ConeSimple::ConeSimple(Vecteur const& param, Vecteur const& vit, double const& r
                 masse(rayon, hauteur, masseVolumique), 3.0/4.0*hauteur, masseVolumique), m_rayon(rayon), m_hauteur(hauteur)
 {}
 
+
 double ConeSimple::calculeIA1(double const& rayon, double const& hauteur, double const& masseVolumique) const {
 
     return M_PI*rayon*rayon*hauteur*masseVolumique/20*( rayon*rayon+3.0/5*hauteur*hauteur );
 
 }
+
 
 double ConeSimple::calculeI3(double const& rayon, double const& hauteur, double const& masseVolumique) const {
 

@@ -8,11 +8,11 @@
 #include <string>
 #include <iostream>
 #include <initializer_list>
-
+#include "constantes.h"
 
 // VARIABLE GLOBALE
 
-double const PREC(1e-14);
+
 
 
 
@@ -46,7 +46,7 @@ class Vecteur{
 
         void rationnalise();                                                // M�thode arrondissant les petites coordonn�es � 0
 
-        std::string to_str();
+        std::string to_str() const;
     // ======================================= OPERATEURS INTERNES ===========================================
 
 

@@ -1,4 +1,4 @@
-#include "../headers/Oscillateur.h"
+#include "Tests/Oscillateur.h"
 
 Oscillateur::Oscillateur(Vecteur const & param, Vecteur const & vit)
         : Integrable(param, vit)

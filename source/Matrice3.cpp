@@ -276,7 +276,7 @@ const Matrice3 Matrice3::operator*(Matrice3 const& m2){
 
 }
 
-std::string Matrice3::to_str() {
+std::string Matrice3::to_str() const{
 
     return (m_coords[0].to_str() + "\n" + m_coords[1].to_str() + "\n" + m_coords[2].to_str());
 }
@@ -286,10 +286,7 @@ const std::ostream& operator<<(std::ostream& flux, Matrice3 const& m1){
 
     flux << std::endl;
 
-    for (size_t i(0); i < 3; i++){
-
-        flux << m1.getLigne(i) << std::endl;            // on utilise notre opérateur d'affichage de vecteurs pour
-    }                                                   // les matrices
+    flux << m1.to_str() << std::endl;
 
     return flux;
 }

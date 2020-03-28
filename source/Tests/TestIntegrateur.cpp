@@ -1,0 +1,123 @@
+#include "../../headers/Tests/TestIntegrateur.h"
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <climits>
+
+
+TestIntegrateur::TestIntegrateur() : Unittest() {}
+
+bool TestIntegrateur::run() {
+// Tests
+
+    try {
+
+        m_success = (testBille() && testOH());
+
+    }
+
+// Gestion des exceptions système
+
+    catch (std::exception const &e) {
+
+        std::string alerte("Erreur systeme dans la classe Integrateur : ");
+        alerte += e.what();
+        alerte += " \n";
+        m_comment += (alerte);
+        m_success = false;
+    }
+
+
+// Affichage
+
+
+    std::cout << "Test de la classe Integrateur" << std::endl;
+
+    if (m_success) {
+
+        std::cout << "Le test s'est correctement déroulé. Classe opérationnelle." << std::endl;
+    } else {
+
+        std::ofstream flux;
+        flux.open("TestIntegrateur_ErrReport.txt");
+
+        std::cout << "Echec du test." << std::endl;
+
+        if (flux) {
+
+            flux << m_comment << std::endl;
+            std::cout << "Rapport d'erreur enregistré." << std::endl;
+
+        } else { std::cout << "Erreur : ErrReport n'a pas pu etre ecrit." << std::endl; }
+    }
+
+    return m_success;
+}
+
+
+
+bool TestIntegrateur::testBille() {
+
+    Bille B(0,1,1,2);
+    IntegrateurEulerCromer I(0);
+
+    double dt(0.01);
+
+    for (size_t i(0); i < 68 ; i++){
+
+        I.integre(B, dt);
+    }
+
+    Vecteur attendu({0.68, 0.058574});
+
+    if (B.getParam() != attendu) {      // Opérateur surchargé : PREC = 1e-14
+
+        m_comment += "Erreur dans la classe IntegrateurEulerCromer : Attendu :";
+        m_comment += attendu.to_str();
+        m_comment += "Constaté : ";
+        m_comment += B.getParam().to_str();
+        m_comment += "\n";
+        return false;
+    }
+
+    return true;
+}
+
+
+
+
+
+
+
+bool TestIntegrateur::testOH() {
+
+    Oscillateur OH(Vecteur({1}), Vecteur({0}));
+    IntegrateurEulerCromer I(0);
+    double dt(0.01);
+
+    double err_rel(0);
+
+    for(size_t i(0); i < 68; i++){
+
+        I.integre(OH, dt);
+        I.augmente_t(dt);
+
+        double newErr_rel(fabs((cos(I.getTemps()) - OH.getParam().getCoord(0))/cos(I.getTemps())));
+
+        if(newErr_rel > err_rel) {err_rel = newErr_rel;}
+    }
+
+    double precision(0.005);
+    if (err_rel > precision){
+        m_comment += "Erreur dans le test d'IntegrateurEC sur l'OH : Erreur relative tolérée :";
+        m_comment +=  std::to_string(precision) + "Observé : ";
+        m_comment += std::to_string(err_rel);
+        m_comment += "\n";
+
+        return false;
+    }
+
+    return true;
+}
+
+

@@ -6,9 +6,9 @@
 #include "Vecteur.h"
 #include "Integrable.h"
 #include "string"
+#include "constantes.h"
 
 
-const Vecteur g({0,0,9.81}) ; // (x,y,z)
 
 
 class Toupie : public Integrable
@@ -32,9 +32,9 @@ class Toupie : public Integrable
     double m_masseVolumique;
     double m_d;
 
-    virtual double calculeIA1() const;
+    virtual double calculeIA1() const = 0;
 
-    virtual double calculeI3() const;
+    virtual double calculeI3() const = 0;
 
 };
 

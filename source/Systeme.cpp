@@ -1,17 +1,11 @@
 #include "../headers/Systeme.h"
 
 
-Systeme::Systeme(SupportADessin *support, IntegrateurNewmark* I)
+Systeme::Systeme(SupportADessin *support, Integrateur* I)
     : Dessinable(support), m_integrateur(I)
 {}
 
-Systeme::Systeme(SupportADessin *support, IntegrateurEulerCromer* I)
-        : Dessinable(support), m_integrateur(I)
-{}
 
-Systeme::Systeme(SupportADessin *support, IntegrateurRK4* I)
-        : Dessinable(support), m_integrateur(I)
-{}
 
 Systeme::~Systeme()
 {
@@ -20,7 +14,11 @@ Systeme::~Systeme()
         // Gestion de la collection de pointeurs
         delete elt;
     }
+
+    delete m_integrateur;
 }
+
+
 
 
 void Systeme::dessine() {
@@ -28,26 +26,19 @@ void Systeme::dessine() {
     m_support->dessine(*this);
 }
 
-Toupie * Systeme::getToupie(const int& k, bool& ilEnReste) const {
+Toupie * Systeme::getToupie(size_t k) const {
 
-    if (k < m_toupies.size()) {
+    /// Renvoie un pointeur sur la toupie en indice. En cas d'indice trop grand, renvoie nullptr
 
-        if (k+1 == m_toupies.size()){
-
-            ilEnReste = false;
-            return m_toupies[k];
-
-        }
-
-        ilEnReste = true;
-        return m_toupies[k];
-
+    if (k >= m_toupies.size()){
+        return nullptr;
     }
 
-    ilEnReste = false;
-    return m_toupies[0];
-
+    return m_toupies[k];
 }
+
+
+
 
 
 std::ostream& operator<<(std::ostream& sortie, Systeme& s){
@@ -57,6 +48,9 @@ std::ostream& operator<<(std::ostream& sortie, Systeme& s){
     return sortie ;
 
 }
+
+
+
 
 
 void Systeme::affiche(std::ostream& sortie) {
@@ -80,13 +74,20 @@ void Systeme::affiche(std::ostream& sortie) {
 }
 
 
+
+
+
 void Systeme::evolue(double const& dt) {
 
     for (auto& elt: m_toupies){
 
         m_integrateur->integre(*elt , dt);
         m_integrateur->augmente_t(dt);
-
     }
 
+}
+
+unsigned int Systeme::getNbToupies() const {
+
+    return m_toupies.size();
 }

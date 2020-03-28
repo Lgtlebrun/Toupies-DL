@@ -4,18 +4,16 @@
 #define TOUPIES_DL_BILLE_H
 
 #include "Integrable.h"
+#include "../constantes.h"
 
 
 class Bille : public Integrable
 {
 public :
 
-    Bille(Vecteur const&, Vecteur const&);
+    Bille(double, double, double, double);
 
     virtual Vecteur equEvol(double const& temps) const;
-
-protected :
-
 
 };
 

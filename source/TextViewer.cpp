@@ -6,15 +6,12 @@ void TextViewer::dessine(Systeme const & S) {
 
     /// Affiche textuellement chaque paramètre et vitesse de chaque toupie
 
-    int k(0);
-    bool ilEnReste(true);
-    while (ilEnReste){
+    unsigned int taille(S.getNbToupies());
+
+    for (size_t k(0); k < taille; k++){
 
         std::cout << "Toupie " << k+1 << " :  ";
-        dessine(*S.getToupie(k,ilEnReste));
-
-        ++k;
-
+        dessine(*S.getToupie(k));
     }
 
 }

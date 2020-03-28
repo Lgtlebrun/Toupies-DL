@@ -4,9 +4,9 @@
 #define INTEGRATEUR_H
 
 #include "Toupie.h"
+#include "constantes.h"
 
 
-const double EPSILON (1e-4) ;
 
 
 class Integrateur{

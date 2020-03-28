@@ -14,9 +14,7 @@ class Systeme : public Dessinable {
 
 public:
 
-    Systeme(SupportADessin *support, IntegrateurNewmark*);
-    Systeme(SupportADessin *support, IntegrateurEulerCromer*);
-    Systeme(SupportADessin *support, IntegrateurRK4*);
+    Systeme(SupportADessin *support, Integrateur*);
 
     /// Nous n'avons pas envie que quelqu'un, un jour utilise un intégrateur de base
     /// puisqu'il ne fait pas de sens, étant une classe abstraite
@@ -27,7 +25,9 @@ public:
 
     void affiche(std::ostream& sortie);
 
-    Toupie * getToupie(const int&, bool&) const;
+    Toupie * getToupie(size_t k) const;
+
+    unsigned int getNbToupies() const;
 
     void evolue(double const&) ;
 

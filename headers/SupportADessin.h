@@ -7,8 +7,8 @@
 #define TOUPIES_DL_SUPPORTADESSIN_H
 
 #include "ConeSimple.h"
-#include "Bille.h"
-#include "Oscillateur.h"
+#include "Tests/Bille.h"
+#include "Tests/Oscillateur.h"
 
 
 class Systeme;
