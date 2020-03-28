@@ -17,7 +17,9 @@ set(FILES
         source/Vecteur.cpp
         source/Systeme.cpp
         source/Bille.cpp
-        source/Dessinable.cpp)
+        source/Dessinable.cpp
+        source/ConeSimple.cpp
+        source/TextViewer.cpp)
 
 
 set(TEST_FILES
