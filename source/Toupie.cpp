@@ -2,8 +2,8 @@
 #include <cmath>
 
 
-Toupie::Toupie (Vecteur const& param, Vecteur const& vit, double const& IA1, double const& I3, double const & masse, double const& d)
-    : Integrable(param, vit), m_IA1(IA1), m_I3(I3), m_masse(masse), m_d(d)
+Toupie::Toupie (Vecteur const& param, Vecteur const& vit, double const& IA1, double const& I3, double const& masseVolumique, double const & masse, double const& d)
+    : Integrable(param, vit), m_IA1(IA1), m_I3(I3), m_masse(masse), m_d(d), m_masseVolumique(masseVolumique)
 {}
 
 double Toupie::calculeIA1() const{
@@ -54,3 +54,11 @@ Vecteur Toupie::equEvol(double const& temps) const {
 
 }
 
+
+void Toupie::statsToupie(std::ostream& sortie) const{
+
+    sortie << "masse [kg]               :  " << m_masse << std::endl;
+    sortie << "masse volumique [kg m-3] :  " << m_masseVolumique << std::endl;
+    sortie << "distance [m]             :  " << m_d << std::endl;
+
+}
