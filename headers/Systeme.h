@@ -31,6 +31,7 @@ public:
 
     void evolue(double const&) ;
 
+    void addIntegrable(Integrable*);
 
     Systeme& operator=(Systeme const& S);
 

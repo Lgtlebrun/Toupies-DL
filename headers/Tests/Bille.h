@@ -16,6 +16,10 @@ public :
 
     virtual Vecteur equEvol(double const& temps) const;
 
+protected :
+
+    std::string m_type = "Bille";
+
 };
 
 #endif //TOUPIES_DL_BILLE_H
