@@ -26,6 +26,8 @@ Systeme& Systeme::operator=(Systeme const& S) {
 
     if (this != &S){
 
+        Dessinable::operator=(S);
+
         for (auto& elt : m_toupies){
            delete elt;
     }
@@ -38,8 +40,7 @@ Systeme& Systeme::operator=(Systeme const& S) {
         delete m_integrateur;
         m_integrateur = S.m_integrateur->clone();
 
-        delete m_support;
-        m_support = S.m_support->clone();
+
     }
 
 

@@ -15,8 +15,10 @@ Dessinable::Dessinable(Dessinable const & autre) {
 
 Dessinable& Dessinable::operator=(Dessinable const & autre) {
 
-    m_support = autre.m_support->clone();
-
+    if (this != &autre) {
+        delete m_support;
+        m_support = autre.m_support->clone();
+    }
     return *this;
 }
 
