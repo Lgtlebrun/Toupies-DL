@@ -20,7 +20,7 @@ void TextViewer::dessine(Systeme const& S) {
     for (size_t k(0); k < taille; k++){
 
         m_flux << "Toupie " << k+1 << " :  ";
-        dessine(*S.getToupie(k));
+        dessine(*S.getCorps(k));
         m_flux << std::endl;
     }
 

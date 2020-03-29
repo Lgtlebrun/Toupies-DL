@@ -2,8 +2,8 @@
 #include "../headers/Vecteur.h"
 
 
-Integrable::Integrable(Vecteur const& param, Vecteur const& vit)
-    : m_P(param), m_Ppoint(vit)
+Integrable::Integrable(std::string const& type, Vecteur const& param, Vecteur const& vit)
+    : m_P(param), m_Ppoint(vit), m_type(type)
 {}
 
 Integrable::~Integrable()

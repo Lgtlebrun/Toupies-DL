@@ -95,8 +95,8 @@ bool TestTextViewer::TestSysteme_B_OH() {
         Ic.augmente_t(dt);
 
 
-        double EcartBille(norme(S.getToupie(0)->getParam()-*Bc.getParam()));
-        double EcartOH(norme(S.getToupie(1)->getParam()-*OHc.getParam()));
+        double EcartBille(norme(S.getCorps(0)->getParam() - *Bc.getParam()));
+        double EcartOH(norme(S.getCorps(1)->getParam() - *OHc.getParam()));
 
 
         if (EcartBille >= PREC){
@@ -108,7 +108,7 @@ bool TestTextViewer::TestSysteme_B_OH() {
             m_comment += "Valeur observee : ";
 
             std::stringstream stream;
-            stream << std::fixed << std::setprecision(log10(PREC)) << S.getToupie(0)->getParam();
+            stream << std::fixed << std::setprecision(log10(PREC)) << S.getCorps(0)->getParam();
             std::string BilleObs = stream.str();
 
             m_comment += BilleObs ;
@@ -134,7 +134,7 @@ bool TestTextViewer::TestSysteme_B_OH() {
             m_comment += "Valeur observee : ";
 
             std::stringstream stream;
-            stream << std::fixed << std::setprecision(log10(PREC)) << S.getToupie(1)->getParam();
+            stream << std::fixed << std::setprecision(log10(PREC)) << S.getCorps(1)->getParam();
             std::string OHObs = stream.str();
 
             m_comment += OHObs ;
@@ -188,7 +188,7 @@ bool TestTextViewer::TestSysteme_Conique() {
 
     Vecteur attendu({0.0265555, 0.598869, 5.0944});
 
-    if (S.getToupie(0)->getParam() == attendu) {
+    if (S.getCorps(0)->getParam() == attendu) {
 
         return true;
 
@@ -196,7 +196,7 @@ bool TestTextViewer::TestSysteme_Conique() {
 
         m_comment += "Erreur dans la classe ConeSimple : \n";
         m_comment += "Valeur calculee : ";
-        m_comment += S.getToupie(0)->getParam().to_str();
+        m_comment += S.getCorps(0)->getParam().to_str();
         m_comment += "\n";
         m_comment += "Valeur theorique : ";
         m_comment += attendu.to_str();

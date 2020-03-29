@@ -23,7 +23,7 @@ public:
 
 
 
-    Toupie * getToupie(size_t k) const;
+    Integrable* getCorps(size_t k) const;
 
     double getTemps() const;
 
@@ -36,7 +36,7 @@ public:
 
 protected:
 
-    std::vector<Integrable*> m_toupies;
+    std::vector<Integrable*> m_corps;
 
     Integrateur* m_integrateur;
 

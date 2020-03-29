@@ -12,6 +12,7 @@ class Bille : public Integrable
 public :
 
     Bille(double, double, double, double);
+    virtual Bille* clone() const;
 
     virtual Vecteur equEvol(double const& temps) const;
 

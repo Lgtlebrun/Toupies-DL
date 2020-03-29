@@ -2,8 +2,8 @@
 #include <cmath>
 
 
-Toupie::Toupie (Vecteur const& param, Vecteur const& vit, double const& IA1, double const& I3, double const& masseVolumique, double const & masse, double const& d)
-    : Integrable(param, vit), m_IA1(IA1), m_I3(I3), m_masse(masse), m_d(d), m_masseVolumique(masseVolumique)
+Toupie::Toupie (std::string const& type, Vecteur const& param, Vecteur const& vit, double const& IA1, double const& I3, double const& masseVolumique, double const & masse, double const& d)
+    : Integrable(type, param, vit), m_IA1(IA1), m_I3(I3), m_masse(masse), m_d(d), m_masseVolumique(masseVolumique)
 {}
 
 

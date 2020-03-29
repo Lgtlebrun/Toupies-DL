@@ -9,12 +9,13 @@ class Integrable
 {
     public:
 
-        Integrable(Vecteur const&, Vecteur const&);
+        Integrable(std::string const&, Vecteur const&, Vecteur const&);
 
         virtual ~Integrable();
 
 
         virtual Vecteur equEvol(double const& temps) const = 0;
+        virtual Integrable* clone() const = 0;
 
 
         Vecteur getParam() const;
@@ -31,6 +32,8 @@ class Integrable
 
         Vecteur m_P;                // P est le vecteur paramètres
         Vecteur m_Ppoint;           // Ppoint est le vecteur dérivée temporelle de P
+
+        std::string m_type = "Corps solide";
 
 };
 

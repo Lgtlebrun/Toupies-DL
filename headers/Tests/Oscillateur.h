@@ -12,6 +12,7 @@ public :
 
     Oscillateur(Vecteur const&, Vecteur const&);
 
+    virtual Oscillateur* clone() const;
     virtual Vecteur equEvol(double const& temps) const;
 
 };

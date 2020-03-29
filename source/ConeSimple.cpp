@@ -3,11 +3,9 @@
 
 
 ConeSimple::ConeSimple(Vecteur const& param, Vecteur const& vit, double const& rayon, double const& hauteur, double const& masseVolumique)
-        : Toupie(param, vit, calculeIA1(rayon, hauteur, masseVolumique), calculeI3(rayon, hauteur, masseVolumique),
+        : Toupie("Cone simple", param, vit, calculeIA1(rayon, hauteur, masseVolumique), calculeI3(rayon, hauteur, masseVolumique),
                 masse(rayon, hauteur, masseVolumique), 3.0/4.0*hauteur, masseVolumique), m_rayon(rayon), m_hauteur(hauteur)
-{
-    m_type = "Cone simple";
-}
+{}
 
 
 double ConeSimple::calculeIA1(double const& rayon, double const& hauteur, double const& masseVolumique) const {

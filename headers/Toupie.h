@@ -15,7 +15,7 @@ class Toupie : public Integrable
 {
     public:
 
-        Toupie(Vecteur const&, Vecteur const&, double const&, double const&, double const&, double const&, double const&);
+        Toupie(std::string const&, Vecteur const&, Vecteur const&, double const&, double const&, double const&, double const&, double const&);
 
         virtual Vecteur equEvol(double const& temps) const override;
 
@@ -33,7 +33,6 @@ class Toupie : public Integrable
     double m_masse;
     double m_masseVolumique;
     double m_d;
-    std::string m_type;
 
 
 };

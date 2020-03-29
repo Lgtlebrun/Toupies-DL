@@ -9,9 +9,9 @@ Systeme::Systeme(Systeme const& S) : Dessinable(S) {
 
     /// Constructeur de copie, pointeurs obligent
 
-    for (auto const& elt : S.m_toupies){
+    for (auto const& elt : S.m_corps){
 
-        m_toupies.push_back(elt->clone());
+        m_corps.push_back(elt->clone());
     }
 
     m_integrateur = S.m_integrateur->clone();
@@ -28,13 +28,13 @@ Systeme& Systeme::operator=(Systeme const& S) {
 
         Dessinable::operator=(S);
 
-        for (auto& elt : m_toupies){
+        for (auto& elt : m_corps){
            delete elt;
     }
 
-        for (auto const& elt : S.m_toupies){
+        for (auto const& elt : S.m_corps){
 
-            m_toupies.push_back(elt->clone());
+            m_corps.push_back(elt->clone());
         }
 
         delete m_integrateur;
@@ -50,7 +50,7 @@ Systeme& Systeme::operator=(Systeme const& S) {
 
 Systeme::~Systeme()
 {
-    for (auto& elt:m_toupies) {
+    for (auto& elt:m_corps) {
 
         // Gestion de la collection de pointeurs
         delete elt;
@@ -69,15 +69,15 @@ void Systeme::dessine() {
 
 
 
-Toupie * Systeme::getToupie(size_t k) const {
+Integrable* Systeme::getCorps(size_t k) const {
 
     /// Renvoie un pointeur sur la toupie en indice. En cas d'indice trop grand, renvoie nullptr
 
-    if (k >= m_toupies.size()){
+    if (k >= m_corps.size()){
         return nullptr;
     }
 
-    return m_toupies[k];
+    return m_corps[k];
 }
 
 
@@ -101,15 +101,15 @@ std::ostream& operator<<(std::ostream& sortie, Systeme& s){
 
 void Systeme::affiche(std::ostream& sortie) {
 
-    for (int k(0); k < m_toupies.size() ; ++k) {
+    for (int k(0); k < m_corps.size() ; ++k) {
 
         sortie << "==== Toupie " << k << " :" << std::endl;
-        sortie << m_toupies[k]->getType() << std::endl;
+        sortie << m_corps[k]->getType() << std::endl;
 
-        sortie << "parametre                :  " << m_toupies[k]->getParam() << std::endl;
-        sortie << "vitesse                  :  " << m_toupies[k]->getVitesse() << std::endl;
+        sortie << "parametre                :  " << m_corps[k]->getParam() << std::endl;
+        sortie << "vitesse                  :  " << m_corps[k]->getVitesse() << std::endl;
 
-        m_toupies[k]->statsToupie(sortie);
+        m_corps[k]->statsToupie(sortie);
 
         sortie << std::endl;
 
@@ -125,7 +125,7 @@ void Systeme::affiche(std::ostream& sortie) {
 
 void Systeme::evolue(double const& dt) {
 
-    for (auto& elt: m_toupies){
+    for (auto& elt: m_corps){
 
         m_integrateur->integre(*elt , dt);
 
@@ -137,7 +137,7 @@ void Systeme::evolue(double const& dt) {
 
 unsigned int Systeme::getNbToupies() const {
 
-    return m_toupies.size();
+    return m_corps.size();
 }
 
 
