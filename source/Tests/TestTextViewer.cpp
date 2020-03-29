@@ -3,8 +3,6 @@
 #include <iostream>
 #include <fstream>
 #include <cmath>
-#include <iomanip>
-#include <sstream>
 #include <string>
 
 
@@ -108,53 +106,36 @@ bool TestTextViewer::TestSysteme_B_OH() {
 
         if (EcartBille >= PREC){
 
-            double t(k*dt);
+            std::string t(std::to_string(Ic.getTemps()));
 
-            m_comment += "Erreur dans la classe Systeme : \n";
-            m_comment += "Ecart trop eleve sur la bille: probleme d'integration au temps t=" + std::to_string(t) + "\n";
+            m_comment += "Erreur dans la classe Systeme : \nEcart trop eleve sur la bille: probleme d'integration au temps t=" + t + "\n";
             m_comment += "Valeur observee : ";
 
-            std::stringstream stream;
-            stream << std::fixed << std::setprecision(log10(PREC)) << S.getCorps(0)->getParam();
-            std::string BilleObs = stream.str();
 
-            m_comment += BilleObs ;
+            m_comment +=  S.getCorps(0)->getParam().to_str() ;
 
-            m_comment += "\n";
-            m_comment += "Valeur attendue : ";
+            m_comment += "\nValeur attendue : ";
 
-            stream.str(std::string());
 
-            stream << std::fixed << std::setprecision(log10(PREC)) << Bc.getParam().to_str();
-            std::string BilleReel = stream.str();
-
-            m_comment += BilleReel;
+            m_comment +=  Bc.getParam().to_str();
             m_comment += "\n";
 
             return false;
 
         } else if (EcartOH >= PREC){
 
-            double t(k*dt);
+            std::string t(std::to_string(Ic.getTemps()));
 
-            m_comment += "Ecart trop eleve sur la bille: probleme d'integration au temps t=" + std::to_string(t) + "\n";
+            m_comment += "Ecart trop eleve sur la bille: probleme d'integration au temps t=" + t + "\n";
             m_comment += "Valeur observee : ";
 
-            std::stringstream stream;
-            stream << std::fixed << std::setprecision(log10(PREC)) << S.getCorps(1)->getParam();
-            std::string OHObs = stream.str();
 
-            m_comment += OHObs ;
+            m_comment += S.getCorps(1)->getParam().to_str();
 
-            m_comment += "\n";
-            m_comment += "Valeur attendue : ";
+            m_comment += "\nValeur attendue : ";
 
-            stream.str(std::string());
 
-            stream << std::fixed << std::setprecision(log10(PREC)) << OHc.getParam().to_str();
-            std::string OHReel = stream.str();
-
-            m_comment += OHReel;
+            m_comment += OHc.getParam().to_str();
             m_comment += "\n";
 
             return false;
@@ -165,9 +146,7 @@ bool TestTextViewer::TestSysteme_B_OH() {
     }
 
     return true;
-
-
-
+    
 }
 
 
