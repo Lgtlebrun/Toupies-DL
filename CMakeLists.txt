@@ -36,6 +36,7 @@ set(TEST_FILES
         source/Integrateur.cpp
         source/Tests/Bille.cpp
         source/Tests/Oscillateur.cpp
+        source/Tests/TestTextViewer.cpp
         )
 
 add_executable(Toupies_DL

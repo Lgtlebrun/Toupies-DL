@@ -1,0 +1,194 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../headers/ConeSimple.h
+Toupie.h
+../headers/Toupie.h
+
+../headers/Dessinable.h
+SupportADessin.h
+../headers/SupportADessin.h
+
+../headers/Integrable.h
+Vecteur.h
+../headers/Vecteur.h
+
+../headers/Integrateur.h
+Toupie.h
+../headers/Toupie.h
+constantes.h
+../headers/constantes.h
+
+../headers/SupportADessin.h
+ConeSimple.h
+../headers/ConeSimple.h
+Tests/Bille.h
+../headers/Tests/Bille.h
+Tests/Oscillateur.h
+../headers/Tests/Oscillateur.h
+Integrable.h
+../headers/Integrable.h
+
+../headers/Systeme.h
+SupportADessin.h
+../headers/SupportADessin.h
+vector
+-
+Dessinable.h
+../headers/Dessinable.h
+iostream
+-
+Integrateur.h
+../headers/Integrateur.h
+
+../headers/Tests/Bille.h
+Integrable.h
+../headers/Tests/Integrable.h
+../constantes.h
+../headers/constantes.h
+
+../headers/Tests/Oscillateur.h
+Integrable.h
+../headers/Tests/Integrable.h
+
+../headers/Tests/TestIntegrateur.h
+Unittest.h
+../headers/Tests/Unittest.h
+Bille.h
+../headers/Tests/Bille.h
+Oscillateur.h
+../headers/Tests/Oscillateur.h
+../Integrateur.h
+../headers/Integrateur.h
+constantes.h
+../headers/Tests/constantes.h
+cmath
+-
+
+../headers/Tests/TestTextViewer.h
+Unittest.h
+../headers/Tests/Unittest.h
+../TextViewer.h
+../headers/TextViewer.h
+../Systeme.h
+../headers/Systeme.h
+../constantes.h
+../headers/constantes.h
+
+../headers/Tests/Unittest.h
+string
+-
+iostream
+-
+
+../headers/TextViewer.h
+SupportADessin.h
+../headers/SupportADessin.h
+Systeme.h
+../headers/Systeme.h
+ConeSimple.h
+../headers/ConeSimple.h
+Tests/Oscillateur.h
+../headers/Tests/Oscillateur.h
+Tests/Bille.h
+../headers/Tests/Bille.h
+
+../headers/Toupie.h
+Vecteur.h
+../headers/Vecteur.h
+Integrable.h
+../headers/Integrable.h
+string
+../headers/string
+constantes.h
+../headers/constantes.h
+
+../headers/Vecteur.h
+vector
+-
+string
+-
+iostream
+-
+initializer_list
+-
+constantes.h
+../headers/constantes.h
+
+../headers/constantes.h
+Vecteur.h
+../headers/Vecteur.h
+
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Matrice3.h
+Vecteur.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Vecteur.h
+string
+-
+
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Tests/TestMatrice.h
+Unittest.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Tests/Unittest.h
+../Vecteur.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Vecteur.h
+../Matrice3.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Matrice3.h
+
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Tests/TestVecteur.h
+Unittest.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Tests/Unittest.h
+../Vecteur.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Vecteur.h
+
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Tests/Unittest.h
+string
+-
+iostream
+-
+
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Vecteur.h
+vector
+-
+string
+-
+iostream
+-
+initializer_list
+-
+constantes.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/constantes.h
+
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Tests/TestTextViewer.cpp
+Tests/TestTextViewer.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Tests/Tests/TestTextViewer.h
+../../headers/Tests/Unittest.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Tests/Unittest.h
+iostream
+-
+fstream
+-
+cmath
+-
+iomanip
+-
+sstream
+-
+string
+-
+
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Tests/testAll.cpp
+vector
+-
+Tests/TestTextViewer.h
+-
+Tests/TestIntegrateur.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Tests/Tests/TestIntegrateur.h
+../../headers/Tests/TestVecteur.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Tests/TestVecteur.h
+../../headers/Tests/TestMatrice.h
+E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Tests/TestMatrice.h
+

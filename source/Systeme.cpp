@@ -81,7 +81,10 @@ Toupie * Systeme::getToupie(size_t k) const {
 }
 
 
-
+double Systeme::getTemps() const
+{
+    return m_integrateur->getTemps();
+}
 
 
 std::ostream& operator<<(std::ostream& sortie, Systeme& s){

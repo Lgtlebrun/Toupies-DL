@@ -53,11 +53,13 @@ CMAKE_BINARY_DIR = "E:\C++\Tous pires\Toupies-DL\Toupies-DL\cmake-build-debug"
 
 # The main recursive "all" target.
 all: CMakeFiles/Toupies_DL.dir/all
+all: CMakeFiles/testAll.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
 clean: CMakeFiles/Toupies_DL.dir/clean
+clean: CMakeFiles/testAll.dir/clean
 
 .PHONY : clean
 
@@ -73,12 +75,12 @@ preinstall:
 CMakeFiles/Toupies_DL.dir/all:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/depend
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="E:\C++\Tous pires\Toupies-DL\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target Toupies_DL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="E:\C++\Tous pires\Toupies-DL\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14 "Built target Toupies_DL"
 .PHONY : CMakeFiles/Toupies_DL.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Toupies_DL.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C++\Tous pires\Toupies-DL\Toupies-DL\cmake-build-debug\CMakeFiles" 12
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C++\Tous pires\Toupies-DL\Toupies-DL\cmake-build-debug\CMakeFiles" 14
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/Toupies_DL.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C++\Tous pires\Toupies-DL\Toupies-DL\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/Toupies_DL.dir/rule
@@ -92,6 +94,33 @@ Toupies_DL: CMakeFiles/Toupies_DL.dir/rule
 CMakeFiles/Toupies_DL.dir/clean:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/clean
 .PHONY : CMakeFiles/Toupies_DL.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/testAll.dir
+
+# All Build rule for target.
+CMakeFiles/testAll.dir/all:
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/depend
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="E:\C++\Tous pires\Toupies-DL\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=15,16,17,18,19,20,21,22,23,24,25,26,27,28 "Built target testAll"
+.PHONY : CMakeFiles/testAll.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/testAll.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C++\Tous pires\Toupies-DL\Toupies-DL\cmake-build-debug\CMakeFiles" 14
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/testAll.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C++\Tous pires\Toupies-DL\Toupies-DL\cmake-build-debug\CMakeFiles" 0
+.PHONY : CMakeFiles/testAll.dir/rule
+
+# Convenience name for target.
+testAll: CMakeFiles/testAll.dir/rule
+
+.PHONY : testAll
+
+# clean rule for target.
+CMakeFiles/testAll.dir/clean:
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/clean
+.PHONY : CMakeFiles/testAll.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

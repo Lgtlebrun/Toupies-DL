@@ -15,6 +15,8 @@ void TextViewer::dessine(Systeme const& S) {
 
     unsigned int taille(S.getNbToupies());
 
+    m_flux << "t=" << S.getTemps() << " : " << std::endl;
+
     for (size_t k(0); k < taille; k++){
 
         m_flux << "Toupie " << k+1 << " :  ";

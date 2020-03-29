@@ -25,6 +25,8 @@ public:
 
     Toupie * getToupie(size_t k) const;
 
+    double getTemps() const;
+
     unsigned int getNbToupies() const;
 
     void evolue(double const&) ;
@@ -34,7 +36,7 @@ public:
 
 protected:
 
-    std::vector<Toupie*> m_toupies;
+    std::vector<Integrable*> m_toupies;
 
     Integrateur* m_integrateur;
 

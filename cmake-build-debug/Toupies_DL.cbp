@@ -25,7 +25,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers"/>
-					<Add directory="E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Tests"/>
+					<Add directory="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
@@ -48,7 +48,7 @@
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers"/>
-					<Add directory="E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Tests"/>
+					<Add directory="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
 					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
@@ -58,6 +58,52 @@
 				</Compiler>
 				<MakeCommands>
 					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C++/Tous pires/Toupies-DL/Toupies-DL/cmake-build-debug/Makefile&quot;  VERBOSE=1 Toupies_DL/fast"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C++/Tous pires/Toupies-DL/Toupies-DL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C++/Tous pires/Toupies-DL/Toupies-DL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C++/Tous pires/Toupies-DL/Toupies-DL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="testAll">
+				<Option output="E:/C++/Tous pires/Toupies-DL/Toupies-DL/cmake-build-debug/testAll.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/C++/Tous pires/Toupies-DL/Toupies-DL/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers"/>
+					<Add directory="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C++/Tous pires/Toupies-DL/Toupies-DL/cmake-build-debug/Makefile&quot;  VERBOSE=1 testAll"/>
+					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C++/Tous pires/Toupies-DL/Toupies-DL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C++/Tous pires/Toupies-DL/Toupies-DL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C++/Tous pires/Toupies-DL/Toupies-DL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="testAll/fast">
+				<Option output="E:/C++/Tous pires/Toupies-DL/Toupies-DL/cmake-build-debug/testAll.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="E:/C++/Tous pires/Toupies-DL/Toupies-DL/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers"/>
+					<Add directory="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/mingw32"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include/c++/backward"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/../../../../include"/>
+					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/6.3.0/include-fixed"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C++/Tous pires/Toupies-DL/Toupies-DL/cmake-build-debug/Makefile&quot;  VERBOSE=1 testAll/fast"/>
 					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C++/Tous pires/Toupies-DL/Toupies-DL/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C++/Tous pires/Toupies-DL/Toupies-DL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;E:/C++/Tous pires/Toupies-DL/Toupies-DL/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -84,64 +130,60 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Bille.h">
-			<Option target="Toupies_DL"/>
+		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Tests/TestIntegrateur.h">
+			<Option target="testAll"/>
 		</Unit>
-		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/ConeSimple.h">
-			<Option target="Toupies_DL"/>
-		</Unit>
-		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Integrable.h">
-			<Option target="Toupies_DL"/>
-		</Unit>
-		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Integrateur.h">
-			<Option target="Toupies_DL"/>
-		</Unit>
-		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Matrice3.h">
-			<Option target="Toupies_DL"/>
-		</Unit>
-		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Oscillateur.h">
-			<Option target="Toupies_DL"/>
-		</Unit>
-		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Tests/TestMatrice.h">
-			<Option target="Toupies_DL"/>
-		</Unit>
-		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Tests/TestVecteur.h">
-			<Option target="Toupies_DL"/>
-		</Unit>
-		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Tests/Unittest.h">
-			<Option target="Toupies_DL"/>
-		</Unit>
-		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Toupie.h">
-			<Option target="Toupies_DL"/>
-		</Unit>
-		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/headers/Vecteur.h">
-			<Option target="Toupies_DL"/>
-		</Unit>
-		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Bille.cpp">
+		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/main.cpp">
 			<Option target="Toupies_DL"/>
 		</Unit>
 		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/ConeSimple.cpp">
 			<Option target="Toupies_DL"/>
 		</Unit>
+		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Dessinable.cpp">
+			<Option target="Toupies_DL"/>
+		</Unit>
 		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Integrable.cpp">
 			<Option target="Toupies_DL"/>
+			<Option target="testAll"/>
 		</Unit>
 		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Integrateur.cpp">
 			<Option target="Toupies_DL"/>
+			<Option target="testAll"/>
 		</Unit>
 		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Matrice3.cpp">
 			<Option target="Toupies_DL"/>
+			<Option target="testAll"/>
 		</Unit>
-		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Oscillateur.cpp">
+		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Systeme.cpp">
 			<Option target="Toupies_DL"/>
+		</Unit>
+		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Tests/Bille.cpp">
+			<Option target="Toupies_DL"/>
+			<Option target="testAll"/>
+		</Unit>
+		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Tests/Oscillateur.cpp">
+			<Option target="Toupies_DL"/>
+			<Option target="testAll"/>
+		</Unit>
+		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Tests/TestIntegrateur.cpp">
+			<Option target="testAll"/>
 		</Unit>
 		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Tests/TestMatrice.cpp">
-			<Option target="Toupies_DL"/>
+			<Option target="testAll"/>
+		</Unit>
+		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Tests/TestTextViewer.cpp">
+			<Option target="testAll"/>
 		</Unit>
 		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Tests/TestVecteur.cpp">
-			<Option target="Toupies_DL"/>
+			<Option target="testAll"/>
 		</Unit>
 		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Tests/Unittest.cpp">
+			<Option target="testAll"/>
+		</Unit>
+		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Tests/testAll.cpp">
+			<Option target="testAll"/>
+		</Unit>
+		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/TextViewer.cpp">
 			<Option target="Toupies_DL"/>
 		</Unit>
 		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Toupie.cpp">
@@ -149,6 +191,11 @@
 		</Unit>
 		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/Vecteur.cpp">
 			<Option target="Toupies_DL"/>
+			<Option target="testAll"/>
+		</Unit>
+		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/source/constantes.cpp">
+			<Option target="Toupies_DL"/>
+			<Option target="testAll"/>
 		</Unit>
 		<Unit filename="E:/C++/Tous pires/Toupies-DL/Toupies-DL/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

@@ -122,32 +122,45 @@ Toupies_DL/fast:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/build
 .PHONY : Toupies_DL/fast
 
-source/Bille.obj: source/Bille.cpp.obj
+#=============================================================================
+# Target rules for targets named testAll
 
-.PHONY : source/Bille.obj
+# Build rule for target.
+testAll: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 testAll
+.PHONY : testAll
+
+# fast build rule for target.
+testAll/fast:
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/build
+.PHONY : testAll/fast
+
+main.obj: main.cpp.obj
+
+.PHONY : main.obj
 
 # target to build an object file
-source/Bille.cpp.obj:
-	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Bille.cpp.obj
-.PHONY : source/Bille.cpp.obj
+main.cpp.obj:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/main.cpp.obj
+.PHONY : main.cpp.obj
 
-source/Bille.i: source/Bille.cpp.i
+main.i: main.cpp.i
 
-.PHONY : source/Bille.i
+.PHONY : main.i
 
 # target to preprocess a source file
-source/Bille.cpp.i:
-	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Bille.cpp.i
-.PHONY : source/Bille.cpp.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-source/Bille.s: source/Bille.cpp.s
+main.s: main.cpp.s
 
-.PHONY : source/Bille.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-source/Bille.cpp.s:
-	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Bille.cpp.s
-.PHONY : source/Bille.cpp.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/main.cpp.s
+.PHONY : main.cpp.s
 
 source/ConeSimple.obj: source/ConeSimple.cpp.obj
 
@@ -176,6 +189,33 @@ source/ConeSimple.cpp.s:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/ConeSimple.cpp.s
 .PHONY : source/ConeSimple.cpp.s
 
+source/Dessinable.obj: source/Dessinable.cpp.obj
+
+.PHONY : source/Dessinable.obj
+
+# target to build an object file
+source/Dessinable.cpp.obj:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Dessinable.cpp.obj
+.PHONY : source/Dessinable.cpp.obj
+
+source/Dessinable.i: source/Dessinable.cpp.i
+
+.PHONY : source/Dessinable.i
+
+# target to preprocess a source file
+source/Dessinable.cpp.i:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Dessinable.cpp.i
+.PHONY : source/Dessinable.cpp.i
+
+source/Dessinable.s: source/Dessinable.cpp.s
+
+.PHONY : source/Dessinable.s
+
+# target to generate assembly for a file
+source/Dessinable.cpp.s:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Dessinable.cpp.s
+.PHONY : source/Dessinable.cpp.s
+
 source/Integrable.obj: source/Integrable.cpp.obj
 
 .PHONY : source/Integrable.obj
@@ -183,6 +223,7 @@ source/Integrable.obj: source/Integrable.cpp.obj
 # target to build an object file
 source/Integrable.cpp.obj:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Integrable.cpp.obj
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Integrable.cpp.obj
 .PHONY : source/Integrable.cpp.obj
 
 source/Integrable.i: source/Integrable.cpp.i
@@ -192,6 +233,7 @@ source/Integrable.i: source/Integrable.cpp.i
 # target to preprocess a source file
 source/Integrable.cpp.i:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Integrable.cpp.i
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Integrable.cpp.i
 .PHONY : source/Integrable.cpp.i
 
 source/Integrable.s: source/Integrable.cpp.s
@@ -201,6 +243,7 @@ source/Integrable.s: source/Integrable.cpp.s
 # target to generate assembly for a file
 source/Integrable.cpp.s:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Integrable.cpp.s
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Integrable.cpp.s
 .PHONY : source/Integrable.cpp.s
 
 source/Integrateur.obj: source/Integrateur.cpp.obj
@@ -210,6 +253,7 @@ source/Integrateur.obj: source/Integrateur.cpp.obj
 # target to build an object file
 source/Integrateur.cpp.obj:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Integrateur.cpp.obj
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Integrateur.cpp.obj
 .PHONY : source/Integrateur.cpp.obj
 
 source/Integrateur.i: source/Integrateur.cpp.i
@@ -219,6 +263,7 @@ source/Integrateur.i: source/Integrateur.cpp.i
 # target to preprocess a source file
 source/Integrateur.cpp.i:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Integrateur.cpp.i
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Integrateur.cpp.i
 .PHONY : source/Integrateur.cpp.i
 
 source/Integrateur.s: source/Integrateur.cpp.s
@@ -228,6 +273,7 @@ source/Integrateur.s: source/Integrateur.cpp.s
 # target to generate assembly for a file
 source/Integrateur.cpp.s:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Integrateur.cpp.s
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Integrateur.cpp.s
 .PHONY : source/Integrateur.cpp.s
 
 source/Matrice3.obj: source/Matrice3.cpp.obj
@@ -237,6 +283,7 @@ source/Matrice3.obj: source/Matrice3.cpp.obj
 # target to build an object file
 source/Matrice3.cpp.obj:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Matrice3.cpp.obj
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Matrice3.cpp.obj
 .PHONY : source/Matrice3.cpp.obj
 
 source/Matrice3.i: source/Matrice3.cpp.i
@@ -246,6 +293,7 @@ source/Matrice3.i: source/Matrice3.cpp.i
 # target to preprocess a source file
 source/Matrice3.cpp.i:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Matrice3.cpp.i
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Matrice3.cpp.i
 .PHONY : source/Matrice3.cpp.i
 
 source/Matrice3.s: source/Matrice3.cpp.s
@@ -255,34 +303,122 @@ source/Matrice3.s: source/Matrice3.cpp.s
 # target to generate assembly for a file
 source/Matrice3.cpp.s:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Matrice3.cpp.s
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Matrice3.cpp.s
 .PHONY : source/Matrice3.cpp.s
 
-source/Oscillateur.obj: source/Oscillateur.cpp.obj
+source/Systeme.obj: source/Systeme.cpp.obj
 
-.PHONY : source/Oscillateur.obj
+.PHONY : source/Systeme.obj
 
 # target to build an object file
-source/Oscillateur.cpp.obj:
-	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Oscillateur.cpp.obj
-.PHONY : source/Oscillateur.cpp.obj
+source/Systeme.cpp.obj:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Systeme.cpp.obj
+.PHONY : source/Systeme.cpp.obj
 
-source/Oscillateur.i: source/Oscillateur.cpp.i
+source/Systeme.i: source/Systeme.cpp.i
 
-.PHONY : source/Oscillateur.i
+.PHONY : source/Systeme.i
 
 # target to preprocess a source file
-source/Oscillateur.cpp.i:
-	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Oscillateur.cpp.i
-.PHONY : source/Oscillateur.cpp.i
+source/Systeme.cpp.i:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Systeme.cpp.i
+.PHONY : source/Systeme.cpp.i
 
-source/Oscillateur.s: source/Oscillateur.cpp.s
+source/Systeme.s: source/Systeme.cpp.s
 
-.PHONY : source/Oscillateur.s
+.PHONY : source/Systeme.s
 
 # target to generate assembly for a file
-source/Oscillateur.cpp.s:
-	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Oscillateur.cpp.s
-.PHONY : source/Oscillateur.cpp.s
+source/Systeme.cpp.s:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Systeme.cpp.s
+.PHONY : source/Systeme.cpp.s
+
+source/Tests/Bille.obj: source/Tests/Bille.cpp.obj
+
+.PHONY : source/Tests/Bille.obj
+
+# target to build an object file
+source/Tests/Bille.cpp.obj:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/Bille.cpp.obj
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/Bille.cpp.obj
+.PHONY : source/Tests/Bille.cpp.obj
+
+source/Tests/Bille.i: source/Tests/Bille.cpp.i
+
+.PHONY : source/Tests/Bille.i
+
+# target to preprocess a source file
+source/Tests/Bille.cpp.i:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/Bille.cpp.i
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/Bille.cpp.i
+.PHONY : source/Tests/Bille.cpp.i
+
+source/Tests/Bille.s: source/Tests/Bille.cpp.s
+
+.PHONY : source/Tests/Bille.s
+
+# target to generate assembly for a file
+source/Tests/Bille.cpp.s:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/Bille.cpp.s
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/Bille.cpp.s
+.PHONY : source/Tests/Bille.cpp.s
+
+source/Tests/Oscillateur.obj: source/Tests/Oscillateur.cpp.obj
+
+.PHONY : source/Tests/Oscillateur.obj
+
+# target to build an object file
+source/Tests/Oscillateur.cpp.obj:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/Oscillateur.cpp.obj
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/Oscillateur.cpp.obj
+.PHONY : source/Tests/Oscillateur.cpp.obj
+
+source/Tests/Oscillateur.i: source/Tests/Oscillateur.cpp.i
+
+.PHONY : source/Tests/Oscillateur.i
+
+# target to preprocess a source file
+source/Tests/Oscillateur.cpp.i:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/Oscillateur.cpp.i
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/Oscillateur.cpp.i
+.PHONY : source/Tests/Oscillateur.cpp.i
+
+source/Tests/Oscillateur.s: source/Tests/Oscillateur.cpp.s
+
+.PHONY : source/Tests/Oscillateur.s
+
+# target to generate assembly for a file
+source/Tests/Oscillateur.cpp.s:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/Oscillateur.cpp.s
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/Oscillateur.cpp.s
+.PHONY : source/Tests/Oscillateur.cpp.s
+
+source/Tests/TestIntegrateur.obj: source/Tests/TestIntegrateur.cpp.obj
+
+.PHONY : source/Tests/TestIntegrateur.obj
+
+# target to build an object file
+source/Tests/TestIntegrateur.cpp.obj:
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/TestIntegrateur.cpp.obj
+.PHONY : source/Tests/TestIntegrateur.cpp.obj
+
+source/Tests/TestIntegrateur.i: source/Tests/TestIntegrateur.cpp.i
+
+.PHONY : source/Tests/TestIntegrateur.i
+
+# target to preprocess a source file
+source/Tests/TestIntegrateur.cpp.i:
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/TestIntegrateur.cpp.i
+.PHONY : source/Tests/TestIntegrateur.cpp.i
+
+source/Tests/TestIntegrateur.s: source/Tests/TestIntegrateur.cpp.s
+
+.PHONY : source/Tests/TestIntegrateur.s
+
+# target to generate assembly for a file
+source/Tests/TestIntegrateur.cpp.s:
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/TestIntegrateur.cpp.s
+.PHONY : source/Tests/TestIntegrateur.cpp.s
 
 source/Tests/TestMatrice.obj: source/Tests/TestMatrice.cpp.obj
 
@@ -290,7 +426,7 @@ source/Tests/TestMatrice.obj: source/Tests/TestMatrice.cpp.obj
 
 # target to build an object file
 source/Tests/TestMatrice.cpp.obj:
-	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/TestMatrice.cpp.obj
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/TestMatrice.cpp.obj
 .PHONY : source/Tests/TestMatrice.cpp.obj
 
 source/Tests/TestMatrice.i: source/Tests/TestMatrice.cpp.i
@@ -299,7 +435,7 @@ source/Tests/TestMatrice.i: source/Tests/TestMatrice.cpp.i
 
 # target to preprocess a source file
 source/Tests/TestMatrice.cpp.i:
-	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/TestMatrice.cpp.i
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/TestMatrice.cpp.i
 .PHONY : source/Tests/TestMatrice.cpp.i
 
 source/Tests/TestMatrice.s: source/Tests/TestMatrice.cpp.s
@@ -308,8 +444,35 @@ source/Tests/TestMatrice.s: source/Tests/TestMatrice.cpp.s
 
 # target to generate assembly for a file
 source/Tests/TestMatrice.cpp.s:
-	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/TestMatrice.cpp.s
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/TestMatrice.cpp.s
 .PHONY : source/Tests/TestMatrice.cpp.s
+
+source/Tests/TestTextViewer.obj: source/Tests/TestTextViewer.cpp.obj
+
+.PHONY : source/Tests/TestTextViewer.obj
+
+# target to build an object file
+source/Tests/TestTextViewer.cpp.obj:
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/TestTextViewer.cpp.obj
+.PHONY : source/Tests/TestTextViewer.cpp.obj
+
+source/Tests/TestTextViewer.i: source/Tests/TestTextViewer.cpp.i
+
+.PHONY : source/Tests/TestTextViewer.i
+
+# target to preprocess a source file
+source/Tests/TestTextViewer.cpp.i:
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/TestTextViewer.cpp.i
+.PHONY : source/Tests/TestTextViewer.cpp.i
+
+source/Tests/TestTextViewer.s: source/Tests/TestTextViewer.cpp.s
+
+.PHONY : source/Tests/TestTextViewer.s
+
+# target to generate assembly for a file
+source/Tests/TestTextViewer.cpp.s:
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/TestTextViewer.cpp.s
+.PHONY : source/Tests/TestTextViewer.cpp.s
 
 source/Tests/TestVecteur.obj: source/Tests/TestVecteur.cpp.obj
 
@@ -317,7 +480,7 @@ source/Tests/TestVecteur.obj: source/Tests/TestVecteur.cpp.obj
 
 # target to build an object file
 source/Tests/TestVecteur.cpp.obj:
-	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/TestVecteur.cpp.obj
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/TestVecteur.cpp.obj
 .PHONY : source/Tests/TestVecteur.cpp.obj
 
 source/Tests/TestVecteur.i: source/Tests/TestVecteur.cpp.i
@@ -326,7 +489,7 @@ source/Tests/TestVecteur.i: source/Tests/TestVecteur.cpp.i
 
 # target to preprocess a source file
 source/Tests/TestVecteur.cpp.i:
-	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/TestVecteur.cpp.i
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/TestVecteur.cpp.i
 .PHONY : source/Tests/TestVecteur.cpp.i
 
 source/Tests/TestVecteur.s: source/Tests/TestVecteur.cpp.s
@@ -335,7 +498,7 @@ source/Tests/TestVecteur.s: source/Tests/TestVecteur.cpp.s
 
 # target to generate assembly for a file
 source/Tests/TestVecteur.cpp.s:
-	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/TestVecteur.cpp.s
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/TestVecteur.cpp.s
 .PHONY : source/Tests/TestVecteur.cpp.s
 
 source/Tests/Unittest.obj: source/Tests/Unittest.cpp.obj
@@ -344,7 +507,7 @@ source/Tests/Unittest.obj: source/Tests/Unittest.cpp.obj
 
 # target to build an object file
 source/Tests/Unittest.cpp.obj:
-	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/Unittest.cpp.obj
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/Unittest.cpp.obj
 .PHONY : source/Tests/Unittest.cpp.obj
 
 source/Tests/Unittest.i: source/Tests/Unittest.cpp.i
@@ -353,7 +516,7 @@ source/Tests/Unittest.i: source/Tests/Unittest.cpp.i
 
 # target to preprocess a source file
 source/Tests/Unittest.cpp.i:
-	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/Unittest.cpp.i
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/Unittest.cpp.i
 .PHONY : source/Tests/Unittest.cpp.i
 
 source/Tests/Unittest.s: source/Tests/Unittest.cpp.s
@@ -362,8 +525,62 @@ source/Tests/Unittest.s: source/Tests/Unittest.cpp.s
 
 # target to generate assembly for a file
 source/Tests/Unittest.cpp.s:
-	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/Unittest.cpp.s
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/Unittest.cpp.s
 .PHONY : source/Tests/Unittest.cpp.s
+
+source/Tests/testAll.obj: source/Tests/testAll.cpp.obj
+
+.PHONY : source/Tests/testAll.obj
+
+# target to build an object file
+source/Tests/testAll.cpp.obj:
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/testAll.cpp.obj
+.PHONY : source/Tests/testAll.cpp.obj
+
+source/Tests/testAll.i: source/Tests/testAll.cpp.i
+
+.PHONY : source/Tests/testAll.i
+
+# target to preprocess a source file
+source/Tests/testAll.cpp.i:
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/testAll.cpp.i
+.PHONY : source/Tests/testAll.cpp.i
+
+source/Tests/testAll.s: source/Tests/testAll.cpp.s
+
+.PHONY : source/Tests/testAll.s
+
+# target to generate assembly for a file
+source/Tests/testAll.cpp.s:
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/testAll.cpp.s
+.PHONY : source/Tests/testAll.cpp.s
+
+source/TextViewer.obj: source/TextViewer.cpp.obj
+
+.PHONY : source/TextViewer.obj
+
+# target to build an object file
+source/TextViewer.cpp.obj:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/TextViewer.cpp.obj
+.PHONY : source/TextViewer.cpp.obj
+
+source/TextViewer.i: source/TextViewer.cpp.i
+
+.PHONY : source/TextViewer.i
+
+# target to preprocess a source file
+source/TextViewer.cpp.i:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/TextViewer.cpp.i
+.PHONY : source/TextViewer.cpp.i
+
+source/TextViewer.s: source/TextViewer.cpp.s
+
+.PHONY : source/TextViewer.s
+
+# target to generate assembly for a file
+source/TextViewer.cpp.s:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/TextViewer.cpp.s
+.PHONY : source/TextViewer.cpp.s
 
 source/Toupie.obj: source/Toupie.cpp.obj
 
@@ -399,6 +616,7 @@ source/Vecteur.obj: source/Vecteur.cpp.obj
 # target to build an object file
 source/Vecteur.cpp.obj:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Vecteur.cpp.obj
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Vecteur.cpp.obj
 .PHONY : source/Vecteur.cpp.obj
 
 source/Vecteur.i: source/Vecteur.cpp.i
@@ -408,6 +626,7 @@ source/Vecteur.i: source/Vecteur.cpp.i
 # target to preprocess a source file
 source/Vecteur.cpp.i:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Vecteur.cpp.i
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Vecteur.cpp.i
 .PHONY : source/Vecteur.cpp.i
 
 source/Vecteur.s: source/Vecteur.cpp.s
@@ -417,7 +636,38 @@ source/Vecteur.s: source/Vecteur.cpp.s
 # target to generate assembly for a file
 source/Vecteur.cpp.s:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Vecteur.cpp.s
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Vecteur.cpp.s
 .PHONY : source/Vecteur.cpp.s
+
+source/constantes.obj: source/constantes.cpp.obj
+
+.PHONY : source/constantes.obj
+
+# target to build an object file
+source/constantes.cpp.obj:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/constantes.cpp.obj
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/constantes.cpp.obj
+.PHONY : source/constantes.cpp.obj
+
+source/constantes.i: source/constantes.cpp.i
+
+.PHONY : source/constantes.i
+
+# target to preprocess a source file
+source/constantes.cpp.i:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/constantes.cpp.i
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/constantes.cpp.i
+.PHONY : source/constantes.cpp.i
+
+source/constantes.s: source/constantes.cpp.s
+
+.PHONY : source/constantes.s
+
+# target to generate assembly for a file
+source/constantes.cpp.s:
+	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/constantes.cpp.s
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/constantes.cpp.s
+.PHONY : source/constantes.cpp.s
 
 # Help Target
 help:
@@ -426,14 +676,18 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... Toupies_DL
+	@echo ... testAll
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... source/Bille.obj
-	@echo ... source/Bille.i
-	@echo ... source/Bille.s
+	@echo ... main.obj
+	@echo ... main.i
+	@echo ... main.s
 	@echo ... source/ConeSimple.obj
 	@echo ... source/ConeSimple.i
 	@echo ... source/ConeSimple.s
+	@echo ... source/Dessinable.obj
+	@echo ... source/Dessinable.i
+	@echo ... source/Dessinable.s
 	@echo ... source/Integrable.obj
 	@echo ... source/Integrable.i
 	@echo ... source/Integrable.s
@@ -443,24 +697,45 @@ help:
 	@echo ... source/Matrice3.obj
 	@echo ... source/Matrice3.i
 	@echo ... source/Matrice3.s
-	@echo ... source/Oscillateur.obj
-	@echo ... source/Oscillateur.i
-	@echo ... source/Oscillateur.s
+	@echo ... source/Systeme.obj
+	@echo ... source/Systeme.i
+	@echo ... source/Systeme.s
+	@echo ... source/Tests/Bille.obj
+	@echo ... source/Tests/Bille.i
+	@echo ... source/Tests/Bille.s
+	@echo ... source/Tests/Oscillateur.obj
+	@echo ... source/Tests/Oscillateur.i
+	@echo ... source/Tests/Oscillateur.s
+	@echo ... source/Tests/TestIntegrateur.obj
+	@echo ... source/Tests/TestIntegrateur.i
+	@echo ... source/Tests/TestIntegrateur.s
 	@echo ... source/Tests/TestMatrice.obj
 	@echo ... source/Tests/TestMatrice.i
 	@echo ... source/Tests/TestMatrice.s
+	@echo ... source/Tests/TestTextViewer.obj
+	@echo ... source/Tests/TestTextViewer.i
+	@echo ... source/Tests/TestTextViewer.s
 	@echo ... source/Tests/TestVecteur.obj
 	@echo ... source/Tests/TestVecteur.i
 	@echo ... source/Tests/TestVecteur.s
 	@echo ... source/Tests/Unittest.obj
 	@echo ... source/Tests/Unittest.i
 	@echo ... source/Tests/Unittest.s
+	@echo ... source/Tests/testAll.obj
+	@echo ... source/Tests/testAll.i
+	@echo ... source/Tests/testAll.s
+	@echo ... source/TextViewer.obj
+	@echo ... source/TextViewer.i
+	@echo ... source/TextViewer.s
 	@echo ... source/Toupie.obj
 	@echo ... source/Toupie.i
 	@echo ... source/Toupie.s
 	@echo ... source/Vecteur.obj
 	@echo ... source/Vecteur.i
 	@echo ... source/Vecteur.s
+	@echo ... source/constantes.obj
+	@echo ... source/constantes.i
+	@echo ... source/constantes.s
 .PHONY : help
 
 
