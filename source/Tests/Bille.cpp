@@ -18,4 +18,3 @@ Bille *Bille::clone() const {
 
     return new Bille(*this);
 }
-

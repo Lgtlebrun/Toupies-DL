@@ -11,7 +11,11 @@ Integrable::~Integrable()
     //dtor
 }
 
+std::string Integrable::getType() const{
 
+    return m_type;
+
+}
 
 Vecteur Integrable::getParam() const{
 
@@ -38,3 +42,9 @@ void Integrable::setVitesse(Vecteur const& newV){
     m_Ppoint = newV;
 }
 
+
+void Integrable::statsCorps(std::ostream&) const{
+
+
+
+}

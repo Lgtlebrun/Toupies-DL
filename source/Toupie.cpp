@@ -43,7 +43,7 @@ Vecteur Toupie::equEvol(double const& temps) const {
 }
 
 
-void Toupie::statsToupie(std::ostream& sortie) const{
+void Toupie::statsCorps(std::ostream& sortie) const{
 
     sortie << "masse [kg]               :  " << m_masse << std::endl;
     sortie << "masse volumique [kg m-3] :  " << m_masseVolumique << std::endl;
@@ -51,9 +51,4 @@ void Toupie::statsToupie(std::ostream& sortie) const{
 
 }
 
-
-
-std::string Toupie::getType() const {
-    return m_type;
-}
 

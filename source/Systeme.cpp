@@ -18,7 +18,11 @@ Systeme::Systeme(Systeme const& S) : Dessinable(S) {
 
 }
 
+void Systeme::addIntegrable(Integrable* I) {
 
+    m_corps.push_back(reinterpret_cast<Integrable *const>(&I));
+
+}
 
 Systeme& Systeme::operator=(Systeme const& S) {
 
@@ -109,7 +113,7 @@ void Systeme::affiche(std::ostream& sortie) {
         sortie << "parametre                :  " << m_corps[k]->getParam() << std::endl;
         sortie << "vitesse                  :  " << m_corps[k]->getVitesse() << std::endl;
 
-        m_corps[k]->statsToupie(sortie);
+        m_corps[k]->statsCorps(sortie);
 
         sortie << std::endl;
 

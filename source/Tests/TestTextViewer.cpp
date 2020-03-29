@@ -68,7 +68,9 @@ bool TestTextViewer::TestSysteme_B_OH() {
 
     // Teste si un système se comporte bien comme 2 objets indépendants
 
-    std::ofstream statsSyst ( "StatsTextViewer.txt" );
+    std::ofstream statsSyst ;
+    statsSyst.open( "StatsTextViewer.txt" );
+
 
     double dt(0.01);
 
@@ -81,7 +83,12 @@ bool TestTextViewer::TestSysteme_B_OH() {
     IntegrateurEulerCromer Is(0.0);
     IntegrateurEulerCromer Ic(0.0);
 
-    Systeme S((&Bs, &OHs), &Is);
+    TextViewer T(statsSyst);
+
+    Systeme S(&T, &Is);
+
+    S.addIntegrable(&Bs);
+    S.addIntegrable(&OHs);
 
     S.affiche(statsSyst);
 
@@ -95,8 +102,8 @@ bool TestTextViewer::TestSysteme_B_OH() {
         Ic.augmente_t(dt);
 
 
-        double EcartBille(norme(S.getCorps(0)->getParam() - *Bc.getParam()));
-        double EcartOH(norme(S.getCorps(1)->getParam() - *OHc.getParam()));
+        double EcartBille((S.getCorps(0)->getParam() - Bc.getParam()).norme());
+        double EcartOH((S.getCorps(1)->getParam() - OHc.getParam()).norme());
 
 
         if (EcartBille >= PREC){
@@ -168,14 +175,17 @@ bool TestTextViewer::TestSysteme_Conique() {
 
     // Teste si la conique se comporte bien comme prévu
 
-    std::ofstream statsSyst ( "StatsTextViewer.txt" );
+    std::ofstream statsSyst;
+    statsSyst.open( "StatsTextViewer.txt" );
 
     TextViewer T(statsSyst);
 
     ConeSimple C ({0,M_PI/6, 0}, {0,0,60}, 0.5, 1.5, 0.1);
     IntegrateurEulerCromer I(0.0);
 
-    Systeme S ({*C}, *I);
+    Systeme S (&T, &I);
+
+    S.addIntegrable(&C);
 
     double dt(0.01);
 
@@ -213,16 +223,20 @@ bool TestTextViewer::SimulationTexte() {
 
     // teste la simulation de 2 toupies Coniques
 
-    std::ofstream flux ("SimulationTexte.txt");
+    std::ofstream flux;
+    flux.open("SimulationTexte.txt");
 
-    ConeSimple C1((0,M_PI/6, 0), (0,0,60), 0.5, 1.5, 0.1);
-    ConeSimple C2((0,M_PI/4, 0), (0,0,40), 0.5, 1.5, 0.1);
+    ConeSimple C1({0,M_PI/6, 0}, {0,0,60}, 0.5, 1.5, 0.1);
+    ConeSimple C2({0,M_PI/4, 0}, {0,0,40}, 0.5, 1.5, 0.1);
 
     IntegrateurEulerCromer I(0.0);
 
-    Systeme S({*C1, *C2}, *I);
-
     TextViewer T(flux);
+
+    Systeme S(&T, &I);
+
+    S.addIntegrable(&C1);
+    S.addIntegrable(&C2);
 
     double dt(0.01);
 
@@ -231,7 +245,7 @@ bool TestTextViewer::SimulationTexte() {
     for (int k(0); k<1000; ++k){
 
         S.evolue(dt);
-        T.dessine(*S);
+        T.dessine(S);
 
     }
 
