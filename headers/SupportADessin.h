@@ -22,6 +22,7 @@ public:
     // on supposera ici que les supports ne sont ni copiés ni déplacés
 
 
+    virtual SupportADessin* clone() const = 0;
     virtual void dessine(Systeme const&) = 0;
     virtual void dessine(Integrable const&) = 0;
     // ... autres choses que vous voudriez dessiner...

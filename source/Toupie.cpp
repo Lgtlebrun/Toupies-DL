@@ -50,3 +50,10 @@ void Toupie::statsToupie(std::ostream& sortie) const{
     sortie << "distance [m]             :  " << m_d << std::endl;
 
 }
+
+
+
+std::string Toupie::getType() const {
+    return m_type;
+}
+

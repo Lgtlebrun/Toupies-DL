@@ -43,6 +43,18 @@ void IntegrateurEulerCromer::integre(Integrable& integrable, double const& dt) c
 
 
 
+IntegrateurEulerCromer* IntegrateurEulerCromer::clone() const {
+
+    return new IntegrateurEulerCromer(*this);
+}
+
+
+IntegrateurNewmark* IntegrateurNewmark::clone() const{
+
+    return new IntegrateurNewmark(*this);
+}
+
+
 void IntegrateurNewmark::integre(Integrable& integrable, double const& dt) const {
 
         /// Integre num�riquement selon la m�thode de Newmark
@@ -94,6 +106,11 @@ void IntegrateurRK4::integre(Integrable& integrable, double const& dt) const {
 
 
 
+}
+
+IntegrateurRK4* IntegrateurRK4::clone() const {
+
+    return new IntegrateurRK4(*this);
 }
 
 

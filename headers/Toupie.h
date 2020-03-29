@@ -19,9 +19,11 @@ class Toupie : public Integrable
 
         virtual Vecteur equEvol(double const& temps) const override;
 
-        virtual std::string typeToupie() const = 0 ;
-
         virtual void statsToupie(std::ostream& sortie) const;
+
+        virtual std::string getType() const;
+
+        virtual Toupie* clone() const = 0;
 
 
     protected:
@@ -31,10 +33,8 @@ class Toupie : public Integrable
     double m_masse;
     double m_masseVolumique;
     double m_d;
+    std::string m_type;
 
-    virtual double calculeIA1() const = 0;
-
-    virtual double calculeI3() const = 0;
 
 };
 

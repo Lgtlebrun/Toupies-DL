@@ -1,4 +1,4 @@
-data = load("StatsOH.txt");
+data = load("../../cmake-build-debug/StatsOH.txt");
 X = data(:,1);
 Y = data(:,2);
 

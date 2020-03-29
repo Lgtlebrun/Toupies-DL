@@ -15,7 +15,7 @@ public :
 
     ConeSimple(Vecteur const&, Vecteur const&, double const&, double const&, double const&);
 
-    virtual std::string typeToupie() const;
+    virtual ConeSimple* clone() const;
 
     virtual void statsToupie(std::ostream& sortie) const;
 
@@ -24,7 +24,6 @@ public :
 protected :
 
     virtual double calculeIA1(double const&, double const&, double const&) const;
-
     virtual double calculeI3(double const&, double const&, double const&) const;
 
     double masse(double const&, double const&, double const&) const;

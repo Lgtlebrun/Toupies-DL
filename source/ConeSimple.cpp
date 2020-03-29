@@ -5,7 +5,9 @@
 ConeSimple::ConeSimple(Vecteur const& param, Vecteur const& vit, double const& rayon, double const& hauteur, double const& masseVolumique)
         : Toupie(param, vit, calculeIA1(rayon, hauteur, masseVolumique), calculeI3(rayon, hauteur, masseVolumique),
                 masse(rayon, hauteur, masseVolumique), 3.0/4.0*hauteur, masseVolumique), m_rayon(rayon), m_hauteur(hauteur)
-{}
+{
+    m_type = "Cone simple";
+}
 
 
 double ConeSimple::calculeIA1(double const& rayon, double const& hauteur, double const& masseVolumique) const {
@@ -29,11 +31,6 @@ double ConeSimple::masse(double const& rayon, double const& hauteur, double cons
 }
 
 
-std::string ConeSimple::typeToupie() const {
-
-    return "Cone Simple" ;
-
-}
 
 
 void ConeSimple::statsToupie(std::ostream& sortie) const{
@@ -46,4 +43,9 @@ void ConeSimple::statsToupie(std::ostream& sortie) const{
     sortie << "hauteur [m]              :  " << m_hauteur << std::endl;
 
 
+}
+
+ConeSimple *ConeSimple::clone() const {
+
+    return new ConeSimple(*this);
 }

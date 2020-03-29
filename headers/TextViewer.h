@@ -10,15 +10,25 @@
 #include "Tests/Bille.h"
 
 
+
 class TextViewer : public SupportADessin
 {
 public :
 
+    TextViewer(std::ostream&);
     virtual ~TextViewer() {}
 
-    virtual void dessine(Systeme const&, std::ostream&) ;
 
-    virtual void dessine(Integrable const&, std::ostream&);
+    virtual TextViewer* clone() const;
+
+    virtual void dessine(Systeme const&) ;
+
+    virtual void dessine(Integrable const&);
+
+
+protected:
+
+    std::ostream& m_flux;
 
 };
 

@@ -15,21 +15,22 @@ class Systeme : public Dessinable {
 public:
 
     Systeme(SupportADessin *support, Integrateur*);
-
-    /// Nous n'avons pas envie que quelqu'un, un jour utilise un intégrateur de base
-    /// puisqu'il ne fait pas de sens, étant une classe abstraite
-
+    Systeme(Systeme const&);
     virtual ~Systeme();
 
     virtual void dessine() override;
-
     void affiche(std::ostream& sortie);
+
+
 
     Toupie * getToupie(size_t k) const;
 
     unsigned int getNbToupies() const;
 
     void evolue(double const&) ;
+
+
+    Systeme& operator=(Systeme const& S);
 
 protected:
 

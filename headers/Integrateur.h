@@ -17,11 +17,16 @@ class Integrateur{
             : m_t(t0)
         {}
 
+        virtual Integrateur* clone() const = 0;
+
         virtual void integre(Integrable& integrable, double const& dt) const =0;
 
         virtual void augmente_t(double const& dt);
 
         virtual double getTemps() const ;
+
+
+
 
 
     protected :
@@ -38,6 +43,8 @@ class IntegrateurEulerCromer: public Integrateur
 
         IntegrateurEulerCromer(double const& t0);
 
+        virtual IntegrateurEulerCromer* clone() const;
+
         void integre(Integrable& integrable, double const& dt) const;
 
 
@@ -51,6 +58,8 @@ class IntegrateurNewmark: public Integrateur
 
         IntegrateurNewmark (double const& t0);
 
+        virtual IntegrateurNewmark* clone() const;
+
         virtual void integre(Integrable& integrable, double const& dt) const;
 
 
@@ -63,6 +72,7 @@ class IntegrateurRK4: public Integrateur
 
     public :
 
+        virtual IntegrateurRK4* clone() const;
         virtual void integre(Integrable& integrable, double const& dt) const;
 
 
