@@ -12,6 +12,9 @@ class Dessinable {
 public:
 
     Dessinable(SupportADessin *support);
+    Dessinable(Dessinable const&);
+
+    Dessinable& operator=(Dessinable const&);
 
     virtual ~Dessinable();
 
