@@ -15,15 +15,17 @@ int main() {
     string Exo("Exercice9a.txt");
     ofstream flux (Exo.c_str());
 
-    if ( !flux ) {
+    IntegrateurEulerCromer I(0.0);
 
-        flux(cout);
+    if (flux.fail()) {
+
+        TextViewer T(cout);
+
+    } else {
+
+        TextViewer T(flux);
 
     }
-
-    TextViewer T(flux);
-
-    IntegrateurEulerCromer I(0.0);
 
     Systeme S(&T, &I);
 
