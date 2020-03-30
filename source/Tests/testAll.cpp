@@ -1,8 +1,8 @@
 #include <vector>
-#include <Tests/TestTextViewer.h>
 #include "Tests/TestIntegrateur.h"
 #include "../../headers/Tests/TestVecteur.h"
 #include "../../headers/Tests/TestMatrice.h"
+#include "../../headers/Tests/TestSysteme.h"
 
 
 int main() {
@@ -12,11 +12,12 @@ int main() {
     Tests.push_back(new TestVecteur);
     Tests.push_back(new TestMatrice);
     Tests.push_back(new TestIntegrateur);
-    Tests.push_back(new TestTextViewer);
+    Tests.push_back(new TestSysteme);
 
     std::cout << "Début du test." << std::endl;
 
   for (auto& ptr:Tests){
+
       ptr->run();
       delete ptr;
   }

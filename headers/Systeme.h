@@ -14,24 +14,21 @@ class Systeme : public Dessinable {
 
 public:
 
-    Systeme(SupportADessin *support, Integrateur*);
+    Systeme(SupportADessin& support, Integrateur&);
     Systeme(Systeme const&);
     virtual ~Systeme();
 
     virtual void dessine() override;
-    void affiche(std::ostream& sortie);
-
-
 
     Integrable* getCorps(size_t k) const;
-
     double getTemps() const;
+    unsigned int getNbCorps() const;
 
-    unsigned int getNbToupies() const;
 
     void evolue(double const&) ;
-
     void addIntegrable(Integrable*);
+
+    void affiche(std::ostream& sortie);
 
     Systeme& operator=(Systeme const& S);
 
@@ -39,7 +36,9 @@ protected:
 
     std::vector<Integrable*> m_corps;
 
-    Integrateur* m_integrateur;
+    Integrateur& m_integrateur;
+
+
 
 
 };

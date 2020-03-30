@@ -13,7 +13,7 @@ void TextViewer::dessine(Systeme const& S) {
 
     /// Affiche textuellement chaque paramètre et vitesse de chaque toupie
 
-    unsigned int taille(S.getNbToupies());
+    unsigned int taille(S.getNbCorps());
 
     m_flux << "t=" << S.getTemps() << " : " << std::endl;
 
@@ -39,4 +39,5 @@ TextViewer *TextViewer::clone() const {
 
     return new TextViewer(*this);
 }
+
 

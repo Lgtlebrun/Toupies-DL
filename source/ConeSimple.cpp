@@ -8,6 +8,11 @@ ConeSimple::ConeSimple(Vecteur const& param, Vecteur const& vit, double const& r
 {}
 
 
+ConeSimple::~ConeSimple() {
+
+}
+
+
 double ConeSimple::calculeIA1(double const& rayon, double const& hauteur, double const& masseVolumique) const {
 
     return M_PI*rayon*rayon*hauteur*masseVolumique/20*( rayon*rayon+3.0/5*hauteur*hauteur );
@@ -47,3 +52,5 @@ ConeSimple *ConeSimple::clone() const {
 
     return new ConeSimple(*this);
 }
+
+

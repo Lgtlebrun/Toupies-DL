@@ -6,6 +6,8 @@ Toupie::Toupie (std::string const& type, Vecteur const& param, Vecteur const& vi
     : Integrable(type, param, vit), m_IA1(IA1), m_I3(I3), m_masse(masse), m_d(d), m_masseVolumique(masseVolumique)
 {}
 
+Toupie::~Toupie() {}
+
 
 Vecteur Toupie::equEvol(double const& temps) const {
 
@@ -50,5 +52,7 @@ void Toupie::statsCorps(std::ostream& sortie) const{
     sortie << "distance [m]             :  " << m_d << std::endl;
 
 }
+
+
 
 

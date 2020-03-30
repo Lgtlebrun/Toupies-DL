@@ -21,8 +21,8 @@ public :
 
     virtual TextViewer* clone() const;
 
-    virtual void dessine(Systeme const&) ;
 
+    virtual void dessine(Systeme const&);
     virtual void dessine(Integrable const&);
 
 

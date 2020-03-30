@@ -1,11 +1,11 @@
 #include "../headers/Systeme.h"
 
 
-Systeme::Systeme(SupportADessin *support, Integrateur* I)
+Systeme::Systeme(SupportADessin& support, Integrateur& I)
     : Dessinable(support), m_integrateur(I)
 {}
 
-Systeme::Systeme(Systeme const& S) : Dessinable(S) {
+Systeme::Systeme(Systeme const& S) : Dessinable(S), m_integrateur(*(S.m_integrateur.clone())) {
 
     /// Constructeur de copie, pointeurs obligent
 
@@ -14,15 +14,9 @@ Systeme::Systeme(Systeme const& S) : Dessinable(S) {
         m_corps.push_back(elt->clone());
     }
 
-    m_integrateur = S.m_integrateur->clone();
 
 }
 
-void Systeme::addIntegrable(Integrable* I) {
-
-    m_corps.push_back(reinterpret_cast<Integrable *const>(&I));
-
-}
 
 Systeme& Systeme::operator=(Systeme const& S) {
 
@@ -30,7 +24,7 @@ Systeme& Systeme::operator=(Systeme const& S) {
 
     if (this != &S){
 
-        Dessinable::operator=(S);
+        m_support = S.m_support;
 
         for (auto& elt : m_corps){
            delete elt;
@@ -41,8 +35,8 @@ Systeme& Systeme::operator=(Systeme const& S) {
             m_corps.push_back(elt->clone());
         }
 
-        delete m_integrateur;
-        m_integrateur = S.m_integrateur->clone();
+
+        m_integrateur = *(S.m_integrateur.clone());
 
 
     }
@@ -60,7 +54,14 @@ Systeme::~Systeme()
         delete elt;
     }
 
-    delete m_integrateur;
+}
+
+
+
+void Systeme::addIntegrable(Integrable* I) {
+
+    m_corps.push_back(I);
+
 }
 
 
@@ -68,7 +69,7 @@ Systeme::~Systeme()
 
 void Systeme::dessine() {
 
-    m_support->dessine(*this);
+    m_support.dessine(*this);
 }
 
 
@@ -87,8 +88,9 @@ Integrable* Systeme::getCorps(size_t k) const {
 
 double Systeme::getTemps() const
 {
-    return m_integrateur->getTemps();
+    return m_integrateur.getTemps();
 }
+
 
 
 std::ostream& operator<<(std::ostream& sortie, Systeme& s){
@@ -131,17 +133,19 @@ void Systeme::evolue(double const& dt) {
 
     for (auto& elt: m_corps){
 
-        m_integrateur->integre(*elt , dt);
+        m_integrateur.integre(*elt , dt);
 
     }
 
-    m_integrateur->augmente_t(dt);
+    m_integrateur.augmente_t(dt);
 
 }
 
-unsigned int Systeme::getNbToupies() const {
+unsigned int Systeme::getNbCorps() const {
 
     return m_corps.size();
 }
+
+
 
 

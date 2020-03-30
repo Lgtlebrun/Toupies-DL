@@ -11,12 +11,11 @@ class Dessinable {
 
 public:
 
-    Dessinable(SupportADessin *support);
-    Dessinable(Dessinable const&);
+    Dessinable(SupportADessin& support);
 
-    Dessinable& operator=(Dessinable const&);
 
-    virtual ~Dessinable();
+    void changeSupport(SupportADessin&);
+
 
     virtual void dessine() = 0;
 
@@ -24,7 +23,7 @@ public:
 
 protected:
 
-    SupportADessin *m_support;
+    SupportADessin& m_support;
 };
 
 #endif //TOUPIES_DL_DESSINABLE_H

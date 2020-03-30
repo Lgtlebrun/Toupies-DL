@@ -466,7 +466,11 @@ std::string Vecteur::to_str() const{
     std::string str("[");
     for(auto const& elt : m_coords){
         str += std::to_string(elt);
+        str += " ";
     }
+
+    // On efface l'espace en trop
+    str.erase(str.size() - 1); 
 
     str += "]";
 

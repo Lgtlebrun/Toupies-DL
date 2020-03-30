@@ -13,14 +13,12 @@ set(FILES
         source/Integrable.cpp
         source/Integrateur.cpp
         source/Matrice3.cpp
-        source/Tests/Oscillateur.cpp
         source/Toupie.cpp
         source/Vecteur.cpp
         source/Systeme.cpp
-        source/Tests/Bille.cpp
         source/Dessinable.cpp
         source/ConeSimple.cpp
-        source/TextViewer.cpp source/constantes.cpp)
+        source/TextViewer.cpp)
 
 
 set(TEST_FILES
@@ -37,7 +35,7 @@ set(TEST_FILES
         source/Tests/Bille.cpp
         source/Tests/Oscillateur.cpp
         source/Tests/TestTextViewer.cpp
-        )
+        source/Tests/testSysteme.cpp)
 
 add_executable(Toupies_DL
 
@@ -45,5 +43,5 @@ add_executable(Toupies_DL
         main.cpp)
 
 add_executable(testAll
-
+        ${FILES}
         ${TEST_FILES})

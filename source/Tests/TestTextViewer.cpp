@@ -5,16 +5,12 @@
 #include <cmath>
 #include <string>
 
-
+/*
 TestTextViewer::TestTextViewer() : Unittest()
 {
     // ctor
 }
 
-TestTextViewer::~TestTextViewer()
-{
-    // dtor
-}
 
 
 bool TestTextViewer::run(){
@@ -23,7 +19,7 @@ bool TestTextViewer::run(){
 
     try {
 
-        m_success = (TestSysteme_B_OH() && TestSysteme_Conique() && SimulationTexte());
+        m_success = (SimulationTexte());
 
     }
 
@@ -62,140 +58,8 @@ bool TestTextViewer::run(){
 
 }
 
-bool TestTextViewer::TestSysteme_B_OH() {
-
-    // Teste si un système se comporte bien comme 2 objets indépendants
-
-    std::ofstream statsSyst ;
-    statsSyst.open( "StatsTextViewer.txt" );
 
 
-    double dt(0.01);
-
-    Bille Bs (0,1,1,2);                                                 // Bille et oscillateur système
-    Oscillateur OHs(Vecteur({1}), Vecteur({0}));
-
-    Bille Bc(0,1,1,2);                                                 // Bille et oscillateur de contrôle
-    Oscillateur OHc(Vecteur({1}), Vecteur({0}));
-
-    IntegrateurEulerCromer Is(0.0);
-    IntegrateurEulerCromer Ic(0.0);
-
-    TextViewer T(statsSyst);
-
-    Systeme S(&T, &Is);
-
-    S.addIntegrable(&Bs);
-    S.addIntegrable(&OHs);
-
-    S.affiche(statsSyst);
-
-    for (int k(0); k< 68 ; ++k) {
-
-        S.evolue(dt);
-
-        Ic.integre(Bc, dt);
-        Ic.integre(OHc, dt);
-
-        Ic.augmente_t(dt);
-
-
-        double EcartBille((S.getCorps(0)->getParam() - Bc.getParam()).norme());
-        double EcartOH((S.getCorps(1)->getParam() - OHc.getParam()).norme());
-
-
-        if (EcartBille >= PREC){
-
-            std::string t(std::to_string(Ic.getTemps()));
-
-            m_comment += "Erreur dans la classe Systeme : \nEcart trop eleve sur la bille: probleme d'integration au temps t=" + t + "\n";
-            m_comment += "Valeur observee : ";
-
-
-            m_comment +=  S.getCorps(0)->getParam().to_str() ;
-
-            m_comment += "\nValeur attendue : ";
-
-
-            m_comment +=  Bc.getParam().to_str();
-            m_comment += "\n";
-
-            return false;
-
-        } else if (EcartOH >= PREC){
-
-            std::string t(std::to_string(Ic.getTemps()));
-
-            m_comment += "Ecart trop eleve sur la bille: probleme d'integration au temps t=" + t + "\n";
-            m_comment += "Valeur observee : ";
-
-
-            m_comment += S.getCorps(1)->getParam().to_str();
-
-            m_comment += "\nValeur attendue : ";
-
-
-            m_comment += OHc.getParam().to_str();
-            m_comment += "\n";
-
-            return false;
-
-        }
-
-
-    }
-
-    return true;
-    
-}
-
-
-bool TestTextViewer::TestSysteme_Conique() {
-
-    // Teste si la conique se comporte bien comme prévu
-
-    std::ofstream statsSyst;
-    statsSyst.open( "StatsTextViewer.txt" );
-
-    TextViewer T(statsSyst);
-
-    ConeSimple C ({0,M_PI/6, 0}, {0,0,60}, 0.5, 1.5, 0.1);
-    IntegrateurEulerCromer I(0.0);
-
-    Systeme S (&T, &I);
-
-    S.addIntegrable(&C);
-
-    double dt(0.01);
-
-    for (int k(0); k< 20; ++k){
-
-        S.evolue(dt);
-        T.dessine(S);
-
-    }
-
-    Vecteur attendu({0.0265555, 0.598869, 5.0944});
-
-    if (S.getCorps(0)->getParam() == attendu) {
-
-        return true;
-
-    } else {
-
-        m_comment += "Erreur dans la classe ConeSimple : \n";
-        m_comment += "Valeur calculee : ";
-        m_comment += S.getCorps(0)->getParam().to_str();
-        m_comment += "\n";
-        m_comment += "Valeur theorique : ";
-        m_comment += attendu.to_str();
-        m_comment += "\n";
-
-        return false;
-
-    }
-
-}
 
 
 bool TestTextViewer::SimulationTexte() {
@@ -212,10 +76,10 @@ bool TestTextViewer::SimulationTexte() {
 
     TextViewer T(flux);
 
-    Systeme S(&T, &I);
+    Systeme S(&T, I);
 
-    S.addIntegrable(&C1);
-    S.addIntegrable(&C2);
+    S.addIntegrable(C1);
+    S.addIntegrable(C2);
 
     double dt(0.01);
 
@@ -233,3 +97,4 @@ bool TestTextViewer::SimulationTexte() {
 
 
 }
+*/

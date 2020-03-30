@@ -14,13 +14,8 @@ public :
 
     TestTextViewer();
 
-    virtual ~TestTextViewer();
 
     virtual bool run();
-
-    bool TestSysteme_B_OH();
-
-    bool TestSysteme_Conique();
 
     bool SimulationTexte();
 

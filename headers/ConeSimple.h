@@ -14,6 +14,7 @@ class ConeSimple : public Toupie
 public :
 
     ConeSimple(Vecteur const&, Vecteur const&, double const&, double const&, double const&);
+    virtual ~ConeSimple();
 
     virtual ConeSimple* clone() const;
 

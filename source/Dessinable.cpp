@@ -1,24 +1,12 @@
 #include "../headers/Dessinable.h"
 
 
-Dessinable::Dessinable(SupportADessin *support) : m_support(support) {}
+Dessinable::Dessinable(SupportADessin& support) : m_support(support) {}
 
-Dessinable::~Dessinable() {
 
-    delete m_support;
-}
 
-Dessinable::Dessinable(Dessinable const & autre) {
+void Dessinable::changeSupport(SupportADessin& sup) {
 
-    m_support = autre.m_support->clone();
-}
-
-Dessinable& Dessinable::operator=(Dessinable const & autre) {
-
-    if (this != &autre) {
-        delete m_support;
-        m_support = autre.m_support->clone();
-    }
-    return *this;
+    m_support = sup;
 }
 
