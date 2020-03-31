@@ -5,7 +5,7 @@
 
 #include "Vecteur.h"
 #include "Integrable.h"
-#include "string"
+#include <string>
 #include "constantes.h"
 
 

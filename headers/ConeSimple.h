@@ -18,7 +18,7 @@ public :
 
     virtual ConeSimple* clone() const;
 
-    virtual void statsToupie(std::ostream& sortie) const;
+    virtual void statsCorps(std::ostream& sortie) const;
 
 
 
