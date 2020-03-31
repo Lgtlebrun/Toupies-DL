@@ -14,3 +14,9 @@ Oscillateur *Oscillateur::clone() const {
 
     return new Oscillateur(*this);
 }
+
+std::string Oscillateur::getType() const{
+
+    return m_type;
+
+}

@@ -4,7 +4,7 @@
 
 ConeSimple::ConeSimple(Vecteur const& param, Vecteur const& vit, double const& rayon, double const& hauteur, double const& masseVolumique)
         : Toupie("Cone simple", param, vit, calculeIA1(rayon, hauteur, masseVolumique), calculeI3(rayon, hauteur, masseVolumique),
-                masse(rayon, hauteur, masseVolumique), 3.0/4.0*hauteur, masseVolumique), m_rayon(rayon), m_hauteur(hauteur)
+                 masseVolumique, masse(rayon, hauteur, masseVolumique), 3.0/4.0*hauteur), m_rayon(rayon), m_hauteur(hauteur)
 {}
 
 
@@ -15,14 +15,14 @@ ConeSimple::~ConeSimple() {
 
 double ConeSimple::calculeIA1(double const& rayon, double const& hauteur, double const& masseVolumique) const {
 
-    return M_PI*rayon*rayon*hauteur*masseVolumique/20*( rayon*rayon+3.0/5*hauteur*hauteur );
+    return masse(rayon, hauteur, masseVolumique)*(3.0/20*rayon*rayon+3.0/5*hauteur*hauteur);
 
 }
 
 
 double ConeSimple::calculeI3(double const& rayon, double const& hauteur, double const& masseVolumique) const {
 
-    return M_PI*rayon*rayon*hauteur*masseVolumique/10*( rayon*rayon);
+    return 3*masse(rayon, hauteur, masseVolumique)/10*rayon*rayon;
 
 }
 
@@ -36,7 +36,7 @@ double ConeSimple::masse(double const& rayon, double const& hauteur, double cons
 
 
 
-void ConeSimple::statsToupie(std::ostream& sortie) const{
+void ConeSimple::statsCorps(std::ostream& sortie) const{
 
     sortie << "masse [kg]               :  " << m_masse << std::endl;
     sortie << "masse volumique [kg m-3] :  " << m_masseVolumique << std::endl;

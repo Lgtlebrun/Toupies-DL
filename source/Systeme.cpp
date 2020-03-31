@@ -60,7 +60,7 @@ Systeme::~Systeme()
 
 void Systeme::addIntegrable(Integrable* I) {
 
-    m_corps.push_back(I);
+    m_corps.push_back(I->clone());
 
 }
 
@@ -109,7 +109,7 @@ void Systeme::affiche(std::ostream& sortie) {
 
     for (int k(0); k < m_corps.size() ; ++k) {
 
-        sortie << "==== Toupie " << k << " :" << std::endl;
+        sortie << "==== Toupie " << k+1 << " :" << std::endl;
         sortie << m_corps[k]->getType() << std::endl;
 
         sortie << "parametre                :  " << m_corps[k]->getParam() << std::endl;

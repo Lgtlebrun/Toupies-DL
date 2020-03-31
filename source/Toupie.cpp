@@ -1,5 +1,6 @@
 #include "../headers/Toupie.h"
 #include <cmath>
+#include <iostream>
 
 
 Toupie::Toupie (std::string const& type, Vecteur const& param, Vecteur const& vit, double const& IA1, double const& I3, double const& masseVolumique, double const & masse, double const& d)
@@ -15,17 +16,20 @@ Vecteur Toupie::equEvol(double const& temps) const {
     /// point de contact = cste
 
 
-    Vecteur sortie ;                // convention : (théta, psy, phi)
-                                    // init. au vecteur nul
+    Vecteur sortie;                // convention : (théta, psy, phi)
+                                  // init. au vecteur nul
 
 
-    if (abs(m_IA1) <= 1e-9 ) {
+
+    if ( fabs(m_IA1) < PREC ) {
 
         return sortie;              // pas d'accélération de la rotation s'il n'y a rien à faire tourner !
 
-    } else if (abs(sin(m_P.getCoord(0))) <= 1e-9 ) {
+    }
+    if (fabs(sin(m_P.getCoord(0))) < PREC ) {
 
-        return sortie;              // voir formule
+        return sortie;              // si la toupie a un angle à la verticale nul, alors, vu qu'il n'y a aucun frottement,
+                                    // la somme des force est nule, entraînant une accélération nulle
 
     }
 
@@ -35,9 +39,8 @@ Vecteur Toupie::equEvol(double const& temps) const {
     sortie.setCoord(1, m_Ppoint.getCoord(0)/(m_IA1*sin(m_P.getCoord(0))) * ((m_I3-2*m_IA1)*m_Ppoint.getCoord(1)*cos(m_P.getCoord(0))
     + m_I3*m_Ppoint.getCoord(2) ) ) ;
 
-    sortie.setCoord(2, m_Ppoint.getCoord(0)/(m_IA1*sin(m_P.getCoord(0))) * ( m_IA1- (m_I3-m_IA1)*cos(m_P.getCoord(0))
-    - m_I3*m_Ppoint.getCoord(2)*cos(m_P.getCoord(0))) ) ;
-
+    sortie.setCoord(2, m_Ppoint.getCoord(0)/(m_IA1*sin(m_P.getCoord(0))) * ( (m_IA1- (m_I3-m_IA1)*cos(m_P.getCoord(0))*cos(m_P.getCoord(0)) )
+    *m_Ppoint.getCoord(1) - m_I3*m_Ppoint.getCoord(2)*cos(m_P.getCoord(0))) ) ;
 
 
     return sortie;
