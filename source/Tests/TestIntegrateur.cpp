@@ -68,6 +68,7 @@ bool TestIntegrateur::testBille() {
     for (size_t i(0); i < 68 ; i++){
 
         I.integre(B, dt);
+        I.augmente_t(dt);
         stats += (std::to_string(B.getParam().getCoord(0)) + " " + std::to_string(B.getParam().getCoord(1)) + "\n");
     }
 
@@ -82,9 +83,9 @@ bool TestIntegrateur::testBille() {
 
     if (B.getParam() != attendu) {      // Opérateur surchargé : PREC = 1e-14
 
-        m_comment += "Erreur dans la classe IntegrateurEulerCromer : Attendu :";
+        m_comment += "Erreur dans la classe IntegrateurEulerCromer sur la bille : Attendu :";
         m_comment += attendu.to_str();
-        m_comment += "Constaté : ";
+        m_comment += " Constaté : ";
         m_comment += B.getParam().to_str();
         m_comment += "\n";
         return false;
@@ -112,7 +113,7 @@ bool TestIntegrateur::testOH() {
 
     double err_rel(0);
 
-    for(size_t i(0); i < 68; i++){
+    for(size_t i(0); i < 150; i++){
 
         I.integre(OH, dt);
         I.augmente_t(dt);
@@ -135,7 +136,7 @@ bool TestIntegrateur::testOH() {
     double precision(0.005);
     if (err_rel > precision){
         m_comment += "Erreur dans le test d'IntegrateurEC sur l'OH : Erreur relative tolérée :";
-        m_comment +=  std::to_string(precision) + "Observé : ";
+        m_comment +=  std::to_string(precision) + " Observé : ";
         m_comment += std::to_string(err_rel);
         m_comment += "\n";
 

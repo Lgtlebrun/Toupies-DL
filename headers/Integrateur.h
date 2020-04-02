@@ -9,7 +9,7 @@
 
 
 
-class Integrateur{
+class Integrateur : public Clonable{
 
     public :
 

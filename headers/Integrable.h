@@ -4,9 +4,10 @@
 #define INTEGRABLE_H
 
 #include "Vecteur.h"
+#include "Clonable.h"
 #include <iostream>
 
-class Integrable
+class Integrable : public Clonable
 {
     public:
 

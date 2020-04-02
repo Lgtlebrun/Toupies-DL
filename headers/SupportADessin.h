@@ -13,7 +13,7 @@
 
 
 class Systeme;
-class SupportADessin {
+class SupportADessin : public Clonable {
 
 
 public:
