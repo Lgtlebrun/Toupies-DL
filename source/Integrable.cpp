@@ -1,9 +1,8 @@
 #include "../headers/Integrable.h"
-#include "../headers/Vecteur.h"
 
 
 Integrable::Integrable(std::string const& type, Vecteur const& param, Vecteur const& vit)
-    : m_P(param), m_Ppoint(vit), m_type(type)
+    : Dessinable(), m_type(type), m_P(param), m_Ppoint(vit)
 {}
 
 Integrable::~Integrable()
@@ -44,4 +43,9 @@ void Integrable::statsCorps(std::ostream&) const{
 
 
 
+}
+
+void Integrable::dessine() {
+
+    m_support.dessine(*this);
 }

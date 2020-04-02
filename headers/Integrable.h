@@ -3,13 +3,17 @@
 #ifndef INTEGRABLE_H
 #define INTEGRABLE_H
 
+
 #include "Vecteur.h"
-#include "Clonable.h"
+#include "Dessinable.h"
+#include "constantes.h"
 #include <iostream>
 
-class Integrable : public Clonable
+class Dessinable;
+class Integrable : public Dessinable
 {
     public:
+
 
         Integrable(std::string const&, Vecteur const&, Vecteur const&);
 
@@ -18,6 +22,7 @@ class Integrable : public Clonable
 
         virtual Vecteur equEvol(double const& temps) const = 0;
         virtual Integrable* clone() const = 0;
+        virtual void dessine();
 
 
         virtual std::string getType() const;

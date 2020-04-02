@@ -20,3 +20,8 @@ std::string Oscillateur::getType() const{
     return m_type;
 
 }
+
+void Oscillateur::dessine() {
+
+    m_support.dessine(*this);
+}

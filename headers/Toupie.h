@@ -7,6 +7,8 @@
 #include "Integrable.h"
 #include <string>
 #include "constantes.h"
+#include "TextViewer.h"
+#include "SupportADessin.h"
 
 
 
@@ -18,6 +20,8 @@ class Toupie : public Integrable
         Toupie(std::string const&, Vecteur const&, Vecteur const&, double const&, double const&, double const&, double const&, double const&);
 
         virtual ~Toupie();
+
+
 
         virtual Vecteur equEvol(double const& temps) const override;
 

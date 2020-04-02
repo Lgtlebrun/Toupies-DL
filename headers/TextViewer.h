@@ -11,6 +11,8 @@
 
 
 
+
+
 class TextViewer : public SupportADessin
 {
 public :
@@ -23,7 +25,9 @@ public :
 
 
     virtual void dessine(Systeme const&);
-    virtual void dessine(Integrable const&);
+    virtual void dessine(Bille const&) ;
+    virtual void dessine(Oscillateur const&) ;
+    virtual void dessine(ConeSimple const&) ;
 
 
 protected:

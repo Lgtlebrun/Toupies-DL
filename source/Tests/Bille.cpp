@@ -23,3 +23,8 @@ std::string Bille::getType() const{
     return m_type;
 
 }
+
+void Bille::dessine() {
+
+    m_support.dessine(*this);
+}

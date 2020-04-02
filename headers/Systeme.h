@@ -3,12 +3,15 @@
 #ifndef TOUPIES_DL_SYSTEME_H
 #define TOUPIES_DL_SYSTEME_H
 
-
+#include "Integrable.h"
 #include "SupportADessin.h"
 #include <vector>
 #include "Dessinable.h"
 #include <iostream>
 #include "Integrateur.h"
+
+
+class SupportADessin;
 
 class Systeme : public Dessinable {
 
@@ -18,6 +21,7 @@ public:
     Systeme(Systeme const&);
     virtual ~Systeme();
 
+    virtual Systeme* clone() const;
     virtual void dessine() override;
 
     Integrable* getCorps(size_t k) const;
@@ -26,7 +30,7 @@ public:
 
 
     void evolue(double const&) ;
-    void addIntegrable(Integrable*);
+    void addIntegrable(Integrable&);
 
     void affiche(std::ostream& sortie);
 

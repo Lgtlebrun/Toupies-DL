@@ -5,10 +5,13 @@
 
 #include "Vecteur.h"
 
+
 class Vecteur;
+class TextViewer;
 extern const Vecteur g;
 extern const double PREC;
 extern const double EPSILON;
 
+// extern const TextViewer CONSOLE;
 
 #endif //TOUPIES_DL_CONSTANTES_H

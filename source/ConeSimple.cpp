@@ -54,3 +54,19 @@ ConeSimple *ConeSimple::clone() const {
 }
 
 
+void ConeSimple::dessine() {
+
+    m_support.dessine(*this);
+}
+
+double ConeSimple::getRayon() const {
+
+    return m_rayon;
+}
+
+double ConeSimple::getHauteur() const {
+
+    return m_hauteur;
+}
+
+

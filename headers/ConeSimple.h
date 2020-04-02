@@ -17,6 +17,10 @@ public :
     virtual ~ConeSimple();
 
     virtual ConeSimple* clone() const;
+    virtual void dessine() override;
+
+    double getRayon() const;
+    double getHauteur() const;
 
     virtual void statsCorps(std::ostream& sortie) const;
 

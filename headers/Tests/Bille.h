@@ -13,14 +13,13 @@ public :
 
     Bille(double, double, double, double);
     virtual Bille* clone() const;
+    virtual void dessine() override;
 
     virtual Vecteur equEvol(double const& temps) const;
 
     virtual std::string getType() const;
 
 protected :
-
-    std::string m_type = "Bille";
 
 };
 

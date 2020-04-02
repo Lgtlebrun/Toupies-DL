@@ -5,8 +5,9 @@
 
 #include "Toupie.h"
 #include "constantes.h"
+#include "Integrable.h"
 
-
+class Integrable;
 
 
 class Integrateur : public Clonable{
