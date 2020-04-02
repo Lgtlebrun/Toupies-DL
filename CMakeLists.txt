@@ -34,8 +34,8 @@ set(TEST_FILES
         source/Integrateur.cpp
         source/Tests/Bille.cpp
         source/Tests/Oscillateur.cpp
-        source/Tests/TestTextViewer.cpp
-        source/Tests/testSysteme.cpp)
+        source/Tests/testSysteme.cpp
+        headers/Clonable.h)
 
 add_executable(Toupies_DL
 
@@ -45,3 +45,14 @@ add_executable(Toupies_DL
 add_executable(testAll
         ${FILES}
         ${TEST_FILES})
+
+
+add_executable(exoa
+        ${FILES}
+        source/Tests/Bille.cpp
+        source/Tests/Oscillateur.cpp
+        exercice9a.cpp)
+
+add_executable(exob
+        ${FILES}
+        exercice9b.cpp)
