@@ -43,23 +43,27 @@ RM = "C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "E:\C++\Tous pires\Toupies-DL\Toupies-DL"
+CMAKE_SOURCE_DIR = "E:\C++\Tous pires\Toupies-DL"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "E:\C++\Tous pires\Toupies-DL\Toupies-DL\cmake-build-debug"
+CMAKE_BINARY_DIR = "E:\C++\Tous pires\Toupies-DL\cmake-build-debug"
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
 all: CMakeFiles/Toupies_DL.dir/all
+all: CMakeFiles/exoa.dir/all
 all: CMakeFiles/testAll.dir/all
+all: CMakeFiles/exob.dir/all
 
 .PHONY : all
 
 # The main recursive "clean" target.
 clean: CMakeFiles/Toupies_DL.dir/clean
+clean: CMakeFiles/exoa.dir/clean
 clean: CMakeFiles/testAll.dir/clean
+clean: CMakeFiles/exob.dir/clean
 
 .PHONY : clean
 
@@ -75,14 +79,14 @@ preinstall:
 CMakeFiles/Toupies_DL.dir/all:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/depend
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="E:\C++\Tous pires\Toupies-DL\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14 "Built target Toupies_DL"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11,12 "Built target Toupies_DL"
 .PHONY : CMakeFiles/Toupies_DL.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Toupies_DL.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C++\Tous pires\Toupies-DL\Toupies-DL\cmake-build-debug\CMakeFiles" 14
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" 12
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/Toupies_DL.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C++\Tous pires\Toupies-DL\Toupies-DL\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/Toupies_DL.dir/rule
 
 # Convenience name for target.
@@ -96,20 +100,47 @@ CMakeFiles/Toupies_DL.dir/clean:
 .PHONY : CMakeFiles/Toupies_DL.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/exoa.dir
+
+# All Build rule for target.
+CMakeFiles/exoa.dir/all:
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/depend
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=13,14,15,16,17,18,19,20,21,22,23,24,25,26 "Built target exoa"
+.PHONY : CMakeFiles/exoa.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/exoa.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" 14
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/exoa.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" 0
+.PHONY : CMakeFiles/exoa.dir/rule
+
+# Convenience name for target.
+exoa: CMakeFiles/exoa.dir/rule
+
+.PHONY : exoa
+
+# clean rule for target.
+CMakeFiles/exoa.dir/clean:
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/clean
+.PHONY : CMakeFiles/exoa.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/testAll.dir
 
 # All Build rule for target.
 CMakeFiles/testAll.dir/all:
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/depend
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="E:\C++\Tous pires\Toupies-DL\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=15,16,17,18,19,20,21,22,23,24,25,26,27,28 "Built target testAll"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57 "Built target testAll"
 .PHONY : CMakeFiles/testAll.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/testAll.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C++\Tous pires\Toupies-DL\Toupies-DL\cmake-build-debug\CMakeFiles" 14
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" 19
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/testAll.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C++\Tous pires\Toupies-DL\Toupies-DL\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" 0
 .PHONY : CMakeFiles/testAll.dir/rule
 
 # Convenience name for target.
@@ -121,6 +152,33 @@ testAll: CMakeFiles/testAll.dir/rule
 CMakeFiles/testAll.dir/clean:
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/clean
 .PHONY : CMakeFiles/testAll.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/exob.dir
+
+# All Build rule for target.
+CMakeFiles/exob.dir/all:
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/depend
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=27,28,29,30,31,32,33,34,35,36,37,38 "Built target exob"
+.PHONY : CMakeFiles/exob.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/exob.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" 12
+	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/exob.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" 0
+.PHONY : CMakeFiles/exob.dir/rule
+
+# Convenience name for target.
+exob: CMakeFiles/exob.dir/rule
+
+.PHONY : exob
+
+# clean rule for target.
+CMakeFiles/exob.dir/clean:
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/clean
+.PHONY : CMakeFiles/exob.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

@@ -6,8 +6,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/Toupies_DL.dir/source/Integrateur.cpp.obj"
   "CMakeFiles/Toupies_DL.dir/source/Matrice3.cpp.obj"
   "CMakeFiles/Toupies_DL.dir/source/Systeme.cpp.obj"
-  "CMakeFiles/Toupies_DL.dir/source/Tests/Bille.cpp.obj"
-  "CMakeFiles/Toupies_DL.dir/source/Tests/Oscillateur.cpp.obj"
   "CMakeFiles/Toupies_DL.dir/source/TextViewer.cpp.obj"
   "CMakeFiles/Toupies_DL.dir/source/Toupie.cpp.obj"
   "CMakeFiles/Toupies_DL.dir/source/Vecteur.cpp.obj"

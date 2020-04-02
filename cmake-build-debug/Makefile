@@ -47,24 +47,13 @@ RM = "C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe" -E 
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "E:\C++\Tous pires\Toupies-DL\Toupies-DL"
+CMAKE_SOURCE_DIR = "E:\C++\Tous pires\Toupies-DL"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "E:\C++\Tous pires\Toupies-DL\Toupies-DL\cmake-build-debug"
+CMAKE_BINARY_DIR = "E:\C++\Tous pires\Toupies-DL\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	"C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -77,11 +66,22 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	"C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe" -E echo "No interactive CMake dialog available."
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C++\Tous pires\Toupies-DL\Toupies-DL\cmake-build-debug\CMakeFiles" "E:\C++\Tous pires\Toupies-DL\Toupies-DL\cmake-build-debug\CMakeFiles\progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" "E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles\progress.marks"
 	$(MAKE) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C++\Tous pires\Toupies-DL\Toupies-DL\cmake-build-debug\CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,19 @@ Toupies_DL/fast:
 .PHONY : Toupies_DL/fast
 
 #=============================================================================
+# Target rules for targets named exoa
+
+# Build rule for target.
+exoa: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 exoa
+.PHONY : exoa
+
+# fast build rule for target.
+exoa/fast:
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/build
+.PHONY : exoa/fast
+
+#=============================================================================
 # Target rules for targets named testAll
 
 # Build rule for target.
@@ -134,6 +147,73 @@ testAll: cmake_check_build_system
 testAll/fast:
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/build
 .PHONY : testAll/fast
+
+#=============================================================================
+# Target rules for targets named exob
+
+# Build rule for target.
+exob: cmake_check_build_system
+	$(MAKE) -f CMakeFiles\Makefile2 exob
+.PHONY : exob
+
+# fast build rule for target.
+exob/fast:
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/build
+.PHONY : exob/fast
+
+exercice9a.obj: exercice9a.cpp.obj
+
+.PHONY : exercice9a.obj
+
+# target to build an object file
+exercice9a.cpp.obj:
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/exercice9a.cpp.obj
+.PHONY : exercice9a.cpp.obj
+
+exercice9a.i: exercice9a.cpp.i
+
+.PHONY : exercice9a.i
+
+# target to preprocess a source file
+exercice9a.cpp.i:
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/exercice9a.cpp.i
+.PHONY : exercice9a.cpp.i
+
+exercice9a.s: exercice9a.cpp.s
+
+.PHONY : exercice9a.s
+
+# target to generate assembly for a file
+exercice9a.cpp.s:
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/exercice9a.cpp.s
+.PHONY : exercice9a.cpp.s
+
+exercice9b.obj: exercice9b.cpp.obj
+
+.PHONY : exercice9b.obj
+
+# target to build an object file
+exercice9b.cpp.obj:
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/exercice9b.cpp.obj
+.PHONY : exercice9b.cpp.obj
+
+exercice9b.i: exercice9b.cpp.i
+
+.PHONY : exercice9b.i
+
+# target to preprocess a source file
+exercice9b.cpp.i:
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/exercice9b.cpp.i
+.PHONY : exercice9b.cpp.i
+
+exercice9b.s: exercice9b.cpp.s
+
+.PHONY : exercice9b.s
+
+# target to generate assembly for a file
+exercice9b.cpp.s:
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/exercice9b.cpp.s
+.PHONY : exercice9b.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -169,6 +249,9 @@ source/ConeSimple.obj: source/ConeSimple.cpp.obj
 # target to build an object file
 source/ConeSimple.cpp.obj:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/ConeSimple.cpp.obj
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/ConeSimple.cpp.obj
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/ConeSimple.cpp.obj
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/ConeSimple.cpp.obj
 .PHONY : source/ConeSimple.cpp.obj
 
 source/ConeSimple.i: source/ConeSimple.cpp.i
@@ -178,6 +261,9 @@ source/ConeSimple.i: source/ConeSimple.cpp.i
 # target to preprocess a source file
 source/ConeSimple.cpp.i:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/ConeSimple.cpp.i
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/ConeSimple.cpp.i
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/ConeSimple.cpp.i
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/ConeSimple.cpp.i
 .PHONY : source/ConeSimple.cpp.i
 
 source/ConeSimple.s: source/ConeSimple.cpp.s
@@ -187,6 +273,9 @@ source/ConeSimple.s: source/ConeSimple.cpp.s
 # target to generate assembly for a file
 source/ConeSimple.cpp.s:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/ConeSimple.cpp.s
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/ConeSimple.cpp.s
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/ConeSimple.cpp.s
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/ConeSimple.cpp.s
 .PHONY : source/ConeSimple.cpp.s
 
 source/Dessinable.obj: source/Dessinable.cpp.obj
@@ -196,6 +285,9 @@ source/Dessinable.obj: source/Dessinable.cpp.obj
 # target to build an object file
 source/Dessinable.cpp.obj:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Dessinable.cpp.obj
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Dessinable.cpp.obj
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Dessinable.cpp.obj
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/Dessinable.cpp.obj
 .PHONY : source/Dessinable.cpp.obj
 
 source/Dessinable.i: source/Dessinable.cpp.i
@@ -205,6 +297,9 @@ source/Dessinable.i: source/Dessinable.cpp.i
 # target to preprocess a source file
 source/Dessinable.cpp.i:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Dessinable.cpp.i
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Dessinable.cpp.i
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Dessinable.cpp.i
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/Dessinable.cpp.i
 .PHONY : source/Dessinable.cpp.i
 
 source/Dessinable.s: source/Dessinable.cpp.s
@@ -214,6 +309,9 @@ source/Dessinable.s: source/Dessinable.cpp.s
 # target to generate assembly for a file
 source/Dessinable.cpp.s:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Dessinable.cpp.s
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Dessinable.cpp.s
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Dessinable.cpp.s
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/Dessinable.cpp.s
 .PHONY : source/Dessinable.cpp.s
 
 source/Integrable.obj: source/Integrable.cpp.obj
@@ -223,7 +321,9 @@ source/Integrable.obj: source/Integrable.cpp.obj
 # target to build an object file
 source/Integrable.cpp.obj:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Integrable.cpp.obj
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Integrable.cpp.obj
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Integrable.cpp.obj
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/Integrable.cpp.obj
 .PHONY : source/Integrable.cpp.obj
 
 source/Integrable.i: source/Integrable.cpp.i
@@ -233,7 +333,9 @@ source/Integrable.i: source/Integrable.cpp.i
 # target to preprocess a source file
 source/Integrable.cpp.i:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Integrable.cpp.i
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Integrable.cpp.i
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Integrable.cpp.i
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/Integrable.cpp.i
 .PHONY : source/Integrable.cpp.i
 
 source/Integrable.s: source/Integrable.cpp.s
@@ -243,7 +345,9 @@ source/Integrable.s: source/Integrable.cpp.s
 # target to generate assembly for a file
 source/Integrable.cpp.s:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Integrable.cpp.s
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Integrable.cpp.s
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Integrable.cpp.s
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/Integrable.cpp.s
 .PHONY : source/Integrable.cpp.s
 
 source/Integrateur.obj: source/Integrateur.cpp.obj
@@ -253,7 +357,9 @@ source/Integrateur.obj: source/Integrateur.cpp.obj
 # target to build an object file
 source/Integrateur.cpp.obj:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Integrateur.cpp.obj
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Integrateur.cpp.obj
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Integrateur.cpp.obj
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/Integrateur.cpp.obj
 .PHONY : source/Integrateur.cpp.obj
 
 source/Integrateur.i: source/Integrateur.cpp.i
@@ -263,7 +369,9 @@ source/Integrateur.i: source/Integrateur.cpp.i
 # target to preprocess a source file
 source/Integrateur.cpp.i:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Integrateur.cpp.i
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Integrateur.cpp.i
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Integrateur.cpp.i
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/Integrateur.cpp.i
 .PHONY : source/Integrateur.cpp.i
 
 source/Integrateur.s: source/Integrateur.cpp.s
@@ -273,7 +381,9 @@ source/Integrateur.s: source/Integrateur.cpp.s
 # target to generate assembly for a file
 source/Integrateur.cpp.s:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Integrateur.cpp.s
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Integrateur.cpp.s
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Integrateur.cpp.s
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/Integrateur.cpp.s
 .PHONY : source/Integrateur.cpp.s
 
 source/Matrice3.obj: source/Matrice3.cpp.obj
@@ -283,7 +393,9 @@ source/Matrice3.obj: source/Matrice3.cpp.obj
 # target to build an object file
 source/Matrice3.cpp.obj:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Matrice3.cpp.obj
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Matrice3.cpp.obj
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Matrice3.cpp.obj
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/Matrice3.cpp.obj
 .PHONY : source/Matrice3.cpp.obj
 
 source/Matrice3.i: source/Matrice3.cpp.i
@@ -293,7 +405,9 @@ source/Matrice3.i: source/Matrice3.cpp.i
 # target to preprocess a source file
 source/Matrice3.cpp.i:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Matrice3.cpp.i
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Matrice3.cpp.i
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Matrice3.cpp.i
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/Matrice3.cpp.i
 .PHONY : source/Matrice3.cpp.i
 
 source/Matrice3.s: source/Matrice3.cpp.s
@@ -303,7 +417,9 @@ source/Matrice3.s: source/Matrice3.cpp.s
 # target to generate assembly for a file
 source/Matrice3.cpp.s:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Matrice3.cpp.s
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Matrice3.cpp.s
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Matrice3.cpp.s
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/Matrice3.cpp.s
 .PHONY : source/Matrice3.cpp.s
 
 source/Systeme.obj: source/Systeme.cpp.obj
@@ -313,6 +429,9 @@ source/Systeme.obj: source/Systeme.cpp.obj
 # target to build an object file
 source/Systeme.cpp.obj:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Systeme.cpp.obj
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Systeme.cpp.obj
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Systeme.cpp.obj
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/Systeme.cpp.obj
 .PHONY : source/Systeme.cpp.obj
 
 source/Systeme.i: source/Systeme.cpp.i
@@ -322,6 +441,9 @@ source/Systeme.i: source/Systeme.cpp.i
 # target to preprocess a source file
 source/Systeme.cpp.i:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Systeme.cpp.i
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Systeme.cpp.i
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Systeme.cpp.i
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/Systeme.cpp.i
 .PHONY : source/Systeme.cpp.i
 
 source/Systeme.s: source/Systeme.cpp.s
@@ -331,6 +453,9 @@ source/Systeme.s: source/Systeme.cpp.s
 # target to generate assembly for a file
 source/Systeme.cpp.s:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Systeme.cpp.s
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Systeme.cpp.s
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Systeme.cpp.s
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/Systeme.cpp.s
 .PHONY : source/Systeme.cpp.s
 
 source/Tests/Bille.obj: source/Tests/Bille.cpp.obj
@@ -339,7 +464,7 @@ source/Tests/Bille.obj: source/Tests/Bille.cpp.obj
 
 # target to build an object file
 source/Tests/Bille.cpp.obj:
-	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/Bille.cpp.obj
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Tests/Bille.cpp.obj
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/Bille.cpp.obj
 .PHONY : source/Tests/Bille.cpp.obj
 
@@ -349,7 +474,7 @@ source/Tests/Bille.i: source/Tests/Bille.cpp.i
 
 # target to preprocess a source file
 source/Tests/Bille.cpp.i:
-	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/Bille.cpp.i
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Tests/Bille.cpp.i
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/Bille.cpp.i
 .PHONY : source/Tests/Bille.cpp.i
 
@@ -359,7 +484,7 @@ source/Tests/Bille.s: source/Tests/Bille.cpp.s
 
 # target to generate assembly for a file
 source/Tests/Bille.cpp.s:
-	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/Bille.cpp.s
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Tests/Bille.cpp.s
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/Bille.cpp.s
 .PHONY : source/Tests/Bille.cpp.s
 
@@ -369,7 +494,7 @@ source/Tests/Oscillateur.obj: source/Tests/Oscillateur.cpp.obj
 
 # target to build an object file
 source/Tests/Oscillateur.cpp.obj:
-	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/Oscillateur.cpp.obj
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Tests/Oscillateur.cpp.obj
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/Oscillateur.cpp.obj
 .PHONY : source/Tests/Oscillateur.cpp.obj
 
@@ -379,7 +504,7 @@ source/Tests/Oscillateur.i: source/Tests/Oscillateur.cpp.i
 
 # target to preprocess a source file
 source/Tests/Oscillateur.cpp.i:
-	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/Oscillateur.cpp.i
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Tests/Oscillateur.cpp.i
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/Oscillateur.cpp.i
 .PHONY : source/Tests/Oscillateur.cpp.i
 
@@ -389,7 +514,7 @@ source/Tests/Oscillateur.s: source/Tests/Oscillateur.cpp.s
 
 # target to generate assembly for a file
 source/Tests/Oscillateur.cpp.s:
-	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Tests/Oscillateur.cpp.s
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Tests/Oscillateur.cpp.s
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/Oscillateur.cpp.s
 .PHONY : source/Tests/Oscillateur.cpp.s
 
@@ -446,33 +571,6 @@ source/Tests/TestMatrice.s: source/Tests/TestMatrice.cpp.s
 source/Tests/TestMatrice.cpp.s:
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/TestMatrice.cpp.s
 .PHONY : source/Tests/TestMatrice.cpp.s
-
-source/Tests/TestTextViewer.obj: source/Tests/TestTextViewer.cpp.obj
-
-.PHONY : source/Tests/TestTextViewer.obj
-
-# target to build an object file
-source/Tests/TestTextViewer.cpp.obj:
-	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/TestTextViewer.cpp.obj
-.PHONY : source/Tests/TestTextViewer.cpp.obj
-
-source/Tests/TestTextViewer.i: source/Tests/TestTextViewer.cpp.i
-
-.PHONY : source/Tests/TestTextViewer.i
-
-# target to preprocess a source file
-source/Tests/TestTextViewer.cpp.i:
-	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/TestTextViewer.cpp.i
-.PHONY : source/Tests/TestTextViewer.cpp.i
-
-source/Tests/TestTextViewer.s: source/Tests/TestTextViewer.cpp.s
-
-.PHONY : source/Tests/TestTextViewer.s
-
-# target to generate assembly for a file
-source/Tests/TestTextViewer.cpp.s:
-	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/TestTextViewer.cpp.s
-.PHONY : source/Tests/TestTextViewer.cpp.s
 
 source/Tests/TestVecteur.obj: source/Tests/TestVecteur.cpp.obj
 
@@ -555,6 +653,33 @@ source/Tests/testAll.cpp.s:
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/testAll.cpp.s
 .PHONY : source/Tests/testAll.cpp.s
 
+source/Tests/testSysteme.obj: source/Tests/testSysteme.cpp.obj
+
+.PHONY : source/Tests/testSysteme.obj
+
+# target to build an object file
+source/Tests/testSysteme.cpp.obj:
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/testSysteme.cpp.obj
+.PHONY : source/Tests/testSysteme.cpp.obj
+
+source/Tests/testSysteme.i: source/Tests/testSysteme.cpp.i
+
+.PHONY : source/Tests/testSysteme.i
+
+# target to preprocess a source file
+source/Tests/testSysteme.cpp.i:
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/testSysteme.cpp.i
+.PHONY : source/Tests/testSysteme.cpp.i
+
+source/Tests/testSysteme.s: source/Tests/testSysteme.cpp.s
+
+.PHONY : source/Tests/testSysteme.s
+
+# target to generate assembly for a file
+source/Tests/testSysteme.cpp.s:
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Tests/testSysteme.cpp.s
+.PHONY : source/Tests/testSysteme.cpp.s
+
 source/TextViewer.obj: source/TextViewer.cpp.obj
 
 .PHONY : source/TextViewer.obj
@@ -562,6 +687,9 @@ source/TextViewer.obj: source/TextViewer.cpp.obj
 # target to build an object file
 source/TextViewer.cpp.obj:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/TextViewer.cpp.obj
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/TextViewer.cpp.obj
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/TextViewer.cpp.obj
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/TextViewer.cpp.obj
 .PHONY : source/TextViewer.cpp.obj
 
 source/TextViewer.i: source/TextViewer.cpp.i
@@ -571,6 +699,9 @@ source/TextViewer.i: source/TextViewer.cpp.i
 # target to preprocess a source file
 source/TextViewer.cpp.i:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/TextViewer.cpp.i
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/TextViewer.cpp.i
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/TextViewer.cpp.i
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/TextViewer.cpp.i
 .PHONY : source/TextViewer.cpp.i
 
 source/TextViewer.s: source/TextViewer.cpp.s
@@ -580,6 +711,9 @@ source/TextViewer.s: source/TextViewer.cpp.s
 # target to generate assembly for a file
 source/TextViewer.cpp.s:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/TextViewer.cpp.s
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/TextViewer.cpp.s
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/TextViewer.cpp.s
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/TextViewer.cpp.s
 .PHONY : source/TextViewer.cpp.s
 
 source/Toupie.obj: source/Toupie.cpp.obj
@@ -589,6 +723,9 @@ source/Toupie.obj: source/Toupie.cpp.obj
 # target to build an object file
 source/Toupie.cpp.obj:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Toupie.cpp.obj
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Toupie.cpp.obj
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Toupie.cpp.obj
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/Toupie.cpp.obj
 .PHONY : source/Toupie.cpp.obj
 
 source/Toupie.i: source/Toupie.cpp.i
@@ -598,6 +735,9 @@ source/Toupie.i: source/Toupie.cpp.i
 # target to preprocess a source file
 source/Toupie.cpp.i:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Toupie.cpp.i
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Toupie.cpp.i
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Toupie.cpp.i
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/Toupie.cpp.i
 .PHONY : source/Toupie.cpp.i
 
 source/Toupie.s: source/Toupie.cpp.s
@@ -607,6 +747,9 @@ source/Toupie.s: source/Toupie.cpp.s
 # target to generate assembly for a file
 source/Toupie.cpp.s:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Toupie.cpp.s
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Toupie.cpp.s
+	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Toupie.cpp.s
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/Toupie.cpp.s
 .PHONY : source/Toupie.cpp.s
 
 source/Vecteur.obj: source/Vecteur.cpp.obj
@@ -616,7 +759,9 @@ source/Vecteur.obj: source/Vecteur.cpp.obj
 # target to build an object file
 source/Vecteur.cpp.obj:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Vecteur.cpp.obj
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Vecteur.cpp.obj
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Vecteur.cpp.obj
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/Vecteur.cpp.obj
 .PHONY : source/Vecteur.cpp.obj
 
 source/Vecteur.i: source/Vecteur.cpp.i
@@ -626,7 +771,9 @@ source/Vecteur.i: source/Vecteur.cpp.i
 # target to preprocess a source file
 source/Vecteur.cpp.i:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Vecteur.cpp.i
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Vecteur.cpp.i
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Vecteur.cpp.i
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/Vecteur.cpp.i
 .PHONY : source/Vecteur.cpp.i
 
 source/Vecteur.s: source/Vecteur.cpp.s
@@ -636,7 +783,9 @@ source/Vecteur.s: source/Vecteur.cpp.s
 # target to generate assembly for a file
 source/Vecteur.cpp.s:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/Vecteur.cpp.s
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/Vecteur.cpp.s
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/Vecteur.cpp.s
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/Vecteur.cpp.s
 .PHONY : source/Vecteur.cpp.s
 
 source/constantes.obj: source/constantes.cpp.obj
@@ -646,7 +795,9 @@ source/constantes.obj: source/constantes.cpp.obj
 # target to build an object file
 source/constantes.cpp.obj:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/constantes.cpp.obj
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/constantes.cpp.obj
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/constantes.cpp.obj
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/constantes.cpp.obj
 .PHONY : source/constantes.cpp.obj
 
 source/constantes.i: source/constantes.cpp.i
@@ -656,7 +807,9 @@ source/constantes.i: source/constantes.cpp.i
 # target to preprocess a source file
 source/constantes.cpp.i:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/constantes.cpp.i
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/constantes.cpp.i
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/constantes.cpp.i
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/constantes.cpp.i
 .PHONY : source/constantes.cpp.i
 
 source/constantes.s: source/constantes.cpp.s
@@ -666,7 +819,9 @@ source/constantes.s: source/constantes.cpp.s
 # target to generate assembly for a file
 source/constantes.cpp.s:
 	$(MAKE) -f CMakeFiles\Toupies_DL.dir\build.make CMakeFiles/Toupies_DL.dir/source/constantes.cpp.s
+	$(MAKE) -f CMakeFiles\exoa.dir\build.make CMakeFiles/exoa.dir/source/constantes.cpp.s
 	$(MAKE) -f CMakeFiles\testAll.dir\build.make CMakeFiles/testAll.dir/source/constantes.cpp.s
+	$(MAKE) -f CMakeFiles\exob.dir\build.make CMakeFiles/exob.dir/source/constantes.cpp.s
 .PHONY : source/constantes.cpp.s
 
 # Help Target
@@ -676,9 +831,17 @@ help:
 	@echo ... clean
 	@echo ... depend
 	@echo ... Toupies_DL
+	@echo ... exoa
 	@echo ... testAll
-	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... exob
+	@echo ... edit_cache
+	@echo ... exercice9a.obj
+	@echo ... exercice9a.i
+	@echo ... exercice9a.s
+	@echo ... exercice9b.obj
+	@echo ... exercice9b.i
+	@echo ... exercice9b.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
@@ -712,9 +875,6 @@ help:
 	@echo ... source/Tests/TestMatrice.obj
 	@echo ... source/Tests/TestMatrice.i
 	@echo ... source/Tests/TestMatrice.s
-	@echo ... source/Tests/TestTextViewer.obj
-	@echo ... source/Tests/TestTextViewer.i
-	@echo ... source/Tests/TestTextViewer.s
 	@echo ... source/Tests/TestVecteur.obj
 	@echo ... source/Tests/TestVecteur.i
 	@echo ... source/Tests/TestVecteur.s
@@ -724,6 +884,9 @@ help:
 	@echo ... source/Tests/testAll.obj
 	@echo ... source/Tests/testAll.i
 	@echo ... source/Tests/testAll.s
+	@echo ... source/Tests/testSysteme.obj
+	@echo ... source/Tests/testSysteme.i
+	@echo ... source/Tests/testSysteme.s
 	@echo ... source/TextViewer.obj
 	@echo ... source/TextViewer.i
 	@echo ... source/TextViewer.s
