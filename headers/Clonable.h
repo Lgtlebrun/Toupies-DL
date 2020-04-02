@@ -8,7 +8,7 @@ class Clonable {
 
 public:
 
-    virtual Clonable* clone() =0;
+    virtual Clonable* clone() const = 0;
 
 
 };
