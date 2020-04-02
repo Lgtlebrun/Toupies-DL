@@ -3,15 +3,14 @@
 #ifndef TOUPIES_DL_SYSTEME_H
 #define TOUPIES_DL_SYSTEME_H
 
-#include "Integrable.h"
-#include "SupportADessin.h"
+
 #include <vector>
 #include "Dessinable.h"
 #include <iostream>
 #include "Integrateur.h"
 
 
-class SupportADessin;
+
 
 class Systeme : public Dessinable {
 

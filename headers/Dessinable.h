@@ -3,14 +3,13 @@
 #ifndef TOUPIES_DL_DESSINABLE_H
 #define TOUPIES_DL_DESSINABLE_H
 
+#include <iostream>
 #include "Clonable.h"
 #include "SupportADessin.h"
 #include "constantes.h"
 
+class TextViewer;
 
-TextViewer const CONSOLE(std::cout);
-
-class SupportADessin;
 class Dessinable : public Clonable{
 
 public:

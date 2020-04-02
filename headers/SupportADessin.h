@@ -6,17 +6,18 @@
 #ifndef TOUPIES_DL_SUPPORTADESSIN_H
 #define TOUPIES_DL_SUPPORTADESSIN_H
 
-#include "ConeSimple.h"
-#include "Tests/Bille.h"
-#include "Tests/Oscillateur.h"
-#include "Integrable.h"
+
 #include "Clonable.h"
+
 
 
 class Systeme;
 class Bille;
 class Oscillateur;
 class ConeSimple;
+
+class Integrable;
+
 class SupportADessin : public Clonable {
 
 

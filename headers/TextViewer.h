@@ -3,12 +3,12 @@
 #ifndef TOUPIES_DL_TEXTVIEWER_H
 #define TOUPIES_DL_TEXTVIEWER_H
 
-#include "SupportADessin.h"
+
+#include <iostream>
 #include "Systeme.h"
 #include "ConeSimple.h"
 #include "Tests/Oscillateur.h"
 #include "Tests/Bille.h"
-
 
 
 
@@ -23,7 +23,7 @@ public :
 
     virtual TextViewer* clone() const;
 
-
+    virtual void dessine(Integrable const&);
     virtual void dessine(Systeme const&);
     virtual void dessine(Bille const&) ;
     virtual void dessine(Oscillateur const&) ;

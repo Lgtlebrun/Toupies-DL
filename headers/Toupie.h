@@ -3,12 +3,11 @@
 #ifndef TOUPIE_H
 #define TOUPIE_H
 
-#include "Vecteur.h"
+
 #include "Integrable.h"
 #include <string>
-#include "constantes.h"
-#include "TextViewer.h"
-#include "SupportADessin.h"
+
+
 
 
 

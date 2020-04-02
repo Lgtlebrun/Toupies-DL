@@ -3,7 +3,7 @@
 #ifndef INTEGRATEUR_H
 #define INTEGRATEUR_H
 
-#include "Toupie.h"
+#include "Clonable.h"
 #include "constantes.h"
 #include "Integrable.h"
 

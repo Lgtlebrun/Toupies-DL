@@ -4,14 +4,16 @@
 #define TOUPIES_DL_CONSTANTES_H
 
 #include "Vecteur.h"
+#include <iostream>
 
 
 class Vecteur;
-class TextViewer;
+
+
 extern const Vecteur g;
 extern const double PREC;
 extern const double EPSILON;
 
-// extern const TextViewer CONSOLE;
+
 
 #endif //TOUPIES_DL_CONSTANTES_H

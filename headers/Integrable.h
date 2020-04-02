@@ -9,7 +9,7 @@
 #include "constantes.h"
 #include <iostream>
 
-class Dessinable;
+
 class Integrable : public Dessinable
 {
     public:

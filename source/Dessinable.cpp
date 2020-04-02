@@ -2,7 +2,8 @@
 
 
 
-Dessinable::Dessinable() : m_support(CONSOLE) {}
+
+Dessinable::Dessinable() : m_support(TextViewer(std::cout)) {}
 
 
 Dessinable::Dessinable(SupportADessin& support) : m_support(support) {}
