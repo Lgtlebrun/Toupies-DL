@@ -183,12 +183,12 @@ Matrice3 Matrice3::inv() const {
     else if (fabs(deter) < PREC && deter < 0) { deter = -PREC; }
 
 
-    Matrice3 cofacteurs(0,0,0,0,0,0,0,0,0);
+    Matrice3 cofacteurs;
 
 
-    for(int k(0); k < 3; ++k) {
+    for(int k(0); k < 3; ++k) {                         // /!\ int importants pour le modulo !
 
-        for (size_t t(0); t < 3 ; ++t) {
+        for (int t(0); t < 3 ; ++t) {
 
         int MAX_k (std::max((k-1)%3, (k+1)%3));
         int MIN_k (std::min((k-1)%3, (k+1)%3));
@@ -218,6 +218,7 @@ Matrice3 Matrice3::inv() const {
 
 
         }
+
 
     }
 
@@ -277,7 +278,7 @@ const Matrice3 Matrice3::operator*(Matrice3 const& m2){
 
 std::string Matrice3::to_str() const{
 
-    return (m_coords[0].to_str() + "\n" + m_coords[1].to_str() + "\n" + m_coords[2].to_str());
+    return (m_coords[0].to_str() + "\n" + m_coords[1].to_str() + "\n" + m_coords[2].to_str()+"\n");
 }
 
 

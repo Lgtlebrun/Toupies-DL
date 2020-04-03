@@ -75,15 +75,16 @@ bool TestSysteme::test_evol() {
 
     double dt(0.01);
 
-    ConeSimple Ct ({0,M_PI/6, 0}, {0,0,60}, 0.5, 1.5, 0.1);
-    IntegrateurEulerCromer It(0.0);
-
 
     if(statsSyst) {
         TextViewer T(statsSyst);
+
+        ConeSimple Ct (T, {0,M_PI/6, 0}, {0,0,60}, 0.5, 1.5, 0.1);
+        IntegrateurEulerCromer It(0.0);
+
         Systeme S(T, It);
 
-        S.addIntegrable(new ConeSimple(Ct));
+        S.addIntegrable(Ct);
 
 
         statsSyst << S;

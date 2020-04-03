@@ -63,7 +63,7 @@ void Systeme::addIntegrable(Integrable& I) {
     m_corps.push_back(I.clone());
 
     // On modifie le support de l'objet pour la cohérence du système
-    m_corps[-1]->changeSupport(m_support);
+    m_corps.back()->changeSupport(m_support);
 }
 
 

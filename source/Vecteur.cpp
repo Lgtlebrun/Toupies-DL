@@ -444,8 +444,6 @@ std::ostream& operator<<(std::ostream& sortie, Vecteur const& v){
 
         /// Surcharge de l'opérateur <<
 
-    unsigned int taille(v.getDim());
-
     sortie << v.to_str();
 
     return sortie;

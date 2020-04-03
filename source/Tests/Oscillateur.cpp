@@ -1,7 +1,7 @@
 #include "Tests/Oscillateur.h"
 
-Oscillateur::Oscillateur(Vecteur const & param, Vecteur const & vit)
-        : Integrable("Oscillateur harmonique", param, vit)
+Oscillateur::Oscillateur(SupportADessin& S, Vecteur const & param, Vecteur const & vit)
+        : Integrable(S, "Oscillateur harmonique", param, vit)
 {}
 
 Vecteur Oscillateur::equEvol(double const &temps) const {

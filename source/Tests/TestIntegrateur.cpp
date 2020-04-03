@@ -2,6 +2,7 @@
 #include <fstream>
 #include <iostream>
 #include <climits>
+#include "TextViewer.h"
 
 
 TestIntegrateur::TestIntegrateur() : Unittest() {}
@@ -57,11 +58,14 @@ bool TestIntegrateur::run() {
 
 bool TestIntegrateur::testBille() {
 
-    Bille B(0,1,1,2);
     IntegrateurEulerCromer I(0);
 
     std::ofstream file("StatsBille.txt");
     std::string stats("0 1\n");
+
+    TextViewer T(file);
+
+    Bille B(T, 0,1,1,2);
 
     double dt(0.01);
 
@@ -102,18 +106,20 @@ bool TestIntegrateur::testBille() {
 
 bool TestIntegrateur::testOH() {
 
-    Oscillateur OH(Vecteur({1}), Vecteur({0}));
-
     std::ofstream file("StatsOH.txt");
 
     std::string stats("0 1\n");
 
+    TextViewer T(file);
+
     IntegrateurEulerCromer I(0);
     double dt(0.01);
 
+    Oscillateur OH(T, Vecteur({1}), Vecteur({0}));
+
     double err_rel(0);
 
-    for(size_t i(0); i < 150; i++){
+    for(size_t i(0); i < 68; i++){
 
         I.integre(OH, dt);
         I.augmente_t(dt);

@@ -55,4 +55,6 @@ add_executable(exoa
 
 add_executable(exob
         ${FILES}
+        source/Tests/Bille.cpp
+        source/Tests/Oscillateur.cpp
         exercice9b.cpp)

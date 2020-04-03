@@ -5,9 +5,6 @@ using namespace std;
 
 int main(){
 
-    Bille B(0.0,1.0,1.0,2.0);
-    Oscillateur O(Vecteur({1.0}),Vecteur({0.0}));
-
     const double dt(0.01);
 
     string Exo("Exercice9a.txt");
@@ -20,11 +17,13 @@ int main(){
 
         TextViewer T(flux);
 
+        Bille B(T, 0.0,1.0,1.0,2.0);
+        Oscillateur O(T, Vecteur({1.0}),Vecteur({0.0}));
 
         Systeme S(T, I);
 
-        S.addIntegrable(&B);
-        S.addIntegrable(&O);
+        S.addIntegrable(B);
+        S.addIntegrable(O);
 
 
         for (int k(0); k < 68; ++k) {
