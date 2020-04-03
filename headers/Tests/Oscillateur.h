@@ -10,7 +10,7 @@ class Oscillateur : public Integrable
 {
 public :
 
-    Oscillateur(Vecteur const&, Vecteur const&);
+    Oscillateur(SupportADessin&, Vecteur const&, Vecteur const&);
 
     virtual Oscillateur* clone() const;
     virtual void dessine() override;

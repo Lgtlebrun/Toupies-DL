@@ -11,7 +11,7 @@ class Bille : public Integrable
 {
 public :
 
-    Bille(double, double, double, double);
+    Bille(SupportADessin&, double, double, double, double);
     virtual Bille* clone() const;
     virtual void dessine() override;
 
