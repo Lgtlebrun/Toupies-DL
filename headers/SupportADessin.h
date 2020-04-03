@@ -28,7 +28,6 @@ public:
 
 
     virtual SupportADessin* clone() const = 0;
-    virtual void dessine(Integrable const&) = 0;
     virtual void dessine(Systeme const&) = 0;
     virtual void dessine(Bille const&) = 0;
     virtual void dessine(Oscillateur const&) = 0;

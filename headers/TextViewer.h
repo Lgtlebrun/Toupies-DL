@@ -23,7 +23,7 @@ public :
 
     virtual TextViewer* clone() const;
 
-    virtual void dessine(Integrable const&);
+
     virtual void dessine(Systeme const&);
     virtual void dessine(Bille const&) ;
     virtual void dessine(Oscillateur const&) ;

@@ -29,34 +29,24 @@ void TextViewer::dessine(Systeme const& S) {
 
 
 
-void TextViewer::dessine(Integrable const& integrable){
-
-    m_flux << "Type : " << integrable.getType() << "  ; Parametre : " << integrable.getParam() << "  ;  Vitesse : " << integrable.getVitesse();
-}
-
-
 TextViewer *TextViewer::clone() const {
 
     return new TextViewer(*this);
 }
 
-void TextViewer::dessine(Bille const & B) {
+void TextViewer::dessine(Bille const& B) {
 
-    Integrable::dessine(B);
-    m_flux << std::endl;
-
+    m_flux << B;
 }
 
-void TextViewer::dessine(Oscillateur const & OH) {
+void TextViewer::dessine(Oscillateur const& OH) {
 
-    Integrable::dessine(OH);
-    m_flux << std::endl;
+    m_flux << OH;
 }
 
-void TextViewer::dessine(ConeSimple const & C) {
+void TextViewer::dessine(ConeSimple const& C) {
 
-    Integrable::dessine(C);
-    m_flux << "  ; Rayon : " << C.getRayon() << "  ; Hauteur : " << C.getHauteur() << std::endl;
+    m_flux << C;
 }
 
 

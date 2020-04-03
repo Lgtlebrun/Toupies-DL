@@ -156,9 +156,9 @@ double Matrice3::det() const {
 
     double sortie(0.0);
 
-    for (int k(0); k < 3 ; ++k) { sortie += m_coords[0].getCoord((0+k)%3)*m_coords[1].getCoord((1+k)%3)*m_coords[2].getCoord((2+k)%3); }
+    for (size_t k(0); k < 3 ; ++k) { sortie += m_coords[0].getCoord((0+k)%3)*m_coords[1].getCoord((1+k)%3)*m_coords[2].getCoord((2+k)%3); }
 
-    for (int k(0); k < 3 ; ++k) { sortie -= m_coords[0].getCoord((1+k)%3)*m_coords[1].getCoord((0+k)%3)*m_coords[2].getCoord((2+k)%3); }
+    for (size_t k(0); k < 3 ; ++k) { sortie -= m_coords[0].getCoord((1+k)%3)*m_coords[1].getCoord((0+k)%3)*m_coords[2].getCoord((2+k)%3); }
 
 
     return sortie;
@@ -178,18 +178,17 @@ Matrice3 Matrice3::inv() const {
 
     double deter(det());
 
-    if (abs(deter) < PREC && deter >= 0) { deter = PREC; }
+    if (fabs(deter) < PREC && deter >= 0) { deter = PREC; }
 
-    else if (abs(deter) < PREC && deter < 0) { deter = -PREC; }
+    else if (fabs(deter) < PREC && deter < 0) { deter = -PREC; }
 
 
     Matrice3 cofacteurs(0,0,0,0,0,0,0,0,0);
 
-    int t(0);
 
     for(int k(0); k < 3; ++k) {
 
-        for (int t(0); t < 3 ; ++t) {
+        for (size_t t(0); t < 3 ; ++t) {
 
         int MAX_k (std::max((k-1)%3, (k+1)%3));
         int MIN_k (std::min((k-1)%3, (k+1)%3));

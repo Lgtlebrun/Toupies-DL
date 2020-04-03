@@ -24,4 +24,8 @@ protected:
 };
 
 
+
+std::ostream& operator<<(std::ostream&, Oscillateur const&);
+
+
 #endif //TOUPIES_DL_OSCILLATEUR_H

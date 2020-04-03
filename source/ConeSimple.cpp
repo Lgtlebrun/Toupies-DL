@@ -2,8 +2,8 @@
 #include <cmath>
 
 
-ConeSimple::ConeSimple(Vecteur const& param, Vecteur const& vit, double const& rayon, double const& hauteur, double const& masseVolumique)
-        : Toupie("Cone simple", param, vit, calculeIA1(rayon, hauteur, masseVolumique), calculeI3(rayon, hauteur, masseVolumique),
+ConeSimple::ConeSimple(SupportADessin& sup, Vecteur const& param, Vecteur const& vit, double const& rayon, double const& hauteur, double const& masseVolumique)
+        : Toupie(sup, "Cone simple", param, vit, calculeIA1(rayon, hauteur, masseVolumique), calculeI3(rayon, hauteur, masseVolumique),
                  masseVolumique, masse(rayon, hauteur, masseVolumique), 3.0/4.0*hauteur), m_rayon(rayon), m_hauteur(hauteur)
 {}
 
@@ -70,3 +70,13 @@ double ConeSimple::getHauteur() const {
 }
 
 
+
+
+
+std::ostream& operator<<(std::ostream& flux, ConeSimple const& C){
+
+    flux << "Type : " << C.getType() << "  ; Parametre : " << C.getParam() << "  ;  Vitesse : " << C.getVitesse()
+            << "  ; Rayon : " << C.getRayon() << "  ; Hauteur : " << C.getHauteur() << std::endl;
+
+    return flux;
+}

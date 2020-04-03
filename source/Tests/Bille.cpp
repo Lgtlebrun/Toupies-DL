@@ -28,3 +28,13 @@ void Bille::dessine() {
 
     m_support.dessine(*this);
 }
+
+
+
+
+
+std::ostream& operator<<(std::ostream& flux, Bille const& B){
+
+    flux << "Type : " << B.getType() << "  ; Parametre : " << B.getParam() << "  ;  Vitesse : " << B.getVitesse() << std::endl;
+    return flux;
+}

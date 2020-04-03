@@ -25,3 +25,12 @@ void Oscillateur::dessine() {
 
     m_support.dessine(*this);
 }
+
+
+
+
+std::ostream& operator<<(std::ostream& flux, Oscillateur const& OH){
+
+    flux << "Type : " << OH.getType() << "  ; Parametre : " << OH.getParam() << "  ;  Vitesse : " << OH.getVitesse() << std::endl;
+    return flux;
+}

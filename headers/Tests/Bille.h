@@ -23,4 +23,7 @@ protected :
 
 };
 
+std::ostream& operator<<(std::ostream&, Bille const&);
+
+
 #endif //TOUPIES_DL_BILLE_H

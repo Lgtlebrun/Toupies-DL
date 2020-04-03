@@ -15,14 +15,13 @@ class Integrable : public Dessinable
     public:
 
 
-        Integrable(std::string const&, Vecteur const&, Vecteur const&);
+        Integrable(SupportADessin&, std::string const&, Vecteur const&, Vecteur const&);
 
         virtual ~Integrable();
 
 
         virtual Vecteur equEvol(double const& temps) const = 0;
         virtual Integrable* clone() const = 0;
-        virtual void dessine();
 
 
         virtual std::string getType() const;

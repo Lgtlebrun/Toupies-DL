@@ -8,12 +8,11 @@
 
 
 class Vecteur;
-
+class TextViewer;
 
 extern const Vecteur g;
 extern const double PREC;
 extern const double EPSILON;
-
 
 
 #endif //TOUPIES_DL_CONSTANTES_H

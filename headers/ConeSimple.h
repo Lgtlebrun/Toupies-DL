@@ -13,7 +13,7 @@ class ConeSimple : public Toupie
 {
 public :
 
-    ConeSimple(Vecteur const&, Vecteur const&, double const&, double const&, double const&);
+    ConeSimple(SupportADessin&, Vecteur const&, Vecteur const&, double const&, double const&, double const&);
     virtual ~ConeSimple();
 
     virtual ConeSimple* clone() const;
@@ -38,6 +38,9 @@ protected :
 
 
 };
+
+
+std::ostream& operator<<(std::ostream&, ConeSimple const&);
 
 
 

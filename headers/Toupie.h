@@ -16,7 +16,7 @@ class Toupie : public Integrable
 {
     public:
 
-        Toupie(std::string const&, Vecteur const&, Vecteur const&, double const&, double const&, double const&, double const&, double const&);
+        Toupie(SupportADessin&, std::string const&, Vecteur const&, Vecteur const&, double const&, double const&, double const&, double const&, double const&);
 
         virtual ~Toupie();
 

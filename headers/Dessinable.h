@@ -8,13 +8,12 @@
 #include "SupportADessin.h"
 #include "constantes.h"
 
-class TextViewer;
+
 
 class Dessinable : public Clonable{
 
 public:
 
-    Dessinable();
     Dessinable(SupportADessin& support);
 
 
