@@ -8,7 +8,7 @@ class Clonable {
 
 public:
 
-    virtual Clonable* clone() const = 0;
+    virtual Clonable* clone() const = 0;                // Renvoie un pointeur sur une copie polymorphique de l'objet
 
 
 };

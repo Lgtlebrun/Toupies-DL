@@ -12,38 +12,54 @@
 
 class Integrable : public Dessinable
 {
-    public:
+public:
+
+// =========
+
+    Integrable(SupportADessin&, std::string const&, Vecteur const&, Vecteur const&);
+                                                                        // Prend un support à dessin où dessiner
+                                                                        // l'intégrable, un string; le type d'objet
+                                                                        // qu'est l'intégrable et deux vecteurs :
+                                                                        // position et vitesse initiale
+
+    virtual ~Integrable();                                              // dtor de l'intégrable
+
+// =========
+
+    virtual Vecteur equEvol(double const& temps) const = 0;             // l'equation d'évolution de l'intégrable
+                                                                        // dépend du type d'intégrable, d'où la
+                                                                        // virtualité pure
+    virtual Integrable* clone() const = 0;                              // Renvoie un pointeur sur une copie
+                                                                        // polymorphique de l'intégrable
+
+// =========  AFFICHAGE :
+
+    virtual std::string getType() const;                                // Permet de saisir le nom de l'intégrable
+    virtual void statsCorps(std::ostream&) const;                       // Permet d'afficher les statistiques
+                                                                        // de l'intégrable
+// =========  ACCESSEURS ET SETTEURS :
+
+    Vecteur getParam() const;                                           // Renvoit le vecteur paramètre de l'intégrable
+    void setParam(Vecteur const& newV);                                 // Set le vecteur paramètre de l'intégrable
 
 
-        Integrable(SupportADessin&, std::string const&, Vecteur const&, Vecteur const&);
-
-        virtual ~Integrable();
-
-
-        virtual Vecteur equEvol(double const& temps) const = 0;
-        virtual Integrable* clone() const = 0;
+    Vecteur getVitesse() const;                                         // Renvoit le vecteur vitesse de l'intégrable
+    void setVitesse(Vecteur const& newV);                               // Set le vecteur vitesse de l'intégrable
 
 
-        virtual std::string getType() const;
-        virtual void statsCorps(std::ostream&) const;
+// ======================================================================================
 
+protected:
 
-        Vecteur getParam() const;
-        void setParam(Vecteur const& newV);
+// =========  ATTRIBUTS MATHEMATIQUES :
 
+    Vecteur m_P;                // P est le vecteur paramètres
+    Vecteur m_Ppoint;           // Ppoint est le vecteur dérivée temporelle de P
 
-        Vecteur getVitesse() const;
-        void setVitesse(Vecteur const& newV);
+// =========  ATTRIBUT "COSMETIQUE" :
 
-
-    protected:
-
-
-        Vecteur m_P;                // P est le vecteur paramètres
-        Vecteur m_Ppoint;           // Ppoint est le vecteur dérivée temporelle de P
-
-
-        std::string m_type = "Corps Solide";
+    std::string m_type = "Corps Solide";                // le type de l'intégrable. Il est de base supposé étant
+                                                        // un simple solide
 
 };
 

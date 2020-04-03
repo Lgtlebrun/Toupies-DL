@@ -10,18 +10,28 @@ class Unittest
     /// Classe mère des tests unitaires
 
 {
-    public:
+public:
 
-        Unittest();
-        virtual ~Unittest();
+// =========
 
-        virtual bool run() = 0;
+    Unittest();                                 // ctor de la classe Unittest
+    virtual ~Unittest();                        // dtor de la classe Unittest
+
+// =========
+
+    virtual bool run() = 0;                     // méthode abstraite permettant de lancer le test de chaque classe
+                                                // test
+
+// ========================================================================================
 
 
-    protected:
+protected:
 
-        bool m_success;                             // Booléen indiquant le succès ou l'échec du test
-        std::string m_comment;                      // Messages d'erreurs / de succès
+// =========  ATTRIBUTS :
+
+    bool m_success;                             // Booléen indiquant le succès ou l'échec du test
+    std::string m_comment;                      // Messages d'erreurs / de succès
+
 };
 
 #endif // UNITTEST_H

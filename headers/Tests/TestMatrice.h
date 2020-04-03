@@ -1,6 +1,3 @@
-//
-// Created by lgtle on 25/03/2020.
-//
 #pragma once
 #include "Unittest.h"
 #include "../Vecteur.h"
@@ -9,20 +6,30 @@
 #ifndef TOUPIES_DL_TESTMATRICE_H
 #define TOUPIES_DL_TESTMATRICE_H
 
-#endif //TOUPIES_DL_TESTMATRICE_H
+class TestMatrice : public Unittest {
 
-class TestMatrice : public Unittest
-        {
-        public:
-            TestMatrice();
-            virtual ~TestMatrice();
+public:
 
-            virtual bool run();
+// =========
 
-            bool testProdMatriciel();
-            bool testTranspo();
-            bool testInv();
-            bool testDet();
+    TestMatrice();                          // ctor par défaut d'une classe testMatrice
 
+    virtual ~TestMatrice();                 // son destructeur
 
+// =========
+
+    virtual bool run();                     // la méthode permetteant de lancer les tests
+
+// =========
+
+    bool testProdMatriciel();               // vérifie que le produit de 2 matrices se fasse correctement
+
+    bool testTranspo();                     // vérifie que la transposition d'une matrice soit correcte
+
+    bool testInv();                         // vérifie que l'inverse d'une matrice se fasse correctement
+
+    bool testDet();                         // vérifie que le déterminant soit calculé exactement
 };
+
+
+#endif //TOUPIES_DL_TESTMATRICE_H

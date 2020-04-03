@@ -17,20 +17,29 @@ class TextViewer : public SupportADessin
 {
 public :
 
-    TextViewer(std::ostream&);
-    virtual ~TextViewer() {}
+// =========
 
+    TextViewer(std::ostream&);                              // ctor prenant un ostream qui sera la sortie du texte
 
-    virtual TextViewer* clone() const;
+    virtual ~TextViewer() {}                                // dtor
 
+// =========
 
-    virtual void dessine(Systeme const&);
+    virtual TextViewer* clone() const;                      // Renvoie un pointeur sur une copie polymorphique du TextViewer
+
+// =========  DESSINE :
+
+    virtual void dessine(Systeme const&);                   // Méthodes dessinant les divers objets
     virtual void dessine(Bille const&) ;
     virtual void dessine(Oscillateur const&) ;
     virtual void dessine(ConeSimple const&) ;
 
 
+// =====================================================================================
+
 protected:
+
+// =========  ATTRIBUTS :
 
     std::ostream& m_flux;
 
