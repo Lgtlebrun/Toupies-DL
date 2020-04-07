@@ -2,8 +2,6 @@
 
 
 
-
-
 IntegrateurNewmark::IntegrateurNewmark(double const& t0)
     : Integrateur(t0)
 {}

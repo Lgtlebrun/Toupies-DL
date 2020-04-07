@@ -7,7 +7,7 @@ Bille::Bille(SupportADessin& S, double pos1, double pos2, double vit1, double vi
         : Integrable( S, "Bille", Vecteur({pos1, pos2}), Vecteur({vit1, vit2}))
 {}
 
-Vecteur Bille::equEvol(double const& temps) const {
+Vecteur Bille::equEvol(double const& temps) {
 
     return Vecteur({0,g.getCoord(2)});
 

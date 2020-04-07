@@ -4,7 +4,7 @@ Oscillateur::Oscillateur(SupportADessin& S, Vecteur const & param, Vecteur const
         : Integrable(S, "Oscillateur harmonique", param, vit)
 {}
 
-Vecteur Oscillateur::equEvol(double const &temps) const {
+Vecteur Oscillateur::equEvol(double const &temps) {
 
     return -m_P;
 

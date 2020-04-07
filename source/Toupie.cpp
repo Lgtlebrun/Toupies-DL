@@ -1,5 +1,5 @@
 #include "../headers/Toupie.h"
-#include <cmath>
+#include <math.h>
 #include <iostream>
 
 
@@ -10,7 +10,7 @@ Toupie::Toupie (SupportADessin& sup, std::string const& type, Vecteur const& par
 Toupie::~Toupie() {}
 
 
-Vecteur Toupie::equEvol(double const& temps) const {
+Vecteur Toupie::equEvol(double const& temps) {
 
     /// Avec l'équation d'évolution en page 12 du complément mathématique, assumant donc distance centre de masse -
     /// point de contact = cste
@@ -19,7 +19,7 @@ Vecteur Toupie::equEvol(double const& temps) const {
     Vecteur sortie;                // convention : (théta, psy, phi)
                                   // init. au vecteur nul
 
-
+    moduloPi();
 
     if ( fabs(m_IA1) < PREC ) {
 
@@ -57,5 +57,24 @@ void Toupie::statsCorps(std::ostream& sortie) const{
 }
 
 
+void Toupie::moduloPi(){
 
+    for (unsigned int k(0); k < m_P.getDim() ; ++k) {
+
+        if (m_P.getCoord(k)>=0) {
+
+            m_P.setCoord(k, m_P.getCoord(k)-floor(m_P.getCoord(k)/(2*M_PI))*2*M_PI);
+
+        } else {
+
+            m_P.setCoord(k, m_P.getCoord(k)+ceil(m_P.getCoord(k)/(2*M_PI))*2*M_PI);
+
+        }
+
+        std::cout << "+";
+
+    }
+
+
+}
 
