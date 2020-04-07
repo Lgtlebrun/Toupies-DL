@@ -26,7 +26,7 @@ public:
 
 // =========
 
-    virtual Vecteur equEvol(double const& temps) const = 0;             // l'equation d'évolution de l'intégrable
+    virtual Vecteur equEvol(double const& temps) = 0;             // l'equation d'évolution de l'intégrable
                                                                         // dépend du type d'intégrable, d'où la
                                                                         // virtualité pure
     virtual Integrable* clone() const = 0;                              // Renvoie un pointeur sur une copie

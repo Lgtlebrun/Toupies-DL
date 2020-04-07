@@ -28,7 +28,7 @@ public :
 
 // =========
 
-    virtual Vecteur equEvol(double const& temps) const;                     // Equation d'évolution de l'oscillateur
+    virtual Vecteur equEvol(double const& temps);                     // Equation d'évolution de l'oscillateur
                                                                             // harmonique
 
     virtual std::string getType() const;                                    // retourne le type de l'objet pour des

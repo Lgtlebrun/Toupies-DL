@@ -29,7 +29,7 @@ public:
 
 // =========  EQUATION D'EVOLUTION :
 
-    virtual Vecteur equEvol(double const& temps) const override;        // Equation d'évolution d'une toupie générale
+    virtual Vecteur equEvol(double const& temps) override;        // Equation d'évolution d'une toupie générale
 
 // =========  AFFICHAGE :
 
@@ -55,6 +55,11 @@ protected:
 // =========  ATTRIBUTS D'AFFICHAGE :
 
     std::string m_type;                     // Nom du type de la toupie
+
+// =========  METHODES PROTECTED :
+
+    void moduloPi();                                                    // Remet le paramètre modulo Pi, afin d'éviter
+                                                                        // la divergence des fonctions sin et cos
 
 };
 
