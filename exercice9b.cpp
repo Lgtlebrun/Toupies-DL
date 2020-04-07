@@ -29,7 +29,7 @@ int main() {
 
         S.affiche(flux);
 
-        for (int k(0); k < 19 ; ++k) {
+        for (int k(0); k < 600 ; ++k) {
 
             S.evolue(dt);
             S.dessine();
