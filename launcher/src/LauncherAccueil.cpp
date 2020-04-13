@@ -17,9 +17,12 @@ LauncherAccueil::LauncherAccueil() : m_titre(0), m_bord(0) {
 
 
 
+
+    //Path vers les toupies ojala
     QString path(QCoreApplication::applicationDirPath());
     QString pathTv(path + "/tav.gif");
 
+    //setup des gifs de toupies
     QMovie* m_toupieVisage = new QMovie(pathTv);
     QLabel* cadreToupieVisage = new QLabel(this);
 
@@ -48,10 +51,8 @@ LauncherAccueil::LauncherAccueil() : m_titre(0), m_bord(0) {
     cadreToupieBleue->setMovie(m_toupieBleue);
 
 
-
-    //
-
+ }
 
 
-}
+
 

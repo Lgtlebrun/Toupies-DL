@@ -4,6 +4,9 @@
 #include <QDir>
 #include <QString>
 #include "bordMode.h"
+#include "../../general/headers/SupportADessin.h"
+#include "../../general/headers/TextViewer.h"
+
 
 
 //
@@ -16,6 +19,7 @@
 
 class LauncherAccueil : public QWidget {
 
+
 public:
     LauncherAccueil();
 
@@ -27,6 +31,8 @@ protected:
     QMovie* m_toupieVisage;
     QLabel* m_titre;
     BordMode* m_bord;
+
+    SupportADessin* m_support;
 
 
 };

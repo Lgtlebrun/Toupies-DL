@@ -23,6 +23,7 @@ BordMode::BordMode(QWidget* parent) : QWidget(parent), m_b1(0), m_b2(0), m_b3(0)
     m_b1->setFont(police);
     m_b1->move(bx, by);
 
+
     m_b2->setStyleSheet("background-color: light grey");
     m_b2->setCursor(Qt::PointingHandCursor);
     m_b2->setFixedSize(bl, bw);
@@ -41,6 +42,19 @@ BordMode::BordMode(QWidget* parent) : QWidget(parent), m_b1(0), m_b2(0), m_b3(0)
     m_labelMode->setFont(QFont("Agency FB", 19, 19));
     m_labelMode->move(30, 10);
 
+    //Connexioooon!
+
+      QObject::connect(m_b3, &QPushButton::clicked, this, &BordMode::openFichierSearch);
+
 
 }
 
+
+void BordMode::openFichierSearch(){
+
+    FichierSearch* f(0);
+    f = new FichierSearch();
+
+    f->show();
+
+}
