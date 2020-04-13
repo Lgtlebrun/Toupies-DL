@@ -1,8 +1,7 @@
 #include "../../headers/Tests/TestIntegrateur.h"
 #include <fstream>
 #include <iostream>
-#include <climits>
-#include "TextViewer.h"
+#include "../../headers/TextViewer.h"
 
 
 TestIntegrateur::TestIntegrateur() : Unittest() {}

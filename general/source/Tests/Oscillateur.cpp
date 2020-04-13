@@ -1,4 +1,4 @@
-#include "Tests/Oscillateur.h"
+#include "../../headers/Tests/Oscillateur.h"
 #include <cmath>
 
 Oscillateur::Oscillateur(SupportADessin& S, Vecteur const & param, Vecteur const & vit, Vecteur const& Centre_du_mvt)

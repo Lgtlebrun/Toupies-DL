@@ -1,5 +1,5 @@
 #include <vector>
-#include "Tests/TestIntegrateur.h"
+#include "../../headers/Tests/TestIntegrateur.h"
 #include "../../headers/Tests/TestVecteur.h"
 #include "../../headers/Tests/TestMatrice.h"
 #include "../../headers/Tests/TestSysteme.h"
