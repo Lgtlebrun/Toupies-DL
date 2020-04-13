@@ -3,7 +3,7 @@
 #ifndef TOUPIES_DL_OSCILLATEUR_H
 #define TOUPIES_DL_OSCILLATEUR_H
 
-#include "Integrable.h"
+#include "../Integrable.h"
 
 
 class Oscillateur : public Integrable

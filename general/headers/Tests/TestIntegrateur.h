@@ -5,7 +5,7 @@
 #include "Bille.h"
 #include "Oscillateur.h"
 #include "../Integrateur.h"
-#include "constantes.h"
+#include "../constantes.h"
 #include <cmath>
 
 

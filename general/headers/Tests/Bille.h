@@ -3,7 +3,7 @@
 #ifndef TOUPIES_DL_BILLE_H
 #define TOUPIES_DL_BILLE_H
 
-#include "Integrable.h"
+#include "../Integrable.h"
 #include "../constantes.h"
 
 
