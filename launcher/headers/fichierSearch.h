@@ -9,6 +9,7 @@
 #include <QString>
 #include <string>
 #include <QPushButton>
+#include <QCoreApplication>
 #include <fstream>
 #include "Bloc2Boutons.h"
 
@@ -25,13 +26,17 @@ public:
 
     FichierSearch();
 
+    //Accesseurs
     Bloc2Boutons* getBlocBoutons() const;
     std::string getPath() const {return m_path.toStdString();}
 
+    //Vérification de la validité du path
     void pathCheck();
 
-signals:
+    //Gestion des évènements clavier (touche entrée)
 
+
+signals:
     void fichierPret();
 
 protected:

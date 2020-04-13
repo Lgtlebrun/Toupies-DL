@@ -4,7 +4,7 @@
 #include "../headers/fichierSearch.h"
 #include <fstream>
 
-FichierSearch::FichierSearch() : m_path("data/"){
+FichierSearch::FichierSearch() : m_path(QCoreApplication::applicationDirPath()){
 
     setFixedSize(600, 120);
 
@@ -26,8 +26,11 @@ FichierSearch::FichierSearch() : m_path("data/"){
     m_blocBoutons->move(400, 70);
 
 
+    //Connexiooooooooon !
+
     QObject::connect(m_blocBoutons->getBOk(), &QPushButton::clicked, this, &FichierSearch::pathCheck);
     QObject::connect(m_blocBoutons->getBCancel(), &QPushButton::clicked, this, &FichierSearch::hide);
+
 }
 
 
@@ -55,3 +58,5 @@ void FichierSearch::pathCheck()
 
 
 Bloc2Boutons* FichierSearch::getBlocBoutons() const {return m_blocBoutons;}
+
+
