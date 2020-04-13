@@ -1,6 +1,6 @@
 #include "../headers/bordMode.h"
 
-BordMode::BordMode(QWidget* parent) : QWidget(parent), m_b1(0), m_b2(0), m_b3(0), m_labelMode(0) {
+BordMode::BordMode(QWidget* parent) : QWidget(parent), m_formatChoisi(1), m_b1(0), m_b2(0), m_b3(0), m_labelMode(0) {
 
 
 
@@ -42,19 +42,42 @@ BordMode::BordMode(QWidget* parent) : QWidget(parent), m_b1(0), m_b2(0), m_b3(0)
     m_labelMode->setFont(QFont("Agency FB", 19, 19));
     m_labelMode->move(30, 10);
 
+
+    m_fenetre = new FichierSearch(); // initialisation de la fenetre de recherche de dossier
+
     //Connexioooon!
 
       QObject::connect(m_b3, &QPushButton::clicked, this, &BordMode::openFichierSearch);
-
+      QObject::connect(m_b3, &QPushButton::clicked, this, &BordMode::setToFichier);
+      QObject::connect(m_b2, &QPushButton::clicked, this, &BordMode::setToImage);
+      QObject::connect(m_b1, &QPushButton::clicked, this, &BordMode::setToText);
 
 }
 
 
 void BordMode::openFichierSearch(){
 
-    FichierSearch* f(0);
-    f = new FichierSearch();
-
-    f->show();
-
+    m_fenetre->show();
 }
+
+
+QPushButton* BordMode::getBouton(int n){
+
+    switch (n) {
+
+    default:
+        return m_b1;
+    case 2:
+        return m_b2;
+    case 3:
+        return m_b3;
+
+    }
+}
+
+
+FichierSearch* BordMode::getFenetre(){return m_fenetre;}
+
+void BordMode::setToText() {m_formatChoisi = 1;}
+void BordMode::setToImage() {m_formatChoisi = 2;}
+void BordMode::setToFichier() {m_formatChoisi = 3;}

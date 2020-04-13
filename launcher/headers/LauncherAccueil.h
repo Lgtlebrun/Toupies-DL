@@ -3,7 +3,10 @@
 #include <QLabel>
 #include <QDir>
 #include <QString>
+#include <string>
+#include <iostream>
 #include "bordMode.h"
+#include "fichierSearch.h"
 #include "../../general/headers/SupportADessin.h"
 #include "../../general/headers/TextViewer.h"
 
@@ -20,8 +23,15 @@
 class LauncherAccueil : public QWidget {
 
 
+    Q_OBJECT
+
 public:
     LauncherAccueil();
+
+
+public slots:
+
+    void suppInit();
 
 
 

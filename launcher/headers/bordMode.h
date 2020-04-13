@@ -17,10 +17,17 @@ public:
     // Pas de destructeur nécessaire : Qt désalloue la mémoire des widgets enfants
     // Quelle intelligence!
 
+    QPushButton* getBouton(int);
+    FichierSearch* getFenetre();    // Accesseur au FichierSearch
+    int getFormat() {return m_formatChoisi;}
+
 
 public slots:
 
     void openFichierSearch();
+    void setToText();
+    void setToImage();
+    void setToFichier();
 
 
 protected:
@@ -30,6 +37,10 @@ protected:
     QPushButton* m_b1;
     QPushButton* m_b2;
     QPushButton* m_b3;
+
+    int m_formatChoisi;
+
+    FichierSearch* m_fenetre;
 
 };
 

@@ -50,9 +50,44 @@ LauncherAccueil::LauncherAccueil() : m_titre(0), m_bord(0) {
     cadreToupieBleue->setAttribute(Qt::WA_NoSystemBackground);
     cadreToupieBleue->setMovie(m_toupieBleue);
 
+    //Connexioooooon !
 
- }
+    for(int i(1); i < 3; i++){
+
+        QObject::connect(m_bord->getBouton(i), SIGNAL(clicked()), this, SLOT(suppInit()));
+    }
+
+    QObject::connect(m_bord->getFenetre(), &FichierSearch::fichierPret, this, &LauncherAccueil::suppInit);
+
+}
+
+void LauncherAccueil::suppInit(){
+
+    switch(m_bord->getFormat()){
+
+    default:
+    case 1: //Format Texte
+        m_support = new TextViewer(std::cout);
+        break;
+
+    case 2: //Format Image
+        m_support = new TextViewer(std::cout);  // A COMPLETER
+        break;
+
+    case 3: //Format Fichier
+        std::ofstream flux(m_bord->getFenetre()->getPath());
+        m_support = new TextViewer(flux);
+        break;
 
 
+
+    }
+
+    hide();
+}
+
+
+
+//QObject::connect(m_bord->getFenetre()->getBlocBoutons()->getBOk(), &QPushButton::clicked, this, &LauncherAccueil::filePathCheck);
 
 

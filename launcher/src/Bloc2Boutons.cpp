@@ -20,3 +20,5 @@ Bloc2Boutons::Bloc2Boutons(QWidget* parent) : QWidget(parent){
 QPushButton* Bloc2Boutons::getBOk() {return m_bOk;}
 
 QPushButton* Bloc2Boutons::getBCancel() {return m_bCancel;}
+
+

@@ -7,7 +7,9 @@
 #include <QLabel>
 #include <QTextEdit>
 #include <QString>
+#include <string>
 #include <QPushButton>
+#include <fstream>
 #include "Bloc2Boutons.h"
 
 
@@ -17,14 +19,26 @@
 
 class FichierSearch : public QWidget {
 
+Q_OBJECT
+
 public:
 
     FichierSearch();
+
+    Bloc2Boutons* getBlocBoutons() const;
+    std::string getPath() const {return m_path.toStdString();}
+
+    void pathCheck();
+
+signals:
+
+    void fichierPret();
 
 protected:
 
     Bloc2Boutons* m_blocBoutons;
     QTextEdit* m_bar;
+    QLabel* m_errMess;
     QString m_path;
 
 };
