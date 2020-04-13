@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/new/images">
+        <file>toupie-bleue-marine.gif</file>
+    </qresource>
+</RCC>
