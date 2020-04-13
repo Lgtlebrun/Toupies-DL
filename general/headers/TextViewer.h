@@ -7,13 +7,14 @@
 #include <iostream>
 #include "Systeme.h"
 #include "ConeSimple.h"
+#include "Clonable.h"
 #include "Tests/Oscillateur.h"
 #include "Tests/Bille.h"
 
 
 
 
-class TextViewer : public SupportADessin
+class TextViewer : public SupportADessin, public Clonable
 {
 public :
 

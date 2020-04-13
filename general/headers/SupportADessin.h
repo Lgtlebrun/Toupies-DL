@@ -4,9 +4,6 @@
 #define TOUPIES_DL_SUPPORTADESSIN_H
 
 
-#include "Clonable.h"
-
-
 
 class Systeme;
 class Bille;
@@ -15,16 +12,14 @@ class ConeSimple;
 
 class Integrable;
 
-class SupportADessin : public Clonable {
+class SupportADessin {
 public:
 
 // =========
 
     virtual ~SupportADessin() {}                                // dtor de SupportADessin
                                                                 // on supposera ici que les supports ne sont ni copiés ni déplacés
-// =========
 
-    virtual SupportADessin* clone() const = 0;                  // Renvoie un pointeur sur une copie polymorphique
                                                                 // du support à dessin
 // =========  DESSINE(...) :
 
