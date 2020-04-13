@@ -1,5 +1,5 @@
 #include <fstream>
-#include "headers/TextViewer.h"
+#include "general/headers/TextViewer.h"
 
 using namespace std;
 
