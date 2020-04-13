@@ -17,8 +17,8 @@ int main(){
 
         TextViewer T(flux);
 
-        Bille B(T, 0.0,1.0,1.0,2.0);
-        Oscillateur O(T, Vecteur({1.0}),Vecteur({0.0}));
+        Bille B(T, Vecteur({0.0,0.0,1.0}), Vecteur({1.0,0.0,2.0}));
+        Oscillateur O(T, Vecteur({2.0,3.0,1.0}),Vecteur({0.0,0.0,0.0}), Vecteur({2.0,3.0,0.0}));
 
         Systeme S(T, I);
 

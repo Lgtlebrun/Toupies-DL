@@ -79,7 +79,7 @@ bool TestSysteme::test_evol() {
     if(statsSyst) {
         TextViewer T(statsSyst);
 
-        ConeSimple Ct (T, {0,M_PI/6, 0}, {0,0,60}, 0.5, 1.5, 0.1);
+        ConeSimple Ct (T, {0,M_PI/6, 0}, {0,0,60}, 0.5, 1.5, 0.1, 0.0, 0.0);
         IntegrateurEulerCromer It(0.0);
 
         Systeme S(T, It);

@@ -65,7 +65,7 @@ bool TestIntegrateur::testBille() {
 
     TextViewer T(file);
 
-    Bille B(T, 0,1,1,2);
+    Bille B(T, Vecteur({0,0,1}),Vecteur({1,0,2}));
 
     double dt(0.01);
 
@@ -83,7 +83,7 @@ bool TestIntegrateur::testBille() {
         file << stats;
     }
 
-    Vecteur attendu({0.68, 0.058574});
+    Vecteur attendu({0.68, 0, 0.058574});
 
     if (B.getParam() != attendu) {      // Opérateur surchargé : PREC = 1e-14
 
@@ -115,7 +115,7 @@ bool TestIntegrateur::testOH() {
     IntegrateurEulerCromer I(0);
     double dt(0.01);
 
-    Oscillateur OH(T, Vecteur({1}), Vecteur({0}));
+    Oscillateur OH(T, Vecteur({1}), Vecteur({0}), Vecteur({0}));
 
     double err_rel(0);
 

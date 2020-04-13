@@ -9,7 +9,7 @@ TextViewer::TextViewer(std::ostream& flux) : m_flux(flux){}
 
 
 
-/*void TextViewer::dessine(Systeme const& S) {
+void TextViewer::dessine(Systeme const& S) {
 
     /// Affiche textuellement chaque paramètre et vitesse de chaque toupie
 
@@ -29,7 +29,10 @@ TextViewer::TextViewer(std::ostream& flux) : m_flux(flux){}
 
 
 
+TextViewer *TextViewer::clone() const {
 
+    return new TextViewer(*this);
+}
 
 void TextViewer::dessine(Bille const& B) {
 
@@ -41,16 +44,9 @@ void TextViewer::dessine(Oscillateur const& OH) {
     m_flux << OH;
 }
 
-*/
-
 void TextViewer::dessine(ConeSimple const& C) {
 
     m_flux << C;
 }
 
 
-
-void TextViewer::dessine(Contenu const& c){
-
-        m_flux << c;
-}

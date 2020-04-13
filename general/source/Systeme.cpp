@@ -57,14 +57,6 @@ Systeme::~Systeme()
 }
 
 
-Systeme *Systeme::clone() const {
-
-    return new Systeme(*this);
-}
-
-
-
-
 
 void Systeme::addIntegrable(Integrable& I) {
 
@@ -156,6 +148,10 @@ unsigned int Systeme::getNbCorps() const {
     return m_corps.size();
 }
 
+Systeme* Systeme::clone() const {
+
+    return new Systeme(*this);
+}
 
 
 

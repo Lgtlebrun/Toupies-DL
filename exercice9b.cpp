@@ -19,8 +19,8 @@ int main() {
 
         TextViewer T(flux);
 
-        ConeSimple C1(T, {M_PI/6,0, 0}, {0,0,60}, 0.5, 1.5, 0.1);
-        ConeSimple C2(T, {M_PI/4,0, 0}, {0,0,40}, 0.5, 1.5, 0.1);
+        ConeSimple C1(T, {M_PI/6,0, 0}, {0,0,60}, 0.5, 1.5, 0.1, 0.0, 0.0);
+        ConeSimple C2(T, {M_PI/180,0, 0}, {0,0,100}, 0.5, 1.5, 0.1, 0.0, 1.0);
 
         Systeme S(T, I);
 

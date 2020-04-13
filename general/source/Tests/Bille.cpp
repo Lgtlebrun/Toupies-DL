@@ -1,15 +1,15 @@
 #include "Tests/Bille.h"
+#include <cmath>
 
 
 
-
-Bille::Bille(SupportADessin& S, double pos1, double pos2, double vit1, double vit2)
-        : Integrable( S, "Bille", Vecteur({pos1, pos2}), Vecteur({vit1, vit2}))
+Bille::Bille(SupportADessin& S, Vecteur const& pos, Vecteur const& vit)
+        : Integrable( S, "Bille", pos, vit)
 {}
 
 Vecteur Bille::equEvol(double const& temps) {
 
-    return Vecteur({0,g.getCoord(2)});
+    return g;
 
 }
 
@@ -30,11 +30,19 @@ void Bille::dessine() {
 }
 
 
-
-
-
 std::ostream& operator<<(std::ostream& flux, Bille const& B){
 
     flux << "Type : " << B.getType() << "  ; Parametre : " << B.getParam() << "  ;  Vitesse : " << B.getVitesse() << std::endl;
     return flux;
+}
+
+
+double Bille::distanceSecurite() const {
+
+    double v0x(sqrt(m_Ppoint.getCoord(0)*m_Ppoint.getCoord(0)+m_Ppoint.getCoord(1)*m_Ppoint.getCoord(1)));
+
+    double v0z(fabs(m_Ppoint.getCoord(2)));
+
+    return v0x * (v0z + sqrt (v0z*v0z + 2 * g.norme() * m_P.getCoord(2)))/g.norme();
+
 }
