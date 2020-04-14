@@ -64,3 +64,10 @@ void Oscillateur::setDistSecu() {
     m_distSecu += m_rayon;
 
 }
+
+
+double Oscillateur::getRayon() const {
+
+    return m_rayon;
+
+}

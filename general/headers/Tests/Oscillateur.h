@@ -41,6 +41,8 @@ public :
 
     virtual void setDistSecu();
 
+    double getRayon() const;                                                // renvoit le rayon
+
 // =====================================================================================
 
 

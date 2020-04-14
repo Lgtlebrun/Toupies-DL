@@ -50,3 +50,9 @@ void Bille::setDistSecu() {
     m_distSecu += m_rayon;
 
 }
+
+double Bille::getRayon() const {
+
+    return m_rayon;
+
+}
