@@ -4,7 +4,7 @@
 
 
 Bille::Bille(SupportADessin& S, Vecteur const& pos, Vecteur const& vit, double const& r)
-        : Integrable( S, "Bille", pos, vit, 0.0), m_rayon(r)
+        : Integrable( S, "Bille", pos, vit, pos, 0.0), m_rayon(r)
 {
     setDistSecu();
 }
@@ -54,5 +54,19 @@ void Bille::setDistSecu() {
 double Bille::getRayon() const {
 
     return m_rayon;
+
+}
+
+Vecteur Bille::getPosition() const {
+
+    // pour une bille, la position et le paramètre sont identiques, donc puisque seul le paramèrte change, on le retourne lui
+
+    return m_P;
+
+}
+
+void Bille::setPosition(const Vecteur & V) {
+
+    setParam(V);
 
 }

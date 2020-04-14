@@ -2,9 +2,9 @@
 #include <cmath>
 
 
-ConeSimple::ConeSimple(SupportADessin& sup, Vecteur const& param, Vecteur const& vit, double const& rayon, double const& hauteur, double const& masseVolumique, double const& pos1, double const& pos2)
-        : Toupie(sup, "Cone simple", param, vit, calculeIA1(rayon, hauteur, masseVolumique), calculeI3(rayon, hauteur, masseVolumique)
-                , masseVolumique, masse(rayon, hauteur, masseVolumique), 3.0/4.0*hauteur, pos1, pos2, 0.0), m_rayon(rayon), m_hauteur(hauteur)
+ConeSimple::ConeSimple(SupportADessin& sup, Vecteur const& param, Vecteur const& vit, Vecteur const& pos, double const& rayon, double const& hauteur, double const& masseVolumique)
+        : Toupie(sup, "Cone simple", param, vit, pos, calculeIA1(rayon, hauteur, masseVolumique), calculeI3(rayon, hauteur, masseVolumique)
+                , masseVolumique, masse(rayon, hauteur, masseVolumique), 3.0/4.0*hauteur, 0.0), m_rayon(rayon), m_hauteur(hauteur)
 {
     setDistSecu();
 }

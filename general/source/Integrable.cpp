@@ -1,8 +1,8 @@
 #include "../headers/Integrable.h"
 
 
-Integrable::Integrable(SupportADessin& sup, std::string const& type, Vecteur const& param, Vecteur const& vit, double const& distSecu)
-    : Dessinable(sup), m_type(type), m_P(param), m_Ppoint(vit), m_distSecu(distSecu)
+Integrable::Integrable(SupportADessin& sup, std::string const& type, Vecteur const& param, Vecteur const& vit, Vecteur const& pos, double const& distSecu)
+    : Dessinable(sup), m_type(type), m_P(param), m_Ppoint(vit), m_position(pos), m_distSecu(distSecu)
 {}
 
 Integrable::~Integrable()
@@ -60,5 +60,18 @@ double Integrable::distanceSecurite() const {
 void Integrable::statsCorps(std::ostream&) const{
 
 
+
+}
+
+
+Vecteur Integrable::getPosition() const {
+
+    return m_position;
+
+}
+
+void Integrable::setPosition(Vecteur const& V) {
+
+    m_position = V;
 
 }

@@ -15,7 +15,7 @@ public:
 
 // =========
 
-    Toupie(SupportADessin&, std::string const&, Vecteur const&, Vecteur const&, double const&, double const&, double const&, double const&, double const&, double const&, double const&, double const&);
+    Toupie(SupportADessin&, std::string const&, Vecteur const&, Vecteur const&, Vecteur const&, double const&, double const&, double const&, double const&, double const&, double const&);
                                 // Prend un support à dessin où afficher la toupie, un string pour la nomme,
                                 // 2 Vecteurs, le premier position et le second vitesse (avec theta psy phi comme
                                 // convention). Il prend ensuite I_A1, I_3 les moments d'inertie, la masse Volumique,
@@ -57,8 +57,6 @@ protected:
     double m_masseVolumique;                // la masse volumique de la toupie
 
     double m_d;                             // distance du centre de masse au point de contact avec le sol
-
-    Vecteur m_position;                     // position de la pointe
 
 // =========  ATTRIBUTS D'AFFICHAGE :
 

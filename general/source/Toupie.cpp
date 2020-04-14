@@ -3,9 +3,8 @@
 #include <iostream>
 
 
-Toupie::Toupie (SupportADessin& sup, std::string const& type, Vecteur const& param, Vecteur const& vit, double const& IA1, double const& I3, double const& masseVolumique, double const & masse, double const& d, double const& pos1, double const& pos2, double const& distSecu)
-    : Integrable(sup, type, param, vit, distSecu), m_IA1(IA1), m_I3(I3), m_masse(masse), m_d(d), m_masseVolumique(masseVolumique)
-    , m_position({pos1, pos2, 0.0})
+Toupie::Toupie (SupportADessin& sup, std::string const& type, Vecteur const& param, Vecteur const& vit, Vecteur const& posA, double const& IA1, double const& I3, double const& masseVolumique, double const & masse, double const& d, double const& distSecu)
+    : Integrable(sup, type, param, vit, posA - Vecteur({0.0,0.0,posA.getCoord(2)}), distSecu), m_IA1(IA1), m_I3(I3), m_masse(masse), m_d(d), m_masseVolumique(masseVolumique)
 {}
 
 Toupie::~Toupie() {}

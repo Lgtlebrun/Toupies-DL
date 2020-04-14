@@ -2,7 +2,7 @@
 #include <cmath>
 
 Oscillateur::Oscillateur(SupportADessin& S, Vecteur const & param, Vecteur const & vit, Vecteur const& Centre_du_mvt, double const& r)
-        : Integrable(S, "Oscillateur harmonique", param, vit, 0.0), m_centreMVT(Centre_du_mvt), m_rayon(r)
+        : Integrable(S, "Oscillateur harmonique", param, vit, param, 0.0), m_centreMVT(Centre_du_mvt), m_rayon(r)
 {
     setDistSecu();
 }
@@ -69,5 +69,17 @@ void Oscillateur::setDistSecu() {
 double Oscillateur::getRayon() const {
 
     return m_rayon;
+
+}
+
+Vecteur Oscillateur::getPosition() const {
+
+    return m_P;
+
+}
+
+void Oscillateur::setPosition(Vecteur const& V) {
+
+    setParam(V);
 
 }

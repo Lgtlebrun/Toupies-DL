@@ -64,7 +64,7 @@ bool TestIntegrateur::testBille() {
 
     TextViewer T(file);
 
-    Bille B(T, Vecteur({0,0,1}),Vecteur({1,0,2}));
+    Bille B(T, Vecteur({0,0,1}),Vecteur({1,0,2}), 0.2);
 
     double dt(0.01);
 
@@ -114,7 +114,7 @@ bool TestIntegrateur::testOH() {
     IntegrateurEulerCromer I(0);
     double dt(0.01);
 
-    Oscillateur OH(T, Vecteur({1}), Vecteur({0}), Vecteur({0}));
+    Oscillateur OH(T, Vecteur({1}), Vecteur({0}), Vecteur({0}), 0.1);
 
     double err_rel(0);
 

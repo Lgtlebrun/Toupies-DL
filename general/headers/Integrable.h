@@ -16,7 +16,7 @@ public:
 
 // =========
 
-    Integrable(SupportADessin&, std::string const&, Vecteur const&, Vecteur const&, double const&);
+    Integrable(SupportADessin&, std::string const&, Vecteur const&, Vecteur const&, Vecteur const&, double const&);
                                                                         // Prend un support à dessin où dessiner
                                                                         // l'intégrable, un string; le type d'objet
                                                                         // qu'est l'intégrable et deux vecteurs :
@@ -54,14 +54,19 @@ public:
     double getDistSecu() const;                                         // renvoie la distance de sécurité
     void setDistSecu();                                                 // set la distance de séurité
 
+    virtual Vecteur getPosition() const;                                        // renvoie la position carthésienne
+    virtual void setPosition(Vecteur const&);                                              // set la position carthésienne
+
 // ======================================================================================
 
 protected:
 
 // =========  ATTRIBUTS MATHEMATIQUES :
 
-    Vecteur m_P;                // P est le vecteur paramètres
+    Vecteur m_P;                // P est le vecteur paramètres, pas forcément phsyiques
     Vecteur m_Ppoint;           // Ppoint est le vecteur dérivée temporelle de P
+
+    Vecteur m_position;         // Différent du vecteur paramètre car ne représentant une position carthésienne
 
 // =========  ATTRIBUT "COSMETIQUE" :
 
