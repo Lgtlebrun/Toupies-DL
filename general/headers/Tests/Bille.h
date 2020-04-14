@@ -13,7 +13,7 @@ public :
 
 // =========
 
-    Bille(SupportADessin&, Vecteur const&, Vecteur const&);
+    Bille(SupportADessin&, Vecteur const&, Vecteur const&, double const&);
                                                                     // ctor de Bille prenant comme argument le support à
                                                                     // dessin où nous aimerions le dessiner ainsi que
                                                                     // les coord. initiales et les composantes de la
@@ -39,6 +39,7 @@ public :
 
 protected :
 
+    double m_rayon;
 
 };
 

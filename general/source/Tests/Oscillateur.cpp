@@ -1,8 +1,8 @@
 #include "../../headers/Tests/Oscillateur.h"
 #include <cmath>
 
-Oscillateur::Oscillateur(SupportADessin& S, Vecteur const & param, Vecteur const & vit, Vecteur const& Centre_du_mvt)
-        : Integrable(S, "Oscillateur harmonique", param, vit, 0.0), m_centreMVT(Centre_du_mvt)
+Oscillateur::Oscillateur(SupportADessin& S, Vecteur const & param, Vecteur const & vit, Vecteur const& Centre_du_mvt, double const& r)
+        : Integrable(S, "Oscillateur harmonique", param, vit, 0.0), m_centreMVT(Centre_du_mvt), m_rayon(r)
 {
     setDistSecu();
 }
@@ -61,5 +61,6 @@ void Oscillateur::setDistSecu() {
 
     }
 
+    m_distSecu += m_rayon;
 
 }

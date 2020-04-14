@@ -3,8 +3,8 @@
 
 
 
-Bille::Bille(SupportADessin& S, Vecteur const& pos, Vecteur const& vit)
-        : Integrable( S, "Bille", pos, vit, 0.0)
+Bille::Bille(SupportADessin& S, Vecteur const& pos, Vecteur const& vit, double const& r)
+        : Integrable( S, "Bille", pos, vit, 0.0), m_rayon(r)
 {
     setDistSecu();
 }
@@ -46,5 +46,7 @@ void Bille::setDistSecu() {
     double v0z(fabs(m_Ppoint.getCoord(2)));
 
     m_distSecu = v0x * (v0z + sqrt (v0z*v0z + 2 * g.norme() * m_P.getCoord(2)))/g.norme();
+
+    m_distSecu += m_rayon;
 
 }

@@ -12,14 +12,15 @@ public :
 
 // =========
 
-    Oscillateur(SupportADessin&, Vecteur const&, Vecteur const&, Vecteur const&);
+    Oscillateur(SupportADessin&, Vecteur const&, Vecteur const&, Vecteur const&, double const&);
                                                                             // ctor d'Oscillateur. Il faut entrer un
                                                                             // support à dessin sur lequel nous aimerions
                                                                             // afficher l'oscillateur. En plus, le pre-
                                                                             // mier vecteur est le vecteur de position
                                                                             // initiale et le second celui de la vitesse
                                                                             // initiale, le troisième est celui du centre
-                                                                            // du mouvement
+                                                                            // du mouvement. Le double est le rayon de
+                                                                            // l'oscillateur
 
 
 // =========
@@ -47,6 +48,7 @@ protected:
 
     Vecteur m_centreMVT;                                            // le centre du mouvement
 
+    double m_rayon;                                                 // rayon de l'oscillateur considéré étant une bille
 
 };
 
