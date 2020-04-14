@@ -2,7 +2,7 @@
 #include <iostream>
 
 
-LauncherAccueil::LauncherAccueil() : m_titre(0), m_bord(0) {
+LauncherAccueil::LauncherAccueil() : m_titre(0), m_bord(0), m_grillage(0) {
 
     setFixedSize(1400,621);
     setStyleSheet("background: cyan");
@@ -19,8 +19,7 @@ LauncherAccueil::LauncherAccueil() : m_titre(0), m_bord(0) {
 
 
     //Path vers les toupies ojala
-    QString path(QCoreApplication::applicationDirPath());
-    QString pathTv(path + "/tav.gif");
+    QString pathTv(":/icons/launcher/data/tav.gif");
 
     //setup des gifs de toupies
     QMovie* m_toupieVisage = new QMovie(pathTv);
@@ -37,7 +36,7 @@ LauncherAccueil::LauncherAccueil() : m_titre(0), m_bord(0) {
 
 
 
-    QString pathTb(path + "/data/toupie-bleue-marine.gif");
+    QString pathTb(":/icons/launcher/data/toupie-bleue-marine.gif");
 
 
     QMovie* m_toupieBleue = new QMovie(pathTb);
@@ -84,10 +83,13 @@ void LauncherAccueil::suppInit(){
     }
 
     hide();
+
+    m_grillage = new Grillage();
+    m_grillage->show();
+
 }
 
 
 
-//QObject::connect(m_bord->getFenetre()->getBlocBoutons()->getBOk(), &QPushButton::clicked, this, &LauncherAccueil::filePathCheck);
 
 

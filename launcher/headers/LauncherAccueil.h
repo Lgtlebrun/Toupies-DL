@@ -6,7 +6,7 @@
 #include <string>
 #include <iostream>
 #include "bordMode.h"
-#include "fichierSearch.h"
+#include "Grillage.h"
 #include "../../general/headers/SupportADessin.h"
 #include "../../general/headers/TextViewer.h"
 
@@ -41,6 +41,8 @@ protected:
     QMovie* m_toupieVisage;
     QLabel* m_titre;
     BordMode* m_bord;
+
+    Grillage* m_grillage; // Le frérot
 
     SupportADessin* m_support;
 
