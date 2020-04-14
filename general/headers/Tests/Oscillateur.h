@@ -38,7 +38,7 @@ public :
 
 // =========
 
-    virtual double distanceSecurite() const;
+    virtual void setDistSecu();
 
 // =====================================================================================
 
@@ -46,6 +46,7 @@ public :
 protected:
 
     Vecteur m_centreMVT;                                            // le centre du mouvement
+
 
 };
 

@@ -38,8 +38,8 @@ public :
 
     virtual void statsCorps(std::ostream& sortie) const;            // affiche dans un ostream les statistiques du cône
 
-
-    virtual double distanceSecurite() const;
+    virtual void setDistSecu();                         // Calcule la distance de sécurité nécessaire à un affichage
+                                                        // de qualité
 
 // =====================================================================================
 
@@ -55,7 +55,6 @@ protected :
 
     double masse(double const&, double const&, double const&) const;
                                                         // Calcule la masse de la toupie
-
 
 // =========  ATTRIBUTS :
 

@@ -16,7 +16,7 @@ public:
 
 // =========
 
-    Integrable(SupportADessin&, std::string const&, Vecteur const&, Vecteur const&);
+    Integrable(SupportADessin&, std::string const&, Vecteur const&, Vecteur const&, double const&);
                                                                         // Prend un support à dessin où dessiner
                                                                         // l'intégrable, un string; le type d'objet
                                                                         // qu'est l'intégrable et deux vecteurs :
@@ -38,7 +38,7 @@ public:
     virtual void statsCorps(std::ostream&) const;                       // Permet d'afficher les statistiques
                                                                         // de l'intégrable
 
-    virtual double distanceSecurite() const =0;                         // méthode qui permet d'estimer la distance minimale
+    virtual double distanceSecurite() const;                            // méthode qui permet d'estimer la distance minimale
                                                                         // nécessaire pour dessiner deux intégrables et qu'ils
                                                                         // ne soient pas l'un dans l'autre
 
@@ -51,6 +51,8 @@ public:
     Vecteur getVitesse() const;                                         // Renvoit le vecteur vitesse de l'intégrable
     void setVitesse(Vecteur const& newV);                               // Set le vecteur vitesse de l'intégrable
 
+    double getDistSecu() const;                                         // renvoie la distance de sécurité
+    void setDistSecu();                                                 // set la distance de séurité
 
 // ======================================================================================
 
@@ -65,6 +67,8 @@ protected:
 
     std::string m_type = "Corps Solide";                // le type de l'intégrable. Il est de base supposé étant
                                                         // un simple solide
+
+    double m_distSecu;                                  // distance de sécurité nécessaire à un affichage correct
 
 };
 

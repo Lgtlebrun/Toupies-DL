@@ -3,9 +3,11 @@
 
 
 ConeSimple::ConeSimple(SupportADessin& sup, Vecteur const& param, Vecteur const& vit, double const& rayon, double const& hauteur, double const& masseVolumique, double const& pos1, double const& pos2)
-        : Toupie(sup, "Cone simple", param, vit, calculeIA1(rayon, hauteur, masseVolumique), calculeI3(rayon, hauteur, masseVolumique),
-                 masseVolumique, masse(rayon, hauteur, masseVolumique), 3.0/4.0*hauteur, pos1, pos2), m_rayon(rayon), m_hauteur(hauteur)
-{}
+        : Toupie(sup, "Cone simple", param, vit, calculeIA1(rayon, hauteur, masseVolumique), calculeI3(rayon, hauteur, masseVolumique)
+                , masseVolumique, masse(rayon, hauteur, masseVolumique), 3.0/4.0*hauteur, pos1, pos2, 0.0), m_rayon(rayon), m_hauteur(hauteur)
+{
+    setDistSecu();
+}
 
 
 ConeSimple::~ConeSimple() {
@@ -45,6 +47,8 @@ void ConeSimple::statsCorps(std::ostream& sortie) const{
     sortie << "rayon [m]                :  " << m_rayon << std::endl;
     sortie << "hauteur [m]              :  " << m_hauteur << std::endl;
 
+    sortie << "position (x,y,z) [m]     :  " << m_position << std::endl;
+
 
 }
 
@@ -79,8 +83,8 @@ std::ostream& operator<<(std::ostream& flux, ConeSimple const& C){
 }
 
 
-double ConeSimple::distanceSecurite() const {
+void ConeSimple::setDistSecu() {
 
-    return sqrt(m_hauteur*m_hauteur + m_rayon*m_rayon);
+    m_distSecu = sqrt(m_hauteur*m_hauteur + m_rayon*m_rayon);
 
 }

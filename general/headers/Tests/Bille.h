@@ -32,14 +32,13 @@ public :
     virtual std::string getType() const;                            // sert à donner le typer pour les méthodes qui affichent
                                                                     // des billes
 
-// =========
-
-    virtual double distanceSecurite() const;
+    virtual void setDistSecu();
 
 // ==================================================================================
 
 
 protected :
+
 
 };
 

@@ -4,8 +4,10 @@
 
 
 Bille::Bille(SupportADessin& S, Vecteur const& pos, Vecteur const& vit)
-        : Integrable( S, "Bille", pos, vit)
-{}
+        : Integrable( S, "Bille", pos, vit, 0.0)
+{
+    setDistSecu();
+}
 
 Vecteur Bille::equEvol(double const& temps) {
 
@@ -37,12 +39,12 @@ std::ostream& operator<<(std::ostream& flux, Bille const& B){
 }
 
 
-double Bille::distanceSecurite() const {
+void Bille::setDistSecu() {
 
     double v0x(sqrt(m_Ppoint.getCoord(0)*m_Ppoint.getCoord(0)+m_Ppoint.getCoord(1)*m_Ppoint.getCoord(1)));
 
     double v0z(fabs(m_Ppoint.getCoord(2)));
 
-    return v0x * (v0z + sqrt (v0z*v0z + 2 * g.norme() * m_P.getCoord(2)))/g.norme();
+    m_distSecu = v0x * (v0z + sqrt (v0z*v0z + 2 * g.norme() * m_P.getCoord(2)))/g.norme();
 
 }
