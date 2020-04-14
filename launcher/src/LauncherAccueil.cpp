@@ -57,7 +57,7 @@ LauncherAccueil::LauncherAccueil() : m_titre(0), m_bord(0) {
         QObject::connect(m_bord->getBouton(i), SIGNAL(clicked()), this, SLOT(suppInit()));
     }
 
-    QObject::connect(m_bord->getFenetre(), &FichierSearch::fichierPret, this, &LauncherAccueil::suppInit);
+    QObject::connect(m_bord, &BordMode::fichierPret, this, &LauncherAccueil::suppInit);
 
 }
 
@@ -75,7 +75,7 @@ void LauncherAccueil::suppInit(){
         break;
 
     case 3: //Format Fichier
-        std::ofstream flux(m_bord->getFenetre()->getPath());
+        std::ofstream flux(m_bord->getPath());
         m_support = new TextViewer(flux);
         break;
 

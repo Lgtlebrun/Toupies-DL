@@ -60,3 +60,5 @@ void FichierSearch::pathCheck()
 Bloc2Boutons* FichierSearch::getBlocBoutons() const {return m_blocBoutons;}
 
 
+
+
