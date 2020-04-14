@@ -3,8 +3,8 @@
 #include <iostream>
 
 
-Toupie::Toupie (SupportADessin& sup, std::string const& type, Vecteur const& param, Vecteur const& vit, double const& IA1, double const& I3, double const& masseVolumique, double const & masse, double const& d, double const& pos1, double const& pos2)
-    : Integrable(sup, type, param, vit), m_IA1(IA1), m_I3(I3), m_masse(masse), m_d(d), m_masseVolumique(masseVolumique)
+Toupie::Toupie (SupportADessin& sup, std::string const& type, Vecteur const& param, Vecteur const& vit, double const& IA1, double const& I3, double const& masseVolumique, double const & masse, double const& d, double const& pos1, double const& pos2, double const& distSecu)
+    : Integrable(sup, type, param, vit, distSecu), m_IA1(IA1), m_I3(I3), m_masse(masse), m_d(d), m_masseVolumique(masseVolumique)
     , m_position({pos1, pos2, 0.0})
 {}
 
@@ -77,3 +77,16 @@ void Toupie::moduloPi(){
 
 }
 
+Vecteur Toupie::getPosition() const {
+
+    return m_position;
+
+}
+
+void Toupie::setDistSecu() {
+
+    m_distSecu = 2*m_d;                             // arbitraire, mais nous supposerons que le centre de masse d'une
+                                                    // toupie est deux fois plus bas que le point le plus éloigné du
+                                                    // point de contact
+
+}

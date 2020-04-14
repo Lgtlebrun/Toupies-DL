@@ -46,7 +46,12 @@ class Vecteur{
 
         void rationnalise();                                                // M�thode arrondissant les petites coordonn�es � 0
 
+
         std::string to_str() const;
+
+
+        Vecteur rad_to_deg() const;                                         // Convertisseur
+
     // ======================================= OPERATEURS INTERNES ===========================================
 
 

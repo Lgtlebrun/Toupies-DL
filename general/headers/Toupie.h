@@ -15,7 +15,7 @@ public:
 
 // =========
 
-    Toupie(SupportADessin&, std::string const&, Vecteur const&, Vecteur const&, double const&, double const&, double const&, double const&, double const&, double const&, double const&);
+    Toupie(SupportADessin&, std::string const&, Vecteur const&, Vecteur const&, double const&, double const&, double const&, double const&, double const&, double const&, double const&, double const&);
                                 // Prend un support à dessin où afficher la toupie, un string pour la nomme,
                                 // 2 Vecteurs, le premier position et le second vitesse (avec theta psy phi comme
                                 // convention). Il prend ensuite I_A1, I_3 les moments d'inertie, la masse Volumique,
@@ -27,6 +27,10 @@ public:
 
     virtual Toupie* clone() const = 0;                  // Renvoie un pointeur sur une copie polymorphique de la toupie
 
+// ========
+
+    Vecteur getPosition() const;                        // Renvoie la position du point de contact avec le sol
+
 // =========  EQUATION D'EVOLUTION :
 
     virtual Vecteur equEvol(double const& temps) override;        // Equation d'évolution d'une toupie générale
@@ -36,7 +40,7 @@ public:
     virtual void statsCorps(std::ostream& sortie) const;                // Affichage de toutes les statistiques de
                                                                         // la toupie
 
-    virtual double distanceSecurite() const =0;
+    virtual void setDistSecu();
 
 // ===================================================================================
 

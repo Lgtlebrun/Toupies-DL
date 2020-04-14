@@ -476,6 +476,18 @@ std::string Vecteur::to_str() const{
 }
 
 
+Vecteur Vecteur::rad_to_deg() const {
 
+    Vecteur sortie;
+
+    for (unsigned int k(0); k < m_coords.size(); ++k) {
+
+        sortie.augmente(m_coords[k]*180/M_PI);
+
+    }
+
+    return sortie;
+
+}
 
 
