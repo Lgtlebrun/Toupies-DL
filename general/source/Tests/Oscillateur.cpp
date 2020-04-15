@@ -85,7 +85,7 @@ void Oscillateur::setDistSecu() {
 
 Vecteur Oscillateur::getPosition() const {
 /* Pour un oscillateur, la position est identique au paramètre */
-    return m_P;
+    return getParam();
 
 }
 

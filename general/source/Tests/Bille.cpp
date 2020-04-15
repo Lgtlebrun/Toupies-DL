@@ -75,7 +75,7 @@ void Bille::setDistSecu() {
 
 Vecteur Bille::getPosition() const {
 /*pour une bille, la position et le paramètre sont identiques, donc puisque seul le paramèrte change, on le retourne lui */
-    return m_P;
+    return getParam();
 
 }
 

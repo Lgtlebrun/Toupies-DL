@@ -55,12 +55,6 @@ Vecteur Toupie::equEvol(double const& temps) {
 
 // =====================================================================================================
 
-Vecteur Toupie::getPosition() const {
-
-    return m_position;
-
-}
-
 void Toupie::setDistSecu() {
 
     m_distSecu = 2*m_d;                             // arbitraire, mais nous supposerons que le centre de masse d'une
