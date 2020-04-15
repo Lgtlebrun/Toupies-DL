@@ -150,7 +150,7 @@ Vecteur Vecteur::rad_to_deg() const {
 
     for (unsigned int k(0); k < m_coords.size(); ++k) {
 
-        sortie.augmente(m_coords[k]*180/M_PI);
+        sortie.setCoord(k, m_coords[k]*180/M_PI);
 
     }
 

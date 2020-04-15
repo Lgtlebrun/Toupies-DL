@@ -20,9 +20,12 @@ HEADERS += \
     glwidget.h \
     vertex_shader.h \
     vue_opengl.h \
-    ../general/Dessinable.h \
-    ../general/SupportADessin.h \
-    ../general/Systeme.h
+    general/headers/Dessinable.h \
+    general/headers/SupportADessin.h \
+    general/headers/Systeme.h \
+    general/headers/ConeSimple.h \
+    general/headers/Tests/Bille.h \
+    general/headers/Tests/Oscillateur.h
 
 RESOURCES += \
     resource.qrc

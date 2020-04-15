@@ -31,7 +31,7 @@ Vecteur Bille::equEvol(double const& temps) {
 
 void Bille::dessine() {
 /* Voir Systeme::dessine() pour des explications approfondies */
-    m_support.dessine(*this);
+    m_support->dessine(*this);
 }
 
 

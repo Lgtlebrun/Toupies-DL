@@ -1,39 +1,87 @@
 #include "vue_opengl.h"
-#include "vertex_shader.h" // Identifiants Qt de nos différents attributs
-#include "../general/headers/Systeme.h"
+#include "vertex_shader.h"  // Identifiants Qt de nos différents attributs
+#include <cmath>
 
 // ======================================================================
-void VueOpenGL::dessine(const Bille & B) {}
-void VueOpenGL::dessine(const ConeSimple & C) {}
-void VueOpenGL::dessine(const Oscillateur & O) {}
+void VueOpenGL::dessine(Bille const& B) {
 
-void VueOpenGL::dessine(Systeme const& a_dessiner)
-{
+    /* Jette une petite boîte à chaque étape, dont le seul mouvement est une  *
+     * translation selon le déplacement que va ordonner l'équation du mvt     */
 
     QMatrix4x4 matrice;
 
-    for (unsigned int k(0); k < a_dessiner.getNbCorps() ; ++k) {
+    Vecteur position(B.getParam());
 
-       if (a_dessiner.getCorps(k)->getType() == "Bille") {
+    matrice.translate(position.getCoord(0), position.getCoord(1),
+                      position.getCoord(2));
 
-           matrice.setToIdentity();
+    matrice.scale(B.getRayon()/2.0);
 
-           Vecteur position(a_dessiner.getCorps(k)->getParam());
+    dessineCube(matrice);
 
-           matrice.translate(position.getCoord(0), position.getCoord(1),
-                             position.getCoord(2));
+}
+void VueOpenGL::dessine(ConeSimple const& C) {
 
-           matrice.scale(0.2);
+    /* puisque la toupie doit tourner sur elle-même, il faut d'abord faire *
+     * les rotations puis la translation. Nous la faisons proportionnelle  *
+     * à la hauteur. */
 
-           dessineCube(matrice);
+    QMatrix4x4 matrice;
 
-           // On suppose que notre
+    Vecteur enDegre(C.getParam().rad_to_deg());
 
-       }
+    matrice.translate(  C.getPosition().getCoord(0)
+                      , C.getPosition().getCoord(1)
+                      , C.getPosition().getCoord(2)+C.getHauteur()/2.0);
+
+
+    matrice.rotate(45, 1.0, 0.0, 0.0);
+
+    matrice.rotate(45, 0.0, 1.0, 0.0);
+
+    matrice.rotate(enDegre.getCoord(0), 1.0, 0.0, 0.0);
+
+    matrice.rotate(enDegre.getCoord(1), 0.0, 0.0, 1.0);
+
+    matrice.rotate(  enDegre.getCoord(2)
+                   , sin(enDegre.getCoord(0))*cos(enDegre.getCoord(1))
+                   , sin(enDegre.getCoord(0))*cos(enDegre.getCoord(1))
+                   , cos(enDegre.getCoord(0))        );
+
+
+    matrice.scale(C.getHauteur()/2.0);
+
+    dessineCube(matrice);
+
+}
+void VueOpenGL::dessine(Oscillateur const& O) {
+
+    /* On assume que l'oscillateur ne peut pas tourner sur lui-même. Le mvt    *
+     * est alors une succession de translations. Nous rendons les oscillateurs *
+     * deux fois plus petits que les Billes pour les distinguer mieux          */
+
+    QMatrix4x4 matrice;
+
+    Vecteur position(O.getParam());
+
+    matrice.translate(position.getCoord(0), position.getCoord(1),
+                      position.getCoord(2));
+
+    matrice.scale(O.getRayon()/2.0);
+
+    dessineCube(matrice);
+
+}
+// ======================================================================
+void VueOpenGL::dessine(Systeme const& a_dessiner) {
+
+    for (size_t k(0); k < a_dessiner.getNbCorps() ; ++k) {
+
+            a_dessiner.getCorps(k)->dessine();
 
    }
-}
 
+}
 // ======================================================================
 void VueOpenGL::init()
 {
@@ -96,9 +144,8 @@ void VueOpenGL::initializePosition()
 {
   // position initiale
   matrice_vue.setToIdentity();
-  matrice_vue.translate(0.0, 0.0, -4.0);
-  matrice_vue.rotate(60.0, 0.0, 1.0, 0.0);
-  matrice_vue.rotate(45.0, 0.0, 0.0, 1.0);
+  matrice_vue.rotate(-90, 1.0, 0.0, 0.0);
+  matrice_vue.translate(0.0,10.0,0.0);
 }
 
 // ======================================================================

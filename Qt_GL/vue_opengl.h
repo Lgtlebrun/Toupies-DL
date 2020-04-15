@@ -4,14 +4,18 @@
 #include <QOpenGLShaderProgram> // Classe qui regroupe les fonctions OpenGL liées aux shaders
 #include <QMatrix4x4>
 #include "../general/headers/SupportADessin.h"
+#include "../general/headers/Systeme.h"
+#include "../general/headers/Tests/Bille.h"
+#include "../general/headers/Tests/Oscillateur.h"
+#include "../general/headers/ConeSimple.h"
 
 class VueOpenGL : public SupportADessin {
  public:
   // méthode(s) de dessin (héritée(s) de SupportADessin)
   virtual void dessine(Systeme const& a_dessiner) override;
-    virtual void dessine(const Bille &) override;
-    virtual void dessine(const ConeSimple &) override;
-    virtual void dessine(const Oscillateur &) override;
+  virtual void dessine(Bille const&) override;
+  virtual void dessine(ConeSimple const&) override;
+  virtual void dessine(Oscillateur const&) override;
 
   // méthodes de (ré-)initialisation
   void init();
@@ -34,6 +38,7 @@ class VueOpenGL : public SupportADessin {
 
   // Caméra
   QMatrix4x4 matrice_vue;
+
 };
 
 #endif

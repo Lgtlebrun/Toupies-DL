@@ -63,17 +63,29 @@ void Systeme::dessine() {
  * les méthodes dessine() de chaque intégrable particulier, qui va appeler a son tour la méthode               *
  * dessine(IntegrableParticulier const&) du SupportADessin qui va enfin dessiner l'intégrable en question dans *
  * le bon milieu                                                                                              */
-    m_support.dessine(*this);
+    m_support->dessine(*this);
 }
 
 // =============================================================================================
+
+void Systeme::changeSupport(SupportADessin & sup) {
+
+    Dessinable::changeSupport(sup);
+
+    for (auto& elt : m_corps) {
+
+        elt->changeSupport(*m_support);
+
+    }
+
+}
 
 void Systeme::addIntegrable(Integrable& I) {
 /* méthode qui ajoute un intégrable au Systeme */
     m_corps.push_back(I.clone());
 
     /* On modifie le support de l'objet pour la cohérence du système */
-    m_corps.back()->changeSupport(m_support);
+    m_corps.back()->changeSupport(*m_support);
 }
 
 Integrable* Systeme::getCorps(size_t k) const {

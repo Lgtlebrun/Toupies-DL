@@ -26,7 +26,7 @@ ConeSimple *ConeSimple::clone() const {
 
 void ConeSimple::dessine() {
 /* Explication détaillée dans Systeme::dessine() */
-    m_support.dessine(*this);
+    m_support->dessine(*this);
 }
 
 // ===================================================================================================

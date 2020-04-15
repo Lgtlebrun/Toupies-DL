@@ -37,6 +37,8 @@ public:
 
     virtual void dessine() override;                                // Permet d'afficher le système
 
+    virtual void changeSupport(SupportADessin&) override;                          // Permet de changer de support
+
 // =========  ACCESSEURS/SETTEURS INTEGRABLES :
 
     Integrable* getCorps(size_t k) const;                           // Permet d'accèder au kème intégrable. L'indice est

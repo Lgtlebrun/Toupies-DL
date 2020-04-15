@@ -25,7 +25,7 @@ Oscillateur *Oscillateur::clone() const {
 
 void Oscillateur::dessine() {
 /* Expliqué plus amplement dans Systeme::dessine() */
-    m_support.dessine(*this);
+    m_support->dessine(*this);
 }
 
 

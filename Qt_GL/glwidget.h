@@ -14,7 +14,7 @@ class GLWidget : public QOpenGLWidget
 public:
   GLWidget(Systeme& S, QWidget* parent = nullptr)
     : QOpenGLWidget(parent)
-    , m_s(S)                    // la simulation commence qu'une fois le systeme établi
+     , m_s(S)                   // la simulation commence qu'une fois le systeme établi
   {m_s.changeSupport(vue);}
   virtual ~GLWidget() {}
 
@@ -40,7 +40,7 @@ private:
   QTime chronometre;
 
   // objets à dessiner, faire évoluer
-  Systeme& m_s;
+  Systeme m_s;
 };
 
 #endif // GLWIDGET_H

@@ -26,7 +26,7 @@ public:
 
 // =========
 
-    void changeSupport(SupportADessin&);                    // méthode permettant de changer de SupportADessin
+    virtual void changeSupport(SupportADessin&);                    // méthode permettant de changer de SupportADessin
 
 
 // ======================================================================================
@@ -35,7 +35,7 @@ protected:
 
 // =========  ATTRIBUTS :
 
-    SupportADessin& m_support;                              // l'endroit où l'objet dessinable sera dessiné
+    SupportADessin* m_support;                              // l'endroit où l'objet dessinable sera dessiné
 
 };
 
