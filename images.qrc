@@ -1,2 +1,13 @@
-<!DOCTYPE RCC>
-<RCC version="1.0"/>
+<RCC>
+    <qresource prefix="/icons">
+        <file>launcher/data/pastilleGrise.png</file>
+        <file>launcher/data/boutonRouge.png</file>
+        <file>launcher/data/boutonBleu.png</file>
+        <file>launcher/data/tav.gif</file>
+        <file>launcher/data/toupie-bleue-marine.gif</file>
+        <file>launcher/data/chinoise.gif</file>
+        <file>launcher/data/cone.gif</file>
+        <file>launcher/data/bille.gif</file>
+        <file>launcher/data/oscillateur.gif</file>
+    </qresource>
+</RCC>
