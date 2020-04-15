@@ -21,6 +21,8 @@ public :
                                                                     // = x''(t). Donc on le pose à t=t0 et il nous
                                                                     // dit comment faire évoluer les paramètres
 
+    virtual ~Integrateur() {}                                       // dtor d'intégrateur
+
 // =========  VIRTUELLES PURES :
 
     virtual Integrateur* clone() const = 0;                         // Renvoie un pointeur sur une copie
@@ -64,6 +66,8 @@ public :
 
     IntegrateurEulerCromer(double const& t0);                       // ctor d'Euler-Cromer
 
+    virtual ~IntegrateurEulerCromer() {}                                       // dtor d'Euleur-Cromer
+
 // =========
 
     virtual IntegrateurEulerCromer* clone() const;                  // Renvoie un pointeur sur une copie
@@ -89,6 +93,8 @@ public :
 
     IntegrateurNewmark (double const& t0);                          // ctor de Newmark
 
+    virtual ~IntegrateurNewmark() {}                                // dtor de Newmark
+
 // =========
 
     virtual IntegrateurNewmark* clone() const;                      // Renvoie un pointeur sur une copie
@@ -108,13 +114,14 @@ public :
 
 class IntegrateurRK4: public Integrateur
 {
+public :
 
-    public :
+    IntegrateurRK4(double const& t0);
 
-        virtual IntegrateurRK4* clone() const;
-        virtual void integre(Integrable& integrable, double const& dt) const;
+    virtual ~IntegrateurRK4() {}
 
-
+    virtual IntegrateurRK4* clone() const;
+    virtual void integre(Integrable& integrable, double const& dt) const;
 };
 
 
