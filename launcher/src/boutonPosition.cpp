@@ -1,14 +1,16 @@
 #include "../headers/boutonPosition.h"
 
-BoutonPosition::BoutonPosition(QWidget* parent) : QPushButton("", parent), m_couleur(GRIS), m_pastille(0) {
+BoutonPosition::BoutonPosition(Vecteur const& pos, QWidget* parent) : QPushButton("", parent), m_couleur(GRIS),
+    m_pastille(0), m_position(pos) {
 
     m_pastille = new QLabel(this);
     m_pastille->setAlignment(Qt::AlignCenter);
-    changeCouleur(m_couleur);
 
     QVBoxLayout* lay = new QVBoxLayout;
     lay->addWidget(m_pastille);
     this->setLayout(lay);
+
+    changeCouleur(m_couleur);
 }
 
 
@@ -43,4 +45,25 @@ void BoutonPosition::changeCouleur(Couleur c){
     }
 
     m_pastille->setPixmap(pix);
+}
+
+
+
+void BoutonPosition::clickGestion(){
+
+    switch(m_couleur){
+
+    case ROUGE:
+        return;
+
+    case GRIS:
+        changeCouleur(BLEU);
+        emit newIntegrable();
+        break;
+
+    case BLEU:
+        changeCouleur(GRIS);
+        emit supprIntegrable();
+        break;
+    }
 }
