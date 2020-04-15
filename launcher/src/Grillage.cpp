@@ -1,8 +1,7 @@
 #include "../headers/Grillage.h"
 
 Grillage::Grillage(QWidget* parent) :  QWidget(parent), m_typeChoisi(Null), m_BoxIntegrateur(0), m_bCone(0),
-m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_vX(0), m_vY(0), m_vZ(0),
-m_pX(0), m_pY(0), m_pZ(0), m_LabParam(0){
+m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_go(0){
 
  setFixedSize(1900, 1200); // Un GRAND grillage
 
@@ -10,14 +9,10 @@ m_pX(0), m_pY(0), m_pZ(0), m_LabParam(0){
  mainLay->setAlignment(Qt::AlignTop);
  mainLay->setSpacing(20);
 
- QHBoxLayout* layParam = new QHBoxLayout;
- layParam->setAlignment(Qt::AlignCenter);
-
- QHBoxLayout* layVitesse = new QHBoxLayout;
- layVitesse->setAlignment(Qt::AlignCenter);
-
  QHBoxLayout* layIntegrateur = new QHBoxLayout;
- layIntegrateur->setAlignment(Qt::AlignCenter);
+ QVBoxLayout* layIntegBis = new QVBoxLayout;
+ layIntegBis->setAlignment((Qt::AlignLeft));
+ layIntegrateur->setAlignment(Qt::AlignLeft);
 
  QHBoxLayout* grillePlusBouton = new QHBoxLayout;
  grillePlusBouton->setAlignment(Qt::AlignRight);
@@ -26,7 +21,26 @@ m_pX(0), m_pY(0), m_pZ(0), m_LabParam(0){
  laygrille->setSpacing(0);
 
 
- //NDP : c'est ici qu'on connectera les boutons
+
+ //Setup Integrateur
+
+    m_BoxIntegrateur = new QComboBox(this);
+    QLabel* integrateur = new QLabel("Integrateur :", this);
+
+    m_BoxIntegrateur->addItem("Euler-Cromer");
+    m_BoxIntegrateur->addItem("Newmark");
+
+    layIntegBis->addWidget(integrateur);
+    layIntegBis->addWidget(m_BoxIntegrateur);
+    layIntegBis->setSpacing(5);
+
+    layIntegrateur->addLayout(layIntegBis);
+
+    grillePlusBouton->addLayout(layIntegrateur);
+
+
+ //Setup Boutons Positions
+
     for(double i(0); i < 10; i++) {
 
         for(double j(0); j < 10; j++) {
@@ -70,105 +84,20 @@ m_pX(0), m_pY(0), m_pZ(0), m_LabParam(0){
  layBoutons->setSpacing(0);
 
  grillePlusBouton->addLayout(layBoutons);
- mainLay->addLayout(grillePlusBouton);
 
 
- //Setup Param
+  mainLay->addLayout(grillePlusBouton);
 
- m_LabParam = new QLabel("Paramètres initiaux :", this);
- m_pX = new QDoubleSpinBox(this);
- m_pY = new QDoubleSpinBox(this);
- m_pZ = new QDoubleSpinBox(this);
-
- m_pX->setPrefix("Theta : ");
- m_pY->setPrefix("Psy : ");
- m_pZ->setPrefix("Phi : ");
-
- m_pX->setValue(0);
- m_pY->setValue(0);
- m_pZ->setValue(0);
-
- m_pX->setMinimum(-1e15);
- m_pY->setMinimum(-1e15);
- m_pZ->setMinimum(-1e15);
-
- m_pX->setSingleStep(0.1);
- m_pY->setSingleStep(0.1);
- m_pZ->setSingleStep(0.1);
-
- m_pX->setDecimals(2);
- m_pY->setDecimals(2);
- m_pZ->setDecimals(2);
-
- m_pX->setAccelerated(true);
- m_pY->setAccelerated(true);
- m_pZ->setAccelerated(true);
-
- layParam->addWidget(m_LabParam);
- layParam->addWidget(m_pX);
- layParam->addWidget(m_pY);
- layParam->addWidget(m_pZ);
+    //Setup bouton GO
 
 
- mainLay->addLayout(layParam);
+    m_go = new QPushButton("GO !",this);
+    m_go->setFont(QFont("Cooper Black", 70, 30));
+    m_go->setFixedSize(350, 155);
+    m_go->setStyleSheet("background: cyan; color: white");
 
-
-
-
-
- //Setup Vitesse
-
- QLabel* vitesse = new QLabel("Vitesse initiale :", this);
- m_vX = new QDoubleSpinBox(this);
- m_vY = new QDoubleSpinBox(this);
- m_vZ = new QDoubleSpinBox(this);
-
- m_vX->setPrefix("X : ");
- m_vY->setPrefix("Y : ");
- m_vZ->setPrefix("Z : ");
-
- m_vX->setValue(0);
- m_vY->setValue(0);
- m_vZ->setValue(0);
-
- m_vX->setMinimum(-1e15);
- m_vY->setMinimum(-1e15);
- m_vZ->setMinimum(-1e15);
-
- m_vX->setSingleStep(0.1);
- m_vY->setSingleStep(0.1);
- m_vZ->setSingleStep(0.1);
-
- m_vX->setDecimals(2);
- m_vY->setDecimals(2);
- m_vZ->setDecimals(2);
-
- m_vX->setAccelerated(true);
- m_vY->setAccelerated(true);
- m_vZ->setAccelerated(true);
-
- layVitesse->addWidget(vitesse);
- layVitesse->addWidget(m_vX);
- layVitesse->addWidget(m_vY);
- layVitesse->addWidget(m_vZ);
-
-
- mainLay->addLayout(layVitesse);
-
-
- //Setup Integrateur
-
-    m_BoxIntegrateur = new QComboBox(this);
-    QLabel* integrateur = new QLabel("Integrateur :", this);
-
-    m_BoxIntegrateur->addItem("Euler-Cromer");
-    m_BoxIntegrateur->addItem("Newmark");
-
-    layIntegrateur->addWidget(integrateur);
-    layIntegrateur->addWidget(m_BoxIntegrateur);
-
-    mainLay->addLayout(layIntegrateur);
-
+    m_go->move(1540, 815);
+    mainLay->setSpacing(5);
 
  //DERNIERE COMMANDE!
  setLayout(mainLay);
@@ -223,36 +152,6 @@ void Grillage::clickTypeBouton() {
     }
 
     m_typeChoisi = newType;
-    if(m_typeChoisi == BILLE){
-
-        m_LabParam->hide();
-        m_pX->hide();
-        m_pY->hide();
-        m_pZ->hide();
-    }
-    else{
-
-        m_LabParam->show();
-        m_pX->show();
-        m_pY->show();
-        m_pZ->show();
-    }
-
-    if(m_typeChoisi == OSCILLATEUR){
-
-        m_pX->setPrefix("X :");
-        m_pY->setPrefix("Y :");
-        m_pZ->setPrefix("Z :");
-    }
-
-    if (m_typeChoisi == CONE || m_typeChoisi == CHINOISE){
-
-        m_pX->setPrefix("Theta :");
-        m_pY->setPrefix("Psi :");
-        m_pZ->setPrefix("Phi :");
-    }
-
-
 }
 
 
@@ -333,22 +232,24 @@ void Grillage::addIntegrable(){
             }
         }
 
+        sendCaracErrorMess();
+
     }
     else {
 
         TextViewer t(std::cout); // Par défaut
-        Vecteur vitesse({m_vX->value(), m_vY->value(), m_vZ->value()});
+        Vecteur vitesse({getSelectedButton()->getVX(), getSelectedButton()->getVY(), getSelectedButton()->getVZ()});
 
         if(m_typeChoisi == CONE){
 
-            Vecteur param({m_pX->value(), m_pY->value(), m_pZ->value()});
+            Vecteur param({getSelectedButton()->getPX(), getSelectedButton()->getPY(), getSelectedButton()->getPZ()});
             m_sys.push_back(new ConeSimple(t, param, vitesse, pos, m_bCone->getRayon(), m_bCone->getHauteur(), m_bCone->getMVol()));
 
         }
 
         else if (m_typeChoisi == CHINOISE){
 
-            Vecteur param({m_pX->value(), m_pY->value(), m_pZ->value()});
+            Vecteur param({getSelectedButton()->getPX(), getSelectedButton()->getPY(), getSelectedButton()->getPZ()});
             m_sys.push_back(new ConeSimple(t, param, vitesse, pos, m_bChinoise->getRayon(), m_bChinoise->getHauteur(), m_bChinoise->getMVol()));
 
             //NDP : A mettre à jour lorsque nous aurons des toupies chinoises
@@ -361,7 +262,7 @@ void Grillage::addIntegrable(){
         }
 
         else if (m_typeChoisi == OSCILLATEUR){
-            Vecteur param({m_pX->value(), m_pY->value(), m_pZ->value()});
+            Vecteur param({getSelectedButton()->getPX(), getSelectedButton()->getPY(), getSelectedButton()->getPZ()});
             m_sys.push_back(new Oscillateur(t, param, vitesse, pos, m_bOscillateur->getRayon()));
         }
 
@@ -386,4 +287,54 @@ void Grillage::delIntegrable(){
         }
 
     }
+}
+
+
+void Grillage::sendCaracErrorMess(){
+
+    switch(m_typeChoisi){
+
+    case Null:
+        return;
+
+    case CHINOISE:
+    case CONE:
+        QMessageBox::information(this, "Erreur", "Veuillez renseigner un rayon, une hauteur et une masse volumique.");
+        break;
+
+    case OSCILLATEUR:
+    case BILLE:
+        QMessageBox::information(this, "Erreur", "Veuillez renseigner un rayon.");
+        break;
+
+
+    }
+
+
+}
+
+
+
+
+TypeBouton* Grillage::getSelectedButton() const{
+
+    switch(m_typeChoisi){
+
+    case Null:
+        return nullptr;
+
+    case CONE:
+        return m_bCone;
+
+    case CHINOISE:
+        return m_bChinoise;
+
+    case BILLE:
+        return m_bBille;
+
+    case OSCILLATEUR:
+        return m_bOscillateur;
+
+    }
+
 }

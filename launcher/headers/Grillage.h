@@ -24,11 +24,14 @@ public:
     Grillage(QWidget* = nullptr);
     virtual ~Grillage();
 
+    TypeBouton* getSelectedButton() const;
+
     void clickTypeBouton();
     Vecteur findNewPos();
 
     void addIntegrable();
     void delIntegrable();
+    void sendCaracErrorMess();
 
     bool checkAllCaracs() const;
 
@@ -39,19 +42,11 @@ private:
     TypeBouton* m_bBille;
     TypeBouton* m_bOscillateur;
 
-    QLabel* m_LabParam;
-
-    QDoubleSpinBox* m_pX;
-    QDoubleSpinBox* m_pY;
-    QDoubleSpinBox* m_pZ;
-
-    QDoubleSpinBox* m_vX;
-    QDoubleSpinBox* m_vY;
-    QDoubleSpinBox* m_vZ;
-
     QComboBox* m_BoxIntegrateur;
 
     Type m_typeChoisi;
+
+    QPushButton* m_go;
 
 
 
