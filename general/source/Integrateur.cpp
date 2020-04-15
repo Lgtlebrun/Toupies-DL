@@ -11,6 +11,10 @@ IntegrateurEulerCromer::IntegrateurEulerCromer(double const& t0)
     : Integrateur(t0)
 {}
 
+IntegrateurRK4::IntegrateurRK4(double const& t0)
+    : Integrateur(t0)
+{}
+
 // =================================================================================================
 
 IntegrateurEulerCromer* IntegrateurEulerCromer::clone() const {
