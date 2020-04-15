@@ -43,7 +43,7 @@ int main()
     /* Nous posons le dt de l'intégration numérique à 0.001 */
     double dt(0.001);
 
-    /* On affiche le Systeme dans un ostream, ce qui permet un affichage en plus de profondeur que ne le permet *
+    /* On affiche le Systeme dans cout, ce qui permet un affichage en plus de profondeur que ne le permet       *
      * Systeme::dessine(), quelques lignes plus bas                                                             */
     Syst.affiche(cout);
 
@@ -55,7 +55,7 @@ int main()
         Syst.dessine();
 
     }
-    
+
 
     return 0;
 }
