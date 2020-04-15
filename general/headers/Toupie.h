@@ -64,7 +64,7 @@ protected:
 
 // =========  METHODES PROTECTED :
 
-    void moduloPi();                                                    // Remet le paramètre modulo Pi, afin d'éviter
+    void modulo2Pi();                                                    // Remet le paramètre modulo Pi, afin d'éviter
                                                                         // la divergence des fonctions sin et cos
 
 };

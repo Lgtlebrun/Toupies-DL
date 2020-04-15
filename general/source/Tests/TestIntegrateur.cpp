@@ -64,8 +64,8 @@ bool TestIntegrateur::testBille() {
 
     TextViewer T(file);
 
-    Bille B(T, Vecteur({0,0,1}),Vecteur({1,0,2}), 0.2);
-
+    Bille B(T, Vecteur({0,0,1}),Vecteur({1,0,2}), 0.2);         // Initialisation de la bille selon l'exo
+                                                                           // 7 du projet
     double dt(0.01);
 
     for (size_t i(0); i < 68 ; i++){
@@ -82,7 +82,7 @@ bool TestIntegrateur::testBille() {
         file << stats;
     }
 
-    Vecteur attendu({0.68, 0, 0.058574});
+    Vecteur attendu({0.68, 0, 0.058574});           // nous vérifions que nous avons les mêmes résultats
 
     if (B.getParam() != attendu) {      // Opérateur surchargé : PREC = 1e-14
 
@@ -114,8 +114,8 @@ bool TestIntegrateur::testOH() {
     IntegrateurEulerCromer I(0);
     double dt(0.01);
 
-    Oscillateur OH(T, Vecteur({1}), Vecteur({0}), Vecteur({0}), 0.1);
-
+    Oscillateur OH(T, Vecteur({1}), Vecteur({0}), Vecteur({0}), 0.1);           // Initialisation pour
+                                                                                              // une vérif facile
     double err_rel(0);
 
     for(size_t i(0); i < 68; i++){

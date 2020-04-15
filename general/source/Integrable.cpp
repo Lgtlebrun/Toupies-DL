@@ -1,7 +1,11 @@
 #include "../headers/Integrable.h"
 
 
-Integrable::Integrable(SupportADessin& sup, std::string const& type, Vecteur const& param, Vecteur const& vit, Vecteur const& pos, double const& distSecu)
+Integrable::Integrable( SupportADessin& sup, std::string const& type, Vecteur const& param, Vecteur const& vit, Vecteur const& pos, double const& distSecu)
+/* ctor de l'intégrable. Il lui faut un paramètre != position dans le cas général car paramètre représente un vector *
+ * des coordonnées généralisées (pour une toupie, param = (théta, psy, phi) alors que pos = (x,y,z)). Il faut un     *
+ * SupportADessin pour savoir où le représenter. En plus de cela, la distance de sécurité est là pour s'assurer que  *
+ * deux intégrables ne se superposent pas en représentation visuelle                                                */
     : Dessinable(sup), m_type(type), m_P(param), m_Ppoint(vit), m_position(pos), m_distSecu(distSecu)
 {}
 
@@ -10,68 +14,70 @@ Integrable::~Integrable()
     //dtor
 }
 
+void Integrable::statsCorps(std::ostream& flux) const{
+/* Méthode d'affichage permettant d'afficher tout ce qui pourrait être voulu par un programmeur */
+    flux << m_type << ":    Paramètre : " << m_P << ", Vitesse : " << m_Ppoint << ", Position : " << m_position << std::endl;
+
+}
+
+// ======================================================================================================
+
+    /* Divers getteurs et setteurs de toutes les grandeurs que possède un Integrable */
+
 Vecteur Integrable::getParam() const{
 
     return m_P;
 }
-
 void Integrable::setParam(Vecteur const& newV){
 
 
     m_P = newV;
 }
 
-std::string Integrable::getType() const{
-
-    return m_type;
-
-}
-
 Vecteur Integrable::getVitesse() const{
 
     return m_Ppoint;
 }
-
-
 void Integrable::setVitesse(Vecteur const& newV){
 
     m_Ppoint = newV;
 }
-
-double Integrable::getDistSecu() const {
-
-    return m_distSecu;
-
-}
-
-void Integrable::setDistSecu() {
-
-    m_distSecu = distanceSecurite();
-
-}
-
-double Integrable::distanceSecurite() const {
-
-    return 0.0;
-
-}
-
-
-void Integrable::statsCorps(std::ostream&) const{
-
-
-
-}
-
 
 Vecteur Integrable::getPosition() const {
 
     return m_position;
 
 }
+void Integrable::setPosition(Vecteur const& newP) {
 
-void Integrable::setPosition(Vecteur const& V) {
-
-    m_position = V;
+    m_position = newP;
 
 }
+
+    /* Méthodes de get et set dont le résultat varie grandement en fonction du type d'intégrable, puisque là pour *
+     * l'affichage                                                                                               */
+
+double Integrable::getDistSecu() const {
+
+    return m_distSecu;
+
+}
+void Integrable::setDistSecu() {
+
+    m_distSecu = distanceSecurite();
+
+}
+double Integrable::distanceSecurite() const {
+
+    return 0.0;
+
+}
+
+std::string Integrable::getType() const{
+/* Pas de set car le type est définit à la création de l'objet. Un cheval ne se transforme pas spontanément en lapin, *
+ * peu importe à quel point nous le désirons ! */
+    return m_type;
+
+}
+
+

@@ -77,7 +77,7 @@ bool TestVecteur::run(){
 }
 
 
-
+/* Nous vérifions la véracité du résultat de l'opération en comparant l'écart avec un vecteur pré-calculé */
 
 bool TestVecteur::test_augmente() {
 

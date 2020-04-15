@@ -3,6 +3,9 @@
 
 
 ConeSimple::ConeSimple(SupportADessin& sup, Vecteur const& param, Vecteur const& vit, Vecteur const& pos, double const& rayon, double const& hauteur, double const& masseVolumique)
+/* Nous pouvons calculer les moments d'inertie selon différents axes à base d'uniquement la masse volumique, le rayon *
+ * et la hauteur du cône. De plus la distance de sécurité est définie comme étant la longueur de la paroi du cône     *
+ * qui est calculée dans les accolades pour les mêmes raisons qu'expliqué dans le ctor de Bille.h                    */
         : Toupie(sup, "Cone simple", param, vit, pos, calculeIA1(rayon, hauteur, masseVolumique), calculeI3(rayon, hauteur, masseVolumique)
                 , masseVolumique, masse(rayon, hauteur, masseVolumique), 3.0/4.0*hauteur, 0.0), m_rayon(rayon), m_hauteur(hauteur)
 {
@@ -15,31 +18,21 @@ ConeSimple::~ConeSimple() {
 }
 
 
-double ConeSimple::calculeIA1(double const& rayon, double const& hauteur, double const& masseVolumique) const {
-
-    return masse(rayon, hauteur, masseVolumique)*(3.0/20*rayon*rayon+3.0/5*hauteur*hauteur);
-
+ConeSimple *ConeSimple::clone() const {
+/* Méthode de clonage de ConeSimple */
+    return new ConeSimple(*this);
 }
 
 
-double ConeSimple::calculeI3(double const& rayon, double const& hauteur, double const& masseVolumique) const {
-
-    return 3*masse(rayon, hauteur, masseVolumique)/10*rayon*rayon;
-
+void ConeSimple::dessine() {
+/* Explication détaillée dans Systeme::dessine() */
+    m_support.dessine(*this);
 }
 
-
-double ConeSimple::masse(double const& rayon, double const& hauteur, double const& masseVolumique) const{
-
-    return 1.0/3*M_PI*rayon*rayon*hauteur*masseVolumique;
-
-}
-
-
-
+// ===================================================================================================
 
 void ConeSimple::statsCorps(std::ostream& sortie) const{
-
+/* Affiche en détail les caractéristiques du ConeSimple */
     sortie << "masse [kg]               :  " << m_masse << std::endl;
     sortie << "masse volumique [kg m-3] :  " << m_masseVolumique << std::endl;
     sortie << "distance [m]             :  " << m_d << std::endl;
@@ -52,16 +45,46 @@ void ConeSimple::statsCorps(std::ostream& sortie) const{
 
 }
 
-ConeSimple *ConeSimple::clone() const {
 
-    return new ConeSimple(*this);
+std::ostream& operator<<(std::ostream& flux, ConeSimple const& C){
+/* Affichage générique via la surchage de l'opérateur << */
+    flux << "Type : " << C.getType() << "  ; Parametre : " << C.getParam() << "  ;  Vitesse : " << C.getVitesse()
+         << "  ; Rayon : " << C.getRayon() << "  ; Hauteur : " << C.getHauteur() << std::endl;
+
+    return flux;
 }
 
+// ==================================================================================================
 
-void ConeSimple::dessine() {
+    /* Calcul de pleins de grandeurs physiques par des formules données dans le complément mathématico-physique *
+     * Nous ne permettons pas de set de ces garndeurs pusiqu'intrinsèques à l'objet dont les propriétés comme   *
+     * la forme et la masse sont supposées constantes par l'aproximation du solide indéformable                 */
 
-    m_support.dessine(*this);
+double ConeSimple::calculeIA1(double const& rayon, double const& hauteur, double const& masseVolumique) const {
+
+    return masse(rayon, hauteur, masseVolumique)*(3.0/20*rayon*rayon+3.0/5*hauteur*hauteur);
+
 }
+
+double ConeSimple::calculeI3(double const& rayon, double const& hauteur, double const& masseVolumique) const {
+
+    return 3*masse(rayon, hauteur, masseVolumique)/10*rayon*rayon;
+
+}
+
+double ConeSimple::masse(double const& rayon, double const& hauteur, double const& masseVolumique) const{
+
+    return 1.0/3*M_PI*rayon*rayon*hauteur*masseVolumique;
+
+}
+
+void ConeSimple::setDistSecu() {
+
+    m_distSecu = sqrt(m_hauteur*m_hauteur + m_rayon*m_rayon);
+
+}
+
+    /* Accesseurs à des grandeurs physiques intrinséques au cône */
 
 double ConeSimple::getRayon() const {
 
@@ -71,20 +94,4 @@ double ConeSimple::getRayon() const {
 double ConeSimple::getHauteur() const {
 
     return m_hauteur;
-}
-
-
-std::ostream& operator<<(std::ostream& flux, ConeSimple const& C){
-
-    flux << "Type : " << C.getType() << "  ; Parametre : " << C.getParam() << "  ;  Vitesse : " << C.getVitesse()
-            << "  ; Rayon : " << C.getRayon() << "  ; Hauteur : " << C.getHauteur() << std::endl;
-
-    return flux;
-}
-
-
-void ConeSimple::setDistSecu() {
-
-    m_distSecu = sqrt(m_hauteur*m_hauteur + m_rayon*m_rayon);
-
 }

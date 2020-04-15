@@ -23,7 +23,6 @@ Vecteur::Vecteur(std::initializer_list<double> il) : m_coords(il) {}        // F
 //==========================================  METHODES PUBLIQUES  ==================================================
 
 
-
 // Accesseurs
 
 
@@ -34,8 +33,6 @@ double Vecteur::getCoord(unsigned int nEmeCoord) const{
     return m_coords[nEmeCoord];
 
 }
-
-
 
 
 unsigned int Vecteur::getDim() const{
@@ -72,7 +69,6 @@ void Vecteur::augmente(double coordSupplementaire){
 }
 
 
-
 double Vecteur::norme2() const{
 
     /// Calcule le carré de la norme
@@ -85,9 +81,6 @@ double Vecteur::norme2() const{
 }
 
 
-
-
-
 double Vecteur::norme() const{ // Pythagore à n dimensions
 
     /// Calcule la norme
@@ -95,10 +88,6 @@ double Vecteur::norme() const{ // Pythagore à n dimensions
     return sqrt(norme2());
 
 }
-
-
-
-
 
 
 Vecteur Vecteur::unitaire() const{
@@ -138,11 +127,39 @@ Vecteur Vecteur::unitaire() const{
 }
 
 
+std::string Vecteur::to_str() const{
+
+    std::string str("[");
+    for(auto const& elt : m_coords){
+        str += std::to_string(elt);
+        str += " ";
+    }
+
+    // On efface l'espace en trop
+    str.erase(str.size() - 1);
+
+    str += "]";
+
+    return str;
+}
+
+
+Vecteur Vecteur::rad_to_deg() const {
+
+    Vecteur sortie;
+
+    for (unsigned int k(0); k < m_coords.size(); ++k) {
+
+        sortie.augmente(m_coords[k]*180/M_PI);
+
+    }
+
+    return sortie;
+
+}
 
 
 //==============================================  METHODES PROTECTED  ==================================================
-
-
 
 
 
@@ -160,8 +177,6 @@ Vecteur Vecteur::mult(double scalaire) const{
 
     return sortie;
 }
-
-
 
 
 Vecteur Vecteur::addition(Vecteur const& v2) const{
@@ -196,9 +211,6 @@ Vecteur Vecteur::addition(Vecteur const& v2) const{
 }
 
 
-
-
-
 double Vecteur::prodScalaire(Vecteur const& vecteur2) const{
 
     /// Retourne le produit scalaire de deux vecteurs
@@ -214,11 +226,6 @@ double Vecteur::prodScalaire(Vecteur const& vecteur2) const{
 
     return sortie;
 }
-
-
-
-
-
 
 
 Vecteur Vecteur::prodVectoriel(Vecteur const& vecteur2) const{
@@ -250,10 +257,6 @@ Vecteur Vecteur::prodVectoriel(Vecteur const& vecteur2) const{
 }
 
 
-
-
-
-
 void Vecteur::rationnalise() {
 
     /// Méthode permettant d'atteindre zéro
@@ -266,11 +269,6 @@ void Vecteur::rationnalise() {
     }
 
 }
-
-
-
-
-
 
 
 
@@ -326,7 +324,6 @@ Vecteur& Vecteur::operator*=(double const& lambda){
 }
 
 
-
 const Vecteur operator-(Vecteur const& v){
 
         /// Surcharge du négatif. Sort l'opposé
@@ -360,7 +357,6 @@ bool Vecteur::operator!=(Vecteur const& v2) const{
 }
 
 
-
 const Vecteur operator+(Vecteur v1, Vecteur const& v2){
 
     /// Surcharge de l'opérateur de l'addition
@@ -373,7 +369,6 @@ const Vecteur operator+(Vecteur v1, Vecteur const& v2){
 }
 
 
-
 const Vecteur operator-(Vecteur v1, Vecteur const& v2){
 
     /// Surcharge de l'opérateur de la soustraction
@@ -384,7 +379,6 @@ const Vecteur operator-(Vecteur v1, Vecteur const& v2){
     return v1;
 
 }
-
 
 
 double Vecteur::operator*(Vecteur const& v2){
@@ -414,7 +408,6 @@ const Vecteur Vecteur::operator*(double const& lambda){
 
 
 }
-
 
 
 const Vecteur Vecteur::operator^(Vecteur const& v2){
@@ -450,7 +443,6 @@ std::ostream& operator<<(std::ostream& sortie, Vecteur const& v){
 }
 
 
-
  const Vecteur Vecteur::operator~(){
 
         /// Surcharge de l'opérateur unaire permettant de sortir le vecteur unitaire
@@ -458,36 +450,3 @@ std::ostream& operator<<(std::ostream& sortie, Vecteur const& v){
     return unitaire();
 
 }
-
-std::string Vecteur::to_str() const{
-
-    std::string str("[");
-    for(auto const& elt : m_coords){
-        str += std::to_string(elt);
-        str += " ";
-    }
-
-    // On efface l'espace en trop
-    str.erase(str.size() - 1); 
-
-    str += "]";
-
-    return str;
-}
-
-
-Vecteur Vecteur::rad_to_deg() const {
-
-    Vecteur sortie;
-
-    for (unsigned int k(0); k < m_coords.size(); ++k) {
-
-        sortie.augmente(m_coords[k]*180/M_PI);
-
-    }
-
-    return sortie;
-
-}
-
-
