@@ -1,6 +1,6 @@
 CONFIG += c++11
 
-TARGET = ex_P10_text
+TARGET = ex_05_text
 
 LIBS += -L../general -lgeneral
 PRE_TARGETDEPS += ../general/libgeneral.a
@@ -8,7 +8,7 @@ PRE_TARGETDEPS += ../general/libgeneral.a
 INCLUDEPATH = ../general
 
 SOURCES += \
-    main_text.cc \
+    main_text.cc
 
 HEADERS += \
     ../general/headers/Systeme.h \

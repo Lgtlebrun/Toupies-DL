@@ -7,7 +7,9 @@ int main()
 {
   TextViewer ecran(cout);
   IntegrateurEulerCromer I(0.0);
+  Oscillateur O(ecran, {1.0,0.0,0.0},{0.0,0.0,0.0},{0.0,0.0,0.0},0.2);
   Systeme c(ecran, I);
+  c.addIntegrable(O);
 
   cout << "Au départ :" << endl;
   c.dessine();
