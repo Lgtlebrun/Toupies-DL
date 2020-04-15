@@ -34,11 +34,6 @@ void VueOpenGL::dessine(ConeSimple const& C) {
                       , C.getPosition().getCoord(1)
                       , C.getPosition().getCoord(2)+C.getHauteur()/2.0);
 
-
-    matrice.rotate(45, 1.0, 0.0, 0.0);
-
-    matrice.rotate(45, 0.0, 1.0, 0.0);
-
     matrice.rotate(enDegre.getCoord(0), 1.0, 0.0, 0.0);
 
     matrice.rotate(enDegre.getCoord(1), 0.0, 0.0, 1.0);
@@ -48,6 +43,9 @@ void VueOpenGL::dessine(ConeSimple const& C) {
                    , sin(enDegre.getCoord(0))*cos(enDegre.getCoord(1))
                    , cos(enDegre.getCoord(0))        );
 
+    matrice.rotate(45, 1.0, 0.0, 0.0);
+
+    matrice.rotate(45, 0.0, 1.0, 0.0);
 
     matrice.scale(C.getHauteur()/2.0);
 

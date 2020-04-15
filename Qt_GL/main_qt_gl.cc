@@ -10,8 +10,8 @@ int main(int argc, char* argv[])
 {
   QApplication a(argc, argv);
   TextViewer T(std::cout);
-  ConeSimple C(T, {M_PI/90,0.0,0.0},{0.0,0.0,60},{0.0,2.0,0.0},0.5,1.5,10);
-  Oscillateur O(T, {0.0,0.0,0.0}, {0.0,-1.0,1.0}, {-3.0,0.0,0.0}, 1);
+  ConeSimple C(T, {M_PI/1440,0.0,0.0},{0.0,0.0,60.0},{0.0,2.0,0.0},0.5,1.5,10);
+  Oscillateur O(T, {0.0,0.0,0.0}, {5.0,-1.0,1.0}, {-3.0,0.0,0.0}, 1);
   Bille B(T, {1.0,0.0,2.0},{2.0,0.0,3.0},2);
   IntegrateurEulerCromer I(0.0);
   Systeme S(T,I);
