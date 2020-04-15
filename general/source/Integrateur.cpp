@@ -1,6 +1,7 @@
 #include "../headers/Integrateur.h"
 
 
+    /* ctor de base, ne nécessitant qu'un temps initial pour commencer à résoudre l'équation différentielle */
 
 IntegrateurNewmark::IntegrateurNewmark(double const& t0)
     : Integrateur(t0)
@@ -10,12 +11,30 @@ IntegrateurEulerCromer::IntegrateurEulerCromer(double const& t0)
     : Integrateur(t0)
 {}
 
+// =================================================================================================
 
+IntegrateurEulerCromer* IntegrateurEulerCromer::clone() const {
+/* Méthode de clonage de l'intégrateur Euler-Cromer */
+    return new IntegrateurEulerCromer(*this);
+}
 
+IntegrateurNewmark* IntegrateurNewmark::clone() const{
+/* Méthode de clonage de l'intégrateur de Newmark */
+    return new IntegrateurNewmark(*this);
+}
 
+IntegrateurRK4* IntegrateurRK4::clone() const {
+/* Méthode de clonage de l'intégrateur RK4 */
+    return new IntegrateurRK4(*this);
+}
+
+// ================================================================================================
+
+    /* Getteur et Setteur des intégrateurs */
 
  void Integrateur::augmente_t(double const& dt) {
-
+/* On ne laisse pas le choix à l'utilisateur d'augmenter le temps n'importe comment car le but est de trouver une *
+ * solution à une équation différentielle                                                                        */
     m_t += dt ;
 
 }
@@ -26,38 +45,16 @@ double Integrateur::getTemps() const {
 
 }
 
+// ===============================================================================================
 
 void IntegrateurEulerCromer::integre(Integrable& integrable, double const& dt) const {
-
-        /// Int�gre num�riquement selon la m�thode d'Euler Cromer
-
-
+/* Intègre numériquement selon la méthode d'Euler Cromer */
     integrable.setVitesse( integrable.getVitesse() + dt * integrable.equEvol(m_t) );
-
     integrable.setParam( integrable.getParam() + dt * integrable.getVitesse() );
 
-
 }
-
-
-
-IntegrateurEulerCromer* IntegrateurEulerCromer::clone() const {
-
-    return new IntegrateurEulerCromer(*this);
-}
-
-
-IntegrateurNewmark* IntegrateurNewmark::clone() const{
-
-    return new IntegrateurNewmark(*this);
-}
-
-
 void IntegrateurNewmark::integre(Integrable& integrable, double const& dt) const {
-
-        /// Integre num�riquement selon la m�thode de Newmark
-
-
+/* Intègre numériquement selon la méthode de Newmark */
     Vecteur s ( integrable.equEvol(m_t) ) ;
 
     Vecteur P_nmoins1 ( integrable.getParam() ) ;
@@ -91,25 +88,15 @@ void IntegrateurNewmark::integre(Integrable& integrable, double const& dt) const
 
 
 void IntegrateurRK4::integre(Integrable& integrable, double const& dt) const {
-
-
-        /// Integre num�riquement selon la m�thode Runge-Kutta 4
+/* Intègre numériquement selon la méthode Runge-Kutta 4 */
 
 
 
 
 
-            // A faire �ventuellement plus tard
+            // A faire éventuellement plus tard
 
 
 
 
 }
-
-IntegrateurRK4* IntegrateurRK4::clone() const {
-
-    return new IntegrateurRK4(*this);
-}
-
-
-

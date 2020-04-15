@@ -66,6 +66,8 @@ bool TestMatrice::run() {
     return m_success;
 }
 
+/* Toujours le même schéma : on fait une opération sur une matrice puis vérifie le résultat sur une matrice dont on *
+ * connaît le résultat à l'avance                                                                                  */
 
 bool TestMatrice::testProdMatriciel() {
 
