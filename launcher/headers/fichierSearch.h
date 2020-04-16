@@ -2,7 +2,7 @@
 // Created by lgtle on 13/04/2020.
 //
 
-#include <QWidget>
+#include <QDialog>
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QTextEdit>
@@ -18,13 +18,13 @@
 #define TOUPIES_DL_FICHIERSEARCH_H
 
 
-class FichierSearch : public QWidget {
+class FichierSearch : public QDialog {
 
 Q_OBJECT
 
 public:
 
-    FichierSearch();
+    FichierSearch(QWidget* = nullptr);
 
     //Accesseurs
     Bloc2Boutons* getBlocBoutons() const;
@@ -34,7 +34,6 @@ public:
     void pathCheck();
 
     //Gestion des évènements clavier (touche entrée)
-
 
 signals:
     void fichierPret();

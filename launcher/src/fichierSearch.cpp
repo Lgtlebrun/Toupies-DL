@@ -4,10 +4,10 @@
 #include "../headers/fichierSearch.h"
 #include <fstream>
 
-FichierSearch::FichierSearch() : m_path(QCoreApplication::applicationDirPath()){
+FichierSearch::FichierSearch(QWidget* parent) : QDialog(parent), m_path(QCoreApplication::applicationDirPath()){
 
-    setFixedSize(600, 120);
-
+    setFixedSize(700, 120);
+    setStyleSheet("background: none");
 
     QLabel* texte(new QLabel("Entrez un chemin de dossier valide :", this));
     texte->move(10, 10);
@@ -19,11 +19,11 @@ FichierSearch::FichierSearch() : m_path(QCoreApplication::applicationDirPath()){
 
 
     m_bar = new QTextEdit(m_path, this);
-    m_bar->setFixedSize(580, 30);
+    m_bar->setFixedSize(680, 30);
     m_bar->move(10, 40);
 
     m_blocBoutons = new Bloc2Boutons(this);
-    m_blocBoutons->move(400, 70);
+    m_blocBoutons->move(500, 70);
 
 
     //Connexiooooooooon !
@@ -58,6 +58,7 @@ void FichierSearch::pathCheck()
 
 
 Bloc2Boutons* FichierSearch::getBlocBoutons() const {return m_blocBoutons;}
+
 
 
 

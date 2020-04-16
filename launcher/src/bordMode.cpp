@@ -1,6 +1,7 @@
 #include "../headers/bordMode.h"
 
-BordMode::BordMode(QWidget* parent) : QWidget(parent), m_formatChoisi(1), m_b1(0), m_b2(0), m_b3(0), m_labelMode(0), m_path(QCoreApplication::applicationDirPath().toStdString()) {
+BordMode::BordMode(QWidget* parent) : QWidget(parent), m_formatChoisi(TEXTE), m_b1(0), m_b2(0), m_b3(0), m_labelMode(0),
+m_search(0){
 
 
 
@@ -43,6 +44,8 @@ BordMode::BordMode(QWidget* parent) : QWidget(parent), m_formatChoisi(1), m_b1(0
     m_labelMode->move(30, 10);
 
 
+    m_search = new FichierSearch(this);
+
 
     //Connexioooon!
 
@@ -72,34 +75,18 @@ QPushButton* BordMode::getBouton(int n){
 
 
 
-void BordMode::setToText() {m_formatChoisi = 1;}
+void BordMode::setToText() {
+    m_formatChoisi = TEXTE;
+}
 
-void BordMode::setToImage() {m_formatChoisi = 2;}
+void BordMode::setToImage() {m_formatChoisi = IMAGE;}
 
 void BordMode::setToFichier() {
 
-    m_formatChoisi = 3;
-    m_path = QFileDialog::getExistingDirectory(this).toStdString();
-    pathCheck();
+    m_formatChoisi = FICHIER;
+    m_search->open();
 }
 
 
-void BordMode::pathCheck(){
-
-    if(m_path.back() != '/') {m_path += '/';}
-    m_path += "UltimateSimulation.txt";
-
-    std::ofstream flux(m_path);
-
-    if(flux.fail()){
-
-        QMessageBox::critical(this, "Erreur", "Une erreur est survenue lors de l'ouverture du dossier.");
-        setToFichier();
-    }
-    else{
-        emit fichierPret();
-    }
-
-}
 
 

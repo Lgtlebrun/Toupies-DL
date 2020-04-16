@@ -2,6 +2,8 @@
 #include <QDoubleSpinBox>
 #include <QComboBox>
 #include <QGridLayout>
+#include <QTextStream>
+#include <QDebug>
 #include <vector>
 #include <QMessageBox>
 #include "boutonPosition.h"
@@ -16,6 +18,8 @@
 #ifndef GRILLAGE_H
 #define GRILLAGE_H
 
+enum INTEGRATEUR {EC, NEWMARK};
+
 
 
 class Grillage : public QWidget{
@@ -25,8 +29,12 @@ public:
     virtual ~Grillage();
 
     TypeBouton* getSelectedButton() const;
+    QPushButton* getGo() const {return m_go;}
+    INTEGRATEUR getInteg() const;
+    std::vector<Integrable*> getCorps() const {return m_sys;}
 
     void clickTypeBouton();
+    bool isInOccupe(Vecteur const& v);
     Vecteur findNewPos();
 
     void addIntegrable();
@@ -48,9 +56,7 @@ private:
 
     QPushButton* m_go;
 
-
-
-    //Rendu final
+    std::vector<Vecteur> m_posOccupee;
     std::vector<Integrable*> m_sys;
     std::vector<std::vector<BoutonPosition*>> m_boutonsPos;
 

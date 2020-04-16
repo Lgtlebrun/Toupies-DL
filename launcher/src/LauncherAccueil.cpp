@@ -2,7 +2,8 @@
 #include <iostream>
 
 
-LauncherAccueil::LauncherAccueil() : m_titre(0), m_bord(0), m_grillage(0) {
+LauncherAccueil::LauncherAccueil() : m_titre(0), m_bord(0), m_grillage(0), m_integ(0), m_simulation(0),
+m_support(0){
 
     setFixedSize(1400,621);
     setStyleSheet("background: cyan");
@@ -53,39 +54,87 @@ LauncherAccueil::LauncherAccueil() : m_titre(0), m_bord(0), m_grillage(0) {
 
     for(int i(1); i < 3; i++){
 
-        QObject::connect(m_bord->getBouton(i), SIGNAL(clicked()), this, SLOT(suppInit()));
+        // Boutons Texte et Image
+        QObject::connect(m_bord->getBouton(i), &QPushButton::clicked, this, &LauncherAccueil::suppPret);
     }
 
-    QObject::connect(m_bord, &BordMode::fichierPret, this, &LauncherAccueil::suppInit);
+
+    QObject::connect(m_bord->getSearch(), &FichierSearch::fichierPret, this, &LauncherAccueil::suppPret);
+
 
 }
 
-void LauncherAccueil::suppInit(){
+void LauncherAccueil::suppPret(){
+
+
+    hide();
+    m_grillage = new Grillage();
+
+    //CONNEXIOOOOOOOON
+    QObject::connect(m_grillage->getGo(), &QPushButton::clicked, this, &LauncherAccueil::go);
+
+    m_grillage->show();
 
     switch(m_bord->getFormat()){
 
-    default:
-    case 1: //Format Texte
-        m_support = new TextViewer(std::cout);
+    case IMAGE:
+        m_support = new TextViewer(std::cout);  //Par défaut : le glwidget s'occupe de tout!
         break;
 
-    case 2: //Format Image
-        m_support = new TextViewer(std::cout);  // A COMPLETER
-        break;
-
-    case 3: //Format Fichier
-        std::ofstream flux(m_bord->getPath());
+    case FICHIER:
+        std::ofstream flux(m_bord->getSearch()->getPath());
         m_support = new TextViewer(flux);
         break;
 
+    }
 
+}
+
+
+LauncherAccueil::~LauncherAccueil(){
+
+    delete m_integ;
+    delete m_support;
+}
+
+
+void LauncherAccueil::go(){
+
+    setInteg();
+    m_grillage->hide();
+
+    switch(m_bord->getFormat()){
+
+    case TEXTE:
+        goTexte();
+        break;
+    case IMAGE:
+        goImage();
+        break;
+    case FICHIER:
+        this->goFichier();
+        break;
 
     }
 
-    hide();
+}
 
-    m_grillage = new Grillage();
-    m_grillage->show();
+
+
+
+void LauncherAccueil::setInteg(){
+
+    switch(m_grillage->getInteg()){
+
+    default:
+    case EC:
+        m_integ = new IntegrateurEulerCromer(0);
+        break;
+    case NEWMARK:
+        m_integ = new IntegrateurNewmark(0);
+        break;
+
+    }
 
 }
 
@@ -93,3 +142,68 @@ void LauncherAccueil::suppInit(){
 
 
 
+void LauncherAccueil::goFichier() {
+
+    int secondes = QInputDialog::getInt(this, tr("Information"), tr("Combien de secondes doit durer votre simulation?"), 0, 0);
+    double dt = QInputDialog::getDouble(this, tr("Information"), tr("Quel pas de temps désirez-vous ?"), 0, 0);
+
+    double iterations(secondes);
+    iterations /= dt;
+
+    std::ofstream flux(m_bord->getSearch()->getPath());
+
+    if(flux){
+
+        Systeme S(*m_support, *m_integ);
+
+        for(auto&elt : m_grillage->getCorps()){
+
+            S.addIntegrable(*elt);
+        }
+
+
+        S.affiche(flux);
+
+
+      for (int i(0); i < iterations; i++){
+          S.evolue(dt);
+          S.dessine();
+     }
+
+        std::string mess("La simulation s'est correctement déroulée. \nFichier correctement enrigistré à l'adresse " + m_bord->getSearch()->getPath());
+
+        QMessageBox::information(this, "Succès!", QString::fromStdString(mess));
+
+    }
+    else {
+        std::string mess("Une erreur est survenue en fin de processus. Toutes nos excuses.\nLe fichier " + m_bord->getSearch()->getPath() + " n'a pas été ouvert correctement.");
+
+        QMessageBox::information(this, "Echec!", QString::fromStdString(mess));
+
+    }
+
+    qApp->quit();
+}
+
+
+void LauncherAccueil::goImage() {
+
+    Systeme S(*m_support, *m_integ);
+
+    for(auto&elt : m_grillage->getCorps()){
+
+        S.addIntegrable(*elt);
+    }
+
+    m_simulation = new GLWidget(S);
+
+
+    m_simulation->show();
+    hide();
+}
+
+
+void LauncherAccueil::goTexte() {
+     std::ofstream flux(":/txt/launcher/data/Intermezzo.txt");
+
+}

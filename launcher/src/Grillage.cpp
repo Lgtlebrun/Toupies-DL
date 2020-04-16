@@ -1,9 +1,12 @@
 #include "../headers/Grillage.h"
 
+
+
 Grillage::Grillage(QWidget* parent) :  QWidget(parent), m_typeChoisi(Null), m_BoxIntegrateur(0), m_bCone(0),
 m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_go(0){
 
  setFixedSize(1900, 1200); // Un GRAND grillage
+
 
  QVBoxLayout* mainLay = new QVBoxLayout;
  mainLay->setAlignment(Qt::AlignTop);
@@ -41,24 +44,24 @@ m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_go(0){
 
  //Setup Boutons Positions
 
-    for(double i(0); i < 10; i++) {
+    for(double j(0); j < 10; j++) {
 
-        for(double j(0); j < 10; j++) {
+        for(double i(0); i < 10; i++) {
 
 
             BoutonPosition* b = new BoutonPosition({i, j, 0});
             b->setFixedSize(80,80);
             b->setCursor(Qt::PointingHandCursor);
 
-            if (m_boutonsPos.size() < (i + 1)) {m_boutonsPos.push_back({});}
-            m_boutonsPos[i].push_back(b);
+            if (m_boutonsPos.size() < (j + 1)) {m_boutonsPos.push_back({});}
+            m_boutonsPos[j].push_back(b);
 
             QObject::connect(b, &QPushButton::clicked, b, &BoutonPosition::clickGestion);
             QObject::connect(b, &BoutonPosition::newIntegrable, this, &Grillage::addIntegrable);
             QObject::connect(b, &BoutonPosition::supprIntegrable, this, &Grillage::delIntegrable);
 
             //NDP : Dernière commande de la boucle
-            laygrille->addWidget(b,i,j);
+            laygrille->addWidget(b,j,i);
         }
 
     }
@@ -117,6 +120,7 @@ m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_go(0){
 
  QObject::connect(m_bOscillateur, &TypeBouton::statutChange, this, &Grillage::clickTypeBouton);
  QObject::connect(m_bOscillateur, &QPushButton::clicked, m_bOscillateur, &TypeBouton::changeStatut);
+
 }
 
 
@@ -156,29 +160,46 @@ void Grillage::clickTypeBouton() {
 
 
 
+bool Grillage::isInOccupe(Vecteur const& v) {
+
+    ///Méthode utilitaire vérifiant si une position est déjà attribuée à
+    /// un corps du système en création
+
+    for (auto const& elt : m_posOccupee){
+
+        if (elt == v){return true;}
+    }
+
+    return false;
+}
+
+
+
+
+
+
+
 Vecteur Grillage::findNewPos(){
 
+    //On itère sur les boutons
 
     for(auto& ligne:m_boutonsPos){
         for (auto& bouton:ligne){
 
-            if(bouton->getCouleur() == BLEU){
 
-                bool isInSys(false);
-                for (auto& corps : m_sys){
+            //Si le bouton est bleu ET sa position n'est pas occupée
+            if(bouton->getCouleur() == BLEU && !(isInOccupe(bouton->getPos()))){
 
-                    if(corps->getPosition() == bouton->getPos()){
-                        isInSys = true;
-                    }
-                }
-
-                if (!isInSys) {return bouton->getPos();}
-
-                }
-
+                //On retourne!
+                return bouton->getPos();
             }
+
+           }
         }
 
+
+
+    QMessageBox::information(this, "probleme", "Erreur lors du placement. Objet placé en {0, 0, 0}");
     return Vecteur({0,0,0});
 }
 
@@ -212,6 +233,7 @@ bool Grillage::checkAllCaracs() const {
         return (m_bOscillateur->getRayon() > 0);
     }
 
+    return false; // Juste pour calmer le compilateur
 }
 
 
@@ -228,7 +250,8 @@ void Grillage::addIntegrable(){
                 // SI PAS TOUTES LES CARACS : le bouton redevient gris
                 if(bouton->getPos() == pos){
 
-                    bouton->changeCouleur(GRIS);}
+                    bouton->changeCouleur(GRIS);
+                    }
             }
         }
 
@@ -236,6 +259,9 @@ void Grillage::addIntegrable(){
 
     }
     else {
+
+        //On occupe la position
+        m_posOccupee.push_back(pos);
 
         TextViewer t(std::cout); // Par défaut
         Vecteur vitesse({getSelectedButton()->getVX(), getSelectedButton()->getVY(), getSelectedButton()->getVZ()});
@@ -283,7 +309,8 @@ void Grillage::delIntegrable(){
             delete m_sys[k];
             m_sys[k] = m_sys.back();
             m_sys.pop_back();
-            k--;
+
+            return;
         }
 
     }
@@ -337,4 +364,20 @@ TypeBouton* Grillage::getSelectedButton() const{
 
     }
 
+}
+
+
+INTEGRATEUR Grillage::getInteg() const {
+
+    std::string integ(m_BoxIntegrateur->currentText().toStdString());
+
+    if(integ == "Euler-Cromer"){
+        return EC;
+    }
+
+    else if(integ =="Newmark"){
+        return NEWMARK;
+    }
+
+    else{return EC;} //Securité -> on est bien.
 }
