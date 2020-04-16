@@ -6,9 +6,14 @@
 #include <QMessageBox>
 #include <string>
 #include "fichierSearch.h"
+#include "../../general/headers/SupportADessin.h"
+#include "../../general/headers/TextViewer.h"
 
 #ifndef TOUPIES_DL_BORDMODE_H
 #define TOUPIES_DL_BORDMODE_H
+
+
+enum FORMAT {TEXTE, IMAGE, FICHIER};
 
 class BordMode : public QWidget {
 
@@ -17,36 +22,31 @@ class BordMode : public QWidget {
 public:
     BordMode(QWidget* = nullptr);
 
-    // Pas de destructeur nécessaire : Qt désalloue la mémoire des widgets enfants
-    // Quelle intelligence!
+    virtual ~BordMode() {}
 
     QPushButton* getBouton(int);
     int getFormat() {return m_formatChoisi;}
-    std::string getPath() const {return m_path;}
+    FichierSearch* getSearch() const {return m_search;}
 
-
-    void pathCheck();
-
+    void pathCheck(std::string);
 public slots:
 
     void setToText();
     void setToImage();
     void setToFichier();
 
-signals:
-    void fichierPret();
 
 
 protected:
 
+    FichierSearch* m_search;
     QLabel* m_labelMode;
 
     QPushButton* m_b1;
     QPushButton* m_b2;
     QPushButton* m_b3;
 
-    int m_formatChoisi;
-    std::string m_path;
+    FORMAT m_formatChoisi;
 
 };
 

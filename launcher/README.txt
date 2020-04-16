@@ -1,0 +1,1 @@
+Penser à copier le dossier data à l'emplacement de l'application

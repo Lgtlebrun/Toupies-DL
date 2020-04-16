@@ -341,7 +341,7 @@ bool Vecteur::operator==(Vecteur const& v2) const{
 
      for (size_t i(0); i < m_coords.size(); i++){
 
-        if (m_coords[i] - v2.m_coords[i] > PREC) {return false;}      // Comparaison des coordonnées
+        if (fabs(m_coords[i] - v2.m_coords[i]) > PREC) {return false;}      // Comparaison des coordonnées
 
      }
 
