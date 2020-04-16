@@ -12,10 +12,12 @@ class GLWidget : public QOpenGLWidget
  */
 {
 public:
-  GLWidget(Systeme& S, QWidget* parent = nullptr)
+    GLWidget(Systeme& S, Vecteur const& POV = Vecteur({4.5,-10.0,0.0}),
+             QWidget* parent = nullptr)
     : QOpenGLWidget(parent)
      , m_s(S)                   // la simulation commence qu'une fois le systeme établi
-  {m_s.changeSupport(vue);}
+  {vue.setPOV(POV);
+   m_s.changeSupport(vue);}
   virtual ~GLWidget() {}
 
 private:

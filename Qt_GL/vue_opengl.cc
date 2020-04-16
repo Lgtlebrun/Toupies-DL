@@ -143,7 +143,14 @@ void VueOpenGL::initializePosition()
   // position initiale
   matrice_vue.setToIdentity();
   matrice_vue.rotate(-90, 1.0, 0.0, 0.0);
-  matrice_vue.translate(0.0,10.0,0.0);
+  matrice_vue.translate(-m_POV.getCoord(0),-m_POV.getCoord(1)
+                        , -m_POV.getCoord(2));
+}
+// ======================================================================
+void VueOpenGL::setPOV(Vecteur const& newPOV) {
+    // point de vue sur le système
+    m_POV = newPOV;
+
 }
 
 // ======================================================================

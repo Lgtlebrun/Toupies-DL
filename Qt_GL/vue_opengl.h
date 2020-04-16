@@ -20,6 +20,7 @@ class VueOpenGL : public SupportADessin {
   // méthodes de (ré-)initialisation
   void init();
   void initializePosition();
+  void setPOV(Vecteur const& newPOV);
 
   // méthode set
   void setProjection(QMatrix4x4 const& projection)
@@ -38,6 +39,7 @@ class VueOpenGL : public SupportADessin {
 
   // Caméra
   QMatrix4x4 matrice_vue;
+  Vecteur m_POV;
 
 };
 
