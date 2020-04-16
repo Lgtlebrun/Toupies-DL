@@ -28,7 +28,7 @@ public:
 
     //Accesseurs
     Bloc2Boutons* getBlocBoutons() const;
-    std::string getPath() const {return m_path.toStdString();}
+    std::string getPath() const {return m_path;}
 
     //Vérification de la validité du path
     void pathCheck();
@@ -43,7 +43,7 @@ protected:
     Bloc2Boutons* m_blocBoutons;
     QTextEdit* m_bar;
     QLabel* m_errMess;
-    QString m_path;
+    std::string m_path;
 
 };
 

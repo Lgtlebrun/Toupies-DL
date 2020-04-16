@@ -4,7 +4,7 @@
 #include "../headers/fichierSearch.h"
 #include <fstream>
 
-FichierSearch::FichierSearch(QWidget* parent) : QDialog(parent), m_path(QCoreApplication::applicationDirPath()){
+FichierSearch::FichierSearch(QWidget* parent) : QDialog(parent), m_path(QCoreApplication::applicationDirPath().toStdString()){
 
     setFixedSize(700, 120);
     setStyleSheet("background: none");
@@ -18,7 +18,7 @@ FichierSearch::FichierSearch(QWidget* parent) : QDialog(parent), m_path(QCoreApp
     m_errMess->hide();
 
 
-    m_bar = new QTextEdit(m_path, this);
+    m_bar = new QTextEdit(QString::fromStdString(m_path), this);
     m_bar->setFixedSize(680, 30);
     m_bar->move(10, 40);
 
@@ -37,14 +37,14 @@ FichierSearch::FichierSearch(QWidget* parent) : QDialog(parent), m_path(QCoreApp
 void FichierSearch::pathCheck()
 {
 
-    m_path = m_bar->toPlainText();
+    m_path = m_bar->toPlainText().toStdString();
 
-    std::string path(m_path.toStdString());
-    while(path.back() == ' ') {path.pop_back();}
-    if(path.back() != '/') {path += '/';}
-    path += "UltimateSimulation.txt";
 
-    std::ofstream flux(path);
+    while(m_path.back() == ' ') {m_path.pop_back();}
+    if(m_path.back() != '/') {m_path += '/';}
+    m_path += "UltimateSimulation.txt";
+
+    std::ofstream flux(m_path);
 
     if(flux.fail()){
 

@@ -78,19 +78,14 @@ void LauncherAccueil::suppPret(){
     case TEXTE:
         break;
 
-
+    case FICHIER:
     case IMAGE:
         m_support = new TextViewer(std::cout);  //Par défaut : le glwidget s'occupe de tout!
 
         launchGrillage();
         break;
 
-    case FICHIER:
-        std::ofstream flux(m_bord->getSearch()->getPath());
-        m_support = new TextViewer(flux);
 
-        launchGrillage();
-        break;
 
     }
 
@@ -162,15 +157,18 @@ void LauncherAccueil::setInteg(){
 
 void LauncherAccueil::goFichier() {
 
-    int secondes = QInputDialog::getInt(this, tr("Information"), tr("Combien de secondes doit durer votre simulation?"), 0, 0);
+    double secondes = QInputDialog::getInt(this, tr("Information"), tr("Combien de secondes doit durer votre simulation?"), 0, 0);
     double dt = QInputDialog::getDouble(this, tr("Information"), tr("Quel pas de temps désirez-vous ?"), 0, 0);
 
-    double iterations(secondes);
-    iterations /= dt;
+    if(dt == 0.0){dt = 1;}
+    secondes /= dt;
+
+
 
     std::ofstream flux(m_bord->getSearch()->getPath());
+    m_support = new TextViewer(flux);
 
-    if(flux){
+    if(!flux.fail()){
 
         Systeme S(*m_support, *m_integ);
 
@@ -184,7 +182,7 @@ void LauncherAccueil::goFichier() {
         S.affiche(flux);
 
 
-      for (int i(0); i < iterations; i++){
+      for (int i(0); i < secondes; i++){
           S.evolue(dt);
           S.dessine();
      }
