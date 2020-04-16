@@ -49,7 +49,7 @@ m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_go(0){
         for(double i(0); i < 10; i++) {
 
 
-            BoutonPosition* b = new BoutonPosition({i, j, 0});
+            BoutonPosition* b = new BoutonPosition({i, 9-j, 0}); // On renverse l'axe des Y
             b->setFixedSize(80,80);
             b->setCursor(Qt::PointingHandCursor);
 

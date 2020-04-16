@@ -37,6 +37,8 @@ public:
     void goFichier();
     void setInteg();
 
+    void launchGrillage();
+
 
 public slots:
 

@@ -52,11 +52,13 @@ m_support(0){
 
     //Connexioooooon !
 
-    for(int i(1); i < 3; i++){
+    //Bouton Texte
+    QObject::connect(m_bord->getBouton(1), &QPushButton::clicked, this, &LauncherAccueil::suppPret);
 
-        // Boutons Texte et Image
-        QObject::connect(m_bord->getBouton(i), &QPushButton::clicked, this, &LauncherAccueil::suppPret);
-    }
+
+    // Bouton Image
+    QObject::connect(m_bord->getBouton(2), &QPushButton::clicked, this, &LauncherAccueil::suppPret);
+
 
 
     QObject::connect(m_bord->getSearch(), &FichierSearch::fichierPret, this, &LauncherAccueil::suppPret);
@@ -68,27 +70,43 @@ void LauncherAccueil::suppPret(){
 
 
     hide();
-    m_grillage = new Grillage();
 
-    //CONNEXIOOOOOOOON
-    QObject::connect(m_grillage->getGo(), &QPushButton::clicked, this, &LauncherAccueil::go);
-
-    m_grillage->show();
 
     switch(m_bord->getFormat()){
 
+
+    case TEXTE:
+        break;
+
+
     case IMAGE:
         m_support = new TextViewer(std::cout);  //Par défaut : le glwidget s'occupe de tout!
+
+        launchGrillage();
         break;
 
     case FICHIER:
         std::ofstream flux(m_bord->getSearch()->getPath());
         m_support = new TextViewer(flux);
+
+        launchGrillage();
         break;
 
     }
 
 }
+
+
+void LauncherAccueil::launchGrillage() {
+
+    m_grillage = new Grillage;
+
+    //CONNEXIOOOOOOOON
+    QObject::connect(m_grillage->getGo(), &QPushButton::clicked, this, &LauncherAccueil::go);
+
+    m_grillage->show();
+}
+
 
 
 LauncherAccueil::~LauncherAccueil(){
