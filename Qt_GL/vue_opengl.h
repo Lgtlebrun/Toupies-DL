@@ -8,6 +8,7 @@
 #include "../general/headers/Tests/Bille.h"
 #include "../general/headers/Tests/Oscillateur.h"
 #include "../general/headers/ConeSimple.h"
+#include "sphere.h"
 
 class VueOpenGL : public SupportADessin {
  public:
@@ -32,10 +33,13 @@ class VueOpenGL : public SupportADessin {
   
   // méthode utilitaire offerte pour simplifier
   void dessineCube(QMatrix4x4 const& point_de_vue = QMatrix4x4() );
+  void dessineSphere(QMatrix4x4 const& point_de_vue,
+                       double rouge = 1.0, double vert = 1.0, double bleu = 1.0);
 
  private:
   // Un shader OpenGL encapsulé dans une classe Qt
   QOpenGLShaderProgram prog;
+  GLSphere m_sphere;
 
   // Caméra
   QMatrix4x4 matrice_vue;
