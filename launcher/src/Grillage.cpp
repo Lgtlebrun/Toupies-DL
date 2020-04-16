@@ -3,22 +3,23 @@
 
 
 Grillage::Grillage(QWidget* parent) :  QWidget(parent), m_typeChoisi(Null), m_BoxIntegrateur(0), m_bCone(0),
-m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_go(0){
+m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_go(0), m_echelle(0), m_slider(0){
 
  setFixedSize(1900, 1200); // Un GRAND grillage
 
 
  QVBoxLayout* mainLay = new QVBoxLayout;
  mainLay->setAlignment(Qt::AlignTop);
- mainLay->setSpacing(20);
+ mainLay->setSpacing(0);
 
  QHBoxLayout* layIntegrateur = new QHBoxLayout;
  QVBoxLayout* layIntegBis = new QVBoxLayout;
- layIntegBis->setAlignment((Qt::AlignLeft));
+ layIntegBis->setAlignment((Qt::AlignBottom));
+ layIntegBis->setSpacing(5);
  layIntegrateur->setAlignment(Qt::AlignLeft);
 
- QHBoxLayout* grillePlusBouton = new QHBoxLayout;
- grillePlusBouton->setAlignment(Qt::AlignRight);
+ QHBoxLayout* grillePlusBoutonPlusSlider = new QHBoxLayout;
+ grillePlusBoutonPlusSlider->setAlignment(Qt::AlignRight);
 
  QGridLayout* laygrille = new QGridLayout;
  laygrille->setSpacing(0);
@@ -27,11 +28,35 @@ m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_go(0){
 
  //Setup Integrateur
 
+    QLabel* labEchelle = new QLabel("Echelle :",this);
+    labEchelle->move(40, 5);
+
+    m_echelle = new QLCDNumber(this);
+    m_echelle->display(1);
+    m_echelle->setSegmentStyle(QLCDNumber::Flat);
+    m_echelle->setFixedWidth(100);
+    m_echelle->setFixedHeight(90);
+    m_echelle->move(40, 30);
+
+    m_echelle->setPalette(Qt::green);
+    m_echelle->setAutoFillBackground(true);
+    m_echelle->setStyleSheet("background-color: grey; color: rgb(0,200,40);");
+
+    m_slider = new QSlider(Qt::Vertical, this);
+
+    m_slider->setFixedSize(30, 600);
+    m_slider->setMinimum(1);
+    m_slider->setMaximum(100);
+    m_slider ->move(80, 150);
+
+    QObject::connect(m_slider, SIGNAL(valueChanged(int)), m_echelle, SLOT(display(int)));
+
     m_BoxIntegrateur = new QComboBox(this);
     QLabel* integrateur = new QLabel("Integrateur :", this);
 
     m_BoxIntegrateur->addItem("Euler-Cromer");
     m_BoxIntegrateur->addItem("Newmark");
+
 
     layIntegBis->addWidget(integrateur);
     layIntegBis->addWidget(m_BoxIntegrateur);
@@ -39,7 +64,7 @@ m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_go(0){
 
     layIntegrateur->addLayout(layIntegBis);
 
-    grillePlusBouton->addLayout(layIntegrateur);
+    grillePlusBoutonPlusSlider->addLayout(layIntegrateur);
 
 
  //Setup Boutons Positions
@@ -66,7 +91,7 @@ m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_go(0){
 
     }
 
- grillePlusBouton->addLayout(laygrille);
+ grillePlusBoutonPlusSlider->addLayout(laygrille);
 
 
 
@@ -86,10 +111,10 @@ m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_go(0){
 
  layBoutons->setSpacing(0);
 
- grillePlusBouton->addLayout(layBoutons);
+ grillePlusBoutonPlusSlider->addLayout(layBoutons);
 
 
-  mainLay->addLayout(grillePlusBouton);
+  mainLay->addLayout(grillePlusBoutonPlusSlider);
 
     //Setup bouton GO
 
@@ -101,6 +126,33 @@ m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_go(0){
 
     m_go->move(1540, 815);
     mainLay->setSpacing(5);
+
+
+
+    //Setup Oeil
+
+    QPixmap pix;
+
+    QLabel* superOeil = new QLabel(this);
+    QHBoxLayout* oeilLay = new QHBoxLayout(superOeil);
+
+    superOeil->setAlignment(Qt::AlignRight);
+    superOeil->setFixedSize(578, 50);
+
+    QLabel* oeil = new QLabel(superOeil);
+    oeilLay->addWidget(oeil);
+
+    oeilLay->setAlignment(Qt::AlignRight);
+    superOeil->setLayout(oeilLay);
+
+    oeil->setFixedSize(60,50);
+
+    pix.load(":/icons/launcher/data/oeil.png");
+    pix = pix.scaled(oeil->size(), Qt::KeepAspectRatio);
+    oeil->setPixmap(pix);
+
+    oeil->show();
+    mainLay->addWidget(superOeil);
 
  //DERNIERE COMMANDE!
  setLayout(mainLay);

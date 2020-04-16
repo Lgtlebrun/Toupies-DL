@@ -3,7 +3,7 @@
 TypeBouton::TypeBouton(Type type, QWidget* parent) : QPushButton(parent), m_type(type),
 m_barMVol(0), m_barRayon(0), m_barHauteur(0), m_pressed(false) {
 
-    setFixedSize(900, 200);
+    setFixedSize(940, 200);
     QHBoxLayout* mainlay = new QHBoxLayout;
     mainlay->setAlignment(Qt::AlignLeft);
 
@@ -234,6 +234,7 @@ m_barMVol(0), m_barRayon(0), m_barHauteur(0), m_pressed(false) {
 
     case OSCILLATEUR:
 
+        m_LabParam->setText("Pos° initiale:");
         m_pX->setPrefix("X :");
         m_pY->setPrefix("Y :");
         m_pZ->setPrefix("Z :");

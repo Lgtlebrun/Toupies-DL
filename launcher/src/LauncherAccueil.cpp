@@ -176,6 +176,7 @@ void LauncherAccueil::goFichier() {
 
         for(auto&elt : m_grillage->getCorps()){
 
+            elt->setPosition(m_grillage->getEchelle() * elt->getPosition());
             S.addIntegrable(*elt);
         }
 
@@ -210,10 +211,11 @@ void LauncherAccueil::goImage() {
 
     for(auto&elt : m_grillage->getCorps()){
 
+        elt->setPosition(m_grillage->getEchelle() * elt->getPosition());
         S.addIntegrable(*elt);
     }
 
-    m_simulation = new GLWidget(S);
+    m_simulation = new GLWidget(S, Vecteur({4.5,-1.0,0.0}) * m_grillage->getEchelle());
 
 
     m_simulation->show();

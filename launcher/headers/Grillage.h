@@ -4,6 +4,8 @@
 #include <QGridLayout>
 #include <QTextStream>
 #include <QDebug>
+#include <QSlider>
+#include <QLCDNumber>
 #include <vector>
 #include <QMessageBox>
 #include "boutonPosition.h"
@@ -32,6 +34,7 @@ public:
     QPushButton* getGo() const {return m_go;}
     INTEGRATEUR getInteg() const;
     std::vector<Integrable*> getCorps() const {return m_sys;}
+    int getEchelle() const {return m_echelle->value();}
 
     void clickTypeBouton();
     bool isInOccupe(Vecteur const& v);
@@ -54,6 +57,8 @@ private:
 
     Type m_typeChoisi;
 
+    QSlider* m_slider;
+    QLCDNumber* m_echelle;
     QPushButton* m_go;
 
     std::vector<Vecteur> m_posOccupee;
