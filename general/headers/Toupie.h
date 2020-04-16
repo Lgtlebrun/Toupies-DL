@@ -26,7 +26,7 @@ public:
 // =========
 
     virtual Toupie* clone() const = 0;                  // Renvoie un pointeur sur une copie polymorphique de la toupie
-    
+
 // =========  EQUATION D'EVOLUTION :
 
     virtual Vecteur equEvol(double const& temps) override;        // Equation d'évolution d'une toupie générale
