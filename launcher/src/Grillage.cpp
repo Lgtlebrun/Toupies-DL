@@ -358,9 +358,24 @@ void Grillage::delIntegrable(){
 
         //On vérifie si le bouton correspondant est désactivé
         if (m_boutonsPos[i][j]->getCouleur() == GRIS){
+
+            //Si oui, on supprime l'objet correspondant
             delete m_sys[k];
             m_sys[k] = m_sys.back();
             m_sys.pop_back();
+
+
+            //Et on libère sa position
+            double k(i), l(j);
+            Vecteur temoin({k, l, 0});
+
+            for (auto& elt : m_posOccupee){
+
+                if(elt == temoin) {
+                    elt = m_posOccupee.back();
+                    m_posOccupee.pop_back();
+                }
+            }
 
             return;
         }
