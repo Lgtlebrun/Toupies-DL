@@ -43,6 +43,7 @@ public:
 public slots:
 
     void suppPret();
+    void restart();
 
 
 
