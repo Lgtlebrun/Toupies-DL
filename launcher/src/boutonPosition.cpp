@@ -28,17 +28,17 @@ void BoutonPosition::changeCouleur(Couleur c){
     switch(c){
 
     case GRIS:
-        pix.load(":/icons/launcher/data/pastilleGrise.png");
+        pix.load(":/icons/pastilleGrise.png");
         pix = pix.scaled(scale, Qt::KeepAspectRatio);
         break;
 
     case ROUGE:
-        pix.load(":/icons/launcher/data/boutonRouge.png");
+        pix.load(":/icons/boutonRouge.png");
         pix = pix.scaled(scale, Qt::KeepAspectRatio);
         break;
 
     case BLEU:
-        pix.load(":/icons/launcher/data/boutonBleu.png");
+        pix.load(":/icons/boutonBleu.png");
         pix = pix.scaled(scale, Qt::KeepAspectRatio);
         break;
 

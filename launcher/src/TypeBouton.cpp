@@ -69,24 +69,24 @@ m_barMVol(0), m_barRayon(0), m_barHauteur(0), m_pressed(false) {
     switch(m_type){
 
     case CONE:
-        tof = new QMovie(":/icons/launcher/data/cone.gif");
+        tof = new QMovie(":/icons/cone.gif");
         nom = new QLabel("Cone Simple", this);
         break;
 
     case CHINOISE:
-        tof = new QMovie(":/icons/launcher/data/chinoise.gif");
+        tof = new QMovie(":/icons/chinoise.gif");
         nom = new QLabel("Chinoise", this);
         break;
 
     case BILLE:
-        tof = new QMovie(":/icons/launcher/data/bille.gif");
+        tof = new QMovie(":/icons/bille.gif");
         nom = new QLabel("Bille", this);
         m_barHauteur->hide();
         m_barMVol->hide();
         break;
 
     case OSCILLATEUR:
-        tof = new QMovie(":/icons/launcher/data/oscillateur.gif");
+        tof = new QMovie(":/icons/oscillateur.gif");
         nom = new QLabel("Oscillateur", this);
         m_barHauteur->hide();
         m_barMVol->hide();

@@ -147,7 +147,7 @@ m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_go(0), m_echelle(0), m_slider(
 
     oeil->setFixedSize(60,50);
 
-    pix.load(":/icons/launcher/data/oeil.png");
+    pix.load(":/icons/oeil.png");
     pix = pix.scaled(oeil->size(), Qt::KeepAspectRatio);
     oeil->setPixmap(pix);
 

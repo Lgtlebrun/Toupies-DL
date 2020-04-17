@@ -20,7 +20,7 @@ m_support(0){
 
 
     //Path vers les toupies ojala
-    QString pathTv(":/icons/launcher/data/tav.gif");
+    QString pathTv(":/icons/tav.gif");
 
     //setup des gifs de toupies
     QMovie* m_toupieVisage = new QMovie(pathTv);
@@ -37,7 +37,7 @@ m_support(0){
 
 
 
-    QString pathTb(":/icons/launcher/data/toupie-bleue-marine.gif");
+    QString pathTb(":/icons/toupie-bleue-marine.gif");
 
 
     QMovie* m_toupieBleue = new QMovie(pathTb);
