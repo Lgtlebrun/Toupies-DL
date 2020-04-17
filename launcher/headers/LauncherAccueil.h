@@ -5,6 +5,7 @@
 #include <QDir>
 #include <QString>
 #include <QInputDialog>
+#include <QTextStream>
 #include <string>
 #include <iostream>
 #include "bordMode.h"
@@ -14,13 +15,12 @@
 #include "../../general/headers/Integrateur.h"
 #include "../../general/headers/Systeme.h"
 #include "../../Qt_GL/glwidget.h"
-
-
+#include "QTextViewer.h"
+#include "TextEdit.h"
 
 
 #ifndef TOUPIES_DL_LAUNCHERACCUEIL_H
 #define TOUPIES_DL_LAUNCHERACCUEIL_H
-
 
 class LauncherAccueil : public QWidget {
 

@@ -14,7 +14,7 @@ m_search(0){
     QFont police("courier", 14, 18);        // Police des boutons
 
 
-    m_b1 = new QPushButton("Texte", this);
+    m_b1 = new QPushButton("Texte (démo)", this);
     m_b2 = new QPushButton("Image", this);
     m_b3 = new QPushButton("Fichier", this);
 

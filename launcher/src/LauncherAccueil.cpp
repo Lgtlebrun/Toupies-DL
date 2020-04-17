@@ -76,6 +76,7 @@ void LauncherAccueil::suppPret(){
 
 
     case TEXTE:
+        go();
         break;
 
     case FICHIER:
@@ -112,9 +113,6 @@ LauncherAccueil::~LauncherAccueil(){
 
 
 void LauncherAccueil::go(){
-
-    setInteg();
-    m_grillage->hide();
 
     switch(m_bord->getFormat()){
 
@@ -156,6 +154,9 @@ void LauncherAccueil::setInteg(){
 
 
 void LauncherAccueil::goFichier() {
+
+    setInteg();
+    m_grillage->hide();
 
     double secondes = QInputDialog::getInt(this, tr("Information"), tr("Combien de secondes doit durer votre simulation?"), 0, 0);
     double dt = QInputDialog::getDouble(this, tr("Information"), tr("Quel pas de temps désirez-vous ?"), 0, 0);
@@ -205,6 +206,9 @@ void LauncherAccueil::goFichier() {
 
 void LauncherAccueil::goImage() {
 
+    setInteg();
+    m_grillage->hide();
+
     Systeme S(*m_support, *m_integ);
 
     for(auto&elt : m_grillage->getCorps()){
@@ -227,20 +231,43 @@ void LauncherAccueil::goImage() {
 
     m_simulation->showFullScreen();
 
-
-
-    hide();
 }
 
 
 void LauncherAccueil::goTexte() {
-     std::ofstream flux(":/txt/launcher/data/Intermezzo.txt");
-    qApp->quit();
+
+
+
+    TextEdit* console = new TextEdit;
+    console->setFixedSize(1000, 800);
+    console->show();
+
+
+    QTextViewer T(*console);
+    IntegrateurEulerCromer I(0.0);
+    Systeme S(T,I);
+
+    ConeSimple C(T, {0,0,0}, {1, 0, 0}, {1, 0, 0}, 2, 2, 2);
+    S.addIntegrable(C);
+
+    double dt(0.1);
+
+    *console << S;
+
+    for(int i(0); i < 10; i++){
+
+        S.evolue(dt);
+        S.dessine();
+    }
+
+    QObject::connect(console, &TextEdit::restartStp, this, &LauncherAccueil::restart);
 }
 
 
 
 void LauncherAccueil::restart(){
+
+    show();
 
     if(m_grillage != nullptr){
         delete m_grillage;
@@ -264,5 +291,4 @@ void LauncherAccueil::restart(){
         m_integ = nullptr;
     }
 
-    show();
 }
