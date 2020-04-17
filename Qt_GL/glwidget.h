@@ -28,6 +28,8 @@ private:
 
   // Méthodes de gestion d'évènements
   virtual void keyPressEvent(QKeyEvent* event) override;
+  virtual void mousePressEvent(QMouseEvent* event) override;
+  virtual void mouseMoveEvent(QMouseEvent* event)  override;
   virtual void timerEvent(QTimerEvent* event)  override;
 
   // Méthodes de gestion interne
@@ -43,6 +45,8 @@ private:
 
   // objets à dessiner, faire évoluer
   Systeme m_s;
+
+  QPoint lastMousePosition;
 };
 
 #endif // GLWIDGET_H
