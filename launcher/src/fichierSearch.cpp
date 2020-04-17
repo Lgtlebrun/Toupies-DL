@@ -18,7 +18,7 @@ FichierSearch::FichierSearch(QWidget* parent) : QDialog(parent), m_path(QCoreApp
     m_errMess->hide();
 
 
-    m_bar = new QTextEdit(QString::fromStdString(m_path), this);
+    m_bar = new QLineEdit(QString::fromStdString(m_path), this);
     m_bar->setFixedSize(680, 30);
     m_bar->move(10, 40);
 
@@ -37,7 +37,7 @@ FichierSearch::FichierSearch(QWidget* parent) : QDialog(parent), m_path(QCoreApp
 void FichierSearch::pathCheck()
 {
 
-    m_path = m_bar->toPlainText().toStdString();
+    m_path = m_bar->text().toStdString();
 
 
     while(m_path.back() == ' ') {m_path.pop_back();}

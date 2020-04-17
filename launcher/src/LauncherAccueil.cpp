@@ -199,7 +199,7 @@ void LauncherAccueil::goFichier() {
 
     }
 
-    qApp->quit();
+    restart();
 }
 
 
@@ -235,29 +235,34 @@ void LauncherAccueil::goImage() {
 
 void LauncherAccueil::goTexte() {
      std::ofstream flux(":/txt/launcher/data/Intermezzo.txt");
-
+    qApp->quit();
 }
 
 
 
 void LauncherAccueil::restart(){
 
-    delete m_grillage;
-    m_grillage = nullptr;
+    if(m_grillage != nullptr){
+        delete m_grillage;
+        m_grillage = nullptr;
+    }
 
-    m_simulation->hide();
+    if(m_simulation != nullptr){
+        m_simulation->hide();
 
-    delete m_simulation;
-    m_simulation = nullptr;
+        delete m_simulation;
+        m_simulation = nullptr;
+    }
 
-    delete m_support;
-    m_support = nullptr;
+    if(m_support != nullptr){
+        delete m_support;
+        m_support = nullptr;
+    }
 
-    delete m_integ;
-    m_integ = nullptr;
-
-   // m_toupieBleue->start();
-   // m_toupieVisage->start();
+    if(m_integ != nullptr){
+        delete m_integ;
+        m_integ = nullptr;
+    }
 
     show();
 }

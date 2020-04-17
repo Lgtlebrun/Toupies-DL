@@ -5,7 +5,7 @@
 #include <QDialog>
 #include <QVBoxLayout>
 #include <QLabel>
-#include <QTextEdit>
+#include <QLineEdit>
 #include <QString>
 #include <string>
 #include <QPushButton>
@@ -41,7 +41,7 @@ signals:
 protected:
 
     Bloc2Boutons* m_blocBoutons;
-    QTextEdit* m_bar;
+    QLineEdit* m_bar;
     QLabel* m_errMess;
     std::string m_path;
 
