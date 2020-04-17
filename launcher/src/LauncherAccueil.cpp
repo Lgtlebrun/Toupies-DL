@@ -69,26 +69,13 @@ m_support(0){
 void LauncherAccueil::suppPret(){
 
 
-    hide();
+        hide();
 
-
-    switch(m_bord->getFormat()){
-
-
-    case TEXTE:
-        go();
-        break;
-
-    case FICHIER:
-    case IMAGE:
         m_support = new TextViewer(std::cout);  //Par défaut : le glwidget s'occupe de tout!
 
         launchGrillage();
-        break;
 
 
-
-    }
 
 }
 
@@ -114,6 +101,9 @@ LauncherAccueil::~LauncherAccueil(){
 
 void LauncherAccueil::go(){
 
+    setInteg();
+    m_grillage->hide();
+
     switch(m_bord->getFormat()){
 
     case TEXTE:
@@ -123,7 +113,7 @@ void LauncherAccueil::go(){
         goImage();
         break;
     case FICHIER:
-        this->goFichier();
+        goFichier();
         break;
 
     }
@@ -155,8 +145,6 @@ void LauncherAccueil::setInteg(){
 
 void LauncherAccueil::goFichier() {
 
-    setInteg();
-    m_grillage->hide();
 
     double secondes = QInputDialog::getInt(this, tr("Information"), tr("Combien de secondes doit durer votre simulation?"), 0, 0);
     double dt = QInputDialog::getDouble(this, tr("Information"), tr("Quel pas de temps désirez-vous ?"), 0, 0);
@@ -206,8 +194,7 @@ void LauncherAccueil::goFichier() {
 
 void LauncherAccueil::goImage() {
 
-    setInteg();
-    m_grillage->hide();
+
 
     Systeme S(*m_support, *m_integ);
 
@@ -236,6 +223,8 @@ void LauncherAccueil::goImage() {
 
 void LauncherAccueil::goTexte() {
 
+    double secondes = QInputDialog::getInt(this, tr("Information"), tr("Combien de secondes doit durer votre simulation?"), 0, 0);
+    double dt = QInputDialog::getDouble(this, tr("Information"), tr("Quel pas de temps désirez-vous ?"), 0, 0);
 
 
     TextEdit* console = new TextEdit;
@@ -243,18 +232,22 @@ void LauncherAccueil::goTexte() {
     console->show();
 
 
-    QTextViewer T(*console);
-    IntegrateurEulerCromer I(0.0);
-    Systeme S(T,I);
+    m_support = new QTextViewer(*console);
 
-    ConeSimple C(T, {0,0,0}, {1, 0, 0}, {1, 0, 0}, 2, 2, 2);
-    S.addIntegrable(C);
 
-    double dt(0.1);
+    Systeme S(*m_support, *m_integ);
+
+    for(auto&elt : m_grillage->getCorps()){
+
+        elt->setPosition(m_grillage->getEchelle() * elt->getPosition());
+        S.addIntegrable(*elt);
+    }
+
+
 
     *console << S;
 
-    for(int i(0); i < 10; i++){
+    for(int i(0); i < secondes/dt; i++){
 
         S.evolue(dt);
         S.dessine();
