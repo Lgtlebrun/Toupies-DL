@@ -11,9 +11,6 @@ TextEdit& TextEdit::operator<<(Systeme& s){
         *this << "vitesse                  :  " << QString::fromStdString(s.getCorps(k)->getVitesse().to_str()) << "\n";
 
 
-        *this << QString::fromStdString(s.getCorps(k)->getType()) << ":    Paramètre : " << QString::fromStdString(s.getCorps(k)->getParam().to_str()) << ", Vitesse : " << QString::fromStdString(s.getCorps(k)->getVitesse().to_str()) << ", Position : " << QString::fromStdString(s.getCorps(k)->getPosition().to_str()) << "\n";
-
-
 
 
         *this << "\n";
