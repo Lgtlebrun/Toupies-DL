@@ -13,9 +13,9 @@ void VueOpenGL::dessine(Bille const& B) {
     Vecteur position(B.getParam());
 
     matrice.translate(position.getCoord(0), position.getCoord(1),
-                      position.getCoord(2));
+                      position.getCoord(2)-B.getRayon());
 
-    matrice.scale(B.getRayon()/2.0);
+    matrice.scale(B.getRayon());
 
     dessineSphere(matrice,1.0,0.0,0.0);
 
