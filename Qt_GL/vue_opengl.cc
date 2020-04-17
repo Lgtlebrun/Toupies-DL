@@ -13,7 +13,7 @@ void VueOpenGL::dessine(Bille const& B) {
     Vecteur position(B.getParam());
 
     matrice.translate(position.getCoord(0), position.getCoord(1),
-                      position.getCoord(2)-B.getRayon());
+                      position.getCoord(2)+B.getRayon()/2.0);
 
     matrice.scale(B.getRayon());
 
@@ -32,7 +32,7 @@ void VueOpenGL::dessine(ConeSimple const& C) {
 
     matrice.translate(  C.getPosition().getCoord(0)
                       , C.getPosition().getCoord(1)
-                      , C.getPosition().getCoord(2)+C.getHauteur()/2.0);
+                      , C.getPosition().getCoord(2)+C.getHauteur()/2.0/sqrt(3.0));
 
     matrice.rotate(enDegre.getCoord(0), 1.0, 0.0, 0.0);
 
@@ -47,7 +47,7 @@ void VueOpenGL::dessine(ConeSimple const& C) {
 
     matrice.rotate(45, 0.0, 1.0, 0.0);
 
-    matrice.scale(C.getHauteur()/2.0);
+    matrice.scale(C.getHauteur()/2.0/sqrt(3.0));
 
     dessineCube(matrice);
 
@@ -63,9 +63,9 @@ void VueOpenGL::dessine(Oscillateur const& O) {
     Vecteur position(O.getParam());
 
     matrice.translate(position.getCoord(0), position.getCoord(1),
-                      position.getCoord(2));
+                      position.getCoord(2)+O.getRayon()/2.0);
 
-    matrice.scale(O.getRayon()/2.0);
+    matrice.scale(O.getRayon());
 
     dessineSphere(matrice, 0.0);
 

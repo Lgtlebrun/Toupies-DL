@@ -24,7 +24,7 @@ Bille *Bille::clone() const {
 Vecteur Bille::equEvol(double const& temps) {
 /* F = mg = ma => a(t)=equEvol(t)=g */
 
-    if (getParam().getCoord(2)< getRayon() and getVitesse().getCoord(2) < 0 ) {
+    if (getParam().getCoord(2)< 0.0 and getVitesse().getCoord(2) < 0 ) {
 
         /* Rebondissement */
         setVitesse({getVitesse().getCoord(0)
@@ -33,15 +33,15 @@ Vecteur Bille::equEvol(double const& temps) {
 
         setPosition({getPosition().getCoord(0)
                     , getPosition().getCoord(1)
-                    , getRayon()});
+                    , 0.0});
 
 
     }
-    if (getParam().getCoord(2)<=getRayon() and fabs(getVitesse().getCoord(2)) < PREC ) {
+    if (getParam().getCoord(2)<=0.0 and fabs(getVitesse().getCoord(2)) < PREC ) {
 
         setVitesse({getVitesse().getCoord(0)
                            , getVitesse().getCoord(1)
-                           , getRayon() });
+                           , 0.0 });
 
         return {0.0,0.0,0.0};
     }
