@@ -246,6 +246,10 @@ m_barMVol(0), m_barRayon(0), m_barHauteur(0), m_pressed(false) {
         m_pX->setPrefix("Theta :");
         m_pY->setPrefix("Psi :");
         m_pZ->setPrefix("Phi :");
+
+        m_vX->setPrefix("Theta :");
+        m_vY->setPrefix("Psi :");
+        m_vZ->setPrefix("Phi :");
         break;
 
     }

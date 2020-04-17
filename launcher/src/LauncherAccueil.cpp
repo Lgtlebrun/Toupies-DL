@@ -215,8 +215,20 @@ void LauncherAccueil::goImage() {
 
     m_simulation = new GLWidget(S, Vecteur({4.5,-1.0,0.0}) * m_grillage->getEchelle());
 
+    //Setup bouton Menu principal
 
-    m_simulation->show();
+    QPushButton* menuPrincipal = new QPushButton("Menu Principal", m_simulation);
+
+    menuPrincipal->setGeometry(20,20, 200, 75);
+    menuPrincipal->setFont(QFont("Agency FB", 20, 15));
+    menuPrincipal->setStyleSheet("background: red; color: white");
+
+    QObject::connect(menuPrincipal, &QPushButton::clicked, this, &LauncherAccueil::restart);
+
+    m_simulation->showFullScreen();
+
+
+
     hide();
 }
 
@@ -224,4 +236,28 @@ void LauncherAccueil::goImage() {
 void LauncherAccueil::goTexte() {
      std::ofstream flux(":/txt/launcher/data/Intermezzo.txt");
 
+}
+
+
+
+void LauncherAccueil::restart(){
+
+    delete m_grillage;
+    m_grillage = nullptr;
+
+    m_simulation->hide();
+
+    delete m_simulation;
+    m_simulation = nullptr;
+
+    delete m_support;
+    m_support = nullptr;
+
+    delete m_integ;
+    m_integ = nullptr;
+
+   // m_toupieBleue->start();
+   // m_toupieVisage->start();
+
+    show();
 }
