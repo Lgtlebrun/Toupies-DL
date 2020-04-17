@@ -14,7 +14,7 @@ public:
 
     TextEdit& operator<<(QString const& str){
 
-        setText(toPlainText() + str);
+        append(str);
         return *this;
     }
 

@@ -204,7 +204,7 @@ void LauncherAccueil::goImage() {
         S.addIntegrable(*elt);
     }
 
-    m_simulation = new GLWidget(S, Vecteur({4.5,-1.0,0.0}) * m_grillage->getEchelle());
+    m_simulation = new GLWidget(S, Vecteur({4.5,-1.0,2.0}) * m_grillage->getEchelle());
 
     //Setup bouton Menu principal
 

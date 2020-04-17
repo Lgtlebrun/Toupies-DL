@@ -21,15 +21,16 @@ void QTextViewer::dessine(Systeme const& S) {
 
 
 
-    m_flux << QString("t=") << QString::fromStdString(std::to_string(S.getTemps())) << QString(" : ") << QString::fromStdString("\n");
+    m_flux << QString("t=") + QString::fromStdString(std::to_string(S.getTemps())) + QString(" : ") << QString::fromStdString("\n");
 
     for (size_t k(0); k < taille; k++){
 
-        m_flux << "Objet " << QString::fromStdString(std::to_string(k+1)) << " :  ";
+        m_flux << "Objet " + QString::fromStdString(std::to_string(k+1)) + " :  ";
         S.getCorps(k)->dessine();                       // appel à la méthode dessine de chaque intégrable,
-        m_flux << QString::fromStdString("\n");                            // qui va a son tour appeler les trois méthodes ci-dessous
-    }
 
+                                      // qui va a son tour appeler les trois méthodes ci-dessous
+    }
+         m_flux << "\n";
 }
 
 
