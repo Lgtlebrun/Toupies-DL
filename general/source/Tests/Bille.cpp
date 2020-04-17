@@ -37,13 +37,15 @@ Vecteur Bille::equEvol(double const& temps) {
 
 
     }
-    if (getParam().getCoord(2)<=0.0 and fabs(getVitesse().getCoord(2)) < PREC ) {
+    if (getParam().getCoord(2)<=0.0 and fabs(getVitesse().getCoord(2)) < 1.0/100 ) {
 
         setVitesse({getVitesse().getCoord(0)
                            , getVitesse().getCoord(1)
                            , 0.0 });
 
-        return {0.0,0.0,0.0};
+        return {-0.6* getVitesse().getCoord(0)
+                    , -0.6* getVitesse().getCoord(1)
+                    , 0.0};
     }
 
     return g;
