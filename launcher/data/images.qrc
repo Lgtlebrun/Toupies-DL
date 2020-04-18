@@ -14,4 +14,7 @@
     <qresource prefix="/txt">
         <file>Intermezzo.txt</file>
     </qresource>
+    <qresource prefix="/police">
+        <file>agency-fb_.ttf</file>
+    </qresource>
 </RCC>

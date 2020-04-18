@@ -1,18 +1,166 @@
 ==== Toupie 1 :
 Bille
-parametre                :  [5.000000 4.000000 0.000000]
+parametre                :  [7.000000 5.000000 0.000000]
 vitesse                  :  [0.000000 0.000000 0.000000]
-Bille:    Paramètre : [5.000000 4.000000 0.000000], Vitesse : [0.000000 0.000000 0.000000], Position : [5.000000 4.000000 0.000000]
+Bille:    Paramètre : [7.000000 5.000000 0.000000], Vitesse : [0.000000 0.000000 0.000000], Position : [7.000000 5.000000 0.000000]
 
 ==== Toupie 2 :
 Bille
-parametre                :  [2.000000 3.000000 0.000000]
+parametre                :  [2.000000 4.000000 0.000000]
 vitesse                  :  [0.000000 0.000000 0.000000]
-Bille:    Paramètre : [2.000000 3.000000 0.000000], Vitesse : [0.000000 0.000000 0.000000], Position : [2.000000 3.000000 0.000000]
+Bille:    Paramètre : [2.000000 4.000000 0.000000], Vitesse : [0.000000 0.000000 0.000000], Position : [2.000000 4.000000 0.000000]
 
 ==== Toupie 3 :
 Bille
-parametre                :  [5.000000 1.000000 0.000000]
+parametre                :  [1.000000 3.000000 0.000000]
 vitesse                  :  [0.000000 0.000000 0.000000]
-Bille:    Paramètre : [5.000000 1.000000 0.000000], Vitesse : [0.000000 0.000000 0.000000], Position : [5.000000 1.000000 0.000000]
+Bille:    Paramètre : [1.000000 3.000000 0.000000], Vitesse : [0.000000 0.000000 0.000000], Position : [1.000000 3.000000 0.000000]
+
+==== Toupie 4 :
+Bille
+parametre                :  [6.000000 2.000000 0.000000]
+vitesse                  :  [0.000000 0.000000 0.000000]
+Bille:    Paramètre : [6.000000 2.000000 0.000000], Vitesse : [0.000000 0.000000 0.000000], Position : [6.000000 2.000000 0.000000]
+
+==== Toupie 5 :
+Bille
+parametre                :  [5.000000 5.000000 0.000000]
+vitesse                  :  [0.000000 0.000000 0.000000]
+Bille:    Paramètre : [5.000000 5.000000 0.000000], Vitesse : [0.000000 0.000000 0.000000], Position : [5.000000 5.000000 0.000000]
+
+==== Toupie 6 :
+Bille
+parametre                :  [2.000000 7.000000 0.000000]
+vitesse                  :  [0.000000 0.000000 0.000000]
+Bille:    Paramètre : [2.000000 7.000000 0.000000], Vitesse : [0.000000 0.000000 0.000000], Position : [2.000000 7.000000 0.000000]
+
+t=1 : 
+Objet 1 :  Type : Bille  ; Parametre : [7.000000 5.000000 -9.810000]  ;  Vitesse : [0.000000 0.000000 -9.810000]
+
+Objet 2 :  Type : Bille  ; Parametre : [2.000000 4.000000 -9.810000]  ;  Vitesse : [0.000000 0.000000 -9.810000]
+
+Objet 3 :  Type : Bille  ; Parametre : [1.000000 3.000000 -9.810000]  ;  Vitesse : [0.000000 0.000000 -9.810000]
+
+Objet 4 :  Type : Bille  ; Parametre : [6.000000 2.000000 -9.810000]  ;  Vitesse : [0.000000 0.000000 -9.810000]
+
+Objet 5 :  Type : Bille  ; Parametre : [5.000000 5.000000 -9.810000]  ;  Vitesse : [0.000000 0.000000 -9.810000]
+
+Objet 6 :  Type : Bille  ; Parametre : [2.000000 7.000000 -9.810000]  ;  Vitesse : [0.000000 0.000000 -9.810000]
+
+t=2 : 
+Objet 1 :  Type : Bille  ; Parametre : [7.000000 5.000000 -29.430000]  ;  Vitesse : [0.000000 0.000000 -19.620000]
+
+Objet 2 :  Type : Bille  ; Parametre : [2.000000 4.000000 -29.430000]  ;  Vitesse : [0.000000 0.000000 -19.620000]
+
+Objet 3 :  Type : Bille  ; Parametre : [1.000000 3.000000 -29.430000]  ;  Vitesse : [0.000000 0.000000 -19.620000]
+
+Objet 4 :  Type : Bille  ; Parametre : [6.000000 2.000000 -29.430000]  ;  Vitesse : [0.000000 0.000000 -19.620000]
+
+Objet 5 :  Type : Bille  ; Parametre : [5.000000 5.000000 -29.430000]  ;  Vitesse : [0.000000 0.000000 -19.620000]
+
+Objet 6 :  Type : Bille  ; Parametre : [2.000000 7.000000 -29.430000]  ;  Vitesse : [0.000000 0.000000 -19.620000]
+
+t=3 : 
+Objet 1 :  Type : Bille  ; Parametre : [7.000000 5.000000 -58.860000]  ;  Vitesse : [0.000000 0.000000 -29.430000]
+
+Objet 2 :  Type : Bille  ; Parametre : [2.000000 4.000000 -58.860000]  ;  Vitesse : [0.000000 0.000000 -29.430000]
+
+Objet 3 :  Type : Bille  ; Parametre : [1.000000 3.000000 -58.860000]  ;  Vitesse : [0.000000 0.000000 -29.430000]
+
+Objet 4 :  Type : Bille  ; Parametre : [6.000000 2.000000 -58.860000]  ;  Vitesse : [0.000000 0.000000 -29.430000]
+
+Objet 5 :  Type : Bille  ; Parametre : [5.000000 5.000000 -58.860000]  ;  Vitesse : [0.000000 0.000000 -29.430000]
+
+Objet 6 :  Type : Bille  ; Parametre : [2.000000 7.000000 -58.860000]  ;  Vitesse : [0.000000 0.000000 -29.430000]
+
+t=4 : 
+Objet 1 :  Type : Bille  ; Parametre : [7.000000 5.000000 -98.100000]  ;  Vitesse : [0.000000 0.000000 -39.240000]
+
+Objet 2 :  Type : Bille  ; Parametre : [2.000000 4.000000 -98.100000]  ;  Vitesse : [0.000000 0.000000 -39.240000]
+
+Objet 3 :  Type : Bille  ; Parametre : [1.000000 3.000000 -98.100000]  ;  Vitesse : [0.000000 0.000000 -39.240000]
+
+Objet 4 :  Type : Bille  ; Parametre : [6.000000 2.000000 -98.100000]  ;  Vitesse : [0.000000 0.000000 -39.240000]
+
+Objet 5 :  Type : Bille  ; Parametre : [5.000000 5.000000 -98.100000]  ;  Vitesse : [0.000000 0.000000 -39.240000]
+
+Objet 6 :  Type : Bille  ; Parametre : [2.000000 7.000000 -98.100000]  ;  Vitesse : [0.000000 0.000000 -39.240000]
+
+t=5 : 
+Objet 1 :  Type : Bille  ; Parametre : [7.000000 5.000000 -147.150000]  ;  Vitesse : [0.000000 0.000000 -49.050000]
+
+Objet 2 :  Type : Bille  ; Parametre : [2.000000 4.000000 -147.150000]  ;  Vitesse : [0.000000 0.000000 -49.050000]
+
+Objet 3 :  Type : Bille  ; Parametre : [1.000000 3.000000 -147.150000]  ;  Vitesse : [0.000000 0.000000 -49.050000]
+
+Objet 4 :  Type : Bille  ; Parametre : [6.000000 2.000000 -147.150000]  ;  Vitesse : [0.000000 0.000000 -49.050000]
+
+Objet 5 :  Type : Bille  ; Parametre : [5.000000 5.000000 -147.150000]  ;  Vitesse : [0.000000 0.000000 -49.050000]
+
+Objet 6 :  Type : Bille  ; Parametre : [2.000000 7.000000 -147.150000]  ;  Vitesse : [0.000000 0.000000 -49.050000]
+
+t=6 : 
+Objet 1 :  Type : Bille  ; Parametre : [7.000000 5.000000 -206.010000]  ;  Vitesse : [0.000000 0.000000 -58.860000]
+
+Objet 2 :  Type : Bille  ; Parametre : [2.000000 4.000000 -206.010000]  ;  Vitesse : [0.000000 0.000000 -58.860000]
+
+Objet 3 :  Type : Bille  ; Parametre : [1.000000 3.000000 -206.010000]  ;  Vitesse : [0.000000 0.000000 -58.860000]
+
+Objet 4 :  Type : Bille  ; Parametre : [6.000000 2.000000 -206.010000]  ;  Vitesse : [0.000000 0.000000 -58.860000]
+
+Objet 5 :  Type : Bille  ; Parametre : [5.000000 5.000000 -206.010000]  ;  Vitesse : [0.000000 0.000000 -58.860000]
+
+Objet 6 :  Type : Bille  ; Parametre : [2.000000 7.000000 -206.010000]  ;  Vitesse : [0.000000 0.000000 -58.860000]
+
+t=7 : 
+Objet 1 :  Type : Bille  ; Parametre : [7.000000 5.000000 -274.680000]  ;  Vitesse : [0.000000 0.000000 -68.670000]
+
+Objet 2 :  Type : Bille  ; Parametre : [2.000000 4.000000 -274.680000]  ;  Vitesse : [0.000000 0.000000 -68.670000]
+
+Objet 3 :  Type : Bille  ; Parametre : [1.000000 3.000000 -274.680000]  ;  Vitesse : [0.000000 0.000000 -68.670000]
+
+Objet 4 :  Type : Bille  ; Parametre : [6.000000 2.000000 -274.680000]  ;  Vitesse : [0.000000 0.000000 -68.670000]
+
+Objet 5 :  Type : Bille  ; Parametre : [5.000000 5.000000 -274.680000]  ;  Vitesse : [0.000000 0.000000 -68.670000]
+
+Objet 6 :  Type : Bille  ; Parametre : [2.000000 7.000000 -274.680000]  ;  Vitesse : [0.000000 0.000000 -68.670000]
+
+t=8 : 
+Objet 1 :  Type : Bille  ; Parametre : [7.000000 5.000000 -353.160000]  ;  Vitesse : [0.000000 0.000000 -78.480000]
+
+Objet 2 :  Type : Bille  ; Parametre : [2.000000 4.000000 -353.160000]  ;  Vitesse : [0.000000 0.000000 -78.480000]
+
+Objet 3 :  Type : Bille  ; Parametre : [1.000000 3.000000 -353.160000]  ;  Vitesse : [0.000000 0.000000 -78.480000]
+
+Objet 4 :  Type : Bille  ; Parametre : [6.000000 2.000000 -353.160000]  ;  Vitesse : [0.000000 0.000000 -78.480000]
+
+Objet 5 :  Type : Bille  ; Parametre : [5.000000 5.000000 -353.160000]  ;  Vitesse : [0.000000 0.000000 -78.480000]
+
+Objet 6 :  Type : Bille  ; Parametre : [2.000000 7.000000 -353.160000]  ;  Vitesse : [0.000000 0.000000 -78.480000]
+
+t=9 : 
+Objet 1 :  Type : Bille  ; Parametre : [7.000000 5.000000 -441.450000]  ;  Vitesse : [0.000000 0.000000 -88.290000]
+
+Objet 2 :  Type : Bille  ; Parametre : [2.000000 4.000000 -441.450000]  ;  Vitesse : [0.000000 0.000000 -88.290000]
+
+Objet 3 :  Type : Bille  ; Parametre : [1.000000 3.000000 -441.450000]  ;  Vitesse : [0.000000 0.000000 -88.290000]
+
+Objet 4 :  Type : Bille  ; Parametre : [6.000000 2.000000 -441.450000]  ;  Vitesse : [0.000000 0.000000 -88.290000]
+
+Objet 5 :  Type : Bille  ; Parametre : [5.000000 5.000000 -441.450000]  ;  Vitesse : [0.000000 0.000000 -88.290000]
+
+Objet 6 :  Type : Bille  ; Parametre : [2.000000 7.000000 -441.450000]  ;  Vitesse : [0.000000 0.000000 -88.290000]
+
+t=10 : 
+Objet 1 :  Type : Bille  ; Parametre : [7.000000 5.000000 -539.550000]  ;  Vitesse : [0.000000 0.000000 -98.100000]
+
+Objet 2 :  Type : Bille  ; Parametre : [2.000000 4.000000 -539.550000]  ;  Vitesse : [0.000000 0.000000 -98.100000]
+
+Objet 3 :  Type : Bille  ; Parametre : [1.000000 3.000000 -539.550000]  ;  Vitesse : [0.000000 0.000000 -98.100000]
+
+Objet 4 :  Type : Bille  ; Parametre : [6.000000 2.000000 -539.550000]  ;  Vitesse : [0.000000 0.000000 -98.100000]
+
+Objet 5 :  Type : Bille  ; Parametre : [5.000000 5.000000 -539.550000]  ;  Vitesse : [0.000000 0.000000 -98.100000]
+
+Objet 6 :  Type : Bille  ; Parametre : [2.000000 7.000000 -539.550000]  ;  Vitesse : [0.000000 0.000000 -98.100000]
 
