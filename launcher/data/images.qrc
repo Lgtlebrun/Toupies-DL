@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>pastilleGrise.png</file>
+        <file>boutonRouge.png</file>
+        <file>boutonBleu.png</file>
+        <file>tav.gif</file>
+        <file>toupie-bleue-marine.gif</file>
+        <file>chinoise.gif</file>
+        <file>cone.gif</file>
+        <file>bille.gif</file>
+        <file>oscillateur.gif</file>
+        <file>oeil.png</file>
+    </qresource>
+    <qresource prefix="/txt">
+        <file>Intermezzo.txt</file>
+    </qresource>
+</RCC>
