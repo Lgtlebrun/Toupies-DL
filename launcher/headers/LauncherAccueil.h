@@ -6,6 +6,7 @@
 #include <QString>
 #include <QInputDialog>
 #include <QTextStream>
+#include <QFontDatabase>
 #include <string>
 #include <iostream>
 #include "bordMode.h"
