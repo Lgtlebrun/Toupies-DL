@@ -130,7 +130,11 @@ Chapitre 10 : 14/04/2020
   On attend impatiemment son frère, le Grillage. J'aime ce nom. On va l'appeler comme ça. Ca fait Arcade.
 
   
+Chapitre 11 : 18/04/2020
 
+  Après 4 jours de bataille acharnée, nos deux héros réussirent à dominer la bête : Le L avait, avec un succès remarquable, créé le launcher et l'avait
+  connecté aux différents types de simulation (graphique et textuelle) et, de son côté, le D avait créé la visualisation graphique, en plus de permettre
+  aux billes de rebondir.
 
 
 
