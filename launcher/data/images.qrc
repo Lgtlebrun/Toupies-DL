@@ -16,5 +16,6 @@
     </qresource>
     <qresource prefix="/police">
         <file>agency-fb_.ttf</file>
+        <file>Cooper-Black_.ttf</file>
     </qresource>
 </RCC>
