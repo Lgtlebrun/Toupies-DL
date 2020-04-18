@@ -5,6 +5,8 @@
 LauncherAccueil::LauncherAccueil() : m_titre(0), m_bord(0), m_grillage(0), m_integ(0), m_simulation(0),
 m_support(0){
 
+    QFontDatabase::addApplicationFont("menu/northwood_high.ttf");
+
 
     setFixedSize(1400,621);
     setStyleSheet("background: cyan");
