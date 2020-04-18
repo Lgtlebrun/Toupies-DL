@@ -29,6 +29,8 @@ public :
     virtual void dessine() override;                    // méthode permettant un affichage personnalisé de la
                                                         // classe ConeSimple
 
+    virtual Vecteur equEvol(const double &temps) override;
+
 // =========  ACCESSEURS :
 
     double getRayon() const;                            // renvoit le rayon du cône
