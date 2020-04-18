@@ -6,6 +6,7 @@
 #include <QDebug>
 #include <QSlider>
 #include <QLCDNumber>
+#include <QFontDatabase>
 #include <vector>
 #include <QMessageBox>
 #include "boutonPosition.h"

@@ -5,8 +5,9 @@
 LauncherAccueil::LauncherAccueil() : m_titre(0), m_bord(0), m_grillage(0), m_integ(0), m_simulation(0),
 m_support(0){
 
+    //Setup des polices
     QFontDatabase::addApplicationFont(":/police/agency-fb_.ttf");
-    QFontDatabase::addApplicationFont(":/police/Cooper-Black_.ttf");
+
 
 
     setFixedSize(1400,621);

@@ -118,6 +118,7 @@ m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_go(0), m_echelle(0), m_slider(
 
     //Setup bouton GO
 
+    QFontDatabase::addApplicationFont(":/police/Cooper-Black_.ttf");
 
     m_go = new QPushButton("GO !",this);
     m_go->setFont(QFont("Cooper Black", 70, 30));
