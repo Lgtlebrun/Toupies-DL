@@ -29,6 +29,49 @@ void ConeSimple::dessine() {
     m_support->dessine(*this);
 }
 
+
+Vecteur ConeSimple::equEvol(const double &temps) {
+
+    Vecteur sortie;                // convention : (théta, psy, phi)
+                                  // initialisation au vecteur nul
+
+    modulo2Pi();
+
+    if ( fabs(m_IA1) < PREC ) {
+
+        return sortie;              // pas d'accélération de la rotation s'il n'y a rien à faire tourner !
+
+    }
+    if (fabs(sin(m_P.getCoord(0))) < PREC ) {
+
+        return sortie;              // si la toupie a un angle à la verticale nul, alors, vu qu'il n'y a aucun frottement,
+                                    // la somme des force est nule, entraînant une accélération nulle
+
+    }
+    if (m_P.getCoord(0) >= M_PI/2 - atan(getRayon()/getHauteur())) {
+
+        m_Ppoint = {0.0, 0.0, 0.0};
+
+        return sortie;
+
+    }
+
+    sortie.setCoord(0, 1.0/m_IA1*(m_masse*g.norme()*m_d*sin(m_P.getCoord(0))+m_Ppoint.getCoord(1)*sin(m_P.getCoord(0))
+    * ((m_IA1-m_I3)*m_Ppoint.getCoord(1)*cos(m_P.getCoord(0))-m_I3*m_Ppoint.getCoord(2) )) ) ;
+
+    sortie.setCoord(1, m_Ppoint.getCoord(0)/(m_IA1*sin(m_P.getCoord(0))) * ((m_I3-2*m_IA1)*m_Ppoint.getCoord(1)*cos(m_P.getCoord(0))
+    + m_I3*m_Ppoint.getCoord(2) ) ) ;
+
+    sortie.setCoord(2, m_Ppoint.getCoord(0)/(m_IA1*sin(m_P.getCoord(0))) * ( (m_IA1- (m_I3-m_IA1)*cos(m_P.getCoord(0))*cos(m_P.getCoord(0)) )
+    *m_Ppoint.getCoord(1) - m_I3*m_Ppoint.getCoord(2)*cos(m_P.getCoord(0))) ) ;
+
+
+    return sortie;
+
+
+}
+
+
 // ===================================================================================================
 
 void ConeSimple::statsCorps(std::ostream& sortie) const{
