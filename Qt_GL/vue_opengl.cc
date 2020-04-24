@@ -34,14 +34,14 @@ void VueOpenGL::dessine(ConeSimple const& C) {
                       , C.getPosition().getCoord(1)
                       , C.getPosition().getCoord(2));
 
+    matrice.rotate(  enDegre.getCoord(2)
+                   , sin(C.getParam().getCoord(0))*cos(C.getParam().getCoord(1))
+                   , sin(C.getParam().getCoord(0))*sin(C.getParam().getCoord(1))
+                   , cos(C.getParam().getCoord(0))        );
+
     matrice.rotate(enDegre.getCoord(0), 1.0, 0.0, 0.0);
 
     matrice.rotate(enDegre.getCoord(1), 0.0, 0.0, 1.0);
-
-    matrice.rotate(  enDegre.getCoord(2)
-                   , sin(enDegre.getCoord(0))*cos(enDegre.getCoord(1))
-                   , sin(enDegre.getCoord(0))*sin(enDegre.getCoord(1))
-                   , cos(enDegre.getCoord(0))        );
 
     matrice.translate(0.0, 0.0, C.getHauteur()/2.0/sqrt(3.0));
 
@@ -87,9 +87,9 @@ void VueOpenGL::dessine(ToupieChinoise const& T) {
     matrice.rotate(enDegre.getCoord(1), 0.0, 0.0, 1.0);
 
     matrice.rotate(  enDegre.getCoord(2)
-                   , sin(enDegre.getCoord(0))*cos(enDegre.getCoord(1))
-                   , sin(enDegre.getCoord(0))*cos(enDegre.getCoord(1))
-                   , cos(enDegre.getCoord(0))        );
+                   , sin(T.getParam().getCoord(0))*cos(T.getParam().getCoord(1))
+                   , sin(T.getParam().getCoord(0))*sin(T.getParam().getCoord(1))
+                   , cos(T.getParam().getCoord(0))        );
 
     matrice.scale(T.getRayon());
 
