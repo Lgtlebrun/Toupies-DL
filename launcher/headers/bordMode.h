@@ -17,6 +17,10 @@ enum FORMAT {TEXTE, IMAGE, FICHIER};
 
 class BordMode : public QWidget {
 
+
+    /// Classe utilitaire (widget enfant) servant à la gestion du choix de format:
+    /// Texte, Images ou Fichier.
+
     Q_OBJECT
 
 public:

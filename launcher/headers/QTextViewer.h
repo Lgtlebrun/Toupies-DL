@@ -8,6 +8,7 @@
 #include "../general/headers/Systeme.h"
 #include "../general/headers/ConeSimple.h"
 #include "../general/headers/Clonable.h"
+#include "../general/headers/ToupieChinoise.h"
 #include "../general/headers/Tests/Oscillateur.h"
 #include "../general/headers/Tests/Bille.h"
 #include "TextEdit.h"
@@ -36,6 +37,7 @@ public :
     virtual void dessine(Bille const&) ;
     virtual void dessine(Oscillateur const&) ;
     virtual void dessine(ConeSimple const&) ;
+    virtual void dessine(const ToupieChinoise &) ;
 
 
 // =====================================================================================

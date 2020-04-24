@@ -20,6 +20,9 @@
 
 class FichierSearch : public QDialog {
 
+    /// Fenetre modale de recherche d'un chemin (path) pour le
+    /// format fichier.
+
 Q_OBJECT
 
 public:
@@ -33,17 +36,20 @@ public:
     //Vérification de la validité du path
     void pathCheck();
 
-    //Gestion des évènements clavier (touche entrée)
 
 signals:
+
+    //Indique au LauncherAccueil la validité du path
     void fichierPret();
 
 protected:
 
-    Bloc2Boutons* m_blocBoutons;
-    QLineEdit* m_bar;
-    QLabel* m_errMess;
-    std::string m_path;
+    Bloc2Boutons* m_blocBoutons;    // Les boutons Ok et Cancel
+    QLineEdit* m_bar;               // Widget où enter le path
+    QLabel* m_errMess;              // Message d'erreur "chemin invalide"
+
+
+    std::string m_path;             //Le path en question
 
 };
 

@@ -26,33 +26,48 @@
 class LauncherAccueil : public QWidget {
 
 
+    ///Classe principale de l'interface graphique utilisateur.
+
     Q_OBJECT
 
 public:
     LauncherAccueil();
     virtual ~LauncherAccueil();
 
+
+    // Lancement des simulations
     void go();
     void goTexte();
     void goImage();
     void goFichier();
+
+    // Gestion du choix de l'intégrateur
     void setInteg();
 
+
+    // Lancement du "Grillage", panneau de contrôle
     void launchGrillage();
 
 
 public slots:
 
+    // Gestion du signal suivant le choix du support (Texte, image, ficher)
     void suppPret();
+
+    // Redémarrage à la fin d'une simulation
     void restart();
 
 
 
 protected:
 
+    // Gifs
     QMovie* m_toupieBleue;
     QMovie* m_toupieVisage;
+
     QLabel* m_titre;
+
+    // Widget enfant, utilitaire
     BordMode* m_bord;
 
     Grillage* m_grillage; // Le frérot

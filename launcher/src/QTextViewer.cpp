@@ -46,3 +46,7 @@ void QTextViewer::dessine(ConeSimple const& C) {
 
     m_flux << QString::fromStdString(C.getParam().to_str());
 }
+
+void QTextViewer::dessine(const ToupieChinoise & C)  {
+    m_flux << QString::fromStdString(C.getParam().to_str());
+}
