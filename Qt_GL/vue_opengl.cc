@@ -72,6 +72,30 @@ void VueOpenGL::dessine(Oscillateur const& O) {
     dessineSphere(matrice, 0.0);
 
 }
+void VueOpenGL::dessine(ToupieChinoise const& T) {
+
+    QMatrix4x4 matrice;
+
+    Vecteur enDegre(T.getParam().rad_to_deg());
+
+    matrice.translate(  T.getPosition().getCoord(0)
+                      , T.getPosition().getCoord(1)
+                      , T.getPosition().getCoord(2));
+
+    matrice.rotate(enDegre.getCoord(0), 1.0, 0.0, 0.0);
+
+    matrice.rotate(enDegre.getCoord(1), 0.0, 0.0, 1.0);
+
+    matrice.rotate(  enDegre.getCoord(2)
+                   , sin(enDegre.getCoord(0))*cos(enDegre.getCoord(1))
+                   , sin(enDegre.getCoord(0))*cos(enDegre.getCoord(1))
+                   , cos(enDegre.getCoord(0))        );
+
+    matrice.scale(T.getRayon());
+
+    dessineSphere(matrice, 0.0,1.0,0.5);
+
+}
 // ======================================================================
 void VueOpenGL::dessine(Systeme const& a_dessiner) {
 

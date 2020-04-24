@@ -8,6 +8,7 @@
 #include "../general/headers/Tests/Bille.h"
 #include "../general/headers/Tests/Oscillateur.h"
 #include "../general/headers/ConeSimple.h"
+#include "../general/headers/ToupieChinoise.h"
 #include "sphere.h"
 
 class VueOpenGL : public SupportADessin {
@@ -17,6 +18,7 @@ class VueOpenGL : public SupportADessin {
   virtual void dessine(Bille const&) override;
   virtual void dessine(ConeSimple const&) override;
   virtual void dessine(Oscillateur const&) override;
+  virtual void dessine(ToupieChinoise const&) override;
 
   // méthodes de (ré-)initialisation
   void init();
