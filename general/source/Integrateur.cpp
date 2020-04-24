@@ -53,8 +53,8 @@ double Integrateur::getTemps() const {
 
 void IntegrateurEulerCromer::integre(Integrable& integrable, double const& dt) const {
 /* Intègre numériquement selon la méthode d'Euler Cromer */
-    integrable.setVitesse( integrable.getVitesse() + dt * integrable.equEvol(m_t) );
-    integrable.setParam( integrable.getParam() + dt * integrable.getVitesse() );
+    integrable.setPpoint(integrable.getPpoint() + dt * integrable.equEvol(m_t));
+    integrable.setParam( integrable.getParam() + dt * integrable.getPpoint() );
 
 }
 void IntegrateurNewmark::integre(Integrable& integrable, double const& dt) const {
@@ -63,7 +63,7 @@ void IntegrateurNewmark::integre(Integrable& integrable, double const& dt) const
 
     Vecteur P_nmoins1 ( integrable.getParam() ) ;
 
-    Vecteur Ppoint_nmoins1 ( integrable.getVitesse() ) ;
+    Vecteur Ppoint_nmoins1 (integrable.getPpoint() ) ;
 
 
     Vecteur distance({0,0,0});
@@ -76,7 +76,7 @@ void IntegrateurNewmark::integre(Integrable& integrable, double const& dt) const
         Vecteur r ( integrable.equEvol(m_t + dt) ) ;
 
 
-        integrable.setVitesse( Ppoint_nmoins1 + dt/2 * (r + s) ) ;
+        integrable.setPpoint(Ppoint_nmoins1 + dt / 2 * (r + s)) ;
 
         integrable.setParam( P_nmoins1 + dt * Ppoint_nmoins1 + dt*dt/3 * (1/2 * r + s) ) ;
 

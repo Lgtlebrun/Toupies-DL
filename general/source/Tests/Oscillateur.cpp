@@ -4,7 +4,7 @@
 Oscillateur::Oscillateur(SupportADessin& S, Vecteur const & param, Vecteur const & vit, Vecteur const& Centre_du_mvt, double const& r)
  /* L'amplitude du mouvement dépend du centre du mouvement, que nous décidons de passer en paramètre. Tous les vecteur *
   * sont de dimension 3. Le raisonnement pour setDistSecu() est le même que pour Bille.cpp */
-        : Integrable(S, "Oscillateur harmonique", param, vit, Centre_du_mvt, 0.0), m_centreMVT(Centre_du_mvt), m_rayon(r)
+        : Integrable(S, "Oscillateur harmonique", param, vit, 0.0), m_centreMVT(Centre_du_mvt), m_rayon(r)
 {
     setDistSecu();
 }
@@ -31,7 +31,7 @@ void Oscillateur::dessine() {
 
 std::ostream& operator<<(std::ostream& flux, Oscillateur const& OH){
 /* Surcharge de l'oppérateur << */
-    flux << "Type : " << OH.getType() << "  ; Parametre : " << OH.getParam() << "  ;  Vitesse : " << OH.getVitesse() << std::endl;
+    flux << "Type : " << OH.getType() << "  ; Parametre : " << OH.getParam() << "  ;  Vitesse : " << OH.getPpoint() << std::endl;
     return flux;
 }
 
@@ -49,6 +49,17 @@ double Oscillateur::getRayon() const {
 
 }
 
+Vecteur Oscillateur::getPosition() const {
+
+    return m_centreMVT;
+
+}
+
+void Oscillateur::setPosition(Vecteur const & newV) {
+
+    m_centreMVT = newV;
+
+}
 
 void Oscillateur::setDistSecu() {
 /* Fixe automatiquement la distance de sécurité selon les caractéristiques de l'oscillateur à un instant donné.    *
@@ -79,18 +90,5 @@ void Oscillateur::setDistSecu() {
     }
 
     m_distSecu += m_rayon;
-
-}
-
-
-Vecteur Oscillateur::getPosition() const {
-/* Pour un oscillateur, la position est la position du centre du mouvement */
-    return m_centreMVT;
-
-}
-
-void Oscillateur::setPosition(Vecteur const& V) {
-
-    m_centreMVT = V;
 
 }

@@ -43,3 +43,7 @@ void TextViewer::dessine(ConeSimple const& C) {
 
     m_flux << C;
 }
+void TextViewer::dessine(ToupieChinoise const& T) {
+
+    m_flux << T;
+}

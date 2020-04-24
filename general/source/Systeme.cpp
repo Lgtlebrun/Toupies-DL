@@ -141,7 +141,7 @@ void Systeme::affiche(std::ostream& sortie) {
         sortie << m_corps[k]->getType() << std::endl;
 
         sortie << "parametre                :  " << m_corps[k]->getParam() << std::endl;
-        sortie << "vitesse                  :  " << m_corps[k]->getVitesse() << std::endl;
+        sortie << "vitesse                  :  " << m_corps[k]->getPpoint() << std::endl;
 
         m_corps[k]->statsCorps(sortie);
 

@@ -5,6 +5,7 @@
 
 
 #include "Integrable.h"
+#include "Matrice3.h"
 #include <string>
 
 
@@ -15,7 +16,7 @@ public:
 
 // =========
 
-    Toupie(SupportADessin&, std::string const&, Vecteur const&, Vecteur const&, Vecteur const&, double const&, double const&, double const&, double const&, double const&, double const&);
+    Toupie(SupportADessin&, std::string const&, Vecteur const&, Vecteur const&, Vecteur const&, Vecteur const&, double const&, double const&, double const&, double const&, double const&, double const&);
                                 // Prend un support à dessin où afficher la toupie, un string pour la nomme,
                                 // 2 Vecteurs, le premier position et le second vitesse (avec theta psy phi comme
                                 // convention). Il prend ensuite I_A1, I_3 les moments d'inertie, la masse Volumique,
@@ -27,6 +28,20 @@ public:
 
     virtual Toupie* clone() const = 0;                  // Renvoie un pointeur sur une copie polymorphique de la toupie
 
+// =========
+
+    Vecteur getParam() const;
+    void setParam(Vecteur const& newV);
+
+    Vecteur getPpoint() const;
+    void setPpoint(Vecteur const& newV);
+
+    Vecteur getPosition() const;                                // renvoie la position carthésienne du pt de contact
+    void setPosition(Vecteur const&);                           // set la position carthésienne
+
+    Vecteur getVitesse() const;                                 // revoie la vitesse du point de contact
+    void setVitesse(Vecteur const&);                            // set la vitesse du point de contact
+
 // =========  EQUATION D'EVOLUTION :
 
     virtual Vecteur equEvol(double const& temps) override;        // Equation d'évolution d'une toupie générale
@@ -37,6 +52,16 @@ public:
                                                                         // la toupie
 
     virtual void setDistSecu();
+
+// =========  METHODES PERMETTANT DE MONTRER LES GRANDEURS PHYSIQUES :
+
+    double Energie() const;
+
+    double L_a() const;
+
+    double L_k() const;
+
+    double ProdMixte() const;
 
 // ===================================================================================
 
@@ -63,6 +88,13 @@ protected:
     void modulo2Pi();                                                    // Remet le paramètre modulo Pi, afin d'éviter
                                                                         // la divergence des fonctions sin et cos
 
+
+
+    Matrice3 TenseurInertie() const;
+
+    Vecteur omega() const;
+
+    Matrice3 S() const;
 };
 
 

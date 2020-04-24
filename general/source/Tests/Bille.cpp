@@ -8,7 +8,7 @@ Bille::Bille(SupportADessin& S, Vecteur const& pos, Vecteur const& vit, double c
  * le launcher s'assure que r > 0. De plus, la distance de sécurité est dans les accolades pour permettre de ne *
  * pas prendre d'argument à la méthode, puisque setDistSecu() n'est dépendante que de l'objet et on ne veut pas *
  * qu'un utilisateur mal-intentionné fasse n'importe quoi. */
-        : Integrable(S, "Bille", pos, vit, pos, 0.0), m_rayon(r)
+        : Integrable(S, "Bille", pos, vit, 0.0), m_rayon(r)
 {
     setDistSecu();
 }
@@ -24,12 +24,10 @@ Bille *Bille::clone() const {
 Vecteur Bille::equEvol(double const& temps) {
 /* F = mg = ma => a(t)=equEvol(t)=g */
 
-    if (getParam().getCoord(2)< 0.0 and getVitesse().getCoord(2) < 0 ) {
+    if (getParam().getCoord(2)< 0.0 and getPpoint().getCoord(2) < 0 ) {
 
         /* Rebondissement */
-        setVitesse({getVitesse().getCoord(0)
-                   , getVitesse().getCoord(1)
-                   , - 0.6 * getVitesse().getCoord(2)});
+        setPpoint({getPpoint().getCoord(0), getPpoint().getCoord(1), -0.6 * getPpoint().getCoord(2)});
 
         setPosition({getPosition().getCoord(0)
                     , getPosition().getCoord(1)
@@ -37,14 +35,12 @@ Vecteur Bille::equEvol(double const& temps) {
 
 
     }
-    if (getParam().getCoord(2)<=0.0 and fabs(getVitesse().getCoord(2)) < 1.0/100 ) {
+    if (getParam().getCoord(2)<=0.0 and fabs(getPpoint().getCoord(2)) < 1.0 / 100 ) {
 
-        setVitesse({getVitesse().getCoord(0)
-                           , getVitesse().getCoord(1)
-                           , 0.0 });
+        setPpoint({getPpoint().getCoord(0), getPpoint().getCoord(1), 0.0});
 
-        return {-0.6* getVitesse().getCoord(0)
-                    , -0.6* getVitesse().getCoord(1)
+        return {-0.6 * getPpoint().getCoord(0)
+                    , -0.6 * getPpoint().getCoord(1)
                     , 0.0};
     }
 
@@ -62,7 +58,7 @@ void Bille::dessine() {
 
 std::ostream& operator<<(std::ostream& flux, Bille const& B){
 /* surchage de l'opérteur << */
-    flux << "Type : " << B.getType() << "  ; Parametre : " << B.getParam() << "  ;  Vitesse : " << B.getVitesse() << std::endl;
+    flux << "Type : " << B.getType() << "  ; Parametre : " << B.getParam() << "  ;  Vitesse : " << B.getPpoint() << std::endl;
     return flux;
 }
 
@@ -94,18 +90,5 @@ void Bille::setDistSecu() {
     m_distSecu = v0x * (v0z + sqrt (v0z*v0z + 2 * g.norme() * m_P.getCoord(2)))/g.norme();
 
     m_distSecu += m_rayon;
-
-}
-
-
-Vecteur Bille::getPosition() const {
-/*pour une bille, la position et le paramètre sont identiques, donc puisque seul le paramèrte change, on le retourne lui */
-    return getParam();
-
-}
-
-void Bille::setPosition(const Vecteur & V) {
-
-    setParam(V);
 
 }

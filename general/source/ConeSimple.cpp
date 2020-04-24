@@ -2,11 +2,11 @@
 #include <cmath>
 
 
-ConeSimple::ConeSimple(SupportADessin& sup, Vecteur const& param, Vecteur const& vit, Vecteur const& pos, double const& rayon, double const& hauteur, double const& masseVolumique)
+ConeSimple::ConeSimple(SupportADessin& sup, Vecteur const& param, Vecteur const& parampoint, Vecteur const& pos, double const& rayon, double const& hauteur, double const& masseVolumique)
 /* Nous pouvons calculer les moments d'inertie selon différents axes à base d'uniquement la masse volumique, le rayon *
  * et la hauteur du cône. De plus la distance de sécurité est définie comme étant la longueur de la paroi du cône     *
  * qui est calculée dans les accolades pour les mêmes raisons qu'expliqué dans le ctor de Bille.h                    */
-        : Toupie(sup, "Cone simple", param, vit, pos, calculeIA1(rayon, hauteur, masseVolumique), calculeI3(rayon, hauteur, masseVolumique)
+        : Toupie(sup, "Cone simple", param, parampoint, pos, {0.0,0.0,0.0}, calculeIA1(rayon, hauteur, masseVolumique), calculeI3(rayon, hauteur, masseVolumique)
                 , masseVolumique, masse(rayon, hauteur, masseVolumique), 3.0/4.0*hauteur, 0.0), m_rayon(rayon), m_hauteur(hauteur)
 {
     setDistSecu();
@@ -31,7 +31,25 @@ void ConeSimple::dessine() {
 
 
 Vecteur ConeSimple::equEvol(const double &temps) {
+/* Avec l'équation d'évolution en page 12 du complément mathématique, assumant donc distance centre de masse - *
+ * point de contact = cste. Condition d'arrêt si la tranche du cône touche le sol On assume vA = 0             */
 
+    Vecteur sortie;                 // convention : (théta, psy, phi)
+                                    // initialisation au vecteur nul
+
+    modulo2Pi();
+
+    if ( fabs(m_IA1) < PREC ) {
+
+        return sortie;              // pas d'accélération de la rotation s'il n'y a rien à faire tourner !
+
+    }
+    if (fabs(sin(m_P.getCoord(0))) < PREC ) {
+
+        return sortie;              // si la toupie a un angle à la verticale nul, alors, vu qu'il n'y a aucun frottement,
+                                    // la somme des force est nule, entraînant une accélération nulle
+
+    }
     if (m_P.getCoord(0) >= M_PI/2 - atan(getRayon()/getHauteur())) {
 
         m_Ppoint = {0.0, 0.0, 0.0};
@@ -40,7 +58,17 @@ Vecteur ConeSimple::equEvol(const double &temps) {
 
     }
 
-    return Toupie::equEvol(temps);
+    sortie.setCoord(0, 1.0/m_IA1*(m_masse*g.norme()*m_d*sin(m_P.getCoord(0))+m_Ppoint.getCoord(1)*sin(m_P.getCoord(0))
+                                                                             * ((m_IA1-m_I3)*m_Ppoint.getCoord(1)*cos(m_P.getCoord(0))-m_I3*m_Ppoint.getCoord(2) )) ) ;
+
+    sortie.setCoord(1, m_Ppoint.getCoord(0)/(m_IA1*sin(m_P.getCoord(0))) * ((m_I3-2*m_IA1)*m_Ppoint.getCoord(1)*cos(m_P.getCoord(0))
+                                                                            + m_I3*m_Ppoint.getCoord(2) ) ) ;
+
+    sortie.setCoord(2, m_Ppoint.getCoord(0)/(m_IA1*sin(m_P.getCoord(0))) * ( (m_IA1- (m_I3-m_IA1)*cos(m_P.getCoord(0))*cos(m_P.getCoord(0)) )
+                                                                             *m_Ppoint.getCoord(1) - m_I3*m_Ppoint.getCoord(2)*cos(m_P.getCoord(0))) ) ;
+
+
+    return sortie;
 
 
 }
@@ -57,7 +85,7 @@ void ConeSimple::statsCorps(std::ostream& sortie) const{
     sortie << "rayon [m]                :  " << m_rayon << std::endl;
     sortie << "hauteur [m]              :  " << m_hauteur << std::endl;
 
-    sortie << "position (x,y,z) [m]     :  " << m_position << std::endl;
+    sortie << "position (x,y,z) [m]     :  " << getPosition() << std::endl;
 
 
 }
@@ -65,7 +93,7 @@ void ConeSimple::statsCorps(std::ostream& sortie) const{
 
 std::ostream& operator<<(std::ostream& flux, ConeSimple const& C){
 /* Affichage générique via la surchage de l'opérateur << */
-    flux << "Type : " << C.getType() << "  ; Parametre : " << C.getParam() << "  ;  Vitesse : " << C.getVitesse()
+    flux << "Type : " << C.getType() << "  ; Parametre : " << C.getParam() << "  ;  Vitesse : " << C.getPpoint()
          << "  ; Rayon : " << C.getRayon() << "  ; Hauteur : " << C.getHauteur() << std::endl;
 
     return flux;

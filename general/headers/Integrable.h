@@ -16,7 +16,7 @@ public:
 
 // =========
 
-    Integrable(SupportADessin&, std::string const&, Vecteur const&, Vecteur const&, Vecteur const&, double const&);
+    Integrable(SupportADessin&, std::string const&, Vecteur const&, Vecteur const&, double const&);
                                                                         // Prend un support à dessin où dessiner
                                                                         // l'intégrable, un string; le type d'objet
                                                                         // qu'est l'intégrable et deux vecteurs :
@@ -44,18 +44,22 @@ public:
 
 // =========  ACCESSEURS ET SETTEURS :
 
-    Vecteur getParam() const;                                           // Renvoit le vecteur paramètre de l'intégrable
-    void setParam(Vecteur const& newV);                                 // Set le vecteur paramètre de l'intégrable
+    virtual Vecteur getParam() const;                                           // Renvoit le vecteur paramètre de l'intégrable
+    virtual void setParam(Vecteur const& newV);                                 // Set le vecteur paramètre de l'intégrable
 
 
-    Vecteur getVitesse() const;                                         // Renvoit le vecteur vitesse de l'intégrable
-    void setVitesse(Vecteur const& newV);                               // Set le vecteur vitesse de l'intégrable
+    virtual Vecteur getPpoint() const;                                         // Renvoit le vecteur vitesse de l'intégrable
+    virtual void setPpoint(Vecteur const& newV);                               // Set le vecteur vitesse de l'intégrable
 
     double getDistSecu() const;                                         // renvoie la distance de sécurité
     void setDistSecu();                                                 // set la distance de séurité
 
-    virtual Vecteur getPosition() const;                                        // renvoie la position carthésienne
-    virtual void setPosition(Vecteur const&);                                              // set la position carthésienne
+    virtual Vecteur getPosition() const;                                // renvoie la position carthésienne, peut ne pas exister
+                                                                        // en quel cas nous sortons le paramètre
+    virtual void setPosition(Vecteur const&);                           // set la position carthésienne
+
+    virtual Vecteur getVitesse() const;
+    virtual void setVitesse(Vecteur const&);
 
 // ======================================================================================
 
@@ -63,10 +67,8 @@ protected:
 
 // =========  ATTRIBUTS MATHEMATIQUES :
 
-    Vecteur m_P;                // P est le vecteur paramètres, pas forcément phsyiques
+    Vecteur m_P;                // P est le vecteur paramètres, pas forcément physiques
     Vecteur m_Ppoint;           // Ppoint est le vecteur dérivée temporelle de P
-
-    Vecteur m_position;         // Différent du vecteur paramètre car ne représentant une position carthésienne
 
 // =========  ATTRIBUT "COSMETIQUE" :
 

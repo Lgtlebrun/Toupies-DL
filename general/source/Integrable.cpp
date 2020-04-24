@@ -1,12 +1,12 @@
 #include "../headers/Integrable.h"
 
 
-Integrable::Integrable( SupportADessin& sup, std::string const& type, Vecteur const& param, Vecteur const& vit, Vecteur const& pos, double const& distSecu)
+Integrable::Integrable( SupportADessin& sup, std::string const& type, Vecteur const& param, Vecteur const& parampoint, double const& distSecu)
 /* ctor de l'intégrable. Il lui faut un paramètre != position dans le cas général car paramètre représente un vector *
  * des coordonnées généralisées (pour une toupie, param = (théta, psy, phi) alors que pos = (x,y,z)). Il faut un     *
  * SupportADessin pour savoir où le représenter. En plus de cela, la distance de sécurité est là pour s'assurer que  *
  * deux intégrables ne se superposent pas en représentation visuelle                                                */
-    : Dessinable(sup), m_type(type), m_P(param), m_Ppoint(vit), m_position(pos), m_distSecu(distSecu)
+    : Dessinable(sup), m_type(type), m_P(param), m_Ppoint(parampoint), m_distSecu(distSecu)
 {}
 
 Integrable::~Integrable()
@@ -14,9 +14,9 @@ Integrable::~Integrable()
     //dtor
 }
 
-void Integrable::statsCorps(std::ostream& flux) const{
+void Integrable::statsCorps(std::ostream& flux) const {
 /* Méthode d'affichage permettant d'afficher tout ce qui pourrait être voulu par un programmeur */
-    flux << m_type << ":    Paramètre : " << m_P << ", Vitesse : " << m_Ppoint << ", Position : " << m_position << std::endl;
+    flux << m_type << ":    Paramètre : " << m_P << ", Dérivée : " << m_Ppoint << std::endl;
 
 }
 
@@ -30,29 +30,40 @@ Vecteur Integrable::getParam() const{
 }
 void Integrable::setParam(Vecteur const& newV){
 
-
     m_P = newV;
 }
 
-Vecteur Integrable::getVitesse() const{
+Vecteur Integrable::getPpoint() const{
 
     return m_Ppoint;
 }
-void Integrable::setVitesse(Vecteur const& newV){
+void Integrable::setPpoint(Vecteur const& newV){
 
     m_Ppoint = newV;
 }
 
 Vecteur Integrable::getPosition() const {
 
-    return m_position;
+    return m_P;
 
 }
 void Integrable::setPosition(Vecteur const& newP) {
 
-    m_position = newP;
+    m_P = newP;
 
 }
+
+Vecteur Integrable::getVitesse() const {
+
+    return m_Ppoint;
+
+}
+void Integrable::setVitesse(const Vecteur & newV) {
+
+    m_Ppoint = newV;
+
+}
+
 
     /* Méthodes de get et set dont le résultat varie grandement en fonction du type d'intégrable, puisque là pour *
      * l'affichage                                                                                               */

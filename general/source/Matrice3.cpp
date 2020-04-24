@@ -104,6 +104,20 @@ const Matrice3 Matrice3::operator*(Matrice3 const& m2){
 
 }
 
+Vecteur operator*(Matrice3 const& M, Vecteur const& v) {
+
+    Vecteur sortie;
+
+    for (unsigned int i(0); i< 3; ++i) {
+
+        sortie.setCoord(i, M.getLigne(i)*v);
+
+    }
+
+    return sortie;
+
+}
+
 // ====================================================================================================
 
 bool Matrice3::operator==(Matrice3 const& autre) const{

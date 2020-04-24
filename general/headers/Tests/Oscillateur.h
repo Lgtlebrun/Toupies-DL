@@ -43,8 +43,8 @@ public :
 
     double getRayon() const;                                                // renvoit le rayon
 
-    virtual Vecteur getPosition() const;
-    virtual void setPosition(Vecteur const&);
+    Vecteur getPosition() const;                                            // revoit la position du centre du mvt
+    void setPosition(Vecteur const&);
 
 // =====================================================================================
 

@@ -71,7 +71,7 @@ int main(){
         std::cout << "######################" << std::endl;
         std::cout << N2.getTemps() << std::endl;
         std::cout << bille2.getParam() << "      parametre" << std::endl;
-        std::cout << bille2.getVitesse() << "     vitesse" << std::endl;
+        std::cout << bille2.getPpoint() << "     vitesse" << std::endl;
         N2.integre(bille2, dt);
         N2.augmente_t(dt);
 

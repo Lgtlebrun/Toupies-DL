@@ -78,6 +78,8 @@ const Matrice3 operator*(double const& lambda, Matrice3 mat1);      // Multiplic
 
 const Matrice3 operator*(Matrice3 const& m1, Matrice3 const& m2);   // Multiplication de deux matrices
 
+Vecteur operator*(Matrice3 const& M, Vecteur const& v);
+
 const std::ostream& operator<<(std::ostream& flux, Matrice3 const& m1);   //
 
 

@@ -36,11 +36,6 @@ public :
 
     double getRayon() const;                                        // renvoit le rayon
 
-
-    virtual Vecteur getPosition() const;
-    virtual void setPosition(Vecteur const&);
-
-
 // ==================================================================================
 
 
