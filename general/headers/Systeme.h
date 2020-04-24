@@ -23,6 +23,8 @@ public:
                                                                     // numérique pour savoir comment faire évoluer le
                                                                     // Systeme
 
+   // Systeme(SupportADessin& support, Integrateur&, std::vector<Integrable*>&);
+
     Systeme(Systeme const&);                                        // ctor de copie
 
     virtual ~Systeme();                                             //  dtor de la classe Systeme
