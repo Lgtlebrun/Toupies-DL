@@ -50,11 +50,11 @@ Vecteur ConeSimple::equEvol(const double &temps) {
                                     // la somme des force est nule, entraînant une accélération nulle
 
     }
-    if (m_P.getCoord(0) >= M_PI/2 - atan(getRayon()/getHauteur())) {
+    if (m_P.getCoord(0) >= M_PI/2) {
 
         m_Ppoint = {0.0, 0.0, 0.0};
 
-        return {0.0, 0.0, 0.0};
+        return sortie;
 
     }
 
@@ -78,6 +78,9 @@ Vecteur ConeSimple::equEvol(const double &temps) {
 
 void ConeSimple::statsCorps(std::ostream& sortie) const{
 /* Affiche en détail les caractéristiques du ConeSimple */
+    sortie << "Angles                   :  " << getAngles() << std::endl;
+    sortie << "Vitesse Angulaire        :  " << getAnglesp() << std::endl;
+
     sortie << "masse [kg]               :  " << m_masse << std::endl;
     sortie << "masse volumique [kg m-3] :  " << m_masseVolumique << std::endl;
     sortie << "distance [m]             :  " << m_d << std::endl;
@@ -93,8 +96,9 @@ void ConeSimple::statsCorps(std::ostream& sortie) const{
 
 std::ostream& operator<<(std::ostream& flux, ConeSimple const& C){
 /* Affichage générique via la surchage de l'opérateur << */
-    flux << "Type : " << C.getType() << "  ; Parametre : " << C.getParam() << "  ;  Vitesse : " << C.getPpoint()
-         << "  ; Rayon : " << C.getRayon() << "  ; Hauteur : " << C.getHauteur() << std::endl;
+    flux << "Type : " << C.getType() << "  ; Angles : " << C.getAngles() << "  ;  Dérivées : " << C.getAnglesp()
+         << "  ; Energie : " << C.Energie() << "  ; L_a : " << C.L_a() << "  ; L_K : " << C.L_k() <<
+         "  ; det[omega, L, a ] : " << C.ProdMixte() << std::endl;
 
     return flux;
 }
@@ -113,7 +117,7 @@ double ConeSimple::calculeIA1(double const& rayon, double const& hauteur, double
 
 double ConeSimple::calculeI3(double const& rayon, double const& hauteur, double const& masseVolumique) const {
 
-    return 3*masse(rayon, hauteur, masseVolumique)/10*rayon*rayon;
+    return 3.0*masse(rayon, hauteur, masseVolumique)/10*rayon*rayon;
 
 }
 

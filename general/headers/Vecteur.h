@@ -47,6 +47,9 @@ class Vecteur{
         void rationnalise();                                                // M�thode arrondissant les petites coordonn�es � 0
 
 
+        Vecteur concatene(Vecteur const&) const;
+
+
         std::string to_str() const;
 
 
@@ -85,7 +88,9 @@ class Vecteur{
     //=============================================================================================
 
 
-    private:
+    double prodScalaire(Vecteur const &vecteur2) const;
+
+private:
 
     /* Attributs */
 
@@ -103,7 +108,7 @@ class Vecteur{
 
         Vecteur prodVectoriel(Vecteur const& vecteur2) const;               // Produit vectoriel classique somme toutes
 
-        double prodScalaire(Vecteur const &vecteur2) const;                 // Produit scalaire entre deux vecteurs
+    // Produit scalaire entre deux vecteurs
 
         Vecteur unitaire() const;                                           // Retourne le vecteur unitaire (m�me dimension, m�me sens)
 

@@ -56,225 +56,241 @@ include CMakeFiles/exoa.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/exoa.dir/flags.make
 
-CMakeFiles/exoa.dir/source/constantes.cpp.obj: CMakeFiles/exoa.dir/flags.make
-CMakeFiles/exoa.dir/source/constantes.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
-CMakeFiles/exoa.dir/source/constantes.cpp.obj: ../source/constantes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/exoa.dir/source/constantes.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\source\constantes.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\source\constantes.cpp"
+CMakeFiles/exoa.dir/general/source/constantes.cpp.obj: CMakeFiles/exoa.dir/flags.make
+CMakeFiles/exoa.dir/general/source/constantes.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
+CMakeFiles/exoa.dir/general/source/constantes.cpp.obj: ../general/source/constantes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/exoa.dir/general/source/constantes.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\general\source\constantes.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\constantes.cpp"
 
-CMakeFiles/exoa.dir/source/constantes.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/source/constantes.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\source\constantes.cpp" > CMakeFiles\exoa.dir\source\constantes.cpp.i
+CMakeFiles/exoa.dir/general/source/constantes.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/general/source/constantes.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\constantes.cpp" > CMakeFiles\exoa.dir\general\source\constantes.cpp.i
 
-CMakeFiles/exoa.dir/source/constantes.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/source/constantes.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\source\constantes.cpp" -o CMakeFiles\exoa.dir\source\constantes.cpp.s
+CMakeFiles/exoa.dir/general/source/constantes.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/general/source/constantes.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\constantes.cpp" -o CMakeFiles\exoa.dir\general\source\constantes.cpp.s
 
-CMakeFiles/exoa.dir/source/Integrable.cpp.obj: CMakeFiles/exoa.dir/flags.make
-CMakeFiles/exoa.dir/source/Integrable.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
-CMakeFiles/exoa.dir/source/Integrable.cpp.obj: ../source/Integrable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/exoa.dir/source/Integrable.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\source\Integrable.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\source\Integrable.cpp"
+CMakeFiles/exoa.dir/general/source/Integrable.cpp.obj: CMakeFiles/exoa.dir/flags.make
+CMakeFiles/exoa.dir/general/source/Integrable.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
+CMakeFiles/exoa.dir/general/source/Integrable.cpp.obj: ../general/source/Integrable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/exoa.dir/general/source/Integrable.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\general\source\Integrable.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\Integrable.cpp"
 
-CMakeFiles/exoa.dir/source/Integrable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/source/Integrable.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\source\Integrable.cpp" > CMakeFiles\exoa.dir\source\Integrable.cpp.i
+CMakeFiles/exoa.dir/general/source/Integrable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/general/source/Integrable.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\Integrable.cpp" > CMakeFiles\exoa.dir\general\source\Integrable.cpp.i
 
-CMakeFiles/exoa.dir/source/Integrable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/source/Integrable.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\source\Integrable.cpp" -o CMakeFiles\exoa.dir\source\Integrable.cpp.s
+CMakeFiles/exoa.dir/general/source/Integrable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/general/source/Integrable.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\Integrable.cpp" -o CMakeFiles\exoa.dir\general\source\Integrable.cpp.s
 
-CMakeFiles/exoa.dir/source/Integrateur.cpp.obj: CMakeFiles/exoa.dir/flags.make
-CMakeFiles/exoa.dir/source/Integrateur.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
-CMakeFiles/exoa.dir/source/Integrateur.cpp.obj: ../source/Integrateur.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/exoa.dir/source/Integrateur.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\source\Integrateur.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\source\Integrateur.cpp"
+CMakeFiles/exoa.dir/general/source/Integrateur.cpp.obj: CMakeFiles/exoa.dir/flags.make
+CMakeFiles/exoa.dir/general/source/Integrateur.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
+CMakeFiles/exoa.dir/general/source/Integrateur.cpp.obj: ../general/source/Integrateur.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/exoa.dir/general/source/Integrateur.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\general\source\Integrateur.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\Integrateur.cpp"
 
-CMakeFiles/exoa.dir/source/Integrateur.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/source/Integrateur.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\source\Integrateur.cpp" > CMakeFiles\exoa.dir\source\Integrateur.cpp.i
+CMakeFiles/exoa.dir/general/source/Integrateur.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/general/source/Integrateur.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\Integrateur.cpp" > CMakeFiles\exoa.dir\general\source\Integrateur.cpp.i
 
-CMakeFiles/exoa.dir/source/Integrateur.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/source/Integrateur.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\source\Integrateur.cpp" -o CMakeFiles\exoa.dir\source\Integrateur.cpp.s
+CMakeFiles/exoa.dir/general/source/Integrateur.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/general/source/Integrateur.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\Integrateur.cpp" -o CMakeFiles\exoa.dir\general\source\Integrateur.cpp.s
 
-CMakeFiles/exoa.dir/source/Matrice3.cpp.obj: CMakeFiles/exoa.dir/flags.make
-CMakeFiles/exoa.dir/source/Matrice3.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
-CMakeFiles/exoa.dir/source/Matrice3.cpp.obj: ../source/Matrice3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/exoa.dir/source/Matrice3.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\source\Matrice3.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\source\Matrice3.cpp"
+CMakeFiles/exoa.dir/general/source/Matrice3.cpp.obj: CMakeFiles/exoa.dir/flags.make
+CMakeFiles/exoa.dir/general/source/Matrice3.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
+CMakeFiles/exoa.dir/general/source/Matrice3.cpp.obj: ../general/source/Matrice3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/exoa.dir/general/source/Matrice3.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\general\source\Matrice3.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\Matrice3.cpp"
 
-CMakeFiles/exoa.dir/source/Matrice3.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/source/Matrice3.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\source\Matrice3.cpp" > CMakeFiles\exoa.dir\source\Matrice3.cpp.i
+CMakeFiles/exoa.dir/general/source/Matrice3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/general/source/Matrice3.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\Matrice3.cpp" > CMakeFiles\exoa.dir\general\source\Matrice3.cpp.i
 
-CMakeFiles/exoa.dir/source/Matrice3.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/source/Matrice3.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\source\Matrice3.cpp" -o CMakeFiles\exoa.dir\source\Matrice3.cpp.s
+CMakeFiles/exoa.dir/general/source/Matrice3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/general/source/Matrice3.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\Matrice3.cpp" -o CMakeFiles\exoa.dir\general\source\Matrice3.cpp.s
 
-CMakeFiles/exoa.dir/source/Toupie.cpp.obj: CMakeFiles/exoa.dir/flags.make
-CMakeFiles/exoa.dir/source/Toupie.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
-CMakeFiles/exoa.dir/source/Toupie.cpp.obj: ../source/Toupie.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/exoa.dir/source/Toupie.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\source\Toupie.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\source\Toupie.cpp"
+CMakeFiles/exoa.dir/general/source/Toupie.cpp.obj: CMakeFiles/exoa.dir/flags.make
+CMakeFiles/exoa.dir/general/source/Toupie.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
+CMakeFiles/exoa.dir/general/source/Toupie.cpp.obj: ../general/source/Toupie.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/exoa.dir/general/source/Toupie.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\general\source\Toupie.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\Toupie.cpp"
 
-CMakeFiles/exoa.dir/source/Toupie.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/source/Toupie.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\source\Toupie.cpp" > CMakeFiles\exoa.dir\source\Toupie.cpp.i
+CMakeFiles/exoa.dir/general/source/Toupie.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/general/source/Toupie.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\Toupie.cpp" > CMakeFiles\exoa.dir\general\source\Toupie.cpp.i
 
-CMakeFiles/exoa.dir/source/Toupie.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/source/Toupie.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\source\Toupie.cpp" -o CMakeFiles\exoa.dir\source\Toupie.cpp.s
+CMakeFiles/exoa.dir/general/source/Toupie.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/general/source/Toupie.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\Toupie.cpp" -o CMakeFiles\exoa.dir\general\source\Toupie.cpp.s
 
-CMakeFiles/exoa.dir/source/Vecteur.cpp.obj: CMakeFiles/exoa.dir/flags.make
-CMakeFiles/exoa.dir/source/Vecteur.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
-CMakeFiles/exoa.dir/source/Vecteur.cpp.obj: ../source/Vecteur.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/exoa.dir/source/Vecteur.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\source\Vecteur.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\source\Vecteur.cpp"
+CMakeFiles/exoa.dir/general/source/Vecteur.cpp.obj: CMakeFiles/exoa.dir/flags.make
+CMakeFiles/exoa.dir/general/source/Vecteur.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
+CMakeFiles/exoa.dir/general/source/Vecteur.cpp.obj: ../general/source/Vecteur.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/exoa.dir/general/source/Vecteur.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\general\source\Vecteur.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\Vecteur.cpp"
 
-CMakeFiles/exoa.dir/source/Vecteur.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/source/Vecteur.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\source\Vecteur.cpp" > CMakeFiles\exoa.dir\source\Vecteur.cpp.i
+CMakeFiles/exoa.dir/general/source/Vecteur.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/general/source/Vecteur.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\Vecteur.cpp" > CMakeFiles\exoa.dir\general\source\Vecteur.cpp.i
 
-CMakeFiles/exoa.dir/source/Vecteur.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/source/Vecteur.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\source\Vecteur.cpp" -o CMakeFiles\exoa.dir\source\Vecteur.cpp.s
+CMakeFiles/exoa.dir/general/source/Vecteur.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/general/source/Vecteur.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\Vecteur.cpp" -o CMakeFiles\exoa.dir\general\source\Vecteur.cpp.s
 
-CMakeFiles/exoa.dir/source/Systeme.cpp.obj: CMakeFiles/exoa.dir/flags.make
-CMakeFiles/exoa.dir/source/Systeme.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
-CMakeFiles/exoa.dir/source/Systeme.cpp.obj: ../source/Systeme.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/exoa.dir/source/Systeme.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\source\Systeme.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\source\Systeme.cpp"
+CMakeFiles/exoa.dir/general/source/Systeme.cpp.obj: CMakeFiles/exoa.dir/flags.make
+CMakeFiles/exoa.dir/general/source/Systeme.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
+CMakeFiles/exoa.dir/general/source/Systeme.cpp.obj: ../general/source/Systeme.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/exoa.dir/general/source/Systeme.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\general\source\Systeme.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\Systeme.cpp"
 
-CMakeFiles/exoa.dir/source/Systeme.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/source/Systeme.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\source\Systeme.cpp" > CMakeFiles\exoa.dir\source\Systeme.cpp.i
+CMakeFiles/exoa.dir/general/source/Systeme.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/general/source/Systeme.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\Systeme.cpp" > CMakeFiles\exoa.dir\general\source\Systeme.cpp.i
 
-CMakeFiles/exoa.dir/source/Systeme.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/source/Systeme.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\source\Systeme.cpp" -o CMakeFiles\exoa.dir\source\Systeme.cpp.s
+CMakeFiles/exoa.dir/general/source/Systeme.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/general/source/Systeme.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\Systeme.cpp" -o CMakeFiles\exoa.dir\general\source\Systeme.cpp.s
 
-CMakeFiles/exoa.dir/source/Dessinable.cpp.obj: CMakeFiles/exoa.dir/flags.make
-CMakeFiles/exoa.dir/source/Dessinable.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
-CMakeFiles/exoa.dir/source/Dessinable.cpp.obj: ../source/Dessinable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/exoa.dir/source/Dessinable.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\source\Dessinable.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\source\Dessinable.cpp"
+CMakeFiles/exoa.dir/general/source/Dessinable.cpp.obj: CMakeFiles/exoa.dir/flags.make
+CMakeFiles/exoa.dir/general/source/Dessinable.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
+CMakeFiles/exoa.dir/general/source/Dessinable.cpp.obj: ../general/source/Dessinable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/exoa.dir/general/source/Dessinable.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\general\source\Dessinable.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\Dessinable.cpp"
 
-CMakeFiles/exoa.dir/source/Dessinable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/source/Dessinable.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\source\Dessinable.cpp" > CMakeFiles\exoa.dir\source\Dessinable.cpp.i
+CMakeFiles/exoa.dir/general/source/Dessinable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/general/source/Dessinable.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\Dessinable.cpp" > CMakeFiles\exoa.dir\general\source\Dessinable.cpp.i
 
-CMakeFiles/exoa.dir/source/Dessinable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/source/Dessinable.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\source\Dessinable.cpp" -o CMakeFiles\exoa.dir\source\Dessinable.cpp.s
+CMakeFiles/exoa.dir/general/source/Dessinable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/general/source/Dessinable.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\Dessinable.cpp" -o CMakeFiles\exoa.dir\general\source\Dessinable.cpp.s
 
-CMakeFiles/exoa.dir/source/ConeSimple.cpp.obj: CMakeFiles/exoa.dir/flags.make
-CMakeFiles/exoa.dir/source/ConeSimple.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
-CMakeFiles/exoa.dir/source/ConeSimple.cpp.obj: ../source/ConeSimple.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/exoa.dir/source/ConeSimple.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\source\ConeSimple.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\source\ConeSimple.cpp"
+CMakeFiles/exoa.dir/general/source/ConeSimple.cpp.obj: CMakeFiles/exoa.dir/flags.make
+CMakeFiles/exoa.dir/general/source/ConeSimple.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
+CMakeFiles/exoa.dir/general/source/ConeSimple.cpp.obj: ../general/source/ConeSimple.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/exoa.dir/general/source/ConeSimple.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\general\source\ConeSimple.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\ConeSimple.cpp"
 
-CMakeFiles/exoa.dir/source/ConeSimple.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/source/ConeSimple.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\source\ConeSimple.cpp" > CMakeFiles\exoa.dir\source\ConeSimple.cpp.i
+CMakeFiles/exoa.dir/general/source/ConeSimple.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/general/source/ConeSimple.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\ConeSimple.cpp" > CMakeFiles\exoa.dir\general\source\ConeSimple.cpp.i
 
-CMakeFiles/exoa.dir/source/ConeSimple.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/source/ConeSimple.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\source\ConeSimple.cpp" -o CMakeFiles\exoa.dir\source\ConeSimple.cpp.s
+CMakeFiles/exoa.dir/general/source/ConeSimple.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/general/source/ConeSimple.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\ConeSimple.cpp" -o CMakeFiles\exoa.dir\general\source\ConeSimple.cpp.s
 
-CMakeFiles/exoa.dir/source/TextViewer.cpp.obj: CMakeFiles/exoa.dir/flags.make
-CMakeFiles/exoa.dir/source/TextViewer.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
-CMakeFiles/exoa.dir/source/TextViewer.cpp.obj: ../source/TextViewer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/exoa.dir/source/TextViewer.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\source\TextViewer.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\source\TextViewer.cpp"
+CMakeFiles/exoa.dir/general/source/TextViewer.cpp.obj: CMakeFiles/exoa.dir/flags.make
+CMakeFiles/exoa.dir/general/source/TextViewer.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
+CMakeFiles/exoa.dir/general/source/TextViewer.cpp.obj: ../general/source/TextViewer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/exoa.dir/general/source/TextViewer.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\general\source\TextViewer.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\TextViewer.cpp"
 
-CMakeFiles/exoa.dir/source/TextViewer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/source/TextViewer.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\source\TextViewer.cpp" > CMakeFiles\exoa.dir\source\TextViewer.cpp.i
+CMakeFiles/exoa.dir/general/source/TextViewer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/general/source/TextViewer.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\TextViewer.cpp" > CMakeFiles\exoa.dir\general\source\TextViewer.cpp.i
 
-CMakeFiles/exoa.dir/source/TextViewer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/source/TextViewer.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\source\TextViewer.cpp" -o CMakeFiles\exoa.dir\source\TextViewer.cpp.s
+CMakeFiles/exoa.dir/general/source/TextViewer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/general/source/TextViewer.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\TextViewer.cpp" -o CMakeFiles\exoa.dir\general\source\TextViewer.cpp.s
 
-CMakeFiles/exoa.dir/source/Tests/Bille.cpp.obj: CMakeFiles/exoa.dir/flags.make
-CMakeFiles/exoa.dir/source/Tests/Bille.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
-CMakeFiles/exoa.dir/source/Tests/Bille.cpp.obj: ../source/Tests/Bille.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/exoa.dir/source/Tests/Bille.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\source\Tests\Bille.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\source\Tests\Bille.cpp"
+CMakeFiles/exoa.dir/general/source/Tests/Bille.cpp.obj: CMakeFiles/exoa.dir/flags.make
+CMakeFiles/exoa.dir/general/source/Tests/Bille.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
+CMakeFiles/exoa.dir/general/source/Tests/Bille.cpp.obj: ../general/source/Tests/Bille.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/exoa.dir/general/source/Tests/Bille.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\general\source\Tests\Bille.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\Tests\Bille.cpp"
 
-CMakeFiles/exoa.dir/source/Tests/Bille.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/source/Tests/Bille.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\source\Tests\Bille.cpp" > CMakeFiles\exoa.dir\source\Tests\Bille.cpp.i
+CMakeFiles/exoa.dir/general/source/Tests/Bille.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/general/source/Tests/Bille.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\Tests\Bille.cpp" > CMakeFiles\exoa.dir\general\source\Tests\Bille.cpp.i
 
-CMakeFiles/exoa.dir/source/Tests/Bille.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/source/Tests/Bille.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\source\Tests\Bille.cpp" -o CMakeFiles\exoa.dir\source\Tests\Bille.cpp.s
+CMakeFiles/exoa.dir/general/source/Tests/Bille.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/general/source/Tests/Bille.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\Tests\Bille.cpp" -o CMakeFiles\exoa.dir\general\source\Tests\Bille.cpp.s
 
-CMakeFiles/exoa.dir/source/Tests/Oscillateur.cpp.obj: CMakeFiles/exoa.dir/flags.make
-CMakeFiles/exoa.dir/source/Tests/Oscillateur.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
-CMakeFiles/exoa.dir/source/Tests/Oscillateur.cpp.obj: ../source/Tests/Oscillateur.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/exoa.dir/source/Tests/Oscillateur.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\source\Tests\Oscillateur.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\source\Tests\Oscillateur.cpp"
+CMakeFiles/exoa.dir/general/source/Tests/Oscillateur.cpp.obj: CMakeFiles/exoa.dir/flags.make
+CMakeFiles/exoa.dir/general/source/Tests/Oscillateur.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
+CMakeFiles/exoa.dir/general/source/Tests/Oscillateur.cpp.obj: ../general/source/Tests/Oscillateur.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/exoa.dir/general/source/Tests/Oscillateur.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\general\source\Tests\Oscillateur.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\Tests\Oscillateur.cpp"
 
-CMakeFiles/exoa.dir/source/Tests/Oscillateur.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/source/Tests/Oscillateur.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\source\Tests\Oscillateur.cpp" > CMakeFiles\exoa.dir\source\Tests\Oscillateur.cpp.i
+CMakeFiles/exoa.dir/general/source/Tests/Oscillateur.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/general/source/Tests/Oscillateur.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\Tests\Oscillateur.cpp" > CMakeFiles\exoa.dir\general\source\Tests\Oscillateur.cpp.i
 
-CMakeFiles/exoa.dir/source/Tests/Oscillateur.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/source/Tests/Oscillateur.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\source\Tests\Oscillateur.cpp" -o CMakeFiles\exoa.dir\source\Tests\Oscillateur.cpp.s
+CMakeFiles/exoa.dir/general/source/Tests/Oscillateur.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/general/source/Tests/Oscillateur.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\Tests\Oscillateur.cpp" -o CMakeFiles\exoa.dir\general\source\Tests\Oscillateur.cpp.s
 
-CMakeFiles/exoa.dir/exercice9a.cpp.obj: CMakeFiles/exoa.dir/flags.make
-CMakeFiles/exoa.dir/exercice9a.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
-CMakeFiles/exoa.dir/exercice9a.cpp.obj: ../exercice9a.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/exoa.dir/exercice9a.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\exercice9a.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\exercice9a.cpp"
+CMakeFiles/exoa.dir/general/source/ToupieChinoise.cpp.obj: CMakeFiles/exoa.dir/flags.make
+CMakeFiles/exoa.dir/general/source/ToupieChinoise.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
+CMakeFiles/exoa.dir/general/source/ToupieChinoise.cpp.obj: ../general/source/ToupieChinoise.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/exoa.dir/general/source/ToupieChinoise.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\general\source\ToupieChinoise.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\ToupieChinoise.cpp"
 
-CMakeFiles/exoa.dir/exercice9a.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/exercice9a.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\exercice9a.cpp" > CMakeFiles\exoa.dir\exercice9a.cpp.i
+CMakeFiles/exoa.dir/general/source/ToupieChinoise.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/general/source/ToupieChinoise.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\ToupieChinoise.cpp" > CMakeFiles\exoa.dir\general\source\ToupieChinoise.cpp.i
 
-CMakeFiles/exoa.dir/exercice9a.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/exercice9a.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\exercice9a.cpp" -o CMakeFiles\exoa.dir\exercice9a.cpp.s
+CMakeFiles/exoa.dir/general/source/ToupieChinoise.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/general/source/ToupieChinoise.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\ToupieChinoise.cpp" -o CMakeFiles\exoa.dir\general\source\ToupieChinoise.cpp.s
+
+CMakeFiles/exoa.dir/ExerciceP9/exercice9a.cpp.obj: CMakeFiles/exoa.dir/flags.make
+CMakeFiles/exoa.dir/ExerciceP9/exercice9a.cpp.obj: CMakeFiles/exoa.dir/includes_CXX.rsp
+CMakeFiles/exoa.dir/ExerciceP9/exercice9a.cpp.obj: ../ExerciceP9/exercice9a.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/exoa.dir/ExerciceP9/exercice9a.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exoa.dir\ExerciceP9\exercice9a.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\ExerciceP9\exercice9a.cpp"
+
+CMakeFiles/exoa.dir/ExerciceP9/exercice9a.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exoa.dir/ExerciceP9/exercice9a.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\ExerciceP9\exercice9a.cpp" > CMakeFiles\exoa.dir\ExerciceP9\exercice9a.cpp.i
+
+CMakeFiles/exoa.dir/ExerciceP9/exercice9a.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exoa.dir/ExerciceP9/exercice9a.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\ExerciceP9\exercice9a.cpp" -o CMakeFiles\exoa.dir\ExerciceP9\exercice9a.cpp.s
 
 # Object files for target exoa
 exoa_OBJECTS = \
-"CMakeFiles/exoa.dir/source/constantes.cpp.obj" \
-"CMakeFiles/exoa.dir/source/Integrable.cpp.obj" \
-"CMakeFiles/exoa.dir/source/Integrateur.cpp.obj" \
-"CMakeFiles/exoa.dir/source/Matrice3.cpp.obj" \
-"CMakeFiles/exoa.dir/source/Toupie.cpp.obj" \
-"CMakeFiles/exoa.dir/source/Vecteur.cpp.obj" \
-"CMakeFiles/exoa.dir/source/Systeme.cpp.obj" \
-"CMakeFiles/exoa.dir/source/Dessinable.cpp.obj" \
-"CMakeFiles/exoa.dir/source/ConeSimple.cpp.obj" \
-"CMakeFiles/exoa.dir/source/TextViewer.cpp.obj" \
-"CMakeFiles/exoa.dir/source/Tests/Bille.cpp.obj" \
-"CMakeFiles/exoa.dir/source/Tests/Oscillateur.cpp.obj" \
-"CMakeFiles/exoa.dir/exercice9a.cpp.obj"
+"CMakeFiles/exoa.dir/general/source/constantes.cpp.obj" \
+"CMakeFiles/exoa.dir/general/source/Integrable.cpp.obj" \
+"CMakeFiles/exoa.dir/general/source/Integrateur.cpp.obj" \
+"CMakeFiles/exoa.dir/general/source/Matrice3.cpp.obj" \
+"CMakeFiles/exoa.dir/general/source/Toupie.cpp.obj" \
+"CMakeFiles/exoa.dir/general/source/Vecteur.cpp.obj" \
+"CMakeFiles/exoa.dir/general/source/Systeme.cpp.obj" \
+"CMakeFiles/exoa.dir/general/source/Dessinable.cpp.obj" \
+"CMakeFiles/exoa.dir/general/source/ConeSimple.cpp.obj" \
+"CMakeFiles/exoa.dir/general/source/TextViewer.cpp.obj" \
+"CMakeFiles/exoa.dir/general/source/Tests/Bille.cpp.obj" \
+"CMakeFiles/exoa.dir/general/source/Tests/Oscillateur.cpp.obj" \
+"CMakeFiles/exoa.dir/general/source/ToupieChinoise.cpp.obj" \
+"CMakeFiles/exoa.dir/ExerciceP9/exercice9a.cpp.obj"
 
 # External object files for target exoa
 exoa_EXTERNAL_OBJECTS =
 
-exoa.exe: CMakeFiles/exoa.dir/source/constantes.cpp.obj
-exoa.exe: CMakeFiles/exoa.dir/source/Integrable.cpp.obj
-exoa.exe: CMakeFiles/exoa.dir/source/Integrateur.cpp.obj
-exoa.exe: CMakeFiles/exoa.dir/source/Matrice3.cpp.obj
-exoa.exe: CMakeFiles/exoa.dir/source/Toupie.cpp.obj
-exoa.exe: CMakeFiles/exoa.dir/source/Vecteur.cpp.obj
-exoa.exe: CMakeFiles/exoa.dir/source/Systeme.cpp.obj
-exoa.exe: CMakeFiles/exoa.dir/source/Dessinable.cpp.obj
-exoa.exe: CMakeFiles/exoa.dir/source/ConeSimple.cpp.obj
-exoa.exe: CMakeFiles/exoa.dir/source/TextViewer.cpp.obj
-exoa.exe: CMakeFiles/exoa.dir/source/Tests/Bille.cpp.obj
-exoa.exe: CMakeFiles/exoa.dir/source/Tests/Oscillateur.cpp.obj
-exoa.exe: CMakeFiles/exoa.dir/exercice9a.cpp.obj
+exoa.exe: CMakeFiles/exoa.dir/general/source/constantes.cpp.obj
+exoa.exe: CMakeFiles/exoa.dir/general/source/Integrable.cpp.obj
+exoa.exe: CMakeFiles/exoa.dir/general/source/Integrateur.cpp.obj
+exoa.exe: CMakeFiles/exoa.dir/general/source/Matrice3.cpp.obj
+exoa.exe: CMakeFiles/exoa.dir/general/source/Toupie.cpp.obj
+exoa.exe: CMakeFiles/exoa.dir/general/source/Vecteur.cpp.obj
+exoa.exe: CMakeFiles/exoa.dir/general/source/Systeme.cpp.obj
+exoa.exe: CMakeFiles/exoa.dir/general/source/Dessinable.cpp.obj
+exoa.exe: CMakeFiles/exoa.dir/general/source/ConeSimple.cpp.obj
+exoa.exe: CMakeFiles/exoa.dir/general/source/TextViewer.cpp.obj
+exoa.exe: CMakeFiles/exoa.dir/general/source/Tests/Bille.cpp.obj
+exoa.exe: CMakeFiles/exoa.dir/general/source/Tests/Oscillateur.cpp.obj
+exoa.exe: CMakeFiles/exoa.dir/general/source/ToupieChinoise.cpp.obj
+exoa.exe: CMakeFiles/exoa.dir/ExerciceP9/exercice9a.cpp.obj
 exoa.exe: CMakeFiles/exoa.dir/build.make
 exoa.exe: CMakeFiles/exoa.dir/linklibs.rsp
 exoa.exe: CMakeFiles/exoa.dir/objects1.rsp
 exoa.exe: CMakeFiles/exoa.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable exoa.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable exoa.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\exoa.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -3,24 +3,15 @@
 #include <iostream>
 
 
-Toupie::Toupie (SupportADessin& sup, std::string const& type, Vecteur const& param, Vecteur const& parampoint, Vecteur const& posA, Vecteur const& vitA, double const& IA1, double const& I3, double const& masseVolumique, double const & masse, double const& d, double const& distSecu)
+Toupie::Toupie (SupportADessin& sup, std::string const& type, Vecteur const& angles, Vecteur const& anglespoint, Vecteur const& posA, Vecteur const& vitA, double const& IA1, double const& I3, double const& masseVolumique, double const & masse, double const& d, double const& distSecu)
 /* Nous prenons un support à dessin et le type de Toupie en string. Param et vit sont les vecteurs liés à l'intégrateur *
  * tandis que posA est la position du point de contact entre la toupie et le sol. Les moments d'inertie IA1 et I3 sont  *
  * laissés en argument car ça ne fait aucun sens de le calculer pour une toupie générale. De même, la masse dépend de   *
  * la masse volumique mais aussi de la forme sur laquelle nous ne pouvons rien dire dans le cas général. d est la       *
  * distance du centre de masse au point de contact au sol. La distance de sécurité est dépendante du type de toupie,    *
  * d'où la raison pour laquelle elle est en argument                                                                    */
-    : Integrable(sup, type, param, parampoint, distSecu), m_IA1(IA1), m_I3(I3), m_masse(masse), m_d(d), m_masseVolumique(masseVolumique)
-{
-    m_P.augmente(posA.getCoord(0));
-    m_P.augmente(posA.getCoord(1));
-    m_P.augmente(0.0);
-
-    m_Ppoint.augmente(vitA.getCoord(0));
-    m_Ppoint.augmente(vitA.getCoord(1));
-    m_Ppoint.augmente(0.0);
-
-}
+    : Integrable(sup, type, angles.concatene(posA), anglespoint.concatene(vitA), distSecu), m_IA1(IA1), m_I3(I3), m_masse(masse), m_d(d), m_masseVolumique(masseVolumique)
+{}
 
 Toupie::~Toupie() {}
 
@@ -72,12 +63,12 @@ void Toupie::setDistSecu() {
 
 }
 
-Vecteur Toupie::getParam() const {
+Vecteur Toupie::getAngles() const {
 
     return {m_P.getCoord(0), m_P.getCoord(1), m_P.getCoord(2)};
 
 }
-void Toupie::setParam(const Vecteur &newV) {
+void Toupie::setAngles(const Vecteur &newV) {
 
     if (newV.getDim() >= 3) {
 
@@ -89,12 +80,12 @@ void Toupie::setParam(const Vecteur &newV) {
 
 }
 
-Vecteur Toupie::getPpoint() const {
+Vecteur Toupie::getAnglesp() const {
 
     return {m_Ppoint.getCoord(0), m_Ppoint.getCoord(1), m_Ppoint.getCoord(2)};
 
 }
-void Toupie::setPpoint(const Vecteur &newV) {
+void Toupie::setAnglesp(const Vecteur &newV) {
 
     if (newV.getDim() >= 3) {
 
@@ -148,15 +139,52 @@ void Toupie::setVitesse(const Vecteur &newV) {
 double Toupie::Energie() const {
 
 
-    return 0.0;
+    return 1.0/2*(m_masse*getVitesse().norme2()+omega()*(TenseurInertie()*omega())
+    +m_masse*getVitesse().prodScalaire(omega()^Vecteur({0.0,0.0,m_d}))) - m_masse*g.prodScalaire(getPosition()+S()*Vecteur({0.0,0.0,m_d})) ;
 
+
+}
+
+double Toupie::L_a() const {
+
+    Vecteur a(Vecteur({0.0,0.0,1.0}));
+
+    return a*(TenseurInertie()*omega());
+
+}
+
+double Toupie::L_k() const {
+
+    Matrice3 I_O(S().transp()*TenseurInertie());
+
+    Vecteur o(omega());
+
+    return (I_O*o)*Vecteur({0.0,0.0,1.0});
+
+}
+
+double Toupie::ProdMixte() const {
+
+    Vecteur o(omega());
+
+    Vecteur L(TenseurInertie()*omega());
+
+    Vecteur a(Vecteur({0.0,0.0,1.0}));
+
+    Matrice3 M(o.getCoord(0), o.getCoord(1), o.getCoord(2)
+            , L.getCoord(0), L.getCoord(1), L.getCoord(2)
+            , a.getCoord(0), a.getCoord(1), a.getCoord(2));
+
+    return M.det();
 
 }
 
 // =====================================================================================================
 
-void Toupie::statsCorps(std::ostream& sortie) const{
+void Toupie::statsCorps(std::ostream& sortie) const {
 /* Addiche les statistiques d'une toupie */
+    sortie << "Angles                   :  " << getAngles() << std::endl;
+    sortie << "Vitesse angulaire        :  " << getAnglesp() << std::endl;
     sortie << "masse [kg]               :  " << m_masse << std::endl;
     sortie << "masse volumique [kg m-3] :  " << m_masseVolumique << std::endl;
     sortie << "distance [m]             :  " << m_d << std::endl;
@@ -168,9 +196,11 @@ void Toupie::statsCorps(std::ostream& sortie) const{
 void Toupie::modulo2Pi(){
 /* Une méthode qui remet le paramètre d'une toupie modulo 2PI pour éviter la divergence des fonctions trigonométriques *
  * représentées par des séries de Taylor                                                                               */
-    for (unsigned int k(0); k < m_P.getDim() ; ++k) {
 
-        if (m_P.getCoord(k)>=0) {
+
+    for (unsigned int k(0); k < getAngles().getDim() ; ++k) {
+
+        if (getAngles().getCoord(k)>=0) {
 
             m_P.setCoord(k, m_P.getCoord(k)-floor(m_P.getCoord(k)/(2*M_PI))*2*M_PI);
 
@@ -181,6 +211,7 @@ void Toupie::modulo2Pi(){
         }
 
     }
+
 
 }
 
@@ -195,9 +226,9 @@ Matrice3 Toupie::S() const {
 }
 
 
-Matrice3 Toupie::TenseurInertie() const {
+Matrice3 Toupie::TenseurInertie() const{
 
-    return Matrice3(m_I3, 0.0, 0.0
+    return Matrice3(m_IA1, 0.0, 0.0
                     , 0.0, m_IA1, 0.0
                     , 0.0, 0.0, m_I3);
 
@@ -206,6 +237,21 @@ Matrice3 Toupie::TenseurInertie() const {
 
 Vecteur Toupie::omega() const {
 
-    return {0.0,0.0,0.0};
+    double omega1(m_Ppoint.getCoord(0));
+    double omega2(m_Ppoint.getCoord(1)*sin(m_P.getCoord(0)));
+    double omega3(m_Ppoint.getCoord(1)*cos(m_P.getCoord(0))+m_Ppoint.getCoord(2));
+
+    return {omega1, omega2, omega3};
+
+}
+
+
+Vecteur Toupie::to_utilisateur(Vecteur const& v) const {
+
+    Vecteur sortie(v);
+    sortie.setCoord(1, v.getCoord(0));
+    sortie.setCoord(0, v.getCoord(1));
+
+    return sortie;
 
 }

@@ -1,0 +1,124 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/C++/Tous pires/Toupies-DL/ExerciceP9/exercice9b.cpp
+../general/headers/TextViewer.h
+E:/C++/Tous pires/Toupies-DL/general/headers/TextViewer.h
+cmath
+-
+fstream
+-
+
+E:/C++/Tous pires/Toupies-DL/general/headers/Clonable.h
+
+E:/C++/Tous pires/Toupies-DL/general/headers/ConeSimple.h
+Toupie.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Toupie.h
+
+E:/C++/Tous pires/Toupies-DL/general/headers/Dessinable.h
+iostream
+-
+Clonable.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Clonable.h
+SupportADessin.h
+E:/C++/Tous pires/Toupies-DL/general/headers/SupportADessin.h
+constantes.h
+E:/C++/Tous pires/Toupies-DL/general/headers/constantes.h
+
+E:/C++/Tous pires/Toupies-DL/general/headers/Integrable.h
+Vecteur.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Vecteur.h
+Dessinable.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Dessinable.h
+constantes.h
+E:/C++/Tous pires/Toupies-DL/general/headers/constantes.h
+iostream
+-
+
+E:/C++/Tous pires/Toupies-DL/general/headers/Integrateur.h
+Clonable.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Clonable.h
+constantes.h
+E:/C++/Tous pires/Toupies-DL/general/headers/constantes.h
+Integrable.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Integrable.h
+
+E:/C++/Tous pires/Toupies-DL/general/headers/Matrice3.h
+Vecteur.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Vecteur.h
+string
+-
+
+E:/C++/Tous pires/Toupies-DL/general/headers/SupportADessin.h
+
+E:/C++/Tous pires/Toupies-DL/general/headers/Systeme.h
+vector
+-
+Dessinable.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Dessinable.h
+iostream
+-
+Integrateur.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Integrateur.h
+
+E:/C++/Tous pires/Toupies-DL/general/headers/Tests/Bille.h
+../Integrable.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Integrable.h
+../constantes.h
+E:/C++/Tous pires/Toupies-DL/general/headers/constantes.h
+
+E:/C++/Tous pires/Toupies-DL/general/headers/Tests/Oscillateur.h
+../Integrable.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Integrable.h
+
+E:/C++/Tous pires/Toupies-DL/general/headers/TextViewer.h
+iostream
+-
+Systeme.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Systeme.h
+ConeSimple.h
+E:/C++/Tous pires/Toupies-DL/general/headers/ConeSimple.h
+Clonable.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Clonable.h
+Tests/Oscillateur.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Tests/Oscillateur.h
+Tests/Bille.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Tests/Bille.h
+ToupieChinoise.h
+E:/C++/Tous pires/Toupies-DL/general/headers/ToupieChinoise.h
+
+E:/C++/Tous pires/Toupies-DL/general/headers/Toupie.h
+Integrable.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Integrable.h
+Matrice3.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Matrice3.h
+string
+-
+
+E:/C++/Tous pires/Toupies-DL/general/headers/ToupieChinoise.h
+Toupie.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Toupie.h
+
+E:/C++/Tous pires/Toupies-DL/general/headers/Vecteur.h
+vector
+-
+string
+-
+iostream
+-
+initializer_list
+-
+constantes.h
+E:/C++/Tous pires/Toupies-DL/general/headers/constantes.h
+
+E:/C++/Tous pires/Toupies-DL/general/headers/constantes.h
+Vecteur.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Vecteur.h
+iostream
+-
+

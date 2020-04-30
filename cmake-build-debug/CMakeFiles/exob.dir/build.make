@@ -56,193 +56,241 @@ include CMakeFiles/exob.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/exob.dir/flags.make
 
-CMakeFiles/exob.dir/source/constantes.cpp.obj: CMakeFiles/exob.dir/flags.make
-CMakeFiles/exob.dir/source/constantes.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
-CMakeFiles/exob.dir/source/constantes.cpp.obj: ../source/constantes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/exob.dir/source/constantes.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\source\constantes.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\source\constantes.cpp"
+CMakeFiles/exob.dir/general/source/constantes.cpp.obj: CMakeFiles/exob.dir/flags.make
+CMakeFiles/exob.dir/general/source/constantes.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
+CMakeFiles/exob.dir/general/source/constantes.cpp.obj: ../general/source/constantes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/exob.dir/general/source/constantes.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\general\source\constantes.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\constantes.cpp"
 
-CMakeFiles/exob.dir/source/constantes.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/source/constantes.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\source\constantes.cpp" > CMakeFiles\exob.dir\source\constantes.cpp.i
+CMakeFiles/exob.dir/general/source/constantes.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/general/source/constantes.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\constantes.cpp" > CMakeFiles\exob.dir\general\source\constantes.cpp.i
 
-CMakeFiles/exob.dir/source/constantes.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/source/constantes.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\source\constantes.cpp" -o CMakeFiles\exob.dir\source\constantes.cpp.s
+CMakeFiles/exob.dir/general/source/constantes.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/general/source/constantes.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\constantes.cpp" -o CMakeFiles\exob.dir\general\source\constantes.cpp.s
 
-CMakeFiles/exob.dir/source/Integrable.cpp.obj: CMakeFiles/exob.dir/flags.make
-CMakeFiles/exob.dir/source/Integrable.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
-CMakeFiles/exob.dir/source/Integrable.cpp.obj: ../source/Integrable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/exob.dir/source/Integrable.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\source\Integrable.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\source\Integrable.cpp"
+CMakeFiles/exob.dir/general/source/Integrable.cpp.obj: CMakeFiles/exob.dir/flags.make
+CMakeFiles/exob.dir/general/source/Integrable.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
+CMakeFiles/exob.dir/general/source/Integrable.cpp.obj: ../general/source/Integrable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/exob.dir/general/source/Integrable.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\general\source\Integrable.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\Integrable.cpp"
 
-CMakeFiles/exob.dir/source/Integrable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/source/Integrable.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\source\Integrable.cpp" > CMakeFiles\exob.dir\source\Integrable.cpp.i
+CMakeFiles/exob.dir/general/source/Integrable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/general/source/Integrable.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\Integrable.cpp" > CMakeFiles\exob.dir\general\source\Integrable.cpp.i
 
-CMakeFiles/exob.dir/source/Integrable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/source/Integrable.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\source\Integrable.cpp" -o CMakeFiles\exob.dir\source\Integrable.cpp.s
+CMakeFiles/exob.dir/general/source/Integrable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/general/source/Integrable.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\Integrable.cpp" -o CMakeFiles\exob.dir\general\source\Integrable.cpp.s
 
-CMakeFiles/exob.dir/source/Integrateur.cpp.obj: CMakeFiles/exob.dir/flags.make
-CMakeFiles/exob.dir/source/Integrateur.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
-CMakeFiles/exob.dir/source/Integrateur.cpp.obj: ../source/Integrateur.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/exob.dir/source/Integrateur.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\source\Integrateur.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\source\Integrateur.cpp"
+CMakeFiles/exob.dir/general/source/Integrateur.cpp.obj: CMakeFiles/exob.dir/flags.make
+CMakeFiles/exob.dir/general/source/Integrateur.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
+CMakeFiles/exob.dir/general/source/Integrateur.cpp.obj: ../general/source/Integrateur.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/exob.dir/general/source/Integrateur.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\general\source\Integrateur.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\Integrateur.cpp"
 
-CMakeFiles/exob.dir/source/Integrateur.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/source/Integrateur.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\source\Integrateur.cpp" > CMakeFiles\exob.dir\source\Integrateur.cpp.i
+CMakeFiles/exob.dir/general/source/Integrateur.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/general/source/Integrateur.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\Integrateur.cpp" > CMakeFiles\exob.dir\general\source\Integrateur.cpp.i
 
-CMakeFiles/exob.dir/source/Integrateur.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/source/Integrateur.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\source\Integrateur.cpp" -o CMakeFiles\exob.dir\source\Integrateur.cpp.s
+CMakeFiles/exob.dir/general/source/Integrateur.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/general/source/Integrateur.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\Integrateur.cpp" -o CMakeFiles\exob.dir\general\source\Integrateur.cpp.s
 
-CMakeFiles/exob.dir/source/Matrice3.cpp.obj: CMakeFiles/exob.dir/flags.make
-CMakeFiles/exob.dir/source/Matrice3.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
-CMakeFiles/exob.dir/source/Matrice3.cpp.obj: ../source/Matrice3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/exob.dir/source/Matrice3.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\source\Matrice3.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\source\Matrice3.cpp"
+CMakeFiles/exob.dir/general/source/Matrice3.cpp.obj: CMakeFiles/exob.dir/flags.make
+CMakeFiles/exob.dir/general/source/Matrice3.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
+CMakeFiles/exob.dir/general/source/Matrice3.cpp.obj: ../general/source/Matrice3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/exob.dir/general/source/Matrice3.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\general\source\Matrice3.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\Matrice3.cpp"
 
-CMakeFiles/exob.dir/source/Matrice3.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/source/Matrice3.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\source\Matrice3.cpp" > CMakeFiles\exob.dir\source\Matrice3.cpp.i
+CMakeFiles/exob.dir/general/source/Matrice3.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/general/source/Matrice3.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\Matrice3.cpp" > CMakeFiles\exob.dir\general\source\Matrice3.cpp.i
 
-CMakeFiles/exob.dir/source/Matrice3.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/source/Matrice3.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\source\Matrice3.cpp" -o CMakeFiles\exob.dir\source\Matrice3.cpp.s
+CMakeFiles/exob.dir/general/source/Matrice3.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/general/source/Matrice3.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\Matrice3.cpp" -o CMakeFiles\exob.dir\general\source\Matrice3.cpp.s
 
-CMakeFiles/exob.dir/source/Toupie.cpp.obj: CMakeFiles/exob.dir/flags.make
-CMakeFiles/exob.dir/source/Toupie.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
-CMakeFiles/exob.dir/source/Toupie.cpp.obj: ../source/Toupie.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/exob.dir/source/Toupie.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\source\Toupie.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\source\Toupie.cpp"
+CMakeFiles/exob.dir/general/source/Toupie.cpp.obj: CMakeFiles/exob.dir/flags.make
+CMakeFiles/exob.dir/general/source/Toupie.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
+CMakeFiles/exob.dir/general/source/Toupie.cpp.obj: ../general/source/Toupie.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/exob.dir/general/source/Toupie.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\general\source\Toupie.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\Toupie.cpp"
 
-CMakeFiles/exob.dir/source/Toupie.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/source/Toupie.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\source\Toupie.cpp" > CMakeFiles\exob.dir\source\Toupie.cpp.i
+CMakeFiles/exob.dir/general/source/Toupie.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/general/source/Toupie.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\Toupie.cpp" > CMakeFiles\exob.dir\general\source\Toupie.cpp.i
 
-CMakeFiles/exob.dir/source/Toupie.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/source/Toupie.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\source\Toupie.cpp" -o CMakeFiles\exob.dir\source\Toupie.cpp.s
+CMakeFiles/exob.dir/general/source/Toupie.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/general/source/Toupie.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\Toupie.cpp" -o CMakeFiles\exob.dir\general\source\Toupie.cpp.s
 
-CMakeFiles/exob.dir/source/Vecteur.cpp.obj: CMakeFiles/exob.dir/flags.make
-CMakeFiles/exob.dir/source/Vecteur.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
-CMakeFiles/exob.dir/source/Vecteur.cpp.obj: ../source/Vecteur.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/exob.dir/source/Vecteur.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\source\Vecteur.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\source\Vecteur.cpp"
+CMakeFiles/exob.dir/general/source/Vecteur.cpp.obj: CMakeFiles/exob.dir/flags.make
+CMakeFiles/exob.dir/general/source/Vecteur.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
+CMakeFiles/exob.dir/general/source/Vecteur.cpp.obj: ../general/source/Vecteur.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/exob.dir/general/source/Vecteur.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\general\source\Vecteur.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\Vecteur.cpp"
 
-CMakeFiles/exob.dir/source/Vecteur.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/source/Vecteur.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\source\Vecteur.cpp" > CMakeFiles\exob.dir\source\Vecteur.cpp.i
+CMakeFiles/exob.dir/general/source/Vecteur.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/general/source/Vecteur.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\Vecteur.cpp" > CMakeFiles\exob.dir\general\source\Vecteur.cpp.i
 
-CMakeFiles/exob.dir/source/Vecteur.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/source/Vecteur.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\source\Vecteur.cpp" -o CMakeFiles\exob.dir\source\Vecteur.cpp.s
+CMakeFiles/exob.dir/general/source/Vecteur.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/general/source/Vecteur.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\Vecteur.cpp" -o CMakeFiles\exob.dir\general\source\Vecteur.cpp.s
 
-CMakeFiles/exob.dir/source/Systeme.cpp.obj: CMakeFiles/exob.dir/flags.make
-CMakeFiles/exob.dir/source/Systeme.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
-CMakeFiles/exob.dir/source/Systeme.cpp.obj: ../source/Systeme.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/exob.dir/source/Systeme.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\source\Systeme.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\source\Systeme.cpp"
+CMakeFiles/exob.dir/general/source/Systeme.cpp.obj: CMakeFiles/exob.dir/flags.make
+CMakeFiles/exob.dir/general/source/Systeme.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
+CMakeFiles/exob.dir/general/source/Systeme.cpp.obj: ../general/source/Systeme.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/exob.dir/general/source/Systeme.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\general\source\Systeme.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\Systeme.cpp"
 
-CMakeFiles/exob.dir/source/Systeme.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/source/Systeme.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\source\Systeme.cpp" > CMakeFiles\exob.dir\source\Systeme.cpp.i
+CMakeFiles/exob.dir/general/source/Systeme.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/general/source/Systeme.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\Systeme.cpp" > CMakeFiles\exob.dir\general\source\Systeme.cpp.i
 
-CMakeFiles/exob.dir/source/Systeme.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/source/Systeme.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\source\Systeme.cpp" -o CMakeFiles\exob.dir\source\Systeme.cpp.s
+CMakeFiles/exob.dir/general/source/Systeme.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/general/source/Systeme.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\Systeme.cpp" -o CMakeFiles\exob.dir\general\source\Systeme.cpp.s
 
-CMakeFiles/exob.dir/source/Dessinable.cpp.obj: CMakeFiles/exob.dir/flags.make
-CMakeFiles/exob.dir/source/Dessinable.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
-CMakeFiles/exob.dir/source/Dessinable.cpp.obj: ../source/Dessinable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/exob.dir/source/Dessinable.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\source\Dessinable.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\source\Dessinable.cpp"
+CMakeFiles/exob.dir/general/source/Dessinable.cpp.obj: CMakeFiles/exob.dir/flags.make
+CMakeFiles/exob.dir/general/source/Dessinable.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
+CMakeFiles/exob.dir/general/source/Dessinable.cpp.obj: ../general/source/Dessinable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/exob.dir/general/source/Dessinable.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\general\source\Dessinable.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\Dessinable.cpp"
 
-CMakeFiles/exob.dir/source/Dessinable.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/source/Dessinable.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\source\Dessinable.cpp" > CMakeFiles\exob.dir\source\Dessinable.cpp.i
+CMakeFiles/exob.dir/general/source/Dessinable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/general/source/Dessinable.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\Dessinable.cpp" > CMakeFiles\exob.dir\general\source\Dessinable.cpp.i
 
-CMakeFiles/exob.dir/source/Dessinable.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/source/Dessinable.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\source\Dessinable.cpp" -o CMakeFiles\exob.dir\source\Dessinable.cpp.s
+CMakeFiles/exob.dir/general/source/Dessinable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/general/source/Dessinable.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\Dessinable.cpp" -o CMakeFiles\exob.dir\general\source\Dessinable.cpp.s
 
-CMakeFiles/exob.dir/source/ConeSimple.cpp.obj: CMakeFiles/exob.dir/flags.make
-CMakeFiles/exob.dir/source/ConeSimple.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
-CMakeFiles/exob.dir/source/ConeSimple.cpp.obj: ../source/ConeSimple.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/exob.dir/source/ConeSimple.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\source\ConeSimple.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\source\ConeSimple.cpp"
+CMakeFiles/exob.dir/general/source/ConeSimple.cpp.obj: CMakeFiles/exob.dir/flags.make
+CMakeFiles/exob.dir/general/source/ConeSimple.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
+CMakeFiles/exob.dir/general/source/ConeSimple.cpp.obj: ../general/source/ConeSimple.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/exob.dir/general/source/ConeSimple.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\general\source\ConeSimple.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\ConeSimple.cpp"
 
-CMakeFiles/exob.dir/source/ConeSimple.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/source/ConeSimple.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\source\ConeSimple.cpp" > CMakeFiles\exob.dir\source\ConeSimple.cpp.i
+CMakeFiles/exob.dir/general/source/ConeSimple.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/general/source/ConeSimple.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\ConeSimple.cpp" > CMakeFiles\exob.dir\general\source\ConeSimple.cpp.i
 
-CMakeFiles/exob.dir/source/ConeSimple.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/source/ConeSimple.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\source\ConeSimple.cpp" -o CMakeFiles\exob.dir\source\ConeSimple.cpp.s
+CMakeFiles/exob.dir/general/source/ConeSimple.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/general/source/ConeSimple.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\ConeSimple.cpp" -o CMakeFiles\exob.dir\general\source\ConeSimple.cpp.s
 
-CMakeFiles/exob.dir/source/TextViewer.cpp.obj: CMakeFiles/exob.dir/flags.make
-CMakeFiles/exob.dir/source/TextViewer.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
-CMakeFiles/exob.dir/source/TextViewer.cpp.obj: ../source/TextViewer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/exob.dir/source/TextViewer.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\source\TextViewer.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\source\TextViewer.cpp"
+CMakeFiles/exob.dir/general/source/TextViewer.cpp.obj: CMakeFiles/exob.dir/flags.make
+CMakeFiles/exob.dir/general/source/TextViewer.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
+CMakeFiles/exob.dir/general/source/TextViewer.cpp.obj: ../general/source/TextViewer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/exob.dir/general/source/TextViewer.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\general\source\TextViewer.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\TextViewer.cpp"
 
-CMakeFiles/exob.dir/source/TextViewer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/source/TextViewer.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\source\TextViewer.cpp" > CMakeFiles\exob.dir\source\TextViewer.cpp.i
+CMakeFiles/exob.dir/general/source/TextViewer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/general/source/TextViewer.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\TextViewer.cpp" > CMakeFiles\exob.dir\general\source\TextViewer.cpp.i
 
-CMakeFiles/exob.dir/source/TextViewer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/source/TextViewer.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\source\TextViewer.cpp" -o CMakeFiles\exob.dir\source\TextViewer.cpp.s
+CMakeFiles/exob.dir/general/source/TextViewer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/general/source/TextViewer.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\TextViewer.cpp" -o CMakeFiles\exob.dir\general\source\TextViewer.cpp.s
 
-CMakeFiles/exob.dir/exercice9b.cpp.obj: CMakeFiles/exob.dir/flags.make
-CMakeFiles/exob.dir/exercice9b.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
-CMakeFiles/exob.dir/exercice9b.cpp.obj: ../exercice9b.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/exob.dir/exercice9b.cpp.obj"
-	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\exercice9b.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\exercice9b.cpp"
+CMakeFiles/exob.dir/general/source/Tests/Bille.cpp.obj: CMakeFiles/exob.dir/flags.make
+CMakeFiles/exob.dir/general/source/Tests/Bille.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
+CMakeFiles/exob.dir/general/source/Tests/Bille.cpp.obj: ../general/source/Tests/Bille.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/exob.dir/general/source/Tests/Bille.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\general\source\Tests\Bille.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\Tests\Bille.cpp"
 
-CMakeFiles/exob.dir/exercice9b.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/exercice9b.cpp.i"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\exercice9b.cpp" > CMakeFiles\exob.dir\exercice9b.cpp.i
+CMakeFiles/exob.dir/general/source/Tests/Bille.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/general/source/Tests/Bille.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\Tests\Bille.cpp" > CMakeFiles\exob.dir\general\source\Tests\Bille.cpp.i
 
-CMakeFiles/exob.dir/exercice9b.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/exercice9b.cpp.s"
-	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\exercice9b.cpp" -o CMakeFiles\exob.dir\exercice9b.cpp.s
+CMakeFiles/exob.dir/general/source/Tests/Bille.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/general/source/Tests/Bille.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\Tests\Bille.cpp" -o CMakeFiles\exob.dir\general\source\Tests\Bille.cpp.s
+
+CMakeFiles/exob.dir/general/source/Tests/Oscillateur.cpp.obj: CMakeFiles/exob.dir/flags.make
+CMakeFiles/exob.dir/general/source/Tests/Oscillateur.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
+CMakeFiles/exob.dir/general/source/Tests/Oscillateur.cpp.obj: ../general/source/Tests/Oscillateur.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/exob.dir/general/source/Tests/Oscillateur.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\general\source\Tests\Oscillateur.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\Tests\Oscillateur.cpp"
+
+CMakeFiles/exob.dir/general/source/Tests/Oscillateur.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/general/source/Tests/Oscillateur.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\Tests\Oscillateur.cpp" > CMakeFiles\exob.dir\general\source\Tests\Oscillateur.cpp.i
+
+CMakeFiles/exob.dir/general/source/Tests/Oscillateur.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/general/source/Tests/Oscillateur.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\Tests\Oscillateur.cpp" -o CMakeFiles\exob.dir\general\source\Tests\Oscillateur.cpp.s
+
+CMakeFiles/exob.dir/general/source/ToupieChinoise.cpp.obj: CMakeFiles/exob.dir/flags.make
+CMakeFiles/exob.dir/general/source/ToupieChinoise.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
+CMakeFiles/exob.dir/general/source/ToupieChinoise.cpp.obj: ../general/source/ToupieChinoise.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/exob.dir/general/source/ToupieChinoise.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\general\source\ToupieChinoise.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\general\source\ToupieChinoise.cpp"
+
+CMakeFiles/exob.dir/general/source/ToupieChinoise.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/general/source/ToupieChinoise.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\general\source\ToupieChinoise.cpp" > CMakeFiles\exob.dir\general\source\ToupieChinoise.cpp.i
+
+CMakeFiles/exob.dir/general/source/ToupieChinoise.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/general/source/ToupieChinoise.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\general\source\ToupieChinoise.cpp" -o CMakeFiles\exob.dir\general\source\ToupieChinoise.cpp.s
+
+CMakeFiles/exob.dir/ExerciceP9/exercice9b.cpp.obj: CMakeFiles/exob.dir/flags.make
+CMakeFiles/exob.dir/ExerciceP9/exercice9b.cpp.obj: CMakeFiles/exob.dir/includes_CXX.rsp
+CMakeFiles/exob.dir/ExerciceP9/exercice9b.cpp.obj: ../ExerciceP9/exercice9b.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/exob.dir/ExerciceP9/exercice9b.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\exob.dir\ExerciceP9\exercice9b.cpp.obj -c "E:\C++\Tous pires\Toupies-DL\ExerciceP9\exercice9b.cpp"
+
+CMakeFiles/exob.dir/ExerciceP9/exercice9b.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/exob.dir/ExerciceP9/exercice9b.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "E:\C++\Tous pires\Toupies-DL\ExerciceP9\exercice9b.cpp" > CMakeFiles\exob.dir\ExerciceP9\exercice9b.cpp.i
+
+CMakeFiles/exob.dir/ExerciceP9/exercice9b.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/exob.dir/ExerciceP9/exercice9b.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "E:\C++\Tous pires\Toupies-DL\ExerciceP9\exercice9b.cpp" -o CMakeFiles\exob.dir\ExerciceP9\exercice9b.cpp.s
 
 # Object files for target exob
 exob_OBJECTS = \
-"CMakeFiles/exob.dir/source/constantes.cpp.obj" \
-"CMakeFiles/exob.dir/source/Integrable.cpp.obj" \
-"CMakeFiles/exob.dir/source/Integrateur.cpp.obj" \
-"CMakeFiles/exob.dir/source/Matrice3.cpp.obj" \
-"CMakeFiles/exob.dir/source/Toupie.cpp.obj" \
-"CMakeFiles/exob.dir/source/Vecteur.cpp.obj" \
-"CMakeFiles/exob.dir/source/Systeme.cpp.obj" \
-"CMakeFiles/exob.dir/source/Dessinable.cpp.obj" \
-"CMakeFiles/exob.dir/source/ConeSimple.cpp.obj" \
-"CMakeFiles/exob.dir/source/TextViewer.cpp.obj" \
-"CMakeFiles/exob.dir/exercice9b.cpp.obj"
+"CMakeFiles/exob.dir/general/source/constantes.cpp.obj" \
+"CMakeFiles/exob.dir/general/source/Integrable.cpp.obj" \
+"CMakeFiles/exob.dir/general/source/Integrateur.cpp.obj" \
+"CMakeFiles/exob.dir/general/source/Matrice3.cpp.obj" \
+"CMakeFiles/exob.dir/general/source/Toupie.cpp.obj" \
+"CMakeFiles/exob.dir/general/source/Vecteur.cpp.obj" \
+"CMakeFiles/exob.dir/general/source/Systeme.cpp.obj" \
+"CMakeFiles/exob.dir/general/source/Dessinable.cpp.obj" \
+"CMakeFiles/exob.dir/general/source/ConeSimple.cpp.obj" \
+"CMakeFiles/exob.dir/general/source/TextViewer.cpp.obj" \
+"CMakeFiles/exob.dir/general/source/Tests/Bille.cpp.obj" \
+"CMakeFiles/exob.dir/general/source/Tests/Oscillateur.cpp.obj" \
+"CMakeFiles/exob.dir/general/source/ToupieChinoise.cpp.obj" \
+"CMakeFiles/exob.dir/ExerciceP9/exercice9b.cpp.obj"
 
 # External object files for target exob
 exob_EXTERNAL_OBJECTS =
 
-exob.exe: CMakeFiles/exob.dir/source/constantes.cpp.obj
-exob.exe: CMakeFiles/exob.dir/source/Integrable.cpp.obj
-exob.exe: CMakeFiles/exob.dir/source/Integrateur.cpp.obj
-exob.exe: CMakeFiles/exob.dir/source/Matrice3.cpp.obj
-exob.exe: CMakeFiles/exob.dir/source/Toupie.cpp.obj
-exob.exe: CMakeFiles/exob.dir/source/Vecteur.cpp.obj
-exob.exe: CMakeFiles/exob.dir/source/Systeme.cpp.obj
-exob.exe: CMakeFiles/exob.dir/source/Dessinable.cpp.obj
-exob.exe: CMakeFiles/exob.dir/source/ConeSimple.cpp.obj
-exob.exe: CMakeFiles/exob.dir/source/TextViewer.cpp.obj
-exob.exe: CMakeFiles/exob.dir/exercice9b.cpp.obj
+exob.exe: CMakeFiles/exob.dir/general/source/constantes.cpp.obj
+exob.exe: CMakeFiles/exob.dir/general/source/Integrable.cpp.obj
+exob.exe: CMakeFiles/exob.dir/general/source/Integrateur.cpp.obj
+exob.exe: CMakeFiles/exob.dir/general/source/Matrice3.cpp.obj
+exob.exe: CMakeFiles/exob.dir/general/source/Toupie.cpp.obj
+exob.exe: CMakeFiles/exob.dir/general/source/Vecteur.cpp.obj
+exob.exe: CMakeFiles/exob.dir/general/source/Systeme.cpp.obj
+exob.exe: CMakeFiles/exob.dir/general/source/Dessinable.cpp.obj
+exob.exe: CMakeFiles/exob.dir/general/source/ConeSimple.cpp.obj
+exob.exe: CMakeFiles/exob.dir/general/source/TextViewer.cpp.obj
+exob.exe: CMakeFiles/exob.dir/general/source/Tests/Bille.cpp.obj
+exob.exe: CMakeFiles/exob.dir/general/source/Tests/Oscillateur.cpp.obj
+exob.exe: CMakeFiles/exob.dir/general/source/ToupieChinoise.cpp.obj
+exob.exe: CMakeFiles/exob.dir/ExerciceP9/exercice9b.cpp.obj
 exob.exe: CMakeFiles/exob.dir/build.make
 exob.exe: CMakeFiles/exob.dir/linklibs.rsp
 exob.exe: CMakeFiles/exob.dir/objects1.rsp
 exob.exe: CMakeFiles/exob.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable exob.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="E:\C++\Tous pires\Toupies-DL\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable exob.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\exob.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

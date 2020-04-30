@@ -1,0 +1,1364 @@
+==== Corps 1 :
+Cone simple
+Angles                   :  [0.010000 0.000000 0.000000]
+Vitesse Angulaire        :  [0.000000 0.000000 60.000000]
+masse [kg]               :  0.0392699
+masse volumique [kg m-3] :  0.1
+distance [m]             :  1.125
+rayon [m]                :  0.5
+hauteur [m]              :  1.5
+position (x,y,z) [m]     :  [0.000000 0.000000 0.000000]
+
+t=0.01 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.010004 0.000004 0.599996]  ;  Dérivées : [0.000795 0.001288 59.998712]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.02 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.010016 0.000034 1.199966]  ;  Dérivées : [0.001590 0.005143 59.994857]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.03 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.010036 0.000116 1.799884]  ;  Dérivées : [0.002385 0.011537 59.988463]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 3.30872e-024
+
+t=0.04 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.010064 0.000273 2.399727]  ;  Dérivées : [0.003179 0.020423 59.979578]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 6.61744e-024
+
+t=0.05 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.010099 0.000532 2.999468]  ;  Dérivées : [0.003973 0.031736 59.968266]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.06 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.010143 0.000916 3.599084]  ;  Dérivées : [0.004765 0.045395 59.954607]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.07 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.010195 0.001448 4.198552]  ;  Dérivées : [0.005557 0.061306 59.938697]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 2.64698e-023
+
+t=0.08 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.010254 0.002149 4.797851]  ;  Dérivées : [0.006347 0.079358 59.920647]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.09 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.010322 0.003041 5.396959]  ;  Dérivées : [0.007137 0.099429 59.900576]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.1 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.010397 0.004144 5.995856]  ;  Dérivées : [0.007925 0.121389 59.878617]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.11 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.010480 0.005475 6.594525]  ;  Dérivées : [0.008712 0.145099 59.854909]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.12 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.010571 0.007051 7.192949]  ;  Dérivées : [0.009498 0.170411 59.829598]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.13 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.010670 0.008888 7.791112]  ;  Dérivées : [0.010283 0.197178 59.802833]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 2.11758e-022
+
+t=0.14 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.010777 0.010999 8.389001]  ;  Dérivées : [0.011067 0.225246 59.774767]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -2.11758e-022
+
+t=0.15 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.010891 0.013397 8.986604]  ;  Dérivées : [0.011851 0.254462 59.745553]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.16 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.011014 0.016092 9.583909]  ;  Dérivées : [0.012634 0.284675 59.715342]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.17 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.011144 0.019093 10.180908]  ;  Dérivées : [0.013417 0.315735 59.684285]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.18 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.011282 0.022409 10.777592]  ;  Dérivées : [0.014201 0.347496 59.652526]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 4.23516e-022
+
+t=0.19 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.011428 0.026045 11.373957]  ;  Dérivées : [0.014985 0.379819 59.620206]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.2 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.011582 0.030007 11.969995]  ;  Dérivées : [0.015771 0.412566 59.587461]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.21 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.011744 0.034297 12.565705]  ;  Dérivées : [0.016557 0.445612 59.554419]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.22 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.011913 0.038919 13.161083]  ;  Dérivées : [0.017346 0.478834 59.521200]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -8.47033e-022
+
+t=0.23 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.012090 0.043874 13.756129]  ;  Dérivées : [0.018137 0.512120 59.487918]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.24 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.012276 0.049162 14.350841]  ;  Dérivées : [0.018931 0.545364 59.454678]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -8.47033e-022
+
+t=0.25 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.012469 0.054781 14.945223]  ;  Dérivées : [0.019729 0.578469 59.421576]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.26 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.012670 0.060730 15.539274]  ;  Dérivées : [0.020531 0.611347 59.388702]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.27 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.012880 0.067007 16.132998]  ;  Dérivées : [0.021337 0.643917 59.356136]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 1.69407e-021
+
+t=0.28 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.013097 0.073607 16.726398]  ;  Dérivées : [0.022149 0.676107 59.323951]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.29 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.013323 0.080528 17.319478]  ;  Dérivées : [0.022966 0.707852 59.292211]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.3 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.013556 0.087763 17.912244]  ;  Dérivées : [0.023790 0.739094 59.260973]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.31 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.013799 0.095308 18.504699]  ;  Dérivées : [0.024621 0.769785 59.230288]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.32 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.014049 0.103156 19.096851]  ;  Dérivées : [0.025460 0.799881 59.200198]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 3.38813e-021
+
+t=0.33 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.014308 0.111303 19.688706]  ;  Dérivées : [0.026307 0.829344 59.170741]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -3.38813e-021
+
+t=0.34 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.014575 0.119741 20.280268]  ;  Dérivées : [0.027164 0.858145 59.141946]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.35 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.014851 0.128464 20.871547]  ;  Dérivées : [0.028030 0.886257 59.113840]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -3.38813e-021
+
+t=0.36 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.015136 0.137464 21.462548]  ;  Dérivées : [0.028906 0.913662 59.086443]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.37 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.015429 0.146735 22.053278]  ;  Dérivées : [0.029793 0.940343 59.059769]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.38 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.015732 0.156268 22.643745]  ;  Dérivées : [0.030693 0.966289 59.033830]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.39 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.016043 0.166058 23.233957]  ;  Dérivées : [0.031604 0.991494 59.008634]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -3.38813e-021
+
+t=0.4 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.016364 0.176096 23.823921]  ;  Dérivées : [0.032529 1.015953 58.984183]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 3.38813e-021
+
+t=0.41 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.016694 0.186374 24.413643]  ;  Dérivées : [0.033467 1.039666 58.960479]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.42 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.017033 0.196887 25.003133]  ;  Dérivées : [0.034420 1.062636 58.937518]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.43 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.017382 0.207625 25.592396]  ;  Dérivées : [0.035387 1.084866 58.915298]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.44 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.017741 0.218581 26.181441]  ;  Dérivées : [0.036371 1.106365 58.893809]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.45 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.018110 0.229750 26.770275]  ;  Dérivées : [0.037371 1.127141 58.873044]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -6.77626e-021
+
+t=0.46 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.018488 0.241122 27.358904]  ;  Dérivées : [0.038388 1.147204 58.852992]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.47 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.018877 0.252691 27.947337]  ;  Dérivées : [0.039423 1.166568 58.833640]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -6.77626e-021
+
+t=0.48 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.019277 0.264451 28.535579]  ;  Dérivées : [0.040477 1.185244 58.814977]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -6.77626e-021
+
+t=0.49 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.019687 0.276394 29.123639]  ;  Dérivées : [0.041549 1.203247 58.796986]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.5 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.020108 0.288514 29.711521]  ;  Dérivées : [0.042642 1.220592 58.779654]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 6.77626e-021
+
+t=0.51 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.020540 0.300804 30.299234]  ;  Dérivées : [0.043755 1.237296 58.762965]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.52 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.020983 0.313258 30.886783]  ;  Dérivées : [0.044890 1.253374 58.746902]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.53 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.021438 0.325869 31.474174]  ;  Dérivées : [0.046047 1.268842 58.731449]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.54 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.021904 0.338632 32.061414]  ;  Dérivées : [0.047226 1.283719 58.716589]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 1.35525e-020
+
+t=0.55 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.022382 0.351542 32.648508]  ;  Dérivées : [0.048429 1.298021 58.702304]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.56 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.022873 0.364591 33.235462]  ;  Dérivées : [0.049657 1.311765 58.688578]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.57 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.023376 0.377775 33.822281]  ;  Dérivées : [0.050909 1.324970 58.675393]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -1.35525e-020
+
+t=0.58 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.023891 0.391089 34.408971]  ;  Dérivées : [0.052187 1.337651 58.662731]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.59 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.024420 0.404526 34.995537]  ;  Dérivées : [0.053491 1.349826 58.650577]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.6 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.024961 0.418084 35.581984]  ;  Dérivées : [0.054823 1.361512 58.638913]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 1.35525e-020
+
+t=0.61 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.025516 0.431755 36.168317]  ;  Dérivées : [0.056183 1.372725 58.627722]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 1.35525e-020
+
+t=0.62 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.026085 0.445537 36.754540]  ;  Dérivées : [0.057572 1.383483 58.616988]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.63 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.026668 0.459423 37.340658]  ;  Dérivées : [0.058990 1.393801 58.606695]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -1.35525e-020
+
+t=0.64 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.027265 0.473411 37.926676]  ;  Dérivées : [0.060439 1.403695 58.596827]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.65 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.027876 0.487496 38.512596]  ;  Dérivées : [0.061919 1.413181 58.587368]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.66 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.028503 0.501673 39.098424]  ;  Dérivées : [0.063431 1.422273 58.578305]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 2.71051e-020
+
+t=0.67 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.029145 0.515940 39.684164]  ;  Dérivées : [0.064976 1.430987 58.569621]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.68 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.029803 0.530292 40.269818]  ;  Dérivées : [0.066556 1.439337 58.561302]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.69 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.030476 0.544726 40.855391]  ;  Dérivées : [0.068169 1.447337 58.553336]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.7 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.031166 0.559238 41.440886]  ;  Dérivées : [0.069819 1.455000 58.545707]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.71 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.031873 0.573825 42.026306]  ;  Dérivées : [0.071505 1.462340 58.538403]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -2.71051e-020
+
+t=0.72 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.032597 0.588483 42.611655]  ;  Dérivées : [0.073228 1.469369 58.531412]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.73 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.033338 0.603211 43.196935]  ;  Dérivées : [0.074990 1.476100 58.524721]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.74 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.034097 0.618004 43.782150]  ;  Dérivées : [0.076791 1.482544 58.518317]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.75 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.034874 0.632861 44.367303]  ;  Dérivées : [0.078633 1.488715 58.512191]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.76 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.035669 0.647778 44.952395]  ;  Dérivées : [0.080516 1.494621 58.506330]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.77 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.036484 0.662752 45.537430]  ;  Dérivées : [0.082442 1.500275 58.500723]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -5.42101e-020
+
+t=0.78 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.037318 0.677782 46.122410]  ;  Dérivées : [0.084411 1.505687 58.495361]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.79 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.038172 0.692865 46.707338]  ;  Dérivées : [0.086424 1.510867 58.490234]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.8 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.039047 0.707999 47.292216]  ;  Dérivées : [0.088483 1.515824 58.485331]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.81 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.039942 0.723181 47.877045]  ;  Dérivées : [0.090589 1.520568 58.480645]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.82 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.040859 0.738410 48.461829]  ;  Dérivées : [0.092743 1.525109 58.476164]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.83 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.041797 0.753683 49.046569]  ;  Dérivées : [0.094945 1.529453 58.471883]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.84 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.042758 0.768998 49.631268]  ;  Dérivées : [0.097198 1.533611 58.467791]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.85 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.043741 0.784354 50.215926]  ;  Dérivées : [0.099503 1.537590 58.463881]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.86 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.044748 0.799749 50.800546]  ;  Dérivées : [0.101860 1.541397 58.460146]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.87 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.045779 0.815182 51.385129]  ;  Dérivées : [0.104270 1.545041 58.456578]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -5.42101e-020
+
+t=0.88 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.046834 0.830650 51.969678]  ;  Dérivées : [0.106736 1.548528 58.453170]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.89 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.047914 0.846152 52.554193]  ;  Dérivées : [0.109259 1.551865 58.449916]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 5.42101e-020
+
+t=0.9 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.049019 0.861687 53.138677]  ;  Dérivées : [0.111839 1.555059 58.446809]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.91 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.050151 0.877253 53.723130]  ;  Dérivées : [0.114479 1.558116 58.443844]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -1.0842e-019
+
+t=0.92 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.051309 0.892848 54.307554]  ;  Dérivées : [0.117179 1.561042 58.441013]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.93 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.052494 0.908473 54.891950]  ;  Dérivées : [0.119942 1.563843 58.438312]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -1.0842e-019
+
+t=0.94 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.053708 0.924125 55.476321]  ;  Dérivées : [0.122767 1.566525 58.435735]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.95 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.054950 0.939803 56.060666]  ;  Dérivées : [0.125658 1.569092 58.433276]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.96 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.056221 0.955506 56.644986]  ;  Dérivées : [0.128616 1.571551 58.430932]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.97 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.057523 0.971234 57.229285]  ;  Dérivées : [0.131641 1.573906 58.428697]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.98 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.058854 0.986984 57.813561]  ;  Dérivées : [0.134737 1.576162 58.426567]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=0.99 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.060218 1.002757 58.397816]  ;  Dérivées : [0.137903 1.578324 58.424537]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.061613 1.018550 58.982052]  ;  Dérivées : [0.141143 1.580395 58.422604]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.01 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.063041 1.034364 59.566269]  ;  Dérivées : [0.144457 1.582381 58.420763]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 1.0842e-019
+
+t=1.02 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.064502 1.050198 60.150467]  ;  Dérivées : [0.147848 1.584285 58.419010]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 1.0842e-019
+
+t=1.03 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.065998 1.066050 60.734649]  ;  Dérivées : [0.151317 1.586111 58.417343]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 1.0842e-019
+
+t=1.04 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.067529 1.081920 61.318815]  ;  Dérivées : [0.154866 1.587863 58.415757]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -1.0842e-019
+
+t=1.05 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.069095 1.097807 61.902965]  ;  Dérivées : [0.158497 1.589544 58.414250]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 1.0842e-019
+
+t=1.06 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.070699 1.113710 62.487100]  ;  Dérivées : [0.162212 1.591158 58.412817]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.07 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.072340 1.129630 63.071221]  ;  Dérivées : [0.166013 1.592709 58.411457]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.08 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.074019 1.145564 63.655329]  ;  Dérivées : [0.169902 1.594199 58.410167]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 2.1684e-019
+
+t=1.09 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.075738 1.161514 64.239425]  ;  Dérivées : [0.173880 1.595632 58.408943]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -2.1684e-019
+
+t=1.1 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.077497 1.177477 64.823508]  ;  Dérivées : [0.177950 1.597010 58.407784]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -2.1684e-019
+
+t=1.11 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.079298 1.193454 65.407581]  ;  Dérivées : [0.182114 1.598337 58.406687]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -2.1684e-019
+
+t=1.12 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.081140 1.209443 65.991642]  ;  Dérivées : [0.186375 1.599614 58.405649]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.13 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.083025 1.225446 66.575694]  ;  Dérivées : [0.190734 1.600846 58.404669]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.14 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.084955 1.241460 67.159736]  ;  Dérivées : [0.195193 1.602034 58.403745]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -2.1684e-019
+
+t=1.15 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.086930 1.257486 67.743769]  ;  Dérivées : [0.199755 1.603181 58.402873]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.16 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.088950 1.273524 68.327793]  ;  Dérivées : [0.204423 1.604290 58.402054]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.17 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.091018 1.289572 68.911810]  ;  Dérivées : [0.209199 1.605362 58.401285]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -2.1684e-019
+
+t=1.18 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.093135 1.305631 69.495819]  ;  Dérivées : [0.214085 1.606399 58.400564]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.19 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.095301 1.321700 70.079821]  ;  Dérivées : [0.219083 1.607405 58.399890]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.2 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.097517 1.337779 70.663817]  ;  Dérivées : [0.224197 1.608381 58.399261]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -2.1684e-019
+
+t=1.21 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.099785 1.353867 71.247807]  ;  Dérivées : [0.229429 1.609330 58.398677]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.22 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.102106 1.369965 71.831791]  ;  Dérivées : [0.234781 1.610252 58.398136]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -4.33681e-019
+
+t=1.23 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.104481 1.386072 72.415770]  ;  Dérivées : [0.240257 1.611151 58.397636]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.24 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.106911 1.402188 72.999744]  ;  Dérivées : [0.245859 1.612028 58.397178]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -4.33681e-019
+
+t=1.25 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.109399 1.418313 73.583713]  ;  Dérivées : [0.251590 1.612884 58.396759]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -4.33681e-019
+
+t=1.26 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.111944 1.434446 74.167679]  ;  Dérivées : [0.257453 1.613723 58.396380]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -4.33681e-019
+
+t=1.27 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.114548 1.450587 74.751641]  ;  Dérivées : [0.263451 1.614545 58.396038]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.28 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.117213 1.466737 75.335600]  ;  Dérivées : [0.269587 1.615352 58.395734]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -4.33681e-019
+
+t=1.29 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.119940 1.482894 75.919556]  ;  Dérivées : [0.275864 1.616146 58.395467]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 4.33681e-019
+
+t=1.3 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.122731 1.499060 76.503509]  ;  Dérivées : [0.282285 1.616928 58.395236]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.31 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.125586 1.515233 77.087461]  ;  Dérivées : [0.288854 1.617701 58.395042]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -4.33681e-019
+
+t=1.32 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.128508 1.531414 77.671410]  ;  Dérivées : [0.295574 1.618466 58.394882]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -4.33681e-019
+
+t=1.33 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.131498 1.547602 78.255359]  ;  Dérivées : [0.302448 1.619224 58.394758]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.34 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.134558 1.563798 78.839306]  ;  Dérivées : [0.309479 1.619978 58.394668]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.35 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.137689 1.580002 79.423252]  ;  Dérivées : [0.316671 1.620728 58.394613]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 4.33681e-019
+
+t=1.36 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.140892 1.596213 80.007198]  ;  Dérivées : [0.324028 1.621477 58.394593]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 8.67362e-019
+
+t=1.37 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.144170 1.612431 80.591144]  ;  Dérivées : [0.331554 1.622225 58.394608]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 8.67362e-019
+
+t=1.38 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.147524 1.628657 81.175090]  ;  Dérivées : [0.339251 1.622975 58.394656]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 8.67362e-019
+
+t=1.39 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.150955 1.644891 81.759037]  ;  Dérivées : [0.347124 1.623728 58.394740]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.4 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.154467 1.661132 82.342985]  ;  Dérivées : [0.355177 1.624486 58.394859]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.41 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.158059 1.677380 82.926935]  ;  Dérivées : [0.363413 1.625251 58.395012]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.42 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.161736 1.693637 83.510886]  ;  Dérivées : [0.371836 1.626023 58.395201]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 8.67362e-019
+
+t=1.43 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.165497 1.709901 84.094839]  ;  Dérivées : [0.380452 1.626805 58.395426]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.44 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.169345 1.726173 84.678794]  ;  Dérivées : [0.389263 1.627598 58.395688]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -8.67362e-019
+
+t=1.45 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.173283 1.742453 85.262753]  ;  Dérivées : [0.398273 1.628405 58.395986]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.46 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.177311 1.758741 85.846714]  ;  Dérivées : [0.407488 1.629226 58.396323]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 8.67362e-019
+
+t=1.47 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.181433 1.775037 86.430679]  ;  Dérivées : [0.416912 1.630063 58.396697]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 8.67362e-019
+
+t=1.48 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.185650 1.791342 87.014648]  ;  Dérivées : [0.426548 1.630919 58.397111]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 8.67362e-019
+
+t=1.49 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.189965 1.807656 87.598621]  ;  Dérivées : [0.436402 1.631795 58.397564]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 8.67362e-019
+
+t=1.5 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.194379 1.823978 88.182600]  ;  Dérivées : [0.446477 1.632694 58.398059]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 8.67362e-019
+
+t=1.51 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.198895 1.840310 88.766583]  ;  Dérivées : [0.456779 1.633616 58.398596]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.52 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.203515 1.856651 89.350572]  ;  Dérivées : [0.467313 1.634564 58.399176]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.53 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.208242 1.873001 89.934566]  ;  Dérivées : [0.478082 1.635540 58.399801]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.54 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.213078 1.889362 90.518568]  ;  Dérivées : [0.489092 1.636546 58.400472]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.55 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.218025 1.905732 91.102576]  ;  Dérivées : [0.500348 1.637584 58.401190]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -1.73472e-018
+
+t=1.56 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.223086 1.922113 91.686592]  ;  Dérivées : [0.511855 1.638657 58.401957]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.57 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.228263 1.938505 92.270615]  ;  Dérivées : [0.523617 1.639767 58.402775]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.58 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.233559 1.954909 92.854647]  ;  Dérivées : [0.535640 1.640916 58.403645]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.59 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.238977 1.971324 93.438688]  ;  Dérivées : [0.547929 1.642106 58.404569]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -1.73472e-018
+
+t=1.6 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.244518 1.987751 94.022739]  ;  Dérivées : [0.560488 1.643341 58.405550]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.61 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.250187 2.004191 94.606800]  ;  Dérivées : [0.573324 1.644623 58.406589]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.62 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.255986 2.020644 95.190871]  ;  Dérivées : [0.586442 1.645955 58.407689]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -1.73472e-018
+
+t=1.63 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.261917 2.037110 95.774954]  ;  Dérivées : [0.599846 1.647339 58.408853]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -1.73472e-018
+
+t=1.64 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.267984 2.053591 96.359048]  ;  Dérivées : [0.613542 1.648779 58.410081]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.65 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.274189 2.070086 96.943156]  ;  Dérivées : [0.627535 1.650278 58.411379]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -1.73472e-018
+
+t=1.66 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.280535 2.086596 97.527276]  ;  Dérivées : [0.641831 1.651839 58.412747]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 3.46945e-018
+
+t=1.67 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.287026 2.103123 98.111411]  ;  Dérivées : [0.656435 1.653466 58.414190]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.68 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.293665 2.119666 98.695560]  ;  Dérivées : [0.671353 1.655162 58.415710]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.69 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.300455 2.136226 99.279725]  ;  Dérivées : [0.686590 1.656930 58.417310]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.7 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.307398 2.152805 99.863907]  ;  Dérivées : [0.702151 1.658775 58.418995]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.71 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.314499 2.169402 100.448105]  ;  Dérivées : [0.718041 1.660701 58.420768]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -3.46945e-018
+
+t=1.72 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.321760 2.186019 101.032322]  ;  Dérivées : [0.734267 1.662712 58.422633]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.73 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.329185 2.202657 101.616558]  ;  Dérivées : [0.750833 1.664812 58.424594]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.74 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.336778 2.219316 102.200815]  ;  Dérivées : [0.767744 1.667006 58.426655]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.75 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.344541 2.235997 102.785092]  ;  Dérivées : [0.785006 1.669300 58.428822]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.76 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.352479 2.252702 103.369391]  ;  Dérivées : [0.802623 1.671697 58.431098]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 3.46945e-018
+
+t=1.77 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.360595 2.269431 103.953714]  ;  Dérivées : [0.820602 1.674203 58.433489]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.78 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.368892 2.286187 104.538061]  ;  Dérivées : [0.838946 1.676825 58.436000]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -3.46945e-018
+
+t=1.79 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.377375 2.302968 105.122435]  ;  Dérivées : [0.857660 1.679567 58.438637]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.8 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.386047 2.319778 105.706835]  ;  Dérivées : [0.876749 1.682436 58.441405]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 3.46945e-018
+
+t=1.81 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.394911 2.336618 106.291263]  ;  Dérivées : [0.896217 1.685439 58.444311]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.82 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.403972 2.353488 106.875721]  ;  Dérivées : [0.916068 1.688581 58.447362]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -6.93889e-018
+
+t=1.83 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.413234 2.370390 107.460211]  ;  Dérivées : [0.936307 1.691871 58.450564]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 6.93889e-018
+
+t=1.84 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.422700 2.387325 108.044733]  ;  Dérivées : [0.956937 1.695315 58.453925]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -6.93889e-018
+
+t=1.85 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.432374 2.404297 108.629290]  ;  Dérivées : [0.977962 1.698922 58.457452]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.86 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.442260 2.421304 109.213883]  ;  Dérivées : [0.999384 1.702699 58.461153]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.87 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.452363 2.438351 109.798514]  ;  Dérivées : [1.021207 1.706655 58.465037]  ; Energie : 5.73481  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.88 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.462686 2.455438 110.383184]  ;  Dérivées : [1.043432 1.710799 58.469112]  ; Energie : 5.73482  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.89 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.473233 2.472568 110.967897]  ;  Dérivées : [1.066063 1.715141 58.473388]  ; Energie : 5.73482  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.9 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.484008 2.489742 111.552653]  ;  Dérivées : [1.089099 1.719690 58.477874]  ; Energie : 5.73482  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.91 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.495016 2.506962 112.137455]  ;  Dérivées : [1.112543 1.724458 58.482582]  ; Energie : 5.73482  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.92 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.506261 2.524232 112.722305]  ;  Dérivées : [1.136395 1.729454 58.487521]  ; Energie : 5.73482  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.93 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.517746 2.541552 113.307206]  ;  Dérivées : [1.160654 1.734691 58.492703]  ; Energie : 5.73482  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -6.93889e-018
+
+t=1.94 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.529475 2.558926 113.892160]  ;  Dérivées : [1.185320 1.740181 58.498141]  ; Energie : 5.73482  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 6.93889e-018
+
+t=1.95 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.541453 2.576357 114.477170]  ;  Dérivées : [1.210392 1.745936 58.503846]  ; Energie : 5.73482  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 6.93889e-018
+
+t=1.96 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.553684 2.593846 115.062238]  ;  Dérivées : [1.235866 1.751970 58.509833]  ; Energie : 5.73482  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.97 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.566172 2.611397 115.647367]  ;  Dérivées : [1.261740 1.758298 58.516115]  ; Energie : 5.73482  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.98 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.578920 2.629013 116.232561]  ;  Dérivées : [1.288009 1.764933 58.522708]  ; Energie : 5.73482  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=1.99 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.591934 2.646697 116.817823]  ;  Dérivées : [1.314669 1.771892 58.529626]  ; Energie : 5.73482  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -1.38778e-017
+
+t=2 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.605215 2.664452 117.403155]  ;  Dérivées : [1.341714 1.779191 58.536886]  ; Energie : 5.73482  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=2.01 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.618769 2.682282 117.988561]  ;  Dérivées : [1.369135 1.786848 58.544506]  ; Energie : 5.73482  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : -1.38778e-017
+
+t=2.02 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.632599 2.700190 118.574046]  ;  Dérivées : [1.396925 1.794880 58.552503]  ; Energie : 5.73482  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=2.03 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.646709 2.718181 119.159613]  ;  Dérivées : [1.425073 1.803308 58.560897]  ; Energie : 5.73482  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=2.04 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.661102 2.736258 119.745266]  ;  Dérivées : [1.453569 1.812151 58.569708]  ; Energie : 5.73482  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=2.05 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.675781 2.754425 120.331008]  ;  Dérivées : [1.482398 1.821431 58.578958]  ; Energie : 5.73482  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=2.06 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.690751 2.772688 120.916846]  ;  Dérivées : [1.511548 1.831170 58.588668]  ; Energie : 5.73482  ; L_a : 0.176715  ; L_K : 0.176706  ; det[omega, L, a ] : 0
+
+t=2.07 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.706013 2.791050 121.502783]  ;  Dérivées : [1.541000 1.841393 58.598863]  ; Energie : 5.73482  ; L_a : 0.176715  ; L_K : 0.176707  ; det[omega, L, a ] : -1.38778e-017
+
+t=2.08 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.721572 2.809517 122.088825]  ;  Dérivées : [1.570737 1.852123 58.609567]  ; Energie : 5.73482  ; L_a : 0.176715  ; L_K : 0.176707  ; det[omega, L, a ] : -1.38778e-017
+
+t=2.09 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.737429 2.828094 122.674977]  ;  Dérivées : [1.600738 1.863388 58.620808]  ; Energie : 5.73482  ; L_a : 0.176715  ; L_K : 0.176707  ; det[omega, L, a ] : 1.38778e-017
+
+t=2.1 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.753587 2.846787 123.261243]  ;  Dérivées : [1.630981 1.875215 58.632611]  ; Energie : 5.73483  ; L_a : 0.176715  ; L_K : 0.176707  ; det[omega, L, a ] : 0
+
+t=2.11 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.770049 2.865601 123.847631]  ;  Dérivées : [1.661440 1.887634 58.645008]  ; Energie : 5.73483  ; L_a : 0.176715  ; L_K : 0.176707  ; det[omega, L, a ] : 1.38778e-017
+
+t=2.12 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.786817 2.884542 124.434145]  ;  Dérivées : [1.692089 1.900675 58.658028]  ; Energie : 5.73483  ; L_a : 0.176715  ; L_K : 0.176707  ; det[omega, L, a ] : 0
+
+t=2.13 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.803891 2.903616 125.020794]  ;  Dérivées : [1.722896 1.914371 58.671704]  ; Energie : 5.73483  ; L_a : 0.176715  ; L_K : 0.176707  ; det[omega, L, a ] : 0
+
+t=2.14 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.821275 2.922831 125.607582]  ;  Dérivées : [1.753829 1.928757 58.686071]  ; Energie : 5.73483  ; L_a : 0.176715  ; L_K : 0.176707  ; det[omega, L, a ] : 0
+
+t=2.15 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.838968 2.942194 126.194517]  ;  Dérivées : [1.784851 1.943867 58.701164]  ; Energie : 5.73483  ; L_a : 0.176715  ; L_K : 0.176707  ; det[omega, L, a ] : 0
+
+t=2.16 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.856972 2.961711 126.781608]  ;  Dérivées : [1.815922 1.959742 58.717021]  ; Energie : 5.73483  ; L_a : 0.176715  ; L_K : 0.176707  ; det[omega, L, a ] : 0
+
+t=2.17 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.875287 2.981391 127.368860]  ;  Dérivées : [1.847001 1.976419 58.733683]  ; Energie : 5.73483  ; L_a : 0.176715  ; L_K : 0.176707  ; det[omega, L, a ] : 0
+
+t=2.18 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.893912 3.001243 127.956284]  ;  Dérivées : [1.878039 1.993943 58.751192]  ; Energie : 5.73483  ; L_a : 0.176715  ; L_K : 0.176708  ; det[omega, L, a ] : -2.77556e-017
+
+t=2.19 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.912847 3.021273 128.543887]  ;  Dérivées : [1.908986 2.012357 58.769592]  ; Energie : 5.73483  ; L_a : 0.176715  ; L_K : 0.176708  ; det[omega, L, a ] : 0
+
+t=2.2 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.932091 3.041493 129.131679]  ;  Dérivées : [1.939787 2.031708 58.788930]  ; Energie : 5.73483  ; L_a : 0.176715  ; L_K : 0.176708  ; det[omega, L, a ] : 0
+
+t=2.21 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.951642 3.061911 129.719669]  ;  Dérivées : [1.970383 2.052046 58.809256]  ; Energie : 5.73483  ; L_a : 0.176715  ; L_K : 0.176708  ; det[omega, L, a ] : 0
+
+t=2.22 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.971498 3.082537 130.307868]  ;  Dérivées : [2.000710 2.073421 58.830620]  ; Energie : 5.73484  ; L_a : 0.176715  ; L_K : 0.176708  ; det[omega, L, a ] : 0
+
+t=2.23 : 
+Objet 1 :  Type : Cone simple  ; Angles : [0.991655 3.103383 130.896285]  ;  Dérivées : [2.030698 2.095889 58.853077]  ; Energie : 5.73484  ; L_a : 0.176715  ; L_K : 0.176708  ; det[omega, L, a ] : 2.77556e-017
+
+t=2.24 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.012111 3.124459 131.484933]  ;  Dérivées : [2.060273 2.119506 58.876684]  ; Energie : 5.73484  ; L_a : 0.176715  ; L_K : 0.176709  ; det[omega, L, a ] : 0
+
+t=2.25 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.032859 3.145777 132.073823]  ;  Dérivées : [2.089355 2.144332 58.901501]  ; Energie : 5.73484  ; L_a : 0.176715  ; L_K : 0.176709  ; det[omega, L, a ] : 0
+
+t=2.26 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.053896 3.167350 132.662967]  ;  Dérivées : [2.117859 2.170430 58.927591]  ; Energie : 5.73484  ; L_a : 0.176715  ; L_K : 0.176709  ; det[omega, L, a ] : 0
+
+t=2.27 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.075214 3.189190 133.252379]  ;  Dérivées : [2.145691 2.197865 58.955018]  ; Energie : 5.73484  ; L_a : 0.176715  ; L_K : 0.176709  ; det[omega, L, a ] : -2.77556e-017
+
+t=2.28 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.096807 3.211312 133.842072]  ;  Dérivées : [2.172753 2.226706 58.983852]  ; Energie : 5.73484  ; L_a : 0.176715  ; L_K : 0.17671  ; det[omega, L, a ] : 0
+
+t=2.29 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.118666 3.233729 134.432061]  ;  Dérivées : [2.198940 2.257024 59.014163]  ; Energie : 5.73484  ; L_a : 0.176715  ; L_K : 0.17671  ; det[omega, L, a ] : 0
+
+t=2.3 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.140783 3.256457 135.022361]  ;  Dérivées : [2.224138 2.288892 59.046025]  ; Energie : 5.73484  ; L_a : 0.176715  ; L_K : 0.17671  ; det[omega, L, a ] : 0
+
+t=2.31 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.163145 3.279512 135.612987]  ;  Dérivées : [2.248228 2.322388 59.079516]  ; Energie : 5.73484  ; L_a : 0.176715  ; L_K : 0.17671  ; det[omega, L, a ] : 0
+
+t=2.32 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.185743 3.302911 136.203957]  ;  Dérivées : [2.271080 2.357591 59.114714]  ; Energie : 5.73485  ; L_a : 0.176715  ; L_K : 0.176711  ; det[omega, L, a ] : 0
+
+t=2.33 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.208562 3.326670 136.795287]  ;  Dérivées : [2.292559 2.394582 59.151701]  ; Energie : 5.73485  ; L_a : 0.176715  ; L_K : 0.176711  ; det[omega, L, a ] : 0
+
+t=2.34 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.231589 3.350809 137.386997]  ;  Dérivées : [2.312520 2.433446 59.190560]  ; Energie : 5.73485  ; L_a : 0.176715  ; L_K : 0.176711  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.35 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.254807 3.375346 137.979105]  ;  Dérivées : [2.330807 2.474267 59.231378]  ; Energie : 5.73485  ; L_a : 0.176715  ; L_K : 0.176712  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.36 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.278199 3.400301 138.571631]  ;  Dérivées : [2.347258 2.517133 59.274241]  ; Energie : 5.73485  ; L_a : 0.176715  ; L_K : 0.176712  ; det[omega, L, a ] : 0
+
+t=2.37 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.301746 3.425695 139.164597]  ;  Dérivées : [2.361701 2.562130 59.319236]  ; Energie : 5.73485  ; L_a : 0.176715  ; L_K : 0.176713  ; det[omega, L, a ] : 0
+
+t=2.38 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.325426 3.451551 139.758024]  ;  Dérivées : [2.373952 2.609346 59.366450]  ; Energie : 5.73485  ; L_a : 0.176715  ; L_K : 0.176713  ; det[omega, L, a ] : 0
+
+t=2.39 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.349217 3.477890 140.351934]  ;  Dérivées : [2.383820 2.658866 59.415969]  ; Energie : 5.73485  ; L_a : 0.176715  ; L_K : 0.176713  ; det[omega, L, a ] : -5.55112e-017
+
+t=2.4 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.373094 3.504736 140.946351]  ;  Dérivées : [2.391103 2.710774 59.467875]  ; Energie : 5.73485  ; L_a : 0.176716  ; L_K : 0.176714  ; det[omega, L, a ] : -5.55112e-017
+
+t=2.41 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.397029 3.532114 141.541299]  ;  Dérivées : [2.395588 2.765149 59.522249]  ; Energie : 5.73485  ; L_a : 0.176716  ; L_K : 0.176714  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.42 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.420995 3.560048 142.136804]  ;  Dérivées : [2.397055 2.822064 59.579163]  ; Energie : 5.73485  ; L_a : 0.176716  ; L_K : 0.176714  ; det[omega, L, a ] : 0
+
+t=2.43 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.444960 3.588564 142.732891]  ;  Dérivées : [2.395271 2.881586 59.638684]  ; Energie : 5.73485  ; L_a : 0.176716  ; L_K : 0.176714  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.44 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.468889 3.617688 143.329587]  ;  Dérivées : [2.389997 2.943771 59.700869]  ; Energie : 5.73485  ; L_a : 0.176716  ; L_K : 0.176715  ; det[omega, L, a ] : 0
+
+t=2.45 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.492747 3.647448 143.926918]  ;  Dérivées : [2.380983 3.008661 59.765759]  ; Energie : 5.73485  ; L_a : 0.176716  ; L_K : 0.176715  ; det[omega, L, a ] : -5.55112e-017
+
+t=2.46 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.516495 3.677870 144.524911]  ;  Dérivées : [2.367973 3.076285 59.833381]  ; Energie : 5.73484  ; L_a : 0.176716  ; L_K : 0.176715  ; det[omega, L, a ] : 0
+
+t=2.47 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.540092 3.708983 145.123595]  ;  Dérivées : [2.350704 3.146647 59.903744]  ; Energie : 5.73484  ; L_a : 0.176716  ; L_K : 0.176715  ; det[omega, L, a ] : 0
+
+t=2.48 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.563494 3.740812 145.722995]  ;  Dérivées : [2.328909 3.219733 59.976829]  ; Energie : 5.73484  ; L_a : 0.176716  ; L_K : 0.176715  ; det[omega, L, a ] : 0
+
+t=2.49 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.586703 3.773258 146.323012]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.72303  ; L_a : 0.176603  ; L_K : 0.174608  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.5 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.609872 3.805827 146.923152]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.69931  ; L_a : 0.176381  ; L_K : 0.1703  ; det[omega, L, a ] : 0
+
+t=2.51 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.633040 3.838397 147.523293]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.67532  ; L_a : 0.176159  ; L_K : 0.165817  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.52 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.656208 3.870967 148.123433]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.65108  ; L_a : 0.175938  ; L_K : 0.161161  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.53 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.679377 3.903536 148.723574]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.62659  ; L_a : 0.175716  ; L_K : 0.156336  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.54 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.702545 3.936106 149.323714]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.60187  ; L_a : 0.175496  ; L_K : 0.151344  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.55 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.725714 3.968675 149.923854]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.57694  ; L_a : 0.175276  ; L_K : 0.146192  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.56 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.748882 4.001245 150.523995]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.55182  ; L_a : 0.175057  ; L_K : 0.140882  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.57 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.772051 4.033814 151.124135]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.52651  ; L_a : 0.174838  ; L_K : 0.13542  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.58 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.795219 4.066384 151.724276]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.50105  ; L_a : 0.174621  ; L_K : 0.129812  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.59 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.818388 4.098953 152.324416]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.47544  ; L_a : 0.174405  ; L_K : 0.124062  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.6 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.841556 4.131523 152.924557]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.4497  ; L_a : 0.17419  ; L_K : 0.118177  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.61 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.864725 4.164092 153.524697]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.42386  ; L_a : 0.173977  ; L_K : 0.112163  ; det[omega, L, a ] : 0
+
+t=2.62 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.887893 4.196662 154.124838]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.39793  ; L_a : 0.173765  ; L_K : 0.106026  ; det[omega, L, a ] : 0
+
+t=2.63 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.911062 4.229231 154.724978]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.37193  ; L_a : 0.173555  ; L_K : 0.0997742  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.64 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.934230 4.261801 155.325119]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.34589  ; L_a : 0.173346  ; L_K : 0.0934137  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.65 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.957398 4.294370 155.925259]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.31982  ; L_a : 0.173139  ; L_K : 0.0869523  ; det[omega, L, a ] : 0
+
+t=2.66 : 
+Objet 1 :  Type : Cone simple  ; Angles : [1.980567 4.326940 156.525400]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.29374  ; L_a : 0.172934  ; L_K : 0.0803977  ; det[omega, L, a ] : 1.11022e-016
+
+t=2.67 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.003735 4.359509 157.125540]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.26768  ; L_a : 0.172732  ; L_K : 0.073758  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.68 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.026904 4.392079 157.725681]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.24166  ; L_a : 0.172531  ; L_K : 0.0670412  ; det[omega, L, a ] : 0
+
+t=2.69 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.050072 4.424649 158.325821]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.21569  ; L_a : 0.172333  ; L_K : 0.060256  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.7 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.073241 4.457218 158.925962]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.18981  ; L_a : 0.172137  ; L_K : 0.053411  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.71 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.096409 4.489788 159.526102]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.16403  ; L_a : 0.171943  ; L_K : 0.0465151  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.72 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.119578 4.522357 160.126243]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.13838  ; L_a : 0.171752  ; L_K : 0.0395773  ; det[omega, L, a ] : 0
+
+t=2.73 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.142746 4.554927 160.726383]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.11287  ; L_a : 0.171564  ; L_K : 0.0326068  ; det[omega, L, a ] : 0
+
+t=2.74 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.165915 4.587496 161.326524]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.08754  ; L_a : 0.171378  ; L_K : 0.0256132  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.75 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.189083 4.620066 161.926664]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.0624  ; L_a : 0.171196  ; L_K : 0.0186057  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.76 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.212251 4.652635 162.526805]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.03748  ; L_a : 0.171016  ; L_K : 0.0115942  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.77 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.235420 4.685205 163.126945]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.0128  ; L_a : 0.17084  ; L_K : 0.00458827  ; det[omega, L, a ] : 0
+
+t=2.78 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.258588 4.717774 163.727086]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.98838  ; L_a : 0.170666  ; L_K : -0.00240225  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.79 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.281757 4.750344 164.327226]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.96425  ; L_a : 0.170496  ; L_K : -0.00936748  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.8 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.304925 4.782913 164.927367]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.94043  ; L_a : 0.17033  ; L_K : -0.0162975  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.81 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.328094 4.815483 165.527507]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.91695  ; L_a : 0.170166  ; L_K : -0.0231825  ; det[omega, L, a ] : 0
+
+t=2.82 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.351262 4.848052 166.127648]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.89381  ; L_a : 0.170007  ; L_K : -0.0300123  ; det[omega, L, a ] : 0
+
+t=2.83 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.374431 4.880622 166.727788]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.87106  ; L_a : 0.16985  ; L_K : -0.0367772  ; det[omega, L, a ] : 0
+
+t=2.84 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.397599 4.913191 167.327929]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.84871  ; L_a : 0.169698  ; L_K : -0.0434673  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.85 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.420768 4.945761 167.928069]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.82678  ; L_a : 0.169549  ; L_K : -0.0500726  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.86 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.443936 4.978331 168.528210]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.80529  ; L_a : 0.169405  ; L_K : -0.0565834  ; det[omega, L, a ] : 0
+
+t=2.87 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.467104 5.010900 169.128350]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.78428  ; L_a : 0.169264  ; L_K : -0.0629901  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.88 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.490273 5.043470 169.728491]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.76374  ; L_a : 0.169127  ; L_K : -0.0692831  ; det[omega, L, a ] : 2.77556e-017
+
+t=2.89 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.513441 5.076039 170.328631]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.74372  ; L_a : 0.168995  ; L_K : -0.0754528  ; det[omega, L, a ] : 5.55112e-017
+
+t=2.9 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.536610 5.108609 170.928772]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.72423  ; L_a : 0.168866  ; L_K : -0.0814901  ; det[omega, L, a ] : 2.77556e-017
+
+t=2.91 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.559778 5.141178 171.528912]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.70528  ; L_a : 0.168742  ; L_K : -0.0873856  ; det[omega, L, a ] : 0
+
+t=2.92 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.582947 5.173748 172.129053]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.68691  ; L_a : 0.168622  ; L_K : -0.0931306  ; det[omega, L, a ] : 2.77556e-017
+
+t=2.93 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.606115 5.206317 172.729193]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.66912  ; L_a : 0.168506  ; L_K : -0.0987162  ; det[omega, L, a ] : 2.77556e-017
+
+t=2.94 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.629284 5.238887 173.329334]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.65194  ; L_a : 0.168395  ; L_K : -0.104134  ; det[omega, L, a ] : 0
+
+t=2.95 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.652452 5.271456 173.929474]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.63538  ; L_a : 0.168288  ; L_K : -0.109375  ; det[omega, L, a ] : 2.77556e-017
+
+t=2.96 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.675621 5.304026 174.529615]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.61947  ; L_a : 0.168186  ; L_K : -0.114432  ; det[omega, L, a ] : 2.77556e-017
+
+t=2.97 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.698789 5.336595 175.129755]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.60421  ; L_a : 0.168089  ; L_K : -0.119297  ; det[omega, L, a ] : 0
+
+t=2.98 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.721958 5.369165 175.729895]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.58963  ; L_a : 0.167996  ; L_K : -0.123962  ; det[omega, L, a ] : 2.77556e-017
+
+t=2.99 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.745126 5.401734 176.330036]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.57574  ; L_a : 0.167908  ; L_K : -0.12842  ; det[omega, L, a ] : 2.77556e-017
+
+t=3 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.768294 5.434304 176.930176]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.56255  ; L_a : 0.167824  ; L_K : -0.132664  ; det[omega, L, a ] : 2.77556e-017
+
+t=3.01 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.791463 5.466873 177.530317]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.55009  ; L_a : 0.167745  ; L_K : -0.136687  ; det[omega, L, a ] : 2.77556e-017
+
+t=3.02 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.814631 5.499443 178.130457]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.53836  ; L_a : 0.167672  ; L_K : -0.140484  ; det[omega, L, a ] : 2.77556e-017
+
+t=3.03 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.837800 5.532013 178.730598]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.52737  ; L_a : 0.167603  ; L_K : -0.144048  ; det[omega, L, a ] : 1.38778e-017
+
+t=3.04 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.860968 5.564582 179.330738]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.51714  ; L_a : 0.167539  ; L_K : -0.147373  ; det[omega, L, a ] : 1.38778e-017
+
+t=3.05 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.884137 5.597152 179.930879]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.50768  ; L_a : 0.16748  ; L_K : -0.150454  ; det[omega, L, a ] : 1.38778e-017
+
+t=3.06 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.907305 5.629721 180.531019]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.499  ; L_a : 0.167426  ; L_K : -0.153287  ; det[omega, L, a ] : 1.38778e-017
+
+t=3.07 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.930474 5.662291 181.131160]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.49111  ; L_a : 0.167376  ; L_K : -0.155867  ; det[omega, L, a ] : 1.38778e-017
+
+t=3.08 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.953642 5.694860 181.731300]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.48401  ; L_a : 0.167332  ; L_K : -0.15819  ; det[omega, L, a ] : 0
+
+t=3.09 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.976811 5.727430 182.331441]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.47773  ; L_a : 0.167293  ; L_K : -0.160252  ; det[omega, L, a ] : 0
+
+t=3.1 : 
+Objet 1 :  Type : Cone simple  ; Angles : [2.999979 5.759999 182.931581]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.47225  ; L_a : 0.167259  ; L_K : -0.16205  ; det[omega, L, a ] : 6.93889e-018
+
+t=3.11 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.023147 5.792569 183.531722]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.46759  ; L_a : 0.167231  ; L_K : -0.163581  ; det[omega, L, a ] : 0
+
+t=3.12 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.046316 5.825138 184.131862]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.46375  ; L_a : 0.167207  ; L_K : -0.164843  ; det[omega, L, a ] : 0
+
+t=3.13 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.069484 5.857708 184.732003]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.46074  ; L_a : 0.167188  ; L_K : -0.165833  ; det[omega, L, a ] : 6.93889e-018
+
+t=3.14 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.092653 5.890277 185.332143]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.45856  ; L_a : 0.167175  ; L_K : -0.16655  ; det[omega, L, a ] : 0
+
+t=3.15 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.115821 5.922847 185.932284]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.45722  ; L_a : 0.167167  ; L_K : -0.166993  ; det[omega, L, a ] : 0
+
+t=3.16 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.138990 5.955416 186.532424]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.45671  ; L_a : 0.167163  ; L_K : -0.167162  ; det[omega, L, a ] : 2.1684e-019
+
+t=3.17 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.162158 5.987986 187.132565]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.45703  ; L_a : 0.167165  ; L_K : -0.167055  ; det[omega, L, a ] : -1.73472e-018
+
+t=3.18 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.185327 6.020555 187.732705]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.45819  ; L_a : 0.167173  ; L_K : -0.166674  ; det[omega, L, a ] : 0
+
+t=3.19 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.208495 6.053125 188.332846]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.46018  ; L_a : 0.167185  ; L_K : -0.166018  ; det[omega, L, a ] : -3.46945e-018
+
+t=3.2 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.231664 6.085694 188.932986]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.463  ; L_a : 0.167202  ; L_K : -0.165089  ; det[omega, L, a ] : -6.93889e-018
+
+t=3.21 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.254832 6.118264 189.533127]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.46665  ; L_a : 0.167225  ; L_K : -0.163888  ; det[omega, L, a ] : -6.93889e-018
+
+t=3.22 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.278000 6.150834 190.133267]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.47113  ; L_a : 0.167253  ; L_K : -0.162417  ; det[omega, L, a ] : -6.93889e-018
+
+t=3.23 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.301169 6.183403 190.733408]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.47642  ; L_a : 0.167285  ; L_K : -0.160679  ; det[omega, L, a ] : -1.38778e-017
+
+t=3.24 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.324337 6.215973 191.333548]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.48253  ; L_a : 0.167323  ; L_K : -0.158676  ; det[omega, L, a ] : -2.77556e-017
+
+t=3.25 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.347506 6.248542 191.933689]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.48945  ; L_a : 0.167366  ; L_K : -0.156412  ; det[omega, L, a ] : -1.38778e-017
+
+t=3.26 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.370674 6.281112 192.533829]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.49716  ; L_a : 0.167414  ; L_K : -0.153889  ; det[omega, L, a ] : -1.38778e-017
+
+t=3.27 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.393843 6.313681 193.133970]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.50566  ; L_a : 0.167467  ; L_K : -0.151113  ; det[omega, L, a ] : 0
+
+t=3.28 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.417011 6.346251 193.734110]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.51495  ; L_a : 0.167525  ; L_K : -0.148087  ; det[omega, L, a ] : -1.38778e-017
+
+t=3.29 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.440180 6.378820 194.334251]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.52501  ; L_a : 0.167588  ; L_K : -0.144816  ; det[omega, L, a ] : -1.38778e-017
+
+t=3.3 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.463348 6.411390 194.934391]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.53582  ; L_a : 0.167656  ; L_K : -0.141305  ; det[omega, L, a ] : -2.77556e-017
+
+t=3.31 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.486517 6.443959 195.534532]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.54739  ; L_a : 0.167728  ; L_K : -0.13756  ; det[omega, L, a ] : 0
+
+t=3.32 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.509685 6.476529 196.134672]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.55969  ; L_a : 0.167806  ; L_K : -0.133587  ; det[omega, L, a ] : -2.77556e-017
+
+t=3.33 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.532854 6.509098 196.734813]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.57271  ; L_a : 0.167888  ; L_K : -0.129392  ; det[omega, L, a ] : -2.77556e-017
+
+t=3.34 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.556022 6.541668 197.334953]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.58645  ; L_a : 0.167975  ; L_K : -0.124982  ; det[omega, L, a ] : -2.77556e-017
+
+t=3.35 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.579190 6.574237 197.935094]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.60087  ; L_a : 0.168067  ; L_K : -0.120363  ; det[omega, L, a ] : 0
+
+t=3.36 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.602359 6.606807 198.535234]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.61598  ; L_a : 0.168164  ; L_K : -0.115542  ; det[omega, L, a ] : 0
+
+t=3.37 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.625527 6.639376 199.135375]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.63175  ; L_a : 0.168265  ; L_K : -0.110528  ; det[omega, L, a ] : -2.77556e-017
+
+t=3.38 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.648696 6.671946 199.735515]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.64816  ; L_a : 0.168371  ; L_K : -0.105327  ; det[omega, L, a ] : -2.77556e-017
+
+t=3.39 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.671864 6.704516 200.335655]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.66521  ; L_a : 0.168481  ; L_K : -0.0999484  ; det[omega, L, a ] : -2.77556e-017
+
+t=3.4 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.695033 6.737085 200.935796]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.68286  ; L_a : 0.168595  ; L_K : -0.0943999  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.41 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.718201 6.769655 201.535936]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.7011  ; L_a : 0.168714  ; L_K : -0.0886899  ; det[omega, L, a ] : 0
+
+t=3.42 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.741370 6.802224 202.136077]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.71992  ; L_a : 0.168838  ; L_K : -0.0828274  ; det[omega, L, a ] : -2.77556e-017
+
+t=3.43 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.764538 6.834794 202.736217]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.73929  ; L_a : 0.168965  ; L_K : -0.0768212  ; det[omega, L, a ] : -2.77556e-017
+
+t=3.44 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.787707 6.867363 203.336358]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.7592  ; L_a : 0.169097  ; L_K : -0.0706804  ; det[omega, L, a ] : -2.77556e-017
+
+t=3.45 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.810875 6.899933 203.936498]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.77962  ; L_a : 0.169233  ; L_K : -0.0644144  ; det[omega, L, a ] : 0
+
+t=3.46 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.834043 6.932502 204.536639]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.80053  ; L_a : 0.169373  ; L_K : -0.0580324  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.47 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.857212 6.965072 205.136779]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.82191  ; L_a : 0.169517  ; L_K : -0.0515441  ; det[omega, L, a ] : 0
+
+t=3.48 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.880380 6.997641 205.736920]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.84374  ; L_a : 0.169664  ; L_K : -0.0449592  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.49 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.903549 7.030211 206.337060]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.866  ; L_a : 0.169816  ; L_K : -0.0382873  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.5 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.926717 7.062780 206.937201]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.88867  ; L_a : 0.169971  ; L_K : -0.0315384  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.51 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.949886 7.095350 207.537341]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.91172  ; L_a : 0.17013  ; L_K : -0.0247222  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.52 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.973054 7.127919 208.137482]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.93513  ; L_a : 0.170293  ; L_K : -0.0178488  ; det[omega, L, a ] : 0
+
+t=3.53 : 
+Objet 1 :  Type : Cone simple  ; Angles : [3.996223 7.160489 208.737622]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.95887  ; L_a : 0.170458  ; L_K : -0.010928  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.54 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.019391 7.193058 209.337763]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 4.98293  ; L_a : 0.170628  ; L_K : -0.00396984  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.55 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.042560 7.225628 209.937903]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.00729  ; L_a : 0.1708  ; L_K : 0.00301585  ; det[omega, L, a ] : 0
+
+t=3.56 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.065728 7.258198 210.538044]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.03191  ; L_a : 0.170976  ; L_K : 0.0100192  ; det[omega, L, a ] : 0
+
+t=3.57 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.088897 7.290767 211.138184]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.05678  ; L_a : 0.171155  ; L_K : 0.0170303  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.58 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.112065 7.323337 211.738325]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.08187  ; L_a : 0.171337  ; L_K : 0.0240395  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.59 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.135233 7.355906 212.338465]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.10716  ; L_a : 0.171522  ; L_K : 0.0310371  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.6 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.158402 7.388476 212.938606]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.13263  ; L_a : 0.17171  ; L_K : 0.0380136  ; det[omega, L, a ] : 0
+
+t=3.61 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.181570 7.421045 213.538746]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.15826  ; L_a : 0.1719  ; L_K : 0.0449595  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.62 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.204739 7.453615 214.138887]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.18401  ; L_a : 0.172093  ; L_K : 0.0518656  ; det[omega, L, a ] : 0
+
+t=3.63 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.227907 7.486184 214.739027]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.20987  ; L_a : 0.172288  ; L_K : 0.0587229  ; det[omega, L, a ] : 0
+
+t=3.64 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.251076 7.518754 215.339168]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.23582  ; L_a : 0.172486  ; L_K : 0.0655223  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.65 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.274244 7.551323 215.939308]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.26183  ; L_a : 0.172686  ; L_K : 0.0722552  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.66 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.297413 7.583893 216.539449]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.28789  ; L_a : 0.172889  ; L_K : 0.078913  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.67 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.320581 7.616462 217.139589]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.31396  ; L_a : 0.173093  ; L_K : 0.0854874  ; det[omega, L, a ] : 0
+
+t=3.68 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.343750 7.649032 217.739730]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.34003  ; L_a : 0.173299  ; L_K : 0.0919704  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.69 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.366918 7.681601 218.339870]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.36609  ; L_a : 0.173508  ; L_K : 0.0983542  ; det[omega, L, a ] : 0
+
+t=3.7 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.390086 7.714171 218.940011]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.39209  ; L_a : 0.173718  ; L_K : 0.104631  ; det[omega, L, a ] : 0
+
+t=3.71 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.413255 7.746740 219.540151]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.41804  ; L_a : 0.173929  ; L_K : 0.110794  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.72 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.436423 7.779310 220.140292]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.4439  ; L_a : 0.174142  ; L_K : 0.116837  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.73 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.459592 7.811880 220.740432]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.46966  ; L_a : 0.174357  ; L_K : 0.122751  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.74 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.482760 7.844449 221.340573]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.4953  ; L_a : 0.174573  ; L_K : 0.128532  ; det[omega, L, a ] : 0
+
+t=3.75 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.505929 7.877019 221.940713]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.5208  ; L_a : 0.17479  ; L_K : 0.134173  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.76 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.529097 7.909588 222.540854]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.54615  ; L_a : 0.175008  ; L_K : 0.139668  ; det[omega, L, a ] : 0
+
+t=3.77 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.552266 7.942158 223.140994]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.57131  ; L_a : 0.175227  ; L_K : 0.145012  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.78 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.575434 7.974727 223.741135]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.59629  ; L_a : 0.175446  ; L_K : 0.150201  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.79 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.598603 8.007297 224.341275]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.62105  ; L_a : 0.175667  ; L_K : 0.155228  ; det[omega, L, a ] : -1.11022e-016
+
+t=3.8 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.621771 8.039866 224.941416]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.6456  ; L_a : 0.175888  ; L_K : 0.160092  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.81 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.644939 8.072436 225.541556]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.6699  ; L_a : 0.176109  ; L_K : 0.164786  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.82 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.668108 8.105005 226.141696]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.69395  ; L_a : 0.176331  ; L_K : 0.169308  ; det[omega, L, a ] : 0
+
+t=3.83 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.691276 8.137575 226.741837]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.71772  ; L_a : 0.176553  ; L_K : 0.173655  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.84 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.714445 8.170144 227.341977]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.74122  ; L_a : 0.176776  ; L_K : 0.177824  ; det[omega, L, a ] : 0
+
+t=3.85 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.737613 8.202714 227.942118]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.76443  ; L_a : 0.176998  ; L_K : 0.181813  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.86 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.760782 8.235283 228.542258]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.78732  ; L_a : 0.17722  ; L_K : 0.185619  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.87 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.783950 8.267853 229.142399]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.8099  ; L_a : 0.177442  ; L_K : 0.189241  ; det[omega, L, a ] : 0
+
+t=3.88 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.807119 8.300422 229.742539]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.83215  ; L_a : 0.177663  ; L_K : 0.192679  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.89 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.830287 8.332992 230.342680]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.85406  ; L_a : 0.177884  ; L_K : 0.19593  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.9 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.853456 8.365561 230.942820]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.87562  ; L_a : 0.178105  ; L_K : 0.198995  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.91 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.876624 8.398131 231.542961]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.89682  ; L_a : 0.178324  ; L_K : 0.201873  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.92 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.899793 8.430701 232.143101]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.91766  ; L_a : 0.178543  ; L_K : 0.204566  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.93 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.922961 8.463270 232.743242]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.93812  ; L_a : 0.178761  ; L_K : 0.207073  ; det[omega, L, a ] : 0
+
+t=3.94 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.946129 8.495840 233.343382]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.9582  ; L_a : 0.178978  ; L_K : 0.209396  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.95 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.969298 8.528409 233.943523]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.9779  ; L_a : 0.179193  ; L_K : 0.211536  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.96 : 
+Objet 1 :  Type : Cone simple  ; Angles : [4.992466 8.560979 234.543663]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 5.9972  ; L_a : 0.179408  ; L_K : 0.213495  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.97 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.015635 8.593548 235.143804]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.0161  ; L_a : 0.17962  ; L_K : 0.215275  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.98 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.038803 8.626118 235.743944]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.0346  ; L_a : 0.179832  ; L_K : 0.216879  ; det[omega, L, a ] : -5.55112e-017
+
+t=3.99 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.061972 8.658687 236.344085]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.0527  ; L_a : 0.180041  ; L_K : 0.218309  ; det[omega, L, a ] : 0
+
+t=4 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.085140 8.691257 236.944225]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.07038  ; L_a : 0.180249  ; L_K : 0.219569  ; det[omega, L, a ] : 0
+
+t=4.01 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.108309 8.723826 237.544366]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.08765  ; L_a : 0.180455  ; L_K : 0.220661  ; det[omega, L, a ] : -5.55112e-017
+
+t=4.02 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.131477 8.756396 238.144506]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.1045  ; L_a : 0.180659  ; L_K : 0.221591  ; det[omega, L, a ] : 0
+
+t=4.03 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.154646 8.788965 238.744647]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.12094  ; L_a : 0.180861  ; L_K : 0.222362  ; det[omega, L, a ] : 0
+
+t=4.04 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.177814 8.821535 239.344787]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.13696  ; L_a : 0.181061  ; L_K : 0.222977  ; det[omega, L, a ] : 0
+
+t=4.05 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.200982 8.854104 239.944928]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.15257  ; L_a : 0.181259  ; L_K : 0.223443  ; det[omega, L, a ] : -5.55112e-017
+
+t=4.06 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.224151 8.886674 240.545068]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.16775  ; L_a : 0.181454  ; L_K : 0.223763  ; det[omega, L, a ] : -5.55112e-017
+
+t=4.07 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.247319 8.919243 241.145209]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.18252  ; L_a : 0.181646  ; L_K : 0.223943  ; det[omega, L, a ] : -5.55112e-017
+
+t=4.08 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.270488 8.951813 241.745349]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.19687  ; L_a : 0.181836  ; L_K : 0.223988  ; det[omega, L, a ] : 0
+
+t=4.09 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.293656 8.984383 242.345490]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.2108  ; L_a : 0.182023  ; L_K : 0.223904  ; det[omega, L, a ] : -5.55112e-017
+
+t=4.1 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.316825 9.016952 242.945630]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.22432  ; L_a : 0.182207  ; L_K : 0.223696  ; det[omega, L, a ] : -5.55112e-017
+
+t=4.11 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.339993 9.049522 243.545771]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.23743  ; L_a : 0.182389  ; L_K : 0.223371  ; det[omega, L, a ] : -5.55112e-017
+
+t=4.12 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.363162 9.082091 244.145911]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.25012  ; L_a : 0.182567  ; L_K : 0.222933  ; det[omega, L, a ] : -5.55112e-017
+
+t=4.13 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.386330 9.114661 244.746052]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.26242  ; L_a : 0.182742  ; L_K : 0.222391  ; det[omega, L, a ] : -5.55112e-017
+
+t=4.14 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.409499 9.147230 245.346192]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.27431  ; L_a : 0.182914  ; L_K : 0.221749  ; det[omega, L, a ] : 0
+
+t=4.15 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.432667 9.179800 245.946333]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.2858  ; L_a : 0.183083  ; L_K : 0.221015  ; det[omega, L, a ] : 0
+
+t=4.16 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.455835 9.212369 246.546473]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.29689  ; L_a : 0.183248  ; L_K : 0.220195  ; det[omega, L, a ] : -5.55112e-017
+
+t=4.17 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.479004 9.244939 247.146614]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.3076  ; L_a : 0.18341  ; L_K : 0.219295  ; det[omega, L, a ] : -5.55112e-017
+
+t=4.18 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.502172 9.277508 247.746754]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.31791  ; L_a : 0.183569  ; L_K : 0.218323  ; det[omega, L, a ] : -5.55112e-017
+
+t=4.19 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.525341 9.310078 248.346895]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.32785  ; L_a : 0.183723  ; L_K : 0.217285  ; det[omega, L, a ] : -5.55112e-017
+
+t=4.2 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.548509 9.342647 248.947035]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.33741  ; L_a : 0.183874  ; L_K : 0.216188  ; det[omega, L, a ] : 0
+
+t=4.21 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.571678 9.375217 249.547176]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.34659  ; L_a : 0.184021  ; L_K : 0.215039  ; det[omega, L, a ] : 0
+
+t=4.22 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.594846 9.407786 250.147316]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.35541  ; L_a : 0.184164  ; L_K : 0.213845  ; det[omega, L, a ] : -5.55112e-017
+
+t=4.23 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.618015 9.440356 250.747457]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.36387  ; L_a : 0.184303  ; L_K : 0.212612  ; det[omega, L, a ] : -5.55112e-017
+
+t=4.24 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.641183 9.472925 251.347597]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.37197  ; L_a : 0.184439  ; L_K : 0.211348  ; det[omega, L, a ] : 0
+
+t=4.25 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.664352 9.505495 251.947737]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.37972  ; L_a : 0.18457  ; L_K : 0.210058  ; det[omega, L, a ] : 0
+
+t=4.26 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.687520 9.538065 252.547878]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.38712  ; L_a : 0.184696  ; L_K : 0.20875  ; det[omega, L, a ] : -2.77556e-017
+
+t=4.27 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.710689 9.570634 253.148018]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.39419  ; L_a : 0.184819  ; L_K : 0.20743  ; det[omega, L, a ] : -2.77556e-017
+
+t=4.28 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.733857 9.603204 253.748159]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.40092  ; L_a : 0.184937  ; L_K : 0.206105  ; det[omega, L, a ] : -2.77556e-017
+
+t=4.29 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.757025 9.635773 254.348299]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.40732  ; L_a : 0.185051  ; L_K : 0.204781  ; det[omega, L, a ] : -2.77556e-017
+
+t=4.3 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.780194 9.668343 254.948440]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.4134  ; L_a : 0.18516  ; L_K : 0.203464  ; det[omega, L, a ] : 0
+
+t=4.31 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.803362 9.700912 255.548580]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.41916  ; L_a : 0.185265  ; L_K : 0.202161  ; det[omega, L, a ] : -2.77556e-017
+
+t=4.32 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.826531 9.733482 256.148721]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.42461  ; L_a : 0.185366  ; L_K : 0.200876  ; det[omega, L, a ] : -2.77556e-017
+
+t=4.33 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.849699 9.766051 256.748861]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.42976  ; L_a : 0.185461  ; L_K : 0.199617  ; det[omega, L, a ] : 0
+
+t=4.34 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.872868 9.798621 257.349002]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.4346  ; L_a : 0.185552  ; L_K : 0.198388  ; det[omega, L, a ] : 0
+
+t=4.35 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.896036 9.831190 257.949142]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.43914  ; L_a : 0.185639  ; L_K : 0.197195  ; det[omega, L, a ] : -2.77556e-017
+
+t=4.36 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.919205 9.863760 258.549283]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.44339  ; L_a : 0.18572  ; L_K : 0.196043  ; det[omega, L, a ] : -2.77556e-017
+
+t=4.37 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.942373 9.896329 259.149423]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.44736  ; L_a : 0.185797  ; L_K : 0.194937  ; det[omega, L, a ] : -2.77556e-017
+
+t=4.38 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.965542 9.928899 259.749564]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.45104  ; L_a : 0.185869  ; L_K : 0.193882  ; det[omega, L, a ] : 0
+
+t=4.39 : 
+Objet 1 :  Type : Cone simple  ; Angles : [5.988710 9.961468 260.349704]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.45445  ; L_a : 0.185936  ; L_K : 0.192881  ; det[omega, L, a ] : -1.38778e-017
+
+t=4.4 : 
+Objet 1 :  Type : Cone simple  ; Angles : [6.011878 9.994038 260.949845]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.45758  ; L_a : 0.185998  ; L_K : 0.191939  ; det[omega, L, a ] : -1.38778e-017
+
+t=4.41 : 
+Objet 1 :  Type : Cone simple  ; Angles : [6.035047 10.026607 261.549985]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.46044  ; L_a : 0.186055  ; L_K : 0.19106  ; det[omega, L, a ] : 0
+
+t=4.42 : 
+Objet 1 :  Type : Cone simple  ; Angles : [6.058215 10.059177 262.150126]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.46303  ; L_a : 0.186107  ; L_K : 0.190248  ; det[omega, L, a ] : -1.38778e-017
+
+t=4.43 : 
+Objet 1 :  Type : Cone simple  ; Angles : [6.081384 10.091747 262.750266]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.46536  ; L_a : 0.186154  ; L_K : 0.189506  ; det[omega, L, a ] : -1.38778e-017
+
+t=4.44 : 
+Objet 1 :  Type : Cone simple  ; Angles : [6.104552 10.124316 263.350407]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.46743  ; L_a : 0.186196  ; L_K : 0.188836  ; det[omega, L, a ] : -1.38778e-017
+
+t=4.45 : 
+Objet 1 :  Type : Cone simple  ; Angles : [6.127721 10.156886 263.950547]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.46924  ; L_a : 0.186233  ; L_K : 0.188241  ; det[omega, L, a ] : -1.38778e-017
+
+t=4.46 : 
+Objet 1 :  Type : Cone simple  ; Angles : [6.150889 10.189455 264.550688]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.4708  ; L_a : 0.186265  ; L_K : 0.187725  ; det[omega, L, a ] : 0
+
+t=4.47 : 
+Objet 1 :  Type : Cone simple  ; Angles : [6.174058 10.222025 265.150828]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.4721  ; L_a : 0.186291  ; L_K : 0.187288  ; det[omega, L, a ] : -6.93889e-018
+
+t=4.48 : 
+Objet 1 :  Type : Cone simple  ; Angles : [6.197226 10.254594 265.750969]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.47315  ; L_a : 0.186313  ; L_K : 0.186933  ; det[omega, L, a ] : -6.93889e-018
+
+t=4.49 : 
+Objet 1 :  Type : Cone simple  ; Angles : [6.220395 10.287164 266.351109]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.47394  ; L_a : 0.18633  ; L_K : 0.186661  ; det[omega, L, a ] : -3.46945e-018
+
+t=4.5 : 
+Objet 1 :  Type : Cone simple  ; Angles : [6.243563 10.319733 266.951250]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.47449  ; L_a : 0.186341  ; L_K : 0.186473  ; det[omega, L, a ] : -3.46945e-018
+
+t=4.51 : 
+Objet 1 :  Type : Cone simple  ; Angles : [6.266731 10.352303 267.551390]  ;  Dérivées : [2.316846 3.256953 60.014049]  ; Energie : 6.47479  ; L_a : 0.186347  ; L_K : 0.18637  ; det[omega, L, a ] : -8.67362e-019
+

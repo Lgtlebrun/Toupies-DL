@@ -25,6 +25,8 @@ public :
                                                                     // de la bille
     virtual void dessine() override;                                // permet une customisation de l'affichage d'une bille
 
+    void statsCorps(std::ostream& flux);
+
 // =========
 
     virtual Vecteur equEvol(double const& temps);             // equation du mouvement d'une bille lâchée ou lancée

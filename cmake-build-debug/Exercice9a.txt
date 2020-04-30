@@ -1,0 +1,340 @@
+t=0.01 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.010000 0.000000 1.019019]  ;  Vitesse : [1.000000 0.000000 1.901900]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.999900]  ;  Vitesse : [0.000000 0.000000 -0.010000]
+
+t=0.02 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.020000 0.000000 1.037057]  ;  Vitesse : [1.000000 0.000000 1.803800]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.999700]  ;  Vitesse : [0.000000 0.000000 -0.019999]
+
+t=0.03 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.030000 0.000000 1.054114]  ;  Vitesse : [1.000000 0.000000 1.705700]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.999400]  ;  Vitesse : [0.000000 0.000000 -0.029996]
+
+t=0.04 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.040000 0.000000 1.070190]  ;  Vitesse : [1.000000 0.000000 1.607600]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.999000]  ;  Vitesse : [0.000000 0.000000 -0.039990]
+
+t=0.05 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.050000 0.000000 1.085285]  ;  Vitesse : [1.000000 0.000000 1.509500]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.998500]  ;  Vitesse : [0.000000 0.000000 -0.049980]
+
+t=0.06 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.060000 0.000000 1.099399]  ;  Vitesse : [1.000000 0.000000 1.411400]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.997901]  ;  Vitesse : [0.000000 0.000000 -0.059965]
+
+t=0.07 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.070000 0.000000 1.112532]  ;  Vitesse : [1.000000 0.000000 1.313300]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.997201]  ;  Vitesse : [0.000000 0.000000 -0.069944]
+
+t=0.08 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.080000 0.000000 1.124684]  ;  Vitesse : [1.000000 0.000000 1.215200]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.996402]  ;  Vitesse : [0.000000 0.000000 -0.079916]
+
+t=0.09 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.090000 0.000000 1.135855]  ;  Vitesse : [1.000000 0.000000 1.117100]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.995503]  ;  Vitesse : [0.000000 0.000000 -0.089880]
+
+t=0.1 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.100000 0.000000 1.146045]  ;  Vitesse : [1.000000 0.000000 1.019000]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.994505]  ;  Vitesse : [0.000000 0.000000 -0.099835]
+
+t=0.11 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.110000 0.000000 1.155254]  ;  Vitesse : [1.000000 0.000000 0.920900]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.993407]  ;  Vitesse : [0.000000 0.000000 -0.109780]
+
+t=0.12 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.120000 0.000000 1.163482]  ;  Vitesse : [1.000000 0.000000 0.822800]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.992210]  ;  Vitesse : [0.000000 0.000000 -0.119714]
+
+t=0.13 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.130000 0.000000 1.170729]  ;  Vitesse : [1.000000 0.000000 0.724700]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.990914]  ;  Vitesse : [0.000000 0.000000 -0.129636]
+
+t=0.14 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.140000 0.000000 1.176995]  ;  Vitesse : [1.000000 0.000000 0.626600]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.989518]  ;  Vitesse : [0.000000 0.000000 -0.139545]
+
+t=0.15 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.150000 0.000000 1.182280]  ;  Vitesse : [1.000000 0.000000 0.528500]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.988024]  ;  Vitesse : [0.000000 0.000000 -0.149441]
+
+t=0.16 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.160000 0.000000 1.186584]  ;  Vitesse : [1.000000 0.000000 0.430400]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.986431]  ;  Vitesse : [0.000000 0.000000 -0.159321]
+
+t=0.17 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.170000 0.000000 1.189907]  ;  Vitesse : [1.000000 0.000000 0.332300]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.984739]  ;  Vitesse : [0.000000 0.000000 -0.169185]
+
+t=0.18 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.180000 0.000000 1.192249]  ;  Vitesse : [1.000000 0.000000 0.234200]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.982948]  ;  Vitesse : [0.000000 0.000000 -0.179033]
+
+t=0.19 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.190000 0.000000 1.193610]  ;  Vitesse : [1.000000 0.000000 0.136100]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.981060]  ;  Vitesse : [0.000000 0.000000 -0.188862]
+
+t=0.2 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.200000 0.000000 1.193990]  ;  Vitesse : [1.000000 0.000000 0.038000]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.979073]  ;  Vitesse : [0.000000 0.000000 -0.198673]
+
+t=0.21 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.210000 0.000000 1.193389]  ;  Vitesse : [1.000000 0.000000 -0.060100]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.976988]  ;  Vitesse : [0.000000 0.000000 -0.208463]
+
+t=0.22 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.220000 0.000000 1.191807]  ;  Vitesse : [1.000000 0.000000 -0.158200]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.974806]  ;  Vitesse : [0.000000 0.000000 -0.218233]
+
+t=0.23 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.230000 0.000000 1.189244]  ;  Vitesse : [1.000000 0.000000 -0.256300]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.972526]  ;  Vitesse : [0.000000 0.000000 -0.227981]
+
+t=0.24 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.240000 0.000000 1.185700]  ;  Vitesse : [1.000000 0.000000 -0.354400]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.970149]  ;  Vitesse : [0.000000 0.000000 -0.237707]
+
+t=0.25 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.250000 0.000000 1.181175]  ;  Vitesse : [1.000000 0.000000 -0.452500]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.967675]  ;  Vitesse : [0.000000 0.000000 -0.247408]
+
+t=0.26 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.260000 0.000000 1.175669]  ;  Vitesse : [1.000000 0.000000 -0.550600]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.965104]  ;  Vitesse : [0.000000 0.000000 -0.257085]
+
+t=0.27 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.270000 0.000000 1.169182]  ;  Vitesse : [1.000000 0.000000 -0.648700]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.962437]  ;  Vitesse : [0.000000 0.000000 -0.266736]
+
+t=0.28 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.280000 0.000000 1.161714]  ;  Vitesse : [1.000000 0.000000 -0.746800]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.959673]  ;  Vitesse : [0.000000 0.000000 -0.276360]
+
+t=0.29 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.290000 0.000000 1.153265]  ;  Vitesse : [1.000000 0.000000 -0.844900]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.956814]  ;  Vitesse : [0.000000 0.000000 -0.285957]
+
+t=0.3 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.300000 0.000000 1.143835]  ;  Vitesse : [1.000000 0.000000 -0.943000]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.953858]  ;  Vitesse : [0.000000 0.000000 -0.295525]
+
+t=0.31 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.310000 0.000000 1.133424]  ;  Vitesse : [1.000000 0.000000 -1.041100]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.950808]  ;  Vitesse : [0.000000 0.000000 -0.305064]
+
+t=0.32 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.320000 0.000000 1.122032]  ;  Vitesse : [1.000000 0.000000 -1.139200]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.947662]  ;  Vitesse : [0.000000 0.000000 -0.314572]
+
+t=0.33 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.330000 0.000000 1.109659]  ;  Vitesse : [1.000000 0.000000 -1.237300]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.944422]  ;  Vitesse : [0.000000 0.000000 -0.324048]
+
+t=0.34 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.340000 0.000000 1.096305]  ;  Vitesse : [1.000000 0.000000 -1.335400]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.941087]  ;  Vitesse : [0.000000 0.000000 -0.333493]
+
+t=0.35 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.350000 0.000000 1.081970]  ;  Vitesse : [1.000000 0.000000 -1.433500]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.937658]  ;  Vitesse : [0.000000 0.000000 -0.342903]
+
+t=0.36 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.360000 0.000000 1.066654]  ;  Vitesse : [1.000000 0.000000 -1.531600]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.934135]  ;  Vitesse : [0.000000 0.000000 -0.352280]
+
+t=0.37 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.370000 0.000000 1.050357]  ;  Vitesse : [1.000000 0.000000 -1.629700]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.930519]  ;  Vitesse : [0.000000 0.000000 -0.361621]
+
+t=0.38 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.380000 0.000000 1.033079]  ;  Vitesse : [1.000000 0.000000 -1.727800]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.926809]  ;  Vitesse : [0.000000 0.000000 -0.370927]
+
+t=0.39 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.390000 0.000000 1.014820]  ;  Vitesse : [1.000000 0.000000 -1.825900]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.923007]  ;  Vitesse : [0.000000 0.000000 -0.380195]
+
+t=0.4 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.400000 0.000000 0.995580]  ;  Vitesse : [1.000000 0.000000 -1.924000]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.919113]  ;  Vitesse : [0.000000 0.000000 -0.389425]
+
+t=0.41 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.410000 0.000000 0.975359]  ;  Vitesse : [1.000000 0.000000 -2.022100]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.915127]  ;  Vitesse : [0.000000 0.000000 -0.398616]
+
+t=0.42 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.420000 0.000000 0.954157]  ;  Vitesse : [1.000000 0.000000 -2.120200]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.911049]  ;  Vitesse : [0.000000 0.000000 -0.407767]
+
+t=0.43 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.430000 0.000000 0.931974]  ;  Vitesse : [1.000000 0.000000 -2.218300]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.906881]  ;  Vitesse : [0.000000 0.000000 -0.416878]
+
+t=0.44 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.440000 0.000000 0.908810]  ;  Vitesse : [1.000000 0.000000 -2.316400]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.902621]  ;  Vitesse : [0.000000 0.000000 -0.425946]
+
+t=0.45 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.450000 0.000000 0.884665]  ;  Vitesse : [1.000000 0.000000 -2.414500]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.898271]  ;  Vitesse : [0.000000 0.000000 -0.434973]
+
+t=0.46 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.460000 0.000000 0.859539]  ;  Vitesse : [1.000000 0.000000 -2.512600]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.893832]  ;  Vitesse : [0.000000 0.000000 -0.443955]
+
+t=0.47 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.470000 0.000000 0.833432]  ;  Vitesse : [1.000000 0.000000 -2.610700]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.889303]  ;  Vitesse : [0.000000 0.000000 -0.452894]
+
+t=0.48 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.480000 0.000000 0.806344]  ;  Vitesse : [1.000000 0.000000 -2.708800]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.884685]  ;  Vitesse : [0.000000 0.000000 -0.461787]
+
+t=0.49 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.490000 0.000000 0.778275]  ;  Vitesse : [1.000000 0.000000 -2.806900]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.879979]  ;  Vitesse : [0.000000 0.000000 -0.470634]
+
+t=0.5 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.500000 0.000000 0.749225]  ;  Vitesse : [1.000000 0.000000 -2.905000]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.875184]  ;  Vitesse : [0.000000 0.000000 -0.479433]
+
+t=0.51 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.510000 0.000000 0.719194]  ;  Vitesse : [1.000000 0.000000 -3.003100]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.870303]  ;  Vitesse : [0.000000 0.000000 -0.488185]
+
+t=0.52 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.520000 0.000000 0.688182]  ;  Vitesse : [1.000000 0.000000 -3.101200]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.865334]  ;  Vitesse : [0.000000 0.000000 -0.496888]
+
+t=0.53 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.530000 0.000000 0.656189]  ;  Vitesse : [1.000000 0.000000 -3.199300]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.860278]  ;  Vitesse : [0.000000 0.000000 -0.505542]
+
+t=0.54 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.540000 0.000000 0.623215]  ;  Vitesse : [1.000000 0.000000 -3.297400]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.855137]  ;  Vitesse : [0.000000 0.000000 -0.514144]
+
+t=0.55 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.550000 0.000000 0.589260]  ;  Vitesse : [1.000000 0.000000 -3.395500]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.849910]  ;  Vitesse : [0.000000 0.000000 -0.522696]
+
+t=0.56 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.560000 0.000000 0.554324]  ;  Vitesse : [1.000000 0.000000 -3.493600]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.844598]  ;  Vitesse : [0.000000 0.000000 -0.531195]
+
+t=0.57 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.570000 0.000000 0.518407]  ;  Vitesse : [1.000000 0.000000 -3.591700]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.839201]  ;  Vitesse : [0.000000 0.000000 -0.539641]
+
+t=0.58 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.580000 0.000000 0.481509]  ;  Vitesse : [1.000000 0.000000 -3.689800]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.833721]  ;  Vitesse : [0.000000 0.000000 -0.548033]
+
+t=0.59 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.590000 0.000000 0.443630]  ;  Vitesse : [1.000000 0.000000 -3.787900]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.828157]  ;  Vitesse : [0.000000 0.000000 -0.556370]
+
+t=0.6 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.600000 0.000000 0.404770]  ;  Vitesse : [1.000000 0.000000 -3.886000]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.822511]  ;  Vitesse : [0.000000 0.000000 -0.564652]
+
+t=0.61 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.610000 0.000000 0.364929]  ;  Vitesse : [1.000000 0.000000 -3.984100]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.816782]  ;  Vitesse : [0.000000 0.000000 -0.572877]
+
+t=0.62 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.620000 0.000000 0.324107]  ;  Vitesse : [1.000000 0.000000 -4.082200]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.810972]  ;  Vitesse : [0.000000 0.000000 -0.581045]
+
+t=0.63 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.630000 0.000000 0.282304]  ;  Vitesse : [1.000000 0.000000 -4.180300]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.805080]  ;  Vitesse : [0.000000 0.000000 -0.589154]
+
+t=0.64 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.640000 0.000000 0.239520]  ;  Vitesse : [1.000000 0.000000 -4.278400]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.799108]  ;  Vitesse : [0.000000 0.000000 -0.597205]
+
+t=0.65 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.650000 0.000000 0.195755]  ;  Vitesse : [1.000000 0.000000 -4.376500]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.793056]  ;  Vitesse : [0.000000 0.000000 -0.605196]
+
+t=0.66 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.660000 0.000000 0.151009]  ;  Vitesse : [1.000000 0.000000 -4.474600]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.786925]  ;  Vitesse : [0.000000 0.000000 -0.613127]
+
+t=0.67 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.670000 0.000000 0.105282]  ;  Vitesse : [1.000000 0.000000 -4.572700]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.780715]  ;  Vitesse : [0.000000 0.000000 -0.620996]
+
+t=0.68 : 
+Objet 1 :  Type : Bille  ; Parametre : [0.680000 0.000000 0.058574]  ;  Vitesse : [1.000000 0.000000 -4.670800]
+
+Objet 2 :  Type : Oscillateur harmonique  ; Parametre : [2.000000 3.000000 0.774427]  ;  Vitesse : [0.000000 0.000000 -0.628803]
+

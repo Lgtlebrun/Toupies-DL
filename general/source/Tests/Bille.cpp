@@ -62,6 +62,13 @@ std::ostream& operator<<(std::ostream& flux, Bille const& B){
     return flux;
 }
 
+void Bille::statsCorps(std::ostream &sortie) {
+
+    sortie << "parametre                :  " << getParam() << std::endl;
+    sortie << "vitesse                  :  " << getPpoint() << std::endl;
+
+}
+
 // ===========================================================================================
 
 std::string Bille::getType() const{

@@ -98,8 +98,6 @@ const Matrice3 Matrice3::operator*(Matrice3 const& m2){
         }
     }
 
-    for (auto& elt : sortie.m_coords) {elt.rationnalise();}
-
     return sortie;
 
 }
@@ -143,7 +141,7 @@ bool Matrice3::operator!=(Matrice3 const& autre) const{
 
 // ===================================================================================================
 
-const std::ostream& operator<<(std::ostream& flux, Matrice3 const& m1){
+std::ostream& operator<<(std::ostream& flux, Matrice3 const& m1){
 /* Surchage de l'opérateur << qui permet un affichage dans n'importe quel ostream */
     flux << std::endl;
 

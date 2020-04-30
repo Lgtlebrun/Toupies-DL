@@ -1,0 +1,2 @@
+Erreur systeme dans la classe Integrateur : std::bad_alloc 
+

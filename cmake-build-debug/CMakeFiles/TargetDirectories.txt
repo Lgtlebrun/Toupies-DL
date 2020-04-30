@@ -1,3 +1,5 @@
+E:/C++/Tous pires/Toupies-DL/cmake-build-debug/CMakeFiles/main_fichier.dir
+E:/C++/Tous pires/Toupies-DL/cmake-build-debug/CMakeFiles/main_texte.dir
 E:/C++/Tous pires/Toupies-DL/cmake-build-debug/CMakeFiles/Toupies_DL.dir
 E:/C++/Tous pires/Toupies-DL/cmake-build-debug/CMakeFiles/exoa.dir
 E:/C++/Tous pires/Toupies-DL/cmake-build-debug/CMakeFiles/testAll.dir

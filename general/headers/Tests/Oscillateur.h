@@ -30,6 +30,8 @@ public :
     virtual void dessine() override;                                        // permet un affichage customisé de la classe
                                                                             // Oscillateur
 
+    void statsCorps(std::ostream& sortie);
+
 // =========
 
     virtual Vecteur equEvol(double const& temps);                           // Equation d'évolution de l'oscillateur

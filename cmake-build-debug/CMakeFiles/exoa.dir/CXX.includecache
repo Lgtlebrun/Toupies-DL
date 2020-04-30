@@ -1,0 +1,76 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/C++/Tous pires/Toupies-DL/general/headers/Clonable.h
+
+E:/C++/Tous pires/Toupies-DL/general/headers/Dessinable.h
+iostream
+-
+Clonable.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Clonable.h
+SupportADessin.h
+E:/C++/Tous pires/Toupies-DL/general/headers/SupportADessin.h
+constantes.h
+E:/C++/Tous pires/Toupies-DL/general/headers/constantes.h
+
+E:/C++/Tous pires/Toupies-DL/general/headers/Integrable.h
+Vecteur.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Vecteur.h
+Dessinable.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Dessinable.h
+constantes.h
+E:/C++/Tous pires/Toupies-DL/general/headers/constantes.h
+iostream
+-
+
+E:/C++/Tous pires/Toupies-DL/general/headers/Matrice3.h
+Vecteur.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Vecteur.h
+string
+-
+
+E:/C++/Tous pires/Toupies-DL/general/headers/SupportADessin.h
+
+E:/C++/Tous pires/Toupies-DL/general/headers/Toupie.h
+Integrable.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Integrable.h
+Matrice3.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Matrice3.h
+string
+-
+
+E:/C++/Tous pires/Toupies-DL/general/headers/ToupieChinoise.h
+Toupie.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Toupie.h
+
+E:/C++/Tous pires/Toupies-DL/general/headers/Vecteur.h
+vector
+-
+string
+-
+iostream
+-
+initializer_list
+-
+constantes.h
+E:/C++/Tous pires/Toupies-DL/general/headers/constantes.h
+
+E:/C++/Tous pires/Toupies-DL/general/headers/constantes.h
+Vecteur.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Vecteur.h
+iostream
+-
+
+E:/C++/Tous pires/Toupies-DL/general/source/ToupieChinoise.cpp
+../headers/ToupieChinoise.h
+E:/C++/Tous pires/Toupies-DL/general/headers/ToupieChinoise.h
+../headers/Matrice3.h
+E:/C++/Tous pires/Toupies-DL/general/headers/Matrice3.h
+cmath
+-
+

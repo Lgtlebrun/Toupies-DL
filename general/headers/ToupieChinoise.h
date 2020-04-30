@@ -29,9 +29,16 @@ public:
     double getRayon() const;                                // renvoit le rayon de la toupie
     double getHauteur() const;                              // renvoit la hauteur de coupure de la toupie
 
+    Vecteur getPosition() const;                                // renvoie la position carthésienne du pt de contact
+    void setPosition(Vecteur const&);                           // set la position carthésienne
+
+    Vecteur getVitesse();                                 // revoie la vitesse du point de contact
+    void setVitesse(Vecteur const&);                            // set la vitesse du point de contact
+
+
 // =========  AFFICHAGE :
 
-    virtual void statsCorps(std::ostream& sortie) const;          // affiche dans un ostream les statistiques de la toupie
+    virtual void statsCorps(std::ostream& sortie);          // affiche dans un ostream les statistiques de la toupie
 
     virtual void setDistSecu();                             // Calcule la distance de sécurité nécessaire à un affichage
                                                             // de qualité
@@ -43,7 +50,7 @@ protected :
 
 // =========  CALCUL DE GRANDEURS PHYSIQUES :
 
-    virtual double calculeI1();
+    virtual double calculeI1() const;
 
     virtual double calculeIA1(double const&, double const&, double const&) const;
                                                             // Calcule le moment d'inertie I_A1
@@ -54,6 +61,8 @@ protected :
                                                             // Calcule la masse de la toupie
 
     double calcule_d() const;                               // Calcule la norme de AG
+
+    Matrice3 TenseurInertie() const;
 
 // ========= FONCTIONS INTERMEDIAIRES :
 

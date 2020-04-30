@@ -137,11 +137,8 @@ void Systeme::affiche(std::ostream& sortie) {
  * un affichage personnalisé                                                                                  */
     for (int k(0); k < m_corps.size() ; ++k) {
 
-        sortie << "==== Toupie " << k+1 << " :" << std::endl;
+        sortie << "==== Corps " << k+1 << " :" << std::endl;
         sortie << m_corps[k]->getType() << std::endl;
-
-        sortie << "parametre                :  " << m_corps[k]->getParam() << std::endl;
-        sortie << "vitesse                  :  " << m_corps[k]->getPpoint() << std::endl;
 
         m_corps[k]->statsCorps(sortie);
 

@@ -36,6 +36,14 @@ std::ostream& operator<<(std::ostream& flux, Oscillateur const& OH){
 }
 
 
+void Oscillateur::statsCorps(std::ostream &sortie) {
+
+    sortie << "parametre                :  " << getParam() << std::endl;
+    sortie << "vitesse                  :  " << getPpoint() << std::endl;
+
+}
+
+
 std::string Oscillateur::getType() const{
 /* renvoie le type de l'oscillateur */
     return m_type;

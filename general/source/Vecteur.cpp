@@ -159,6 +159,21 @@ Vecteur Vecteur::rad_to_deg() const {
 }
 
 
+Vecteur Vecteur::concatene(const Vecteur& v) const{
+
+    Vecteur sortie(*this);
+
+    for (size_t i(0) ; i< v.getDim(); ++i ) {
+
+        sortie.augmente(v.getCoord(i));
+
+    }
+
+    return sortie;
+
+}
+
+
 //==============================================  METHODES PROTECTED  ==================================================
 
 

@@ -59,31 +59,28 @@ void IntegrateurEulerCromer::integre(Integrable& integrable, double const& dt) c
 }
 void IntegrateurNewmark::integre(Integrable& integrable, double const& dt) const {
 /* Intègre numériquement selon la méthode de Newmark */
-    Vecteur s ( integrable.equEvol(m_t) ) ;
 
     Vecteur P_nmoins1 ( integrable.getParam() ) ;
 
     Vecteur Ppoint_nmoins1 (integrable.getPpoint() ) ;
 
+    Vecteur s ( integrable.equEvol(m_t) ) ;
 
-    Vecteur distance({0,0,0});
+    Vecteur distance;
 
     do {
 
 
-        Vecteur q ( integrable.getParam() ) ;
+        Vecteur q(integrable.getParam());
 
-        Vecteur r ( integrable.equEvol(m_t + dt) ) ;
-
-
-        integrable.setPpoint(Ppoint_nmoins1 + dt / 2 * (r + s)) ;
-
-        integrable.setParam( P_nmoins1 + dt * Ppoint_nmoins1 + dt*dt/3 * (1/2 * r + s) ) ;
+        Vecteur r(integrable.equEvol(m_t + dt));
 
 
+        integrable.setPpoint(Ppoint_nmoins1 + dt / 2.0 * (r + s)) ;
 
-        Vecteur distance = integrable.getParam() - q  ;
+        integrable.setParam( P_nmoins1 + dt * Ppoint_nmoins1 + dt*dt/3.0 * (1.0/2 * r + s) ) ;
 
+        distance = integrable.getParam() - q;
 
     } while ( distance.norme() >= EPSILON ) ;
 

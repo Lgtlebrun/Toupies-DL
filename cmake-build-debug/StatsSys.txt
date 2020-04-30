@@ -1,0 +1,215 @@
+==== Toupie 1 :
+Cone simple
+parametre                :  [0.000000 0.523599 0.000000]
+vitesse                  :  [0.000000 0.000000 60.000000]
+masse [kg]               :  0.0392699
+masse volumique [kg m-3] :  0.1
+distance [m]             :  1.125
+rayon [m]                :  0.5
+hauteur [m]              :  1.5
+position (x,y,z) [m]     :  [0.000000 0.000000 0.000000]
+
+t=0.01 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 0.600000]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.03 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 1.200000]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.05 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 1.800000]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.07 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 2.400000]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.09 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 3.000000]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.11 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 3.600000]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.13 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 4.200000]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.15 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 4.800000]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.17 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 5.400000]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.19 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 6.000000]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.21 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 6.600000]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.23 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 0.916815]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.25 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 1.516815]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.27 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 2.116815]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.29 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 2.716815]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.31 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 3.316815]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.33 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 3.916815]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.35 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 4.516815]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.37 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 5.116815]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.39 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 5.716815]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.41 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 6.316815]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.43 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 0.633629]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.45 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 1.233629]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.47 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 1.833629]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.49 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 2.433629]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.51 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 3.033629]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.53 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 3.633629]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.55 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 4.233629]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.57 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 4.833629]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.59 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 5.433629]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.61 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 6.033629]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.63 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 6.633629]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.65 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 0.950444]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.67 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 1.550444]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.69 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 2.150444]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.71 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 2.750444]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.73 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 3.350444]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.75 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 3.950444]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.77 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 4.550444]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.79 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 5.150444]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.81 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 5.750444]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.83 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 6.350444]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.85 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 0.667259]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.87 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 1.267259]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.89 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 1.867259]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.91 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 2.467259]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.93 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 3.067259]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.95 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 3.667259]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.97 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 4.267259]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=0.99 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 4.867259]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=1.01 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 5.467259]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=1.03 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 6.067259]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=1.05 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 6.667259]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=1.07 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 0.984073]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=1.09 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 1.584073]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=1.11 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 2.184073]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=1.13 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 2.784073]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=1.15 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 3.384073]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=1.17 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 3.984073]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=1.19 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 4.584073]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=1.21 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 5.184073]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=1.23 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 5.784073]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=1.25 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 6.384073]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=1.27 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 0.700888]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=1.29 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 1.300888]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=1.31 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 1.900888]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=1.33 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 2.500888]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+
+t=1.35 : 
+Objet 1 :  Type : Cone simple  ; Parametre : [0.000000 0.523599 3.100888]  ;  Vitesse : [0.000000 0.000000 60.000000]  ; Rayon : 0.5  ; Hauteur : 1.5
+

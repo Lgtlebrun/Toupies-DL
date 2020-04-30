@@ -30,11 +30,11 @@ public:
 
 // =========
 
-    Vecteur getParam() const;
-    void setParam(Vecteur const& newV);
+    Vecteur getAngles() const;
+    void setAngles(Vecteur const&);
 
-    Vecteur getPpoint() const;
-    void setPpoint(Vecteur const& newV);
+    Vecteur getAnglesp() const;
+    void setAnglesp(Vecteur const&);
 
     Vecteur getPosition() const;                                // renvoie la position carthésienne du pt de contact
     void setPosition(Vecteur const&);                           // set la position carthésienne
@@ -90,11 +90,15 @@ protected:
 
 
 
-    Matrice3 TenseurInertie() const;
+    virtual Matrice3 TenseurInertie() const ;
 
     Vecteur omega() const;
 
     Matrice3 S() const;
+
+    Vecteur to_utilisateur(Vecteur const& v) const;
+
+
 };
 
 

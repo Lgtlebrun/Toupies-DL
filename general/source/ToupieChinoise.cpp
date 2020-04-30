@@ -4,14 +4,15 @@
 
 
 ToupieChinoise::ToupieChinoise(SupportADessin& sup, Vecteur const& param, Vecteur const& vit, Vecteur const& pos, double const& rayon, double const& hauteur, double const& masseVolumique)
-    :Toupie(sup, "Cone simple", param, vit, pos, {0.0,0.0,0.0}, calculeIA1(rayon, hauteur, masseVolumique), calculeI3(rayon, hauteur, masseVolumique)
+    :Toupie(sup, "Toupie Chinoise", param, vit, pos, {0.0,0.0,0.0}, calculeIA1(rayon, hauteur, masseVolumique), calculeI3(rayon, hauteur, masseVolumique)
             , masseVolumique, masse(rayon, hauteur, masseVolumique), rayon-hauteur, 0.0), m_rayon(rayon), m_hauteur(hauteur)
 {
-    if (2*rayon < hauteur) {
+    if (2*m_rayon < m_hauteur) {
 
         m_hauteur = 0;
 
     }
+    setPosition(pos);
     m_d = calcule_d();
     setDistSecu();
 }
@@ -33,16 +34,18 @@ void ToupieChinoise::dessine() {
 
 Vecteur ToupieChinoise::equEvol(const double &temps) {
 
-    Vecteur sortie;
+    Vecteur sortie{0.0,0.0,0.0,0.0,0.0,0.0};
+
+    modulo2Pi();
 
     double I1(calculeI1());
 
     double alpha(3.0/4*m_hauteur*m_hauteur/(m_rayon*(m_rayon+m_hauteur)));
 
-    double thetapp(m_Ppoint.getCoord(1)*(-m_masse*m_rayon*m_rayon*(alpha-cos(m_P.getCoord(0)))*(1-alpha*cos(m_P.getCoord(0)))+I1*cos(m_P.getCoord(0))));
-    thetapp += f1()*m_Ppoint.getCoord(1)*(m_masse*m_rayon*m_rayon*(alpha*cos(m_P.getCoord(0))-1)-m_I3)-m_masse*m_rayon*m_rayon*m_Ppoint.getCoord(0)*m_Ppoint.getCoord(0)-alpha
-            - m_masse*m_rayon*alpha*g.norme();
-    thetapp *= sin(m_P.getCoord(0))/(m_I3+m_masse*m_rayon*m_rayon*(pow((alpha-cos(m_P.getCoord(0))),2)+pow(sin(m_P.getCoord(0)),2)));
+    double thetapp(m_Ppoint.getCoord(1)*m_Ppoint.getCoord(1)*((-m_masse*m_rayon*m_rayon*(alpha-cos(m_P.getCoord(0)))*(1-alpha*cos(m_P.getCoord(0)))+I1*cos(m_P.getCoord(0))))
+                    + f1()*m_Ppoint.getCoord(1)*(m_masse*m_rayon*m_rayon*(alpha*cos(m_P.getCoord(0))-1)-m_I3)-m_masse*m_rayon*m_rayon*m_Ppoint.getCoord(0)*m_Ppoint.getCoord(0)*alpha
+                    - m_masse*m_rayon*alpha*g.norme() );
+    thetapp *= sin(m_P.getCoord(0))/(I1+m_masse*m_rayon*m_rayon*(pow((alpha-cos(m_P.getCoord(0))),2)+pow(sin(m_P.getCoord(0)),2)));
 
     sortie.setCoord(0, thetapp);
 
@@ -56,6 +59,12 @@ Vecteur ToupieChinoise::equEvol(const double &temps) {
 
     sortie.setCoord(2, phipp);
 
+    sortie.setCoord(3, m_rayon*(m_Ppoint.getCoord(0)*sin(m_P.getCoord(1))
+                    - m_Ppoint.getCoord(2)*cos(m_P.getCoord(1))*sin(m_P.getCoord(0)) ));
+
+    sortie.setCoord(4, -m_rayon*(m_Ppoint.getCoord(0)*cos(m_P.getCoord(1))
+                    + m_Ppoint.getCoord(2)*sin(m_P.getCoord(1))*sin(m_P.getCoord(0))));
+
 
     return sortie;
 
@@ -64,33 +73,35 @@ Vecteur ToupieChinoise::equEvol(const double &temps) {
 
 // ===================================================================================================
 
-void ToupieChinoise::statsCorps(std::ostream& sortie) const {
+void ToupieChinoise::statsCorps(std::ostream& sortie) {
+
+    sortie << "parametre                :  " << getParam() << std::endl;
+    sortie << "vitesse                  :  " << getPpoint() << std::endl;
 
     sortie << "masse [kg]               :  " << m_masse << std::endl;
     sortie << "masse volumique [kg m-3] :  " << m_masseVolumique << std::endl;
-    double d(calcule_d());
-    sortie << "distance [m]             :  " << d << std::endl;
+    sortie << "distance [m]             :  " << calcule_d() << std::endl;
 
     sortie << "rayon [m]                :  " << m_rayon << std::endl;
     sortie << "hauteur [m]              :  " << m_hauteur << std::endl;
 
-    Vecteur pos({m_P.getCoord(3), m_P.getCoord(4), 0.0});
-
-    sortie << "position (x,y,z) [m]     :  " << pos << std::endl;
+    sortie << "position (x,y,z) [m]     :  " << getPosition() << std::endl;
+    sortie << "Vitesse (x,y,z) [m s-1]  :  " << getVitesse() << std::endl;
 
 }
 
 std::ostream& operator<<(std::ostream& flux, ToupieChinoise const& C){
 /* Affichage générique via la surchage de l'opérateur << */
-    flux << "Type : " << C.getType() << "  ; Parametre : " << C.getParam() << "  ;  Vitesse : " << C.getPpoint()
-         << "  ; Rayon : " << C.getRayon() << "  ; Hauteur : " << C.getHauteur() << std::endl;
+    flux << "Type : " << C.getType() << "  ; Angles : " << C.getAngles() << "  ;  Derivées : " << C.getAnglesp()
+        << "  ; Position : " << C.getPosition() << "  ; Energie : " << C.Energie() << "  ; L_a : " << C.L_a()
+        << "  ; L_K : " << C.L_k() << "  ; det[omega, L, a ] : " << C.ProdMixte() << std::endl;
 
     return flux;
 }
 
 void ToupieChinoise::setDistSecu() {
 
-    m_distSecu = m_rayon;
+    m_distSecu = 2*m_rayon;
 
 }
 
@@ -101,9 +112,9 @@ double ToupieChinoise::calcule_d() const {
     Matrice3 passage(S());
 
     Vecteur e_z({0.0,0.0,1.0});
-    Vecteur e_theta({0.0,1.0,0.0});
+    Vecteur e_theta({0.0,0.0,1.0});
 
-    Vecteur v (m_rayon*passage.inv()*e_z - 3.0/4.0*m_hauteur*m_hauteur/(m_rayon+m_hauteur)*e_theta);
+    Vecteur v (m_rayon*passage*e_z - 3.0/4.0*m_hauteur*m_hauteur/(m_rayon+m_hauteur)*e_theta);
 
     return v.norme();
 
@@ -127,13 +138,23 @@ double ToupieChinoise::calculeIA1(const double & rayon, const double & hauteur, 
 
 }
 
-double ToupieChinoise::calculeI1() {
+double ToupieChinoise::calculeI1() const {
 
-    m_d = calcule_d();
+    double d(calcule_d());
 
-    calculeIA1(m_rayon, m_hauteur, m_masseVolumique);
+    double IA1(calculeIA1(m_rayon, m_hauteur, m_masseVolumique));
 
-    return m_IA1-m_masse*m_d*m_d;
+    return IA1-m_masse*d*d;
+
+}
+
+Matrice3 ToupieChinoise::TenseurInertie() const {
+
+    double I1(calculeI1());
+
+    return Matrice3(m_I3, 0.0, 0.0
+                   , 0.0, m_I3+m_masse*m_rayon*sin(m_P.getCoord(0))*m_rayon*sin(m_P.getCoord(0)), 0.0
+                   , 0.0, 0.0, I1+m_masse*m_rayon*m_rayon*cos(m_P.getCoord(0))*cos(m_P.getCoord(0)));
 
 }
 
@@ -166,11 +187,13 @@ double ToupieChinoise::f1() {
 
 double ToupieChinoise::f2() {
 
+    double alpha (3.0/4*m_hauteur*m_hauteur/m_rayon/(m_rayon+m_hauteur));
+
     if (sin(m_P.getCoord(0)) < PREC) { return 0.0; }
     if (f3() < PREC) { return 0.0; }
     return m_Ppoint.getCoord(0)/sin(m_P.getCoord(0))*f1()*(m_I3*(m_I3+m_masse*m_rayon
-    *m_rayon*(1-3.0/4*m_hauteur*m_hauteur/m_rayon/(m_rayon+m_hauteur))))/f3()-2*
-    m_Ppoint.getCoord(0)*m_Ppoint.getCoord(1)*tan(M_PI/2-m_P.getCoord(0));
+    *m_rayon*(1-alpha*cos(m_P.getCoord(0)))))/f3()
+    -2*m_Ppoint.getCoord(1)*m_Ppoint.getCoord(0)*tan(M_PI/2-m_P.getCoord(0));
 
 }
 
@@ -178,19 +201,43 @@ double ToupieChinoise::f3() {
 
     double I1(calculeI1());
 
-    return m_I3*I1+m_masse*m_rayon*m_rayon*I1*pow(sin(m_P.getCoord(0)), 2)
-    + m_masse*m_rayon*m_rayon*m_I3*pow(3.0/4*m_hauteur*m_hauteur/m_rayon/(m_rayon+m_hauteur), 2);
+    return m_I3*I1+m_masse*m_rayon*m_rayon*I1*sin(m_P.getCoord(0))*sin(m_P.getCoord(0))
+    + m_masse*m_rayon*m_rayon*m_I3*pow(3.0/4*m_hauteur*m_hauteur/m_rayon/(m_rayon+m_hauteur)-cos(m_P.getCoord(0)), 2);
 
 
 }
 
+// =================================================================================================
 
+Vecteur ToupieChinoise::getPosition() const {
 
+    return {m_Ppoint.getCoord(3), m_Ppoint.getCoord(4), m_rayon};
 
+}
 
+void ToupieChinoise::setPosition(const Vecteur & newV) {
 
+    if (newV.getDim() >= 2) {
 
+        m_Ppoint.setCoord(3, newV.getCoord(0));
+        m_Ppoint.setCoord(4, newV.getCoord(1));
+        m_Ppoint.setCoord(5, m_rayon);
 
+    }
+
+}
+
+Vecteur ToupieChinoise::getVitesse() {
+
+    Vecteur vitesse(equEvol(0.0));
+
+    return {vitesse.getCoord(3) , vitesse.getCoord(4), 0.0};
+
+}
+
+void ToupieChinoise::setVitesse(const Vecteur &) {
+/* On est sensés ne rien faire ici, la logique du code est irréparable */
+}
 
 
 

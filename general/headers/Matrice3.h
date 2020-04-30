@@ -80,7 +80,7 @@ const Matrice3 operator*(Matrice3 const& m1, Matrice3 const& m2);   // Multiplic
 
 Vecteur operator*(Matrice3 const& M, Vecteur const& v);
 
-const std::ostream& operator<<(std::ostream& flux, Matrice3 const& m1);   //
+std::ostream& operator<<(std::ostream& flux, Matrice3 const& m1);   //
 
 
 
