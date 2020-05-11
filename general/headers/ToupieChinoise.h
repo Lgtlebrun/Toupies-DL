@@ -29,19 +29,16 @@ public:
     double getRayon() const;                                // renvoit le rayon de la toupie
     double getHauteur() const;                              // renvoit la hauteur de coupure de la toupie
 
-    Vecteur getPosition() const;                                // renvoie la position carthésienne du pt de contact
-    void setPosition(Vecteur const&);                           // set la position carthésienne
+    virtual Vecteur getPosition() const;                                // renvoie la position carthésienne du pt de contact
+    virtual void setPosition(Vecteur const&);                           // set la position carthésienne
 
-    Vecteur getVitesse();                                 // revoie la vitesse du point de contact
-    void setVitesse(Vecteur const&);                            // set la vitesse du point de contact
+    virtual Vecteur getVitesse();                                 // revoie la vitesse du point de contact
 
+    virtual Vecteur AG() const;
 
 // =========  AFFICHAGE :
 
     virtual void statsCorps(std::ostream& sortie);          // affiche dans un ostream les statistiques de la toupie
-
-    virtual void setDistSecu();                             // Calcule la distance de sécurité nécessaire à un affichage
-                                                            // de qualité
 
 // =====================================================================================
 

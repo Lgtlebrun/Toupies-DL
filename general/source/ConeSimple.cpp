@@ -2,15 +2,13 @@
 #include <cmath>
 
 
-ConeSimple::ConeSimple(SupportADessin& sup, Vecteur const& param, Vecteur const& parampoint, Vecteur const& pos, double const& rayon, double const& hauteur, double const& masseVolumique)
+ConeSimple::ConeSimple(SupportADessin& sup, Vecteur const& param, Vecteur const& parampoint, Vecteur const& posA, double const& rayon, double const& hauteur, double const& masseVolumique)
 /* Nous pouvons calculer les moments d'inertie selon différents axes à base d'uniquement la masse volumique, le rayon *
  * et la hauteur du cône. De plus la distance de sécurité est définie comme étant la longueur de la paroi du cône     *
  * qui est calculée dans les accolades pour les mêmes raisons qu'expliqué dans le ctor de Bille.h                    */
-        : Toupie(sup, "Cone simple", param, parampoint, pos, {0.0,0.0,0.0}, calculeIA1(rayon, hauteur, masseVolumique), calculeI3(rayon, hauteur, masseVolumique)
-                , masseVolumique, masse(rayon, hauteur, masseVolumique), 3.0/4.0*hauteur, 0.0), m_rayon(rayon), m_hauteur(hauteur)
-{
-    setDistSecu();
-}
+        : Toupie(sup, "Cone simple", param, parampoint, posA, calculeIA1(rayon, hauteur, masseVolumique), calculeI3(rayon, hauteur, masseVolumique)
+                , masseVolumique, masse(rayon, hauteur, masseVolumique), 3.0/4.0*hauteur), m_rayon(rayon), m_hauteur(hauteur)
+{}
 
 
 ConeSimple::~ConeSimple() {
@@ -37,7 +35,7 @@ Vecteur ConeSimple::equEvol(const double &temps) {
     Vecteur sortie;                 // convention : (théta, psy, phi)
                                     // initialisation au vecteur nul
 
-    modulo2Pi();
+    m_P = modulo2Pi();
 
     if ( fabs(m_IA1) < PREC ) {
 
@@ -50,13 +48,13 @@ Vecteur ConeSimple::equEvol(const double &temps) {
                                     // la somme des force est nule, entraînant une accélération nulle
 
     }
-    if (m_P.getCoord(0) >= M_PI/2) {
+    /* if (m_P.getCoord(0) >= M_PI/2) {
 
         m_Ppoint = {0.0, 0.0, 0.0};
 
-        return sortie;
+        return {0.0, 0.0, 0.0};
 
-    }
+    } */
 
     sortie.setCoord(0, 1.0/m_IA1*(m_masse*g.norme()*m_d*sin(m_P.getCoord(0))+m_Ppoint.getCoord(1)*sin(m_P.getCoord(0))
                                                                              * ((m_IA1-m_I3)*m_Ppoint.getCoord(1)*cos(m_P.getCoord(0))-m_I3*m_Ppoint.getCoord(2) )) ) ;
@@ -97,8 +95,8 @@ void ConeSimple::statsCorps(std::ostream& sortie) const{
 std::ostream& operator<<(std::ostream& flux, ConeSimple const& C){
 /* Affichage générique via la surchage de l'opérateur << */
     flux << "Type : " << C.getType() << "  ; Angles : " << C.getAngles() << "  ;  Dérivées : " << C.getAnglesp()
-         << "  ; Energie : " << C.Energie() << "  ; L_a : " << C.L_a() << "  ; L_K : " << C.L_k() <<
-         "  ; det[omega, L, a ] : " << C.ProdMixte() << std::endl;
+         << "  ;  Position : " << C.getPosition() << "  ; Energie : " << C.Energie() << "  ; L_a : " << C.L_a() << "  ; L_K : " << C.L_k() <<
+         "  ; det[omega, L, a] : " << C.ProdMixte() << std::endl;
 
     return flux;
 }
@@ -124,12 +122,6 @@ double ConeSimple::calculeI3(double const& rayon, double const& hauteur, double 
 double ConeSimple::masse(double const& rayon, double const& hauteur, double const& masseVolumique) const{
 
     return 1.0/3*M_PI*rayon*rayon*hauteur*masseVolumique;
-
-}
-
-void ConeSimple::setDistSecu() {
-
-    m_distSecu = sqrt(m_hauteur*m_hauteur + m_rayon*m_rayon);
 
 }
 

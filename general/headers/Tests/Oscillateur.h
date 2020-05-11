@@ -41,8 +41,6 @@ public :
 
 // =========
 
-    virtual void setDistSecu();
-
     double getRayon() const;                                                // renvoit le rayon
 
     Vecteur getPosition() const;                                            // revoit la position du centre du mvt

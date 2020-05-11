@@ -16,7 +16,7 @@ public:
 
 // =========
 
-    Integrable(SupportADessin&, std::string const&, Vecteur const&, Vecteur const&, double const&);
+    Integrable(SupportADessin&, std::string const&, Vecteur const&, Vecteur const&);
                                                                         // Prend un support à dessin où dessiner
                                                                         // l'intégrable, un string; le type d'objet
                                                                         // qu'est l'intégrable et deux vecteurs :
@@ -38,10 +38,6 @@ public:
     virtual void statsCorps(std::ostream&) const;                       // Permet d'afficher les statistiques
                                                                         // de l'intégrable
 
-    virtual double distanceSecurite() const;                            // méthode qui permet d'estimer la distance minimale
-                                                                        // nécessaire pour dessiner deux intégrables et qu'ils
-                                                                        // ne soient pas l'un dans l'autre
-
 // =========  ACCESSEURS ET SETTEURS :
 
     virtual Vecteur getParam() const;                                           // Renvoit le vecteur paramètre de l'intégrable
@@ -50,9 +46,6 @@ public:
 
     virtual Vecteur getPpoint() const;                                         // Renvoit le vecteur vitesse de l'intégrable
     virtual void setPpoint(Vecteur const& newV);                               // Set le vecteur vitesse de l'intégrable
-
-    double getDistSecu() const;                                         // renvoie la distance de sécurité
-    void setDistSecu();                                                 // set la distance de séurité
 
     virtual Vecteur getPosition() const;                                // renvoie la position carthésienne, peut ne pas exister
                                                                         // en quel cas nous sortons le paramètre
@@ -74,8 +67,6 @@ protected:
 
     std::string m_type = "Corps Solide";                // le type de l'intégrable. Il est de base supposé étant
                                                         // un simple solide
-
-    double m_distSecu;                                  // distance de sécurité nécessaire à un affichage correct
 
 };
 

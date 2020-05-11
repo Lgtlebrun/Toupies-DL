@@ -16,7 +16,7 @@ public:
 
 // =========
 
-    Toupie(SupportADessin&, std::string const&, Vecteur const&, Vecteur const&, Vecteur const&, Vecteur const&, double const&, double const&, double const&, double const&, double const&, double const&);
+    Toupie(SupportADessin&, std::string const&, Vecteur const&, Vecteur const&, Vecteur const&, double const&, double const&, double const&, double const&, double const&);
                                 // Prend un support à dessin où afficher la toupie, un string pour la nomme,
                                 // 2 Vecteurs, le premier position et le second vitesse (avec theta psy phi comme
                                 // convention). Il prend ensuite I_A1, I_3 les moments d'inertie, la masse Volumique,
@@ -26,21 +26,26 @@ public:
 
 // =========
 
-    virtual Toupie* clone() const = 0;                  // Renvoie un pointeur sur une copie polymorphique de la toupie
+    virtual void dessine();
+
+    virtual Toupie* clone() const;                  // Renvoie un pointeur sur une copie polymorphique de la toupie
 
 // =========
 
-    Vecteur getAngles() const;
-    void setAngles(Vecteur const&);
+    void setParam(Vecteur const&);
 
-    Vecteur getAnglesp() const;
-    void setAnglesp(Vecteur const&);
+    virtual Vecteur getAngles() const;
+    virtual void setAngles(Vecteur const&);
 
-    Vecteur getPosition() const;                                // renvoie la position carthésienne du pt de contact
-    void setPosition(Vecteur const&);                           // set la position carthésienne
+    virtual Vecteur getAnglesp() const;
+    virtual void setAnglesp(Vecteur const&);
 
-    Vecteur getVitesse() const;                                 // revoie la vitesse du point de contact
-    void setVitesse(Vecteur const&);                            // set la vitesse du point de contact
+    virtual Vecteur getPosition() const;                                // renvoie la position carthésienne du pt de contact
+    virtual void setPosition(Vecteur const&);                           // set la position carthésienne
+
+    virtual Vecteur getVitesse() const;                                 // revoie la vitesse du point de contact
+
+    virtual Vecteur AG() const;
 
 // =========  EQUATION D'EVOLUTION :
 
@@ -50,8 +55,6 @@ public:
 
     virtual void statsCorps(std::ostream& sortie) const;                // Affichage de toutes les statistiques de
                                                                         // la toupie
-
-    virtual void setDistSecu();
 
 // =========  METHODES PERMETTANT DE MONTRER LES GRANDEURS PHYSIQUES :
 
@@ -85,7 +88,7 @@ protected:
 
 // =========  METHODES PROTECTED :
 
-    void modulo2Pi();                                                    // Remet le paramètre modulo Pi, afin d'éviter
+    Vecteur modulo2Pi() const;                                                    // Remet le paramètre modulo Pi, afin d'éviter
                                                                         // la divergence des fonctions sin et cos
 
 
@@ -96,10 +99,11 @@ protected:
 
     Matrice3 S() const;
 
-    Vecteur to_utilisateur(Vecteur const& v) const;
-
-
 };
+
+
+std::ostream& operator<<(std::ostream&, Toupie const&);             // surcharge de l'opérateur << pour afficher
+// un cône simple
 
 
 

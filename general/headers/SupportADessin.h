@@ -7,6 +7,7 @@
 
 class Systeme;
 class Bille;
+class Toupie;
 class Oscillateur;
 class ConeSimple;
 class ToupieChinoise;
@@ -29,6 +30,7 @@ public:
     virtual void dessine(Oscillateur const&) = 0;
     virtual void dessine(ConeSimple const&) = 0;
     virtual void dessine(ToupieChinoise const&) = 0;
+    virtual void dessine(Toupie const&) =0;
 
     // ... autres choses que vous voudriez dessiner...
 

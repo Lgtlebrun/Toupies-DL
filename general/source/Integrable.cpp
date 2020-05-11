@@ -1,12 +1,12 @@
 #include "../headers/Integrable.h"
 
 
-Integrable::Integrable( SupportADessin& sup, std::string const& type, Vecteur const& param, Vecteur const& parampoint, double const& distSecu)
+Integrable::Integrable( SupportADessin& sup, std::string const& type, Vecteur const& param, Vecteur const& parampoint)
 /* ctor de l'intégrable. Il lui faut un paramètre != position dans le cas général car paramètre représente un vector *
  * des coordonnées généralisées (pour une toupie, param = (théta, psy, phi) alors que pos = (x,y,z)). Il faut un     *
  * SupportADessin pour savoir où le représenter. En plus de cela, la distance de sécurité est là pour s'assurer que  *
  * deux intégrables ne se superposent pas en représentation visuelle                                                */
-    : Dessinable(sup), m_type(type), m_P(param), m_Ppoint(parampoint), m_distSecu(distSecu)
+    : Dessinable(sup), m_type(type), m_P(param), m_Ppoint(parampoint)
 {}
 
 Integrable::~Integrable()
@@ -68,21 +68,6 @@ void Integrable::setVitesse(const Vecteur & newV) {
     /* Méthodes de get et set dont le résultat varie grandement en fonction du type d'intégrable, puisque là pour *
      * l'affichage                                                                                               */
 
-double Integrable::getDistSecu() const {
-
-    return m_distSecu;
-
-}
-void Integrable::setDistSecu() {
-
-    m_distSecu = distanceSecurite();
-
-}
-double Integrable::distanceSecurite() const {
-
-    return 0.0;
-
-}
 
 std::string Integrable::getType() const{
 /* Pas de set car le type est définit à la création de l'objet. Un cheval ne se transforme pas spontanément en lapin, *

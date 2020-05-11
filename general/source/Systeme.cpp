@@ -114,7 +114,7 @@ void Systeme::evolue(double const& dt) {
 /* Méthode permettant de faire évoluer le Systeme en intégrant chaque intégrable à son tour, puis montant *
  * le temps de l'intégrateur avec le même pas de temps                                                    */
     for (auto& elt: m_corps){
-        m_integrateur.integre(*elt , dt);
+        m_integrateur.integre( *elt , dt);
     }
 
     m_integrateur.augmente_t(dt);

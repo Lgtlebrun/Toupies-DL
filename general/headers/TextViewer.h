@@ -11,7 +11,7 @@
 #include "Tests/Oscillateur.h"
 #include "Tests/Bille.h"
 #include "ToupieChinoise.h"
-
+#include "Toupie.h"
 
 
 
@@ -36,7 +36,7 @@ public :
     virtual void dessine(Oscillateur const&) ;
     virtual void dessine(ConeSimple const&) ;
     virtual void dessine(ToupieChinoise const&) ;
-
+    virtual void dessine(Toupie const&);
 
 // =====================================================================================
 

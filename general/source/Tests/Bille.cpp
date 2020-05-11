@@ -8,10 +8,8 @@ Bille::Bille(SupportADessin& S, Vecteur const& pos, Vecteur const& vit, double c
  * le launcher s'assure que r > 0. De plus, la distance de sécurité est dans les accolades pour permettre de ne *
  * pas prendre d'argument à la méthode, puisque setDistSecu() n'est dépendante que de l'objet et on ne veut pas *
  * qu'un utilisateur mal-intentionné fasse n'importe quoi. */
-        : Integrable(S, "Bille", pos, vit, 0.0), m_rayon(r)
-{
-    setDistSecu();
-}
+        : Integrable(S, "Bille", pos, vit), m_rayon(r)
+{}
 
 
 Bille *Bille::clone() const {
@@ -81,21 +79,5 @@ std::string Bille::getType() const{
 double Bille::getRayon() const {
 
     return m_rayon;
-
-}
-
-
-void Bille::setDistSecu() {
-/* Nous faisons le choix arbitraire de dire que la bille ne doit pas rencontre d'autre objet avant l'altitude de 0m *
- * et ceci s'exprime mathématiquement comme si-dessous, avec l'ajout de la distance du rayon, puisque sinon, nous   *
- * pourrions imaginer faire une énorme bille qui, bien que statique, toucherait tous les intégrables alentours, ce  *
- * qui serait évidemment embêtant pour la visualisation*/
-    double v0x(sqrt(m_Ppoint.getCoord(0)*m_Ppoint.getCoord(0)+m_Ppoint.getCoord(1)*m_Ppoint.getCoord(1)));
-
-    double v0z(fabs(m_Ppoint.getCoord(2)));
-
-    m_distSecu = v0x * (v0z + sqrt (v0z*v0z + 2 * g.norme() * m_P.getCoord(2)))/g.norme();
-
-    m_distSecu += m_rayon;
 
 }

@@ -90,6 +90,8 @@ class Vecteur{
 
     double prodScalaire(Vecteur const &vecteur2) const;
 
+    Vecteur prodVectoriel(Vecteur const& vecteur2) const;
+
 private:
 
     /* Attributs */
@@ -106,7 +108,7 @@ private:
 
         Vecteur addition(Vecteur const& vecteur2) const;                    // Addition de deux vecteurs /!\ OBSOL�TE /!\
 
-        Vecteur prodVectoriel(Vecteur const& vecteur2) const;               // Produit vectoriel classique somme toutes
+    // Produit vectoriel classique somme toutes
 
     // Produit scalaire entre deux vecteurs
 

@@ -47,3 +47,8 @@ void TextViewer::dessine(ToupieChinoise const& T) {
 
     m_flux << T;
 }
+void TextViewer::dessine(Toupie const& T) {
+
+    m_flux << T;
+
+}

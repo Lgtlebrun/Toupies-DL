@@ -263,10 +263,9 @@ Vecteur Vecteur::prodVectoriel(Vecteur const& vecteur2) const{
         sortie.setCoord(1, m_coords[2]*vecteur2.m_coords[0] - m_coords[0]*vecteur2.m_coords[2]);
         sortie.setCoord(2, m_coords[0]*vecteur2.m_coords[1] - m_coords[1]*vecteur2.m_coords[0]);
 
-        sortie.rationnalise();
-
     }
 
+    sortie.rationnalise();
 
     return sortie;
 }
@@ -279,7 +278,7 @@ void Vecteur::rationnalise() {
 
     for (auto& elt : m_coords){
 
-        if ( abs(elt) <= PREC) {elt = 0;}
+        if ( fabs(elt) <= PREC) {elt = 0;}
 
     }
 

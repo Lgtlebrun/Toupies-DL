@@ -62,7 +62,7 @@ void IntegrateurNewmark::integre(Integrable& integrable, double const& dt) const
 
     Vecteur P_nmoins1 ( integrable.getParam() ) ;
 
-    Vecteur Ppoint_nmoins1 (integrable.getPpoint() ) ;
+    Vecteur Ppoint_nmoins1 ( integrable.getPpoint() ) ;
 
     Vecteur s ( integrable.equEvol(m_t) ) ;
 
@@ -91,13 +91,33 @@ void IntegrateurNewmark::integre(Integrable& integrable, double const& dt) const
 void IntegrateurRK4::integre(Integrable& integrable, double const& dt) const {
 /* Intègre numériquement selon la méthode Runge-Kutta 4 */
 
+    Vecteur Pnmoins1(integrable.getParam());
+    Vecteur Ppnmoins1(integrable.getPpoint());
 
 
+    Vecteur k1(Ppnmoins1);
+    Vecteur k1_(integrable.equEvol(m_t));
 
 
-            // A faire éventuellement plus tard
+    Vecteur k2(Ppnmoins1+dt/2*k1_);
+    integrable.setParam(Pnmoins1+dt/2*k1);
+    integrable.setPpoint(Ppnmoins1+dt/2*k1_);
+    Vecteur k2_(integrable.equEvol(m_t+dt/2));
 
 
+    Vecteur k3(Ppnmoins1+dt/2*k2_);
+    integrable.setParam(Pnmoins1+dt/2*k2);
+    integrable.setPpoint(Ppnmoins1+dt/2*k2_);
+    Vecteur k3_(integrable.equEvol(m_t+dt/2));
 
+
+    Vecteur k4(Ppnmoins1+dt*k3_);
+    integrable.setParam(Pnmoins1+dt*k3);
+    integrable.setPpoint(Ppnmoins1+dt*k3_);
+    Vecteur k4_(integrable.equEvol(m_t+dt));
+
+
+    integrable.setParam(Pnmoins1+dt/6*(k1+2*k2+2*k3+k4));
+    integrable.setPpoint(Ppnmoins1+dt/6*(k1_+2*k2_+2*k3_+k4_));
 
 }

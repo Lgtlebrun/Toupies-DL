@@ -40,23 +40,23 @@ public :
 
     virtual void statsCorps(std::ostream& sortie) const;            // affiche dans un ostream les statistiques du cône
 
-    virtual void setDistSecu();                         // Calcule la distance de sécurité nécessaire à un affichage
-                                                        // de qualité
-
 // =====================================================================================
 
+
+    virtual double calculeIA1(double const&, double const&, double const&) const;
+
+// Calcule le moment d'inertie I_A1
+    virtual double calculeI3(double const&, double const&, double const&) const;
+
+    double masse(double const&, double const&, double const&) const;
 
 protected :
 
 // =========  CALCUL DE GRANDEURS PHYSIQUES :
 
-    virtual double calculeIA1(double const&, double const&, double const&) const;
-                                                        // Calcule le moment d'inertie I_A1
-    virtual double calculeI3(double const&, double const&, double const&) const;
-                                                        // Calcule le moment d'inertie I_3
+    // Calcule le moment d'inertie I_3
 
-    double masse(double const&, double const&, double const&) const;
-                                                        // Calcule la masse de la toupie
+    // Calcule la masse de la toupie
 
 // =========  ATTRIBUTS :
 
