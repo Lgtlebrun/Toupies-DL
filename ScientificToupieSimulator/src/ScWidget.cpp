@@ -539,6 +539,8 @@ void ScWidget::goImage(){
         //Setup bouton Menu principal
 
         QPushButton* menuPrincipal = new QPushButton("Menu Principal", m_simulations[i]);
+        QFontDatabase::addApplicationFont(":/copper/agency-fb_.ttf");
+
 
         menuPrincipal->setGeometry(20,20, 200, 75);
         menuPrincipal->setFont(QFont("Agency FB", 20, 15));
