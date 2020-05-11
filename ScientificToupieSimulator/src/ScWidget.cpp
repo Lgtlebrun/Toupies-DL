@@ -282,6 +282,10 @@ ScWidget::ScWidget(QWidget *parent)
     m_v2 = new QLineEdit(this);
     m_v3 = new QLineEdit(this);
 
+    m_v1->setValidator(valChill);
+    m_v2->setValidator(valChill);
+    m_v3->setValidator(valChill);
+
     vitesseLay->addWidget(m_labVitesse);
     vitesseLay->addWidget(m_v1);
     vitesseLay->addWidget(m_v2);
