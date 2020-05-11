@@ -91,6 +91,7 @@ private:
 
     QLineEdit* m_duree;
     QLineEdit* m_dt;
+    QLineEdit* m_lineNom;
     QLineEdit* m_lineRayon;
     QLineEdit* m_lineHauteur;
     QLineEdit* m_lineMasse;

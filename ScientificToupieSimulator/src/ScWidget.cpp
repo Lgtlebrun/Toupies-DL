@@ -171,10 +171,10 @@ ScWidget::ScWidget(QWidget *parent)
     // Nom
 
     m_nomGroup = new QGroupBox("Nom", this);
-    QLineEdit* lineNom = new QLineEdit(this);
+    m_lineNom = new QLineEdit(this);
 
     QVBoxLayout* vlay = new QVBoxLayout;
-    vlay->addWidget(lineNom);
+    vlay->addWidget(m_lineNom);
     m_nomGroup->setLayout(vlay);
 
     droiteLay->addWidget(m_nomGroup);
@@ -374,7 +374,9 @@ Integrable* ScWidget::makeObjet() const {
 
     case CUSTOM:
 
-        /// REMPLIR ICI
+        ptr = new Toupie(*m_support, m_lineNom->text().toStdString(), Vecteur({m_param1->text().toDouble(), m_param2->text().toDouble(), m_param3->text().toDouble()}),
+                         Vecteur({m_v1->text().toDouble(), m_v2->text().toDouble(), m_v3->text().toDouble()}), Vecteur(), m_lineIA1->text().toDouble(), m_lineI3->text().toDouble(),
+                         m_lineMVol->text().toDouble(), m_lineMasse->text().toDouble(), m_lineRayon->text().toDouble());
 
         break;
     }
