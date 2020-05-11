@@ -38,6 +38,7 @@ public :
     virtual void dessine(Oscillateur const&) ;
     virtual void dessine(ConeSimple const&) ;
     virtual void dessine(const ToupieChinoise &) ;
+    virtual void dessine(Toupie const&);
 
 
 // =====================================================================================
