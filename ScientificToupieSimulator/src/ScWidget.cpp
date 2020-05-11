@@ -607,6 +607,7 @@ void ScWidget::restart(){
 bool ScWidget::checkAllCaracs(){
 
     if (!(m_caseEC->isChecked() || m_caseNewmark->isChecked() || m_caseRK4->isChecked())) {
+        QMessageBox::information(this, "Echec!", "Veuillez sélectionner au moins un intégrateur.");
         return false;
     }
 
