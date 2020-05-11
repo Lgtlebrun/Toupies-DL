@@ -15,7 +15,7 @@ public :
 
 // =========
 
-    ConeSimple(SupportADessin&, Vecteur const&, Vecteur const&, Vecteur const&, double const&, double const&, double const&);
+    ConeSimple(SupportADessin& sup, Vecteur const& Angles, Vecteur const& AnglesPoint, Vecteur const& posA, double const& rayon, double const& hauteur, double const& masseVolumique);
                                                         // Construit un cône simple à partir de là où nous voulons le
                                                         // représenter, de sa position puis sa vitesse initiale puis de
                                                         // son rayon, sa hauteur puis sa masse volumique

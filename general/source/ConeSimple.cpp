@@ -2,11 +2,11 @@
 #include <cmath>
 
 
-ConeSimple::ConeSimple(SupportADessin& sup, Vecteur const& param, Vecteur const& parampoint, Vecteur const& posA, double const& rayon, double const& hauteur, double const& masseVolumique)
+ConeSimple::ConeSimple(SupportADessin& sup, Vecteur const& Angles, Vecteur const& AnglesPoint, Vecteur const& posA, double const& rayon, double const& hauteur, double const& masseVolumique)
 /* Nous pouvons calculer les moments d'inertie selon différents axes à base d'uniquement la masse volumique, le rayon *
  * et la hauteur du cône. De plus la distance de sécurité est définie comme étant la longueur de la paroi du cône     *
  * qui est calculée dans les accolades pour les mêmes raisons qu'expliqué dans le ctor de Bille.h                    */
-        : Toupie(sup, "Cone simple", param, parampoint, posA, calculeIA1(rayon, hauteur, masseVolumique), calculeI3(rayon, hauteur, masseVolumique)
+        : Toupie(sup, "Cone simple", Angles, AnglesPoint, posA, calculeIA1(rayon, hauteur, masseVolumique), calculeI3(rayon, hauteur, masseVolumique)
                 , masseVolumique, masse(rayon, hauteur, masseVolumique), 3.0/4.0*hauteur), m_rayon(rayon), m_hauteur(hauteur)
 {}
 

@@ -28,18 +28,18 @@ void VueOpenGL::dessine(ConeSimple const& C) {
 
     QMatrix4x4 matrice;
 
-    Vecteur enDegre(C.getParam().rad_to_deg());
+    Vecteur enDegre(C.getAngles().rad_to_deg());
 
     matrice.translate(  C.getPosition().getCoord(0)
                       , C.getPosition().getCoord(1)
                       , C.getPosition().getCoord(2));
 
     matrice.rotate(  enDegre.getCoord(2)
-                   , - sin(C.getParam().getCoord(0))*cos(C.getParam().getCoord(1))
-                   , sin(C.getParam().getCoord(0))*sin(C.getParam().getCoord(1))
-                   , cos(C.getParam().getCoord(0))        );
+                   , - sin(C.getAngles().getCoord(0))*cos(C.getAngles().getCoord(1))
+                   , sin(C.getAngles().getCoord(0))*sin(C.getAngles().getCoord(1))
+                   , cos(C.getAngles().getCoord(0))        );
 
-    matrice.rotate(enDegre.getCoord(0), cos(C.getParam().getCoord(1)), sin(C.getParam().getCoord(1)), 0.0);
+    matrice.rotate(enDegre.getCoord(0), cos(C.getAngles().getCoord(1)), sin(C.getAngles().getCoord(1)), 0.0);
 
     matrice.rotate(enDegre.getCoord(1), 0.0, 0.0, 1.0);
 
@@ -76,7 +76,7 @@ void VueOpenGL::dessine(ToupieChinoise const& T) {
 
     QMatrix4x4 matrice;
 
-    Vecteur enDegre(T.getParam().rad_to_deg());
+    Vecteur enDegre(T.getAngles().rad_to_deg());
 
     matrice.translate(  T.getPosition().getCoord(0)
                       , T.getPosition().getCoord(1)
@@ -87,9 +87,9 @@ void VueOpenGL::dessine(ToupieChinoise const& T) {
     matrice.rotate(enDegre.getCoord(1), 0.0, 0.0, 1.0);
 
     matrice.rotate(  enDegre.getCoord(2)
-                   , sin(T.getParam().getCoord(0))*cos(T.getParam().getCoord(1))
-                   , sin(T.getParam().getCoord(0))*sin(T.getParam().getCoord(1))
-                   , cos(T.getParam().getCoord(0))        );
+                   , sin(T.getAngles().getCoord(0))*cos(T.getAngles().getCoord(1))
+                   , sin(T.getAngles().getCoord(0))*sin(T.getAngles().getCoord(1))
+                   , cos(T.getAngles().getCoord(0))        );
 
     matrice.scale(T.getRayon());
 
