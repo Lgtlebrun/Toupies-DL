@@ -44,7 +44,7 @@ m_search(0){
     m_labelMode->move(30, 10);
 
 
-    m_search = new FichierSearch(this);
+    m_search = new FichierSearch("UltimateSimulation", this);
 
 
     //Connexioooon!

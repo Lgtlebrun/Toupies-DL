@@ -329,7 +329,7 @@ void Grillage::addIntegrable(){
         else if (m_typeChoisi == CHINOISE){
 
             Vecteur param({getSelectedButton()->getPX(), getSelectedButton()->getPY(), getSelectedButton()->getPZ()});
-            m_sys.push_back(new ConeSimple(t, param, vitesse, pos, m_bChinoise->getRayon(), m_bChinoise->getHauteur(), m_bChinoise->getMVol()));
+            m_sys.push_back(new ToupieChinoise(t, param, vitesse, pos, m_bChinoise->getRayon(), m_bChinoise->getHauteur(), m_bChinoise->getMVol()));
 
             //NDP : A mettre à jour lorsque nous aurons des toupies chinoises
         }

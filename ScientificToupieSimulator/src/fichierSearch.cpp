@@ -6,7 +6,6 @@
 
 FichierSearch::FichierSearch(std::string nom, QWidget* parent) : QDialog(parent), m_path(QCoreApplication::applicationDirPath().toStdString())
 , m_nom(nom){
-
     setFixedSize(700, 120);
     setStyleSheet("background: none");
 

@@ -1,29 +1,73 @@
-QT       += core gui
+QT += core gui opengl widgets
+
+win32:LIBS += -lopengl32
+
+TARGET = Scientific-Toupie-Simulator
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
 
-# The following define makes your compiler emit warnings if you use
-# any Qt feature that has been marked deprecated (the exact warnings
-# depend on your compiler). Please consult the documentation of the
-# deprecated API in order to know how to port your code away from it.
+
 DEFINES += QT_DEPRECATED_WARNINGS
 
-# You can also make your code fail to compile if it uses deprecated APIs.
-# In order to do so, uncomment the following line.
-# You can also select to disable deprecated APIs only up to a certain version of Qt.
-#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    main.cpp \
-    widget.cpp
+    ScMain.cpp \
+    src/ScWidget.cpp \
+    src/QTextViewer.cpp \
+    src/TextEdit.cpp \
+    src/fichierSearch.cpp \
+    src/Bloc2Boutons.cpp \
+    ../Qt_GL/glwidget.cc \
+    ../Qt_GL/vue_opengl.cc \
+    ../Qt_GL/sphere.cc \
+    ../general/source/constantes.cpp \
+    ../general/source/Integrable.cpp \
+    ../general/source/Toupie.cpp \
+    ../general/source/Vecteur.cpp \
+    ../general/source/Dessinable.cpp \
+    ../general/source/ConeSimple.cpp \
+    ../general/source/Integrateur.cpp \
+    ../general/source/Systeme.cpp \
+    ../general/source/TextViewer.cpp \
+    ../general/source/Tests/Bille.cpp \
+    ../general/source/Tests/Oscillateur.cpp \
+    ../general/source/ToupieChinoise.cpp \
+    ../general/source/Matrice3.cpp \
 
 HEADERS += \
-    widget.h
+    headers/ScWidget.h \
+    headers/QTextViewer.h \
+    headers/TextEdit.h \
+    headers/fichierSearch.h \
+    headers/Bloc2Boutons.h \
+    ../Qt_GL/glwidget.h \
+    ../Qt_GL/vue_opengl.h \
+    ../Qt_GL/sphere.h \
+    ../Qt_GL/vertex_shader.h \
+    ../general/headers/constantes.h \
+    ../general/headers/Clonable.h \
+    ../general/headers/Integrable.h \
+    ../general/headers/Dessinable.h \
+    ../general/headers/Integrateur.h \
+    ../general/headers/Systeme.h \
+    ../general/headers/Toupie.h \
+    ../general/headers/SupportADessin.h \
+    ../general/headers/ConeSimple.h \
+    ../general/headers/Vecteur.h \
+    ../general/headers/Matrice3.h \
+    ../general/headers/TextViewer.h \
+    ../general/headers/Tests/Bille.h \
+    ../general/headers/Tests/Oscillateur.h \
+    ../general/headers/ToupieChinoise.h \
 
 FORMS += \
     widget.ui
+
+RESOURCES += \
+    ../Qt_GL/resource.qrc \
+    data/police.qrc
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
