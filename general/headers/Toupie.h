@@ -16,7 +16,7 @@ public:
 
 // =========
 
-    Toupie(SupportADessin&, std::string const&, Vecteur const&, Vecteur const&, Vecteur const&, double const&, double const&, double const&, double const&, double const&);
+    Toupie(SupportADessin& sup, std::string const& nom, Vecteur const& angles, Vecteur const& anglesPoint, Vecteur const& position_Pointe, double const& IA1, double const& I3, double const& MasseVolumique, double const& masse, double const& norme_AG);
                                 // Prend un support à dessin où afficher la toupie, un string pour la nomme,
                                 // 2 Vecteurs, le premier position et le second vitesse (avec theta psy phi comme
                                 // convention). Il prend ensuite I_A1, I_3 les moments d'inertie, la masse Volumique,
