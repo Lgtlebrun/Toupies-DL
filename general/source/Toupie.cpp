@@ -10,7 +10,7 @@ Toupie::Toupie (SupportADessin& sup, std::string const& type, Vecteur const& ang
  * la masse volumique mais aussi de la forme sur laquelle nous ne pouvons rien dire dans le cas général. d est la       *
  * distance du centre de masse au point de contact au sol. La distance de sécurité est dépendante du type de toupie,    *
  * d'où la raison pour laquelle elle est en argument                                                                    */
-    : Integrable(sup, type, angles.concatene(Vecteur({0.0,0.0,0.0})), anglespoint.concatene(posA)), m_IA1(IA1), m_I3(I3), m_masse(masse), m_d(d), m_masseVolumique(masseVolumique)
+    : ObjetPhysique(sup, type, angles.concatene(Vecteur({0.0,0.0,0.0})), anglespoint.concatene(posA)), m_IA1(IA1), m_I3(I3), m_masse(masse), m_d(d), m_masseVolumique(masseVolumique)
 {}
 
 Toupie::~Toupie() {}

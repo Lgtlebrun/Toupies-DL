@@ -46,6 +46,16 @@ public :
     Vecteur getPosition() const;                                            // revoit la position du centre du mvt
     void setPosition(Vecteur const&);
 
+// =========
+
+    virtual double Energie() const;
+
+    virtual double L_a() const;
+
+    virtual double L_k() const;
+
+    virtual double ProdMixte() const;
+
 // =====================================================================================
 
 

@@ -3,11 +3,11 @@
 #ifndef TOUPIES_DL_BILLE_H
 #define TOUPIES_DL_BILLE_H
 
-#include "../Integrable.h"
+#include "../ObjetPhysique.h"
 #include "../constantes.h"
 
 
-class Bille : public Integrable
+class Bille : public ObjetPhysique
 {
 public :
 
@@ -35,6 +35,16 @@ public :
                                                                     // des billes
 
     double getRayon() const;                                        // renvoit le rayon
+
+// =========
+
+    virtual double Energie() const;
+
+    virtual double L_a() const;
+
+    virtual double L_k() const;
+
+    virtual double ProdMixte() const;
 
 // ==================================================================================
 

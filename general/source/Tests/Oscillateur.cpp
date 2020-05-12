@@ -66,3 +66,32 @@ void Oscillateur::setPosition(Vecteur const & newV) {
     m_centreMVT = newV;
 
 }
+
+double Oscillateur::Energie() const {
+/* En regardant l'expression dans equEvol, nous pouvons dire que c'est une force, dérivant d'un potentiel. *
+ * Nous évaluons le potentiel et l'énergie cinétique                                                      */
+
+    return 1.0/2*(getParam()*getParam())-getParam()*getPosition()+1.0/2*(getPpoint()*getPpoint());
+
+
+}
+
+double Oscillateur::L_k() const {
+
+    return ((getParam()-getPosition()).prodVectoriel(getPpoint()).prodScalaire(Vecteur({0.0,0.0,1.0}));
+
+}
+
+double Oscillateur::L_a() const {
+
+    Vecteur L((getParam()-getPosition()).prodVectoriel(getPpoint()));
+
+    return L.norme();
+
+}
+
+double Oscillateur::ProdMixte() const {
+
+     return 0.0;
+
+}

@@ -4,13 +4,13 @@
 #define TOUPIE_H
 
 
-#include "Integrable.h"
+#include "ObjetPhysique.h"
 #include "Matrice3.h"
 #include <string>
 
 
 
-class Toupie : public Integrable
+class Toupie : public ObjetPhysique
 {
 public:
 
@@ -58,13 +58,13 @@ public:
 
 // =========  METHODES PERMETTANT DE MONTRER LES GRANDEURS PHYSIQUES :
 
-    double Energie() const;
+    virtual double Energie() const;
 
-    double L_a() const;
+    virtual double L_a() const;
 
-    double L_k() const;
+    virtual double L_k() const;
 
-    double ProdMixte() const;
+    virtual double ProdMixte() const;
 
 // ===================================================================================
 

@@ -1,0 +1,8 @@
+//
+// Created by David Rossboth on 12.05.2020.
+//
+
+#ifndef TOUPIES_DL_OBJETPHYSIQUE_H
+#define TOUPIES_DL_OBJETPHYSIQUE_H
+
+#endif //TOUPIES_DL_OBJETPHYSIQUE_H
