@@ -40,6 +40,7 @@ void GLWidget::paintGL()
   m_s.dessine();
 
   if(m_trace) {
+      std::cout << m_s.getCorps(0)->getPosition();
       m_memoire.addPoint(m_s.getCorps(0)->getPosition());
       m_memoire.dessine();
   }

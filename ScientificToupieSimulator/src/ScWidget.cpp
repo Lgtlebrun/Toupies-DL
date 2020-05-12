@@ -534,7 +534,10 @@ void ScWidget::goFichierBis(){
 
 void ScWidget::goImage(){
 
-    if(m_caseTrace->isChecked()) {m_trace = true;}
+    if(m_caseTrace->isChecked()) {
+        m_trace = true;
+    }
+
 
     for (auto& S:m_sys){
         m_simulations.push_back(new GLWidget(S, Vecteur({0.,-10, 0.}), m_trace));

@@ -5,7 +5,7 @@ void Trace::addPoint(Vecteur const& v1) {
 
     m_points.push_back(v1);
 
-    if(m_points.size() >50){
+    if(m_points.size() > 5000){
         m_points.pop_front();
     }
 }

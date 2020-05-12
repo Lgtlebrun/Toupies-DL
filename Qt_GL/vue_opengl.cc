@@ -329,6 +329,7 @@ void VueOpenGL::dessineLigne(Vecteur const& p1, Vecteur const& p2)
 {
 
     QMatrix4x4 matrice;
+    Vecteur chemin(p2 - p1);
 
     matrice.translate(p1.getCoord(0), p1.getCoord(1), p1.getCoord(2));
 
@@ -337,10 +338,7 @@ void VueOpenGL::dessineLigne(Vecteur const& p1, Vecteur const& p2)
     glBegin(GL_LINES);
     prog.setAttributeValue(CouleurId, 1.0, 0., 0.);
     prog.setAttributeValue(SommetId,  0.0, 0.0, 0.0);
-
-    matrice = QMatrix4x4();
-    matrice.translate(p2.getCoord(0), p2.getCoord(1), p2.getCoord(2));
-    prog.setAttributeValue(SommetId,  0.0, 0.0, 0.0);
+    prog.setAttributeValue(SommetId,  chemin.getCoord(0), chemin.getCoord(1), chemin.getCoord(2));
     glEnd();
 
 }
