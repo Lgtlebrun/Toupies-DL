@@ -42,6 +42,8 @@ class VueOpenGL : public SupportADessin {
   void dessineSphere(QMatrix4x4 const& point_de_vue,
                        double rouge = 1.0, double vert = 1.0, double bleu = 1.0);
   void dessineLigne(Vecteur const& p1, Vecteur const& p2);
+  void dessineAxe(QMatrix4x4 const& point_de_vue
+                  , double rouge=1.0, double vert=1.0, double bleu=1.0);
 
  private:
   // Un shader OpenGL encapsulé dans une classe Qt

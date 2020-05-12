@@ -30,26 +30,29 @@ void VueOpenGL::dessine(ConeSimple const& C) {
 
     Vecteur enDegre(C.getAngles().rad_to_deg());
 
-    matrice.translate(  C.getPosition().getCoord(0)
-                      , C.getPosition().getCoord(1)
-                      , C.getPosition().getCoord(2));
+    double hauteur(C.getHauteur()/2.0/sqrt(3.0));
 
-    matrice.rotate(  enDegre.getCoord(2)
-                   , - sin(C.getAngles().getCoord(0))*cos(C.getAngles().getCoord(1))
-                   , sin(C.getAngles().getCoord(0))*sin(C.getAngles().getCoord(1))
-                   , cos(C.getAngles().getCoord(0))        );
+    Vecteur a({sin(C.getAngles().getCoord(0))*sin(C.getAngles().getCoord(1))
+               ,- sin(C.getAngles().getCoord(0))*cos(C.getAngles().getCoord(1))
+               , cos(C.getAngles().getCoord(0))});
+
+    Vecteur OA(C.getPosition()-C.AG());
+
+    matrice.translate(  OA.getCoord(0)+hauteur/2.0*a.getCoord(0)
+                          , OA.getCoord(1)+hauteur/2.0*a.getCoord(1)
+                          , OA.getCoord(2)+hauteur/2.0*a.getCoord(2));
+
+    matrice.rotate(enDegre.getCoord(2), a.getCoord(0), a.getCoord(1), a.getCoord(2));
 
     matrice.rotate(enDegre.getCoord(0), cos(C.getAngles().getCoord(1)), sin(C.getAngles().getCoord(1)), 0.0);
 
     matrice.rotate(enDegre.getCoord(1), 0.0, 0.0, 1.0);
 
-    matrice.translate(0.0, 0.0, 0.0);
+    matrice.translate(0.0, 0.0, hauteur);
 
-    matrice.rotate(45, 1.0, 0.0, 0.0);
+    matrice.rotate(90-180.0/M_PI*atan(1/sqrt(2.0)), 1.0, 1.0, 0.0);
 
-    matrice.rotate(45, 0.0, 1.0, 0.0);
-
-    matrice.scale(C.getHauteur()/2.0/sqrt(3.0));
+    matrice.scale(hauteur);
 
     dessineCube(matrice);
 
@@ -76,28 +79,66 @@ void VueOpenGL::dessine(ToupieChinoise const& T) {
 
     QMatrix4x4 matrice;
 
-    Vecteur enDegre(T.getAngles().rad_to_deg());
+        Vecteur enDegre(T.getAngles().rad_to_deg());
 
-    matrice.translate(  T.getPosition().getCoord(0)
-                      , T.getPosition().getCoord(1)
-                      , T.getPosition().getCoord(2));
+        double rayon(T.getRayon());
 
-    matrice.rotate(enDegre.getCoord(0), 1.0, 0.0, 0.0);
+        Vecteur a({sin(T.getAngles().getCoord(0))*sin(T.getAngles().getCoord(1))
+                  ,- sin(T.getAngles().getCoord(0))*cos(T.getAngles().getCoord(1))
+                  , cos(T.getAngles().getCoord(0))});
 
-    matrice.rotate(enDegre.getCoord(1), 0.0, 0.0, 1.0);
+        Vecteur OA(T.getPosition()-T.AG());
 
-    matrice.rotate(  enDegre.getCoord(2)
-                   , sin(T.getAngles().getCoord(0))*cos(T.getAngles().getCoord(1))
-                   , sin(T.getAngles().getCoord(0))*sin(T.getAngles().getCoord(1))
-                   , cos(T.getAngles().getCoord(0))        );
+        matrice.translate(  T.getPosition().getCoord(0)+rayon*a.getCoord(0)
+                          , T.getPosition().getCoord(1)+rayon*a.getCoord(1)
+                          , T.getPosition().getCoord(2)+rayon*a.getCoord(2));
 
-    matrice.scale(T.getRayon());
+        matrice.rotate(enDegre.getCoord(2), a.getCoord(0), a.getCoord(1), a.getCoord(2));
 
-    dessineSphere(matrice, 0.0,1.0,0.5);
+        matrice.rotate(enDegre.getCoord(0), cos(T.getAngles().getCoord(1)), sin(T.getAngles().getCoord(1)), 0.0);
+
+        matrice.rotate(enDegre.getCoord(1), 0.0, 0.0, 1.0);
+
+        matrice.scale(rayon);
+
+        dessineSphere(matrice, 0.0,1.0,0.5);
+
+        matrice.scale(1.5);
+
+        dessineAxe(matrice);
 
 }
-void VueOpenGL::dessine(Toupie const& a_dessiner) {
+void VueOpenGL::dessine(Toupie const& T) {
 
+    QMatrix4x4 matrice;
+
+        Vecteur enDegre(T.getAngles().rad_to_deg());
+
+        double hauteur(T.AG().norme()/2.0/sqrt(3.0));
+
+        Vecteur a({sin(T.getAngles().getCoord(0))*sin(T.getAngles().getCoord(1))
+                  ,- sin(T.getAngles().getCoord(0))*cos(T.getAngles().getCoord(1))
+                  , cos(T.getAngles().getCoord(0))});
+
+        Vecteur OA(T.getPosition()-T.AG());
+
+        matrice.translate(  OA.getCoord(0)+hauteur/2.0*a.getCoord(0)
+                          , OA.getCoord(1)+hauteur/2.0*a.getCoord(1)
+                          , OA.getCoord(2)+hauteur/2.0*a.getCoord(2));
+
+        matrice.rotate(enDegre.getCoord(2), a.getCoord(0), a.getCoord(1), a.getCoord(2));
+
+        matrice.rotate(enDegre.getCoord(0), cos(T.getAngles().getCoord(1)), sin(T.getAngles().getCoord(1)), 0.0);
+
+        matrice.rotate(enDegre.getCoord(1), 0.0, 0.0, 1.0);
+
+        matrice.translate(0.0,0.0, hauteur);
+
+        matrice.rotate(90-180.0/M_PI*atan(1/sqrt(2.0)), 1.0, 1.0, 0.0);
+
+        matrice.scale(hauteur);
+
+        dessineCube(matrice);
 
 }
 // ======================================================================
@@ -300,6 +341,22 @@ void VueOpenGL::dessineLigne(Vecteur const& p1, Vecteur const& p2)
     matrice = QMatrix4x4();
     matrice.translate(p2.getCoord(0), p2.getCoord(1), p2.getCoord(2));
     prog.setAttributeValue(SommetId,  0.0, 0.0, 0.0);
+    glEnd();
+
+}
+// =======================================================================
+void VueOpenGL::dessineAxe(QMatrix4x4 const& point_de_vue
+                           , double rouge, double vert, double bleu)
+{
+
+    prog.setUniformValue("vue_modele", matrice_vue * point_de_vue);
+
+    glBegin(GL_LINES);
+
+    prog.setAttributeValue(CouleurId, rouge, vert, bleu);
+    prog.setAttributeValue(SommetId, 0.0, 0.0, 0.0);
+    prog.setAttributeValue(SommetId, 0.0, 0.0, 1.0);
+
     glEnd();
 
 }
