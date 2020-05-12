@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/copper">
+        <file>Cooper-Black_.ttf</file>
+        <file>agency-fb_.ttf</file>
+    </qresource>
+</RCC>
