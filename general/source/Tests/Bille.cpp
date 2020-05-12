@@ -94,7 +94,7 @@ double Bille::L_k() const {
 
     double masse(3.0/4*M_PI*pow(m_rayon, 3)*2.5);
 
-    return masse*((getPosition()^getVitesse()).prodScalaire({0.0,0.0,1.0});
+    return masse*((getPosition()^getVitesse()).prodScalaire({0.0,0.0,1.0}));
 
 }
 

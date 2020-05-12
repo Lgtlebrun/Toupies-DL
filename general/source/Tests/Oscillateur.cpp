@@ -78,7 +78,7 @@ double Oscillateur::Energie() const {
 
 double Oscillateur::L_k() const {
 
-    return ((getParam()-getPosition()).prodVectoriel(getPpoint()).prodScalaire(Vecteur({0.0,0.0,1.0}));
+    return ((getParam()-getPosition()).prodVectoriel(getPpoint()).prodScalaire(Vecteur({0.0,0.0,1.0})));
 
 }
 
