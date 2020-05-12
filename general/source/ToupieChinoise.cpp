@@ -220,7 +220,9 @@ Vecteur ToupieChinoise::getPosition() const {
 /* Retourne le point de contact entre le sol et la toupie */
     Vecteur posA ({m_Ppoint.getCoord(3), m_Ppoint.getCoord(4), 0.0});
 
-    return posA;
+    Vecteur posG(posA+AG());
+
+    return posG;
 
 
 }

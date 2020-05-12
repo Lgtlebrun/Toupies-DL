@@ -127,7 +127,7 @@ void Toupie::setAnglesp(const Vecteur &newV) {
 
 Vecteur Toupie::getPosition() const {
 /* Retourne le point de contact entre la toupie et le sol */
-    return  Vecteur({m_Ppoint.getCoord(3), m_Ppoint.getCoord(4), 0.0});
+    return  Vecteur({m_Ppoint.getCoord(3), m_Ppoint.getCoord(4), 0.0})+S().transp()*Vecteur({0.0,0.0,m_d});
 
 }
 void Toupie::setPosition(const Vecteur &newV) {
@@ -139,8 +139,6 @@ void Toupie::setPosition(const Vecteur &newV) {
         m_Ppoint.setCoord(5, 0.0);
 
     }
-
-    m_Ppoint += S().transp()*Vecteur({0.0,0.0, m_d});
 
 }
 
@@ -164,7 +162,7 @@ double Toupie::Energie() const {
                 , 0.0, m_IA1-m_masse*m_d*m_d, 0.0
                 , 0.0, 0.0, m_I3);
 
-    return 1.0/2*(m_masse*getVitesse().norme2()+omega()*(IG*omega())) - m_masse*g.prodScalaire(getPosition()+AG()) ;
+    return 1.0/2*(m_masse*getVitesse().norme2()+omega()*(IG*omega())) - m_masse*g.prodScalaire(getPosition()) ;
 
 
 }
