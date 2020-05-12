@@ -11,7 +11,7 @@ class Toupie;
 class Oscillateur;
 class ConeSimple;
 class ToupieChinoise;
-
+class Trace;
 class Integrable;
 
 class SupportADessin {
@@ -31,6 +31,7 @@ public:
     virtual void dessine(ConeSimple const&) = 0;
     virtual void dessine(ToupieChinoise const&) = 0;
     virtual void dessine(Toupie const&) =0;
+    virtual void dessine(Trace const&) =0;
 
     // ... autres choses que vous voudriez dessiner...
 

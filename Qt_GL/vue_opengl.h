@@ -11,6 +11,7 @@
 #include "../general/headers/ToupieChinoise.h"
 #include "../general/headers/Toupie.h"
 #include "sphere.h"
+#include "../general/headers/Trace.h"
 
 class VueOpenGL : public SupportADessin {
  public:
@@ -21,6 +22,7 @@ class VueOpenGL : public SupportADessin {
   virtual void dessine(Oscillateur const&) override;
   virtual void dessine(ToupieChinoise const&) override;
   virtual void dessine(Toupie const&) override;
+  virtual void dessine(const Trace &) override;
 
   // méthodes de (ré-)initialisation
   void init();
@@ -39,6 +41,7 @@ class VueOpenGL : public SupportADessin {
   void dessineCube(QMatrix4x4 const& point_de_vue = QMatrix4x4() );
   void dessineSphere(QMatrix4x4 const& point_de_vue,
                        double rouge = 1.0, double vert = 1.0, double bleu = 1.0);
+  void dessineLigne(Vecteur const& p1, Vecteur const& p2);
 
  private:
   // Un shader OpenGL encapsulé dans une classe Qt

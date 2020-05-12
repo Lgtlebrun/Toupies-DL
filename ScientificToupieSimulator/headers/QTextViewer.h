@@ -11,6 +11,7 @@
 #include "../general/headers/ToupieChinoise.h"
 #include "../general/headers/Tests/Oscillateur.h"
 #include "../general/headers/Tests/Bille.h"
+#include "../general/headers/Trace.h"
 #include "TextEdit.h"
 
 
@@ -39,6 +40,7 @@ public :
     virtual void dessine(ConeSimple const&) ;
     virtual void dessine(const ToupieChinoise &) ;
     virtual void dessine(const Toupie &);
+    virtual void dessine(Trace const&){}
 
 
 

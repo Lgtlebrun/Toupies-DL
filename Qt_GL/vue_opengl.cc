@@ -111,6 +111,23 @@ void VueOpenGL::dessine(Systeme const& a_dessiner) {
 
 }
 // ======================================================================
+
+void VueOpenGL::dessine(Trace const& T) {
+
+    if (T.size() < 2) {return;}
+
+    for (size_t i(0); i < T.size()-1; i++){
+
+        dessineLigne(T.getPoint(i), T.getPoint(i+1));
+    }
+}
+
+
+
+
+
+
+// ======================================================================
 void VueOpenGL::init()
 {
   /* Initialise notre vue OpenGL.
@@ -263,4 +280,26 @@ void VueOpenGL::dessineSphere (QMatrix4x4 const& point_de_vue,
   prog.setUniformValue("vue_modele", matrice_vue * point_de_vue);
   prog.setAttributeValue(CouleurId, rouge, vert, bleu);  // met la couleur
   m_sphere.draw(prog, SommetId);                          // dessine la sphère
+}
+
+// ======================================================================
+
+void VueOpenGL::dessineLigne(Vecteur const& p1, Vecteur const& p2)
+{
+
+    QMatrix4x4 matrice;
+
+    matrice.translate(p1.getCoord(0), p1.getCoord(1), p1.getCoord(2));
+
+    prog.setUniformValue("vue_modele", matrice_vue * matrice);
+
+    glBegin(GL_LINES);
+    prog.setAttributeValue(CouleurId, 1.0, 0., 0.);
+    prog.setAttributeValue(SommetId,  0.0, 0.0, 0.0);
+
+    matrice = QMatrix4x4();
+    matrice.translate(p2.getCoord(0), p2.getCoord(1), p2.getCoord(2));
+    prog.setAttributeValue(SommetId,  0.0, 0.0, 0.0);
+    glEnd();
+
 }

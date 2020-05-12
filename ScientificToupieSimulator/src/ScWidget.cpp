@@ -467,12 +467,12 @@ void ScWidget::goTexte(double duree, double dt){
 
 
 
-    for (size_t j(0); j < m_sys.size(); j++){
+    for (size_t j(0); j < m_sys.size(); j++){   //On itère sur les systèmes
 
         *m_console << m_sys[j];
         *m_console << m_nomInteg[j];
 
-        for(int i(0); i < duree/dt; i++){
+        for(int i(0); i < duree/dt; i++){       //Puis sur les objets qu'ils contiennent
 
             m_sys[j].evolue(dt);
             m_sys[j].dessine();
@@ -534,8 +534,10 @@ void ScWidget::goFichierBis(){
 
 void ScWidget::goImage(){
 
+    if(m_caseTrace->isChecked()) {m_trace = true;}
+
     for (auto& S:m_sys){
-        m_simulations.push_back(new GLWidget(S, Vecteur({0.,-10, 0.})));
+        m_simulations.push_back(new GLWidget(S, Vecteur({0.,-10, 0.}), m_trace));
     }
 
     for(size_t i(0); i < m_simulations.size(); i++){
@@ -675,6 +677,43 @@ bool ScWidget::checkAllCaracs(){
 
     return true;
 }
+
+
+/*
+void ScWidget::saveData(Integrable* I){
+
+    std::string pathE("data/EnergieTotale.txt");
+    std::string pathLa("data/L_a.txt");
+    std::string pathLk("data/L_k.txt");
+    std::string pathPMixte("data/ProduitMixte.txt");
+
+    std::ofstream fluxE(pathE);
+    std::ofstream fluxLa(pathLa);
+    std::ofstream fluxLk(pathLk);
+    std::ofstream fluxPMixte(pathPMixte);
+
+    if(!fluxE) {
+        pathE = ("EnergieTotale.txt");
+        fluxE = std::ofstream(pathE);
+    }
+    if(!fluxLa) {
+        pathLa = ("L_a.txt");
+        fluxLa = std::ofstream(pathLa);
+    }
+    if(!fluxLk) {
+        pathLk = ("L_k.txt");
+        fluxLk = std::ofstream(pathLk);
+    }
+    if(!fluxPMixte) {
+        pathPMixte = ("ProduitMixte.txt");
+        fluxPMixte = std::ofstream(pathPMixte);
+    }
+
+    fluxE << I->get
+
+}
+
+*/
 
 
 void ScWidget::setCone() {

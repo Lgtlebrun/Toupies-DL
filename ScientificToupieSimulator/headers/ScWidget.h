@@ -55,6 +55,8 @@ public:
     void goTexte(double duree, double dt);
     void goImage();
 
+    void saveData(Integrable* I);
+
 public slots:
 
    // void changeType();

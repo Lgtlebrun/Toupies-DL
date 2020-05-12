@@ -12,10 +12,10 @@ class GLWidget : public QOpenGLWidget
  */
 {
 public:
-    GLWidget(Systeme& S, Vecteur const& POV = Vecteur({4.5,-10.0,0.0}),
+    GLWidget(Systeme& S, Vecteur const& POV = Vecteur({4.5,-10.0,0.0}), bool trace = false,
              QWidget* parent = nullptr)
     : QOpenGLWidget(parent)
-     , m_s(S)                   // la simulation commence qu'une fois le systeme établi
+     , m_s(S), m_trace(trace), m_memoire(vue)                   // la simulation commence qu'une fois le systeme établi
   {vue.setPOV(POV);
    m_s.changeSupport(vue);}
   virtual ~GLWidget() {}
@@ -45,6 +45,8 @@ private:
 
   // objets à dessiner, faire évoluer
   Systeme m_s;
+  bool m_trace;
+  Trace m_memoire;
 
   QPoint lastMousePosition;
 };

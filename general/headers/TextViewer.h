@@ -12,6 +12,7 @@
 #include "Tests/Bille.h"
 #include "ToupieChinoise.h"
 #include "Toupie.h"
+#include "Trace.h"
 
 
 
@@ -37,6 +38,7 @@ public :
     virtual void dessine(ConeSimple const&) ;
     virtual void dessine(ToupieChinoise const&) ;
     virtual void dessine(Toupie const&);
+    virtual void dessine(Trace const&){}                    // Il n'y a pas lieu de dessiner une trace en mode Texte
 
 // =====================================================================================
 
