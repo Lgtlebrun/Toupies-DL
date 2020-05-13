@@ -3,7 +3,7 @@
 
 ScWidget::ScWidget(QWidget *parent)
     : QWidget(parent)
-    , ui(new Ui::Widget), m_type(CUSTOM), m_mode(TEXTE), m_support(0), m_objet(0), m_console(0), m_fichierPret(false)
+    , ui(new Ui::Widget), m_type(CUSTOM), m_mode(TEXTE), m_support(0), m_objet(0), m_console(0), m_fichierPret(false), m_trace(false)
 {
     ui->setupUi(this);
 
@@ -538,6 +538,9 @@ void ScWidget::goImage(){
 
     if(m_caseTrace->isChecked()) {
         m_trace = true;
+    }
+    else{
+        m_trace = false;
     }
 
 
