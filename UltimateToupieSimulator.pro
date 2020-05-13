@@ -32,6 +32,8 @@ SOURCES += \
     Qt_GL/glwidget.cc \
     Qt_GL/vue_opengl.cc \
     Qt_GL/sphere.cc \
+    general/source/ObjetPhysique.cpp \
+    general/source/Trace.cpp \
     main.cpp
 
 HEADERS += \
@@ -63,6 +65,8 @@ HEADERS += \
     Qt_GL/vue_opengl.h \
     Qt_GL/sphere.h \
     Qt_GL/vertex_shader.h \
+    general/headers/ObjetPhysique.h \
+    general/headers/Trace.h \
 
 
 
