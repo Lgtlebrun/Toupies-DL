@@ -21,7 +21,7 @@
 #ifndef GRILLAGE_H
 #define GRILLAGE_H
 
-enum INTEGRATEUR {EC, NEWMARK};
+enum INTEGRATEUR {EC, NEWMARK, RK4};
 
 
 
@@ -38,7 +38,7 @@ public:
     TypeBouton* getSelectedButton() const;
     QPushButton* getGo() const {return m_go;}
     INTEGRATEUR getInteg() const;
-    std::vector<Integrable*> getCorps() const {return m_sys;}
+    std::vector<ObjetPhysique*> getCorps() const {return m_sys;}
     int getEchelle() const {return m_echelle->value();}
 
     // Gestion du choix d'un bouton-type (Cone, Bille...)
@@ -49,8 +49,8 @@ public:
     Vecteur findNewPos();                       // Identifie une position nouvellement occupée
 
     // Gestion de la liste d'Intégrables
-    void addIntegrable();                       // Ajout d'un objet au futur systeme
-    void delIntegrable();                       // Suppression "   "
+    void addObjet();                       // Ajout d'un objet au futur systeme
+    void delObjet();                       // Suppression "   "
 
     // Gestion d'ensemble
     bool checkAllCaracs() const;                // Vérification du nouvel objet
@@ -75,7 +75,7 @@ private:
     QPushButton* m_go;                          // Bouton de lancement de la simulation
 
     std::vector<Vecteur> m_posOccupee;          // Le positions occupées par le système
-    std::vector<Integrable*> m_sys;             // Les objets fabriqués
+    std::vector<ObjetPhysique*> m_sys;             // Les objets fabriqués
 
 
     std::vector<std::vector<BoutonPosition*>> m_boutonsPos;     // Le grillage à proprement parler

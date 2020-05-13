@@ -56,6 +56,7 @@ m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_go(0), m_echelle(0), m_slider(
 
     m_BoxIntegrateur->addItem("Euler-Cromer");
     m_BoxIntegrateur->addItem("Newmark");
+    m_BoxIntegrateur->addItem("RK4");
 
 
     layIntegBis->addWidget(integrateur);
@@ -82,8 +83,8 @@ m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_go(0), m_echelle(0), m_slider(
             m_boutonsPos[j].push_back(b);
 
             QObject::connect(b, &QPushButton::clicked, b, &BoutonPosition::clickGestion);
-            QObject::connect(b, &BoutonPosition::newIntegrable, this, &Grillage::addIntegrable);
-            QObject::connect(b, &BoutonPosition::supprIntegrable, this, &Grillage::delIntegrable);
+            QObject::connect(b, &BoutonPosition::newIntegrable, this, &Grillage::addObjet);
+            QObject::connect(b, &BoutonPosition::supprIntegrable, this, &Grillage::delObjet);
 
             //NDP : Dernière commande de la boucle
             laygrille->addWidget(b,j,i);
@@ -290,7 +291,7 @@ bool Grillage::checkAllCaracs() const {
 }
 
 
-void Grillage::addIntegrable(){
+void Grillage::addObjet(){
 
     Vecteur pos(findNewPos());
 
@@ -350,7 +351,7 @@ void Grillage::addIntegrable(){
 }
 
 
-void Grillage::delIntegrable(){
+void Grillage::delObjet(){
 
     for(size_t k(0); k < m_sys.size(); k++){
 
@@ -447,5 +448,6 @@ INTEGRATEUR Grillage::getInteg() const {
         return NEWMARK;
     }
 
-    else{return EC;} //Securité -> on est bien.
+
+    else{return RK4;} //Securité -> on est bien.
 }

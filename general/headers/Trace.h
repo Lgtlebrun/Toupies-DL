@@ -25,13 +25,6 @@ private:
 
     std::deque<Vecteur> m_points;
 
-
-
-
-
-
-
-
 };
 
 

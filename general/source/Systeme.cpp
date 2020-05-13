@@ -80,15 +80,15 @@ void Systeme::changeSupport(SupportADessin & sup) {
 
 }
 
-void Systeme::addIntegrable(Integrable& I) {
+void Systeme::addObjet(ObjetPhysique& O) {
 /* méthode qui ajoute un intégrable au Systeme */
-    m_corps.push_back(I.clone());
+    m_corps.push_back(O.clone());
 
     /* On modifie le support de l'objet pour la cohérence du système */
     m_corps.back()->changeSupport(*m_support);
 }
 
-Integrable* Systeme::getCorps(size_t k) const {
+ObjetPhysique* Systeme::getCorps(size_t k) const {
 /* Renvoie un pointeur sur la toupie en indice. En cas d'indice trop grand, renvoie nullptr */
 
     if (k >= m_corps.size()){

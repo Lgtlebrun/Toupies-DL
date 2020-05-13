@@ -13,6 +13,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
+    ../general/source/Trace.cpp \
+    src/ScGLWidget.cpp \
     ScMain.cpp \
     src/ScWidget.cpp \
     src/QTextViewer.cpp \
@@ -35,8 +37,11 @@ SOURCES += \
     ../general/source/Tests/Oscillateur.cpp \
     ../general/source/ToupieChinoise.cpp \
     ../general/source/Matrice3.cpp \
+    ../general/source/ObjetPhysique.cpp
 
 HEADERS += \
+    headers/ScGLWidget.h \
+    ../general/headers/Trace.h \
     headers/ScWidget.h \
     headers/QTextViewer.h \
     headers/TextEdit.h \
@@ -61,13 +66,14 @@ HEADERS += \
     ../general/headers/Tests/Bille.h \
     ../general/headers/Tests/Oscillateur.h \
     ../general/headers/ToupieChinoise.h \
+    ../general/headers/ObjetPhysique.h
 
 FORMS += \
     widget.ui
 
 RESOURCES += \
     ../Qt_GL/resource.qrc \
-    data/police.qrc
+    polices/police.qrc
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

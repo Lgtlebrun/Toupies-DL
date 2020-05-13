@@ -21,7 +21,7 @@
 #include "QTextViewer.h"
 #include "TextEdit.h"
 #include "../general/headers/TextViewer.h"
-#include "../Qt_GL/glwidget.h"
+#include "ScGLWidget.h"
 
 
 
@@ -48,14 +48,14 @@ public:
     ~ScWidget();
 
     bool checkAllCaracs();
-    Integrable* makeObjet() const;
+    ObjetPhysique* makeObjet() const;
 
     void goFichier(double duree, double dt);
     void goFichierBis();
     void goTexte(double duree, double dt);
     void goImage();
 
-    void saveData(Integrable* I);
+
 
 public slots:
 
@@ -121,14 +121,14 @@ private:
     FichierSearch* m_search;
     TextEdit* m_console;
 
-    std::vector<GLWidget*> m_simulations;
+    std::vector<ScGLWidget*> m_simulations;
 
     bool m_trace;
     bool m_fichierPret;
     Type m_type;
     Mode m_mode;
     SupportADessin* m_support;
-    Integrable* m_objet;
+    ObjetPhysique* m_objet;
     std::vector<Integrateur*> m_integ;
     std::vector<std::string> m_nomInteg;
     std::vector<Systeme> m_sys;

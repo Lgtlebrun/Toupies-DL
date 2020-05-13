@@ -4,7 +4,7 @@
 Oscillateur::Oscillateur(SupportADessin& S, Vecteur const & param, Vecteur const & vit, Vecteur const& Centre_du_mvt, double const& r)
  /* L'amplitude du mouvement dépend du centre du mouvement, que nous décidons de passer en paramètre. Tous les vecteur *
   * sont de dimension 3. Le raisonnement pour setDistSecu() est le même que pour Bille.cpp */
-        : Integrable(S, "Oscillateur harmonique", param, vit), m_centreMVT(Centre_du_mvt), m_rayon(r)
+        : ObjetPhysique(S, "Oscillateur harmonique", param, vit), m_centreMVT(Centre_du_mvt), m_rayon(r)
 {}
 
 

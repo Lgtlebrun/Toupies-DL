@@ -8,6 +8,7 @@
 #include "Dessinable.h"
 #include <iostream>
 #include "Integrateur.h"
+#include "ObjetPhysique.h"
 
 
 
@@ -43,12 +44,12 @@ public:
 
 // =========  ACCESSEURS/SETTEURS INTEGRABLES :
 
-    Integrable* getCorps(size_t k) const;                           // Permet d'accèder au kème intégrable. L'indice est
+    ObjetPhysique* getCorps(size_t k) const;                           // Permet d'accèder au kème intégrable. L'indice est
                                                                     // le même que pour un vector
 
     unsigned int getNbCorps() const;                                // Accesseur au nombre d'intégrables du système
 
-    void addIntegrable(Integrable&);                                // Ajoute un intégrable au système
+    void addObjet(ObjetPhysique&);                                // Ajoute un intégrable au système
 
 // =========   ACESSEUR INTEGRABLE :
 
@@ -72,7 +73,7 @@ protected:
 
 // =========  ATTRIBUTS :
 
-    std::vector<Integrable*> m_corps;
+    std::vector<ObjetPhysique*> m_corps;
 
     Integrateur& m_integrateur;
 

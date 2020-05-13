@@ -342,9 +342,9 @@ ScWidget::~ScWidget()
 
 
 
-Integrable* ScWidget::makeObjet() const {
+ObjetPhysique* ScWidget::makeObjet() const {
 
-    Integrable* ptr(0);
+    ObjetPhysique* ptr(0);
 
     switch(m_type){
 
@@ -425,7 +425,7 @@ void ScWidget::go(){
 
     for (auto& elt:m_integ){
         Systeme S(*m_support, *elt);
-        S.addIntegrable(*m_objet);
+        S.addObjet(*m_objet);
         m_sys.push_back(S);
     }
 
@@ -539,11 +539,12 @@ void ScWidget::goImage(){
     }
 
 
-    for (auto& S:m_sys){
-        m_simulations.push_back(new GLWidget(S, Vecteur({0.,-10, 0.}), m_trace));
+    for (size_t i(0); i < m_sys.size(); i++){
+        m_simulations.push_back(new ScGLWidget(m_sys[i], Vecteur({0.,-10, 0.}), i, m_trace));
     }
 
     for(size_t i(0); i < m_simulations.size(); i++){
+
 
         //Setup bouton Menu principal
 
@@ -682,41 +683,10 @@ bool ScWidget::checkAllCaracs(){
 }
 
 
-/*
-void ScWidget::saveData(Integrable* I){
 
-    std::string pathE("data/EnergieTotale.txt");
-    std::string pathLa("data/L_a.txt");
-    std::string pathLk("data/L_k.txt");
-    std::string pathPMixte("data/ProduitMixte.txt");
 
-    std::ofstream fluxE(pathE);
-    std::ofstream fluxLa(pathLa);
-    std::ofstream fluxLk(pathLk);
-    std::ofstream fluxPMixte(pathPMixte);
 
-    if(!fluxE) {
-        pathE = ("EnergieTotale.txt");
-        fluxE = std::ofstream(pathE);
-    }
-    if(!fluxLa) {
-        pathLa = ("L_a.txt");
-        fluxLa = std::ofstream(pathLa);
-    }
-    if(!fluxLk) {
-        pathLk = ("L_k.txt");
-        fluxLk = std::ofstream(pathLk);
-    }
-    if(!fluxPMixte) {
-        pathPMixte = ("ProduitMixte.txt");
-        fluxPMixte = std::ofstream(pathPMixte);
-    }
 
-    fluxE << I->get
-
-}
-
-*/
 
 
 void ScWidget::setCone() {
