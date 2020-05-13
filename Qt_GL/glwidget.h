@@ -6,21 +6,27 @@
 #include "vue_opengl.h"
 #include "../general\headers/Systeme.h"
 
+
 class GLWidget : public QOpenGLWidget
 /* La fenêtre hérite de QOpenGLWidget ;
  * les événements (clavier, souris, temps) sont des méthodes virtuelles à redéfinir.
  */
 {
+
+
 public:
-    GLWidget(Systeme& S, Vecteur const& POV = Vecteur({4.5,-10.0,0.0}), bool trace = false,
+    GLWidget(Systeme& S, Vecteur const& POV = Vecteur({4.5,-10.0,0.0}),
              QWidget* parent = nullptr)
     : QOpenGLWidget(parent)
-     , m_s(S), m_trace(trace), m_memoire(vue)                   // la simulation commence qu'une fois le systeme établi
+     , m_s(S), m_memoire(vue)                   // la simulation commence qu'une fois le systeme établi
   {vue.setPOV(POV);
    m_s.changeSupport(vue);}
   virtual ~GLWidget() {}
 
-private:
+    ObjetPhysique* getCorps(size_t i) {return m_s.getCorps(i);}
+
+
+protected:
   // Les 3 méthodes clés de la classe QOpenGLWidget à réimplémenter
   virtual void initializeGL()                  override;
   virtual void resizeGL(int width, int height) override;
@@ -45,7 +51,6 @@ private:
 
   // objets à dessiner, faire évoluer
   Systeme m_s;
-  bool m_trace;
   Trace m_memoire;
 
   QPoint lastMousePosition;
