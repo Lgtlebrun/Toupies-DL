@@ -9,7 +9,7 @@ class ScGLWidget : public GLWidget {
 
 public:
 
-    ScGLWidget(Systeme& S, Vecteur const& POV = Vecteur({4.5,-10.0,0.0}), size_t indice = 0, bool trace = false,
+    ScGLWidget(Systeme& S, std::string nomInteg, Vecteur const& POV = Vecteur({4.5,-10.0,0.0}), size_t indice = 0, bool trace = false,
                QWidget* parent = nullptr);
 
     void setIndice(size_t i) {m_indice = i;}
@@ -26,6 +26,8 @@ private:
 
     size_t m_indice;
     bool m_trace;
+
+    std::string m_nomInteg;
 
     std::ofstream fluxE;
     std::ofstream fluxLa;

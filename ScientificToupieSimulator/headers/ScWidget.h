@@ -54,7 +54,7 @@ public:
     void goFichierBis();
     void goTexte(double duree, double dt);
     void goImage();
-
+    void saveData(ObjetPhysique* O, size_t indice);
 
 
 public slots:

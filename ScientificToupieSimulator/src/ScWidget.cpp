@@ -412,15 +412,15 @@ void ScWidget::go(){
 
     if (m_caseEC->isChecked()){
         m_integ.push_back(new IntegrateurEulerCromer(0));
-        m_nomInteg.push_back(std::string("Integrateur Euler-Cromer"));
+        m_nomInteg.push_back(std::string("Euler-Cromer"));
     }
     if (m_caseNewmark->isChecked()){
         m_integ.push_back(new IntegrateurNewmark(0));
-        m_nomInteg.push_back(std::string("Integrateur Newmark"));
+        m_nomInteg.push_back(std::string("Newmark"));
     }
     if (m_caseRK4->isChecked()){
         m_integ.push_back(new IntegrateurRK4(0));
-        m_nomInteg.push_back(std::string("Integrateur RK4"));
+        m_nomInteg.push_back(std::string("RK4"));
     }
 
     for (auto& elt:m_integ){
@@ -476,6 +476,7 @@ void ScWidget::goTexte(double duree, double dt){
 
             m_sys[j].evolue(dt);
             m_sys[j].dessine();
+            saveData(m_sys[j].getCorps(0), j);
         }
     }
 
@@ -506,6 +507,7 @@ void ScWidget::goFichier(double duree, double dt){
             for (int i(0); i < duree/dt; i++){
                 m_sys[j].evolue(dt);
                 m_sys[j].dessine();
+                saveData(m_sys[j].getCorps(0),j);
             }
          }
 
@@ -540,7 +542,7 @@ void ScWidget::goImage(){
 
 
     for (size_t i(0); i < m_sys.size(); i++){
-        m_simulations.push_back(new ScGLWidget(m_sys[i], Vecteur({0.,-10, 0.}), i, m_trace));
+        m_simulations.push_back(new ScGLWidget(m_sys[i], m_nomInteg[i], Vecteur({0.,-10, 0.}), i, m_trace));
     }
 
     for(size_t i(0); i < m_simulations.size(); i++){
@@ -683,6 +685,40 @@ bool ScWidget::checkAllCaracs(){
 }
 
 
+
+void ScWidget::saveData(ObjetPhysique* O, size_t indice){
+
+
+    std::string pathE("data/EnergieTotale_" + m_nomInteg[indice] + ".txt");
+    std::string pathLa("data/L_a_"+ m_nomInteg[indice] + ".txt");
+    std::string pathLk("data/L_k_"+ m_nomInteg[indice] + ".txt");
+    std::string pathPMixte("data/ProduitMixte_"+ m_nomInteg[indice] + ".txt");
+
+    std::ofstream fluxE(pathE, std::ios_base::app), fluxLa(pathLa, std::ios_base::app), fluxLk(pathLk, std::ios_base::app), fluxPMixte(pathPMixte, std::ios_base::app);
+
+    if(!fluxE) {
+        std::string pathE("EnergieTotale_" + m_nomInteg[indice] + ".txt");
+        fluxE = std::ofstream(pathE, std::ios_base::app);
+    }
+    if(!fluxLa) {
+        std::string pathLa("L_a_"+ m_nomInteg[indice] + ".txt");
+        fluxLa = std::ofstream(pathLa, std::ios_base::app);
+    }
+    if(!fluxLk) {
+        std::string pathLk("L_k_"+ m_nomInteg[indice] + ".txt");
+        fluxLk = std::ofstream(pathLk, std::ios_base::app);
+    }
+    if(!fluxPMixte) {
+        std::string pathPMixte("ProduitMixte_"+ m_nomInteg[indice] + ".txt");
+        fluxPMixte = std::ofstream(pathPMixte, std::ios_base::app);
+    }
+
+    fluxE << O->Energie() << std::endl;
+    fluxLa << O->L_a() << std::endl;
+    fluxLk << O->L_k() << std::endl;
+    fluxPMixte << O->ProdMixte() << std::endl;
+
+}
 
 
 
