@@ -5,13 +5,14 @@ Vous vous trouvez dans le répertoire contenant les fichiers source des classes 
 Vous trouverez ici un main dans "testAll.cpp" permettant de tester toutes les classes à la fois.
 
 
-Pour le construire, un makefile està votre disposition. Executez "make" dans votre terminal.
+Pour le construire, un Makefile est à votre disposition. Executez "make" dans votre terminal.
 Un executable nommé "TestAll" sera alors construit.
 
 
-Lorsque un test échoue, il écrit un rapport d'erreur au format "Test[classe défaillante].txt".
+Lorsqu'un test échoue, un rapport d'erreur est écrit au format "Test[classe défaillante].txt".
 
 
 
+TestAll est une application console, à executer dans un terminal.
 
 ============================================================================
