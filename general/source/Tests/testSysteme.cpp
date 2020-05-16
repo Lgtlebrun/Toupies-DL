@@ -84,7 +84,7 @@ bool TestSysteme::test_evol() {
 
         Systeme S(T, It);
 
-        S.addIntegrable(Ct);
+        S.addObjet(Ct);
 
 
         statsSyst << S;
