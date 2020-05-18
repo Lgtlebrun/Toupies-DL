@@ -3,18 +3,22 @@
 
 
 ToupieChinoise::ToupieChinoise(SupportADessin& sup, Vecteur const& angles, Vecteur const& anglesp, Vecteur const& posA, double const& rayon, double const& hauteur, double const& masseVolumique)
-    :Toupie(sup, "Toupie Chinoise", angles, anglesp, posA, 0.0, 0.0, masseVolumique, masse(rayon, hauteur, masseVolumique),
-            rayon-hauteur), m_rayon(rayon), m_hauteur(hauteur)
+    :Toupie(sup, "Toupie Chinoise", angles, anglesp, posA, 0.0, 0.0
+     , masseVolumique, 0.0,rayon-hauteur), m_rayon(rayon), m_hauteur(hauteur)
 {
     if (2*m_rayon < m_hauteur) {
 
         m_hauteur = 0;
 
     }
-    setPosition(posA);
     m_d = calcule_d();
-    calculeIA1(rayon, hauteur, masseVolumique);
-    calculeI3(rayon, hauteur, masseVolumique);
+
+    m_masse = masse(m_rayon, m_hauteur, m_masseVolumique);
+
+    m_I3 = calculeI3(m_rayon, m_hauteur, m_masseVolumique);
+
+    m_IA1 = calculeIA1(m_rayon, m_hauteur, m_masseVolumique);
+
 }
 
 ToupieChinoise::~ToupieChinoise() {
@@ -34,7 +38,7 @@ void ToupieChinoise::dessine() {
 
 Vecteur ToupieChinoise::equEvol(const double &temps) {
 
-    Vecteur sortie{0.0,0.0,0.0,0.0,0.0,0.0};
+    Vecteur sortie({0.0,0.0,0.0,0.0,0.0,0.0});
 
     m_P = modulo2Pi();
 
@@ -42,9 +46,10 @@ Vecteur ToupieChinoise::equEvol(const double &temps) {
 
     double alpha(3.0/4*m_hauteur*m_hauteur/(m_rayon*(m_rayon+m_hauteur)));
 
-    double thetapp((m_Ppoint.getCoord(1)*m_Ppoint.getCoord(1)*((-m_masse*m_rayon*m_rayon*(alpha-cos(m_P.getCoord(0)))*(1-alpha*cos(m_P.getCoord(0)))+I1*cos(m_P.getCoord(0))))
+    double thetapp(sin(m_P.getCoord(0))/(I1+m_masse*m_rayon*m_rayon*(alpha-cos(m_P.getCoord(0))*(alpha-cos(m_P.getCoord(0)))+sin(m_P.getCoord(0)*sin(m_P.getCoord(0)))))
+                    *(m_Ppoint.getCoord(1)*m_Ppoint.getCoord(1)*(-m_masse*m_rayon*m_rayon*(alpha-cos(m_P.getCoord(0)))*(1-alpha*cos(m_P.getCoord(0)))+I1*cos(m_P.getCoord(0)))
                     + f1()*m_Ppoint.getCoord(1)*(m_masse*m_rayon*m_rayon*(alpha*cos(m_P.getCoord(0))-1)-m_I3)-m_masse*m_rayon*m_rayon*m_Ppoint.getCoord(0)*m_Ppoint.getCoord(0)*alpha
-                    - m_masse*m_rayon*alpha*g.norme() )  * sin(m_P.getCoord(0))/(I1+m_masse*m_rayon*m_rayon*(pow((alpha-cos(m_P.getCoord(0))),2)+pow(sin(m_P.getCoord(0)),2))));
+                    - m_masse*m_rayon*alpha*g.norme()));
 
     sortie.setCoord(0, thetapp);
 
@@ -114,7 +119,7 @@ double ToupieChinoise::calcule_d() const {
 
 double ToupieChinoise::calculeI3(const double & rayon, const double & hauteur, const double & masseVolumique) const {
 
-    return M_PI/30*masseVolumique*pow(2*rayon-hauteur, 3)*(2*rayon*rayon+3*hauteur*rayon+3*rayon*rayon);
+    return M_PI/30*masseVolumique*pow(2*rayon-hauteur, 3)*(2*rayon*rayon+3*hauteur*rayon+3*hauteur*hauteur);
 
 }
 
@@ -125,7 +130,9 @@ double ToupieChinoise::calculeIA1(const double & rayon, const double & hauteur, 
 
     double integ_z(M_PI/15*masseVolumique*pow(2*rayon-hauteur, 2)*(pow(rayon,3)+hauteur*pow(rayon, 2)-3*pow(hauteur,2)*rayon+3*pow(hauteur,3)));
 
-    return 1.0/2*-m_I3+integ_z-m_masse*9.0/16.0*hauteur*hauteur/pow(rayon+hauteur, 2)+m_masse*d*d;
+    double alpha(3.0/4*hauteur*hauteur/(rayon*(rayon*hauteur)));
+
+    return 1.0/2*m_I3+integ_z-m_masse*rayon*rayon*alpha*alpha+m_masse*d*d;
 
 }
 
@@ -194,13 +201,14 @@ double ToupieChinoise::f1() {
 
 double ToupieChinoise::f2() {
 
-    double alpha (3.0/4*m_hauteur*m_hauteur/(m_rayon*(m_rayon+m_hauteur)));
+    double alpha (3.0/4.0*m_hauteur*m_hauteur/(m_rayon*(m_rayon+m_hauteur)));
 
-    if (sin(m_P.getCoord(0)) < PREC) { return 0.0; }
-    if (f3() < PREC) { return 0.0; }
+    if (fabs(sin(m_P.getCoord(0))) < PREC) { return 0.0; }
+    if (fabs(f3()) < PREC) { return 0.0; }
+
     return m_Ppoint.getCoord(0)/sin(m_P.getCoord(0))*f1()*(m_I3*(m_I3+m_masse*m_rayon
     *m_rayon*(1-alpha*cos(m_P.getCoord(0)))))/f3()
-    -2*m_Ppoint.getCoord(1)*m_Ppoint.getCoord(0)*tan(M_PI/2-m_P.getCoord(0));
+    -2*m_Ppoint.getCoord(1)*m_Ppoint.getCoord(0)*cos(m_P.getCoord(0))/sin(m_P.getCoord(0));
 
 }
 
@@ -209,7 +217,7 @@ double ToupieChinoise::f3() {
     double I1(calculeI1());
 
     return m_I3*I1+m_masse*m_rayon*m_rayon*I1*sin(m_P.getCoord(0))*sin(m_P.getCoord(0))
-    + m_masse*m_rayon*m_rayon*m_I3*pow(3.0/4*m_hauteur*m_hauteur/m_rayon/(m_rayon+m_hauteur)-cos(m_P.getCoord(0)), 2);
+    + m_masse*m_rayon*m_rayon*m_I3*pow(3.0/4*m_hauteur*m_hauteur/(m_rayon*(m_rayon+m_hauteur))-cos(m_P.getCoord(0)), 2);
 
 
 }
