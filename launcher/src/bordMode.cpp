@@ -3,6 +3,7 @@
 BordMode::BordMode(QWidget* parent) : QWidget(parent), m_formatChoisi(TEXTE), m_b1(0), m_b2(0), m_b3(0), m_labelMode(0),
 m_search(0){
 
+    /// CONSTRUCTEUR
 
 
     int bx(30);    //Coords des boutons
@@ -14,6 +15,7 @@ m_search(0){
     QFont police("courier", 14, 18);        // Police des boutons
 
 
+    // Setup Boutons
     m_b1 = new QPushButton("Texte", this);
     m_b2 = new QPushButton("Image", this);
     m_b3 = new QPushButton("Fichier", this);
@@ -38,12 +40,12 @@ m_search(0){
     m_b3->move(bx, by + 140);
 
 
-
+    // Setup Labels
     m_labelMode = new QLabel("Mode d'affichage : ", this);
     m_labelMode->setFont(QFont("Agency FB", 19, 19));
     m_labelMode->move(30, 10);
 
-
+    // Setup Fichiersearch
     m_search = new FichierSearch("UltimateSimulation", this);
 
 
@@ -61,30 +63,36 @@ m_search(0){
 
 QPushButton* BordMode::getBouton(int n){
 
+    /// Accesseur sur les boutons
+    ///Paramètre : indice du bouton désiré
+
     switch (n) {
 
     default:
-        return m_b1;
+        return m_b1;        // retourne le bouton "TEXTE"
     case 2:
-        return m_b2;
+        return m_b2;        // retourne le bouton "IMAGE"
     case 3:
-        return m_b3;
+        return m_b3;        // retourne le bouton "FICHIER"
 
     }
 }
 
 
+// Modifie le mode d'affichage sélectionné
 
 void BordMode::setToText() {
     m_formatChoisi = TEXTE;
 }
 
-void BordMode::setToImage() {m_formatChoisi = IMAGE;}
+void BordMode::setToImage() {
+    m_formatChoisi = IMAGE;
+}
 
 void BordMode::setToFichier() {
 
     m_formatChoisi = FICHIER;
-    m_search->open();
+    m_search->open();               // Lancement du fichierSearch
 }
 
 

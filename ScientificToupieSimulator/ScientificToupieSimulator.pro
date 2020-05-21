@@ -68,8 +68,6 @@ HEADERS += \
     ../general/headers/ToupieChinoise.h \
     ../general/headers/ObjetPhysique.h
 
-FORMS += \
-    widget.ui
 
 RESOURCES += \
     ../Qt_GL/resource.qrc \

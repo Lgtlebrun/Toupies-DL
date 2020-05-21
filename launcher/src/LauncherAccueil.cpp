@@ -5,6 +5,12 @@
 LauncherAccueil::LauncherAccueil() : m_titre(0), m_bord(0), m_grillage(0), m_integ(0), m_simulation(0),
 m_support(0){
 
+    /// CONSTRUCTEUR
+    /// Fenetre d'accueil, donc accueillante.
+
+    //Setup de l'icône
+    setWindowIcon(QIcon(":/icons/icone.gif"));
+
     //Setup des polices
     QFontDatabase::addApplicationFont(":/police/agency-fb_.ttf");
 
@@ -73,6 +79,8 @@ m_support(0){
 
 void LauncherAccueil::suppPret(){
 
+    /// Slot réagissant à l'arrivée dans les cartons du SupportADessin, nécessaire
+    /// à la simulation.
 
         hide();
 
@@ -87,6 +95,8 @@ void LauncherAccueil::suppPret(){
 
 void LauncherAccueil::launchGrillage() {
 
+    /// LANCE LE FREROT AKA GRILLAGE <3 <3 <3
+
     m_grillage = new Grillage;
 
     //CONNEXIOOOOOOOON
@@ -99,12 +109,18 @@ void LauncherAccueil::launchGrillage() {
 
 LauncherAccueil::~LauncherAccueil(){
 
+    /// Destructeur
+
     delete m_integ;
     delete m_support;
 }
 
 
 void LauncherAccueil::go(){
+
+    /// Méthode redirigeant vers les fonctions "go" appropriées.
+    ///
+    /// Les méthodes go démarrent la simulation.
 
     setInteg();
     m_grillage->hide();
@@ -130,6 +146,9 @@ void LauncherAccueil::go(){
 
 void LauncherAccueil::setInteg(){
 
+    /// Fabrique l'intégrateur de la simulation en fonction du choix de
+    /// l'utilisateur dans le grillage.
+
     switch(m_grillage->getInteg()){
 
     default:
@@ -150,7 +169,7 @@ void LauncherAccueil::setInteg(){
 
 
 
-
+// ======================== METHODES GO ===========================
 
 void LauncherAccueil::goFichier() {
 
@@ -267,7 +286,17 @@ void LauncherAccueil::goTexte() {
 
 
 
+// ==============================================================================
+
+
+
+
+
+
+
 void LauncherAccueil::restart(){
+
+    /// Redémarre la fenêtre d'accueil
 
     show();
 

@@ -26,13 +26,17 @@
 class LauncherAccueil : public QWidget {
 
 
-    ///Classe principale de l'interface graphique utilisateur.
+    /// FENETRE PRINCIPALE DE ULTIMATE TOUPIE SIMULATOR.
 
     Q_OBJECT
 
+
+// ========================== METHODES ==============================
+
 public:
-    LauncherAccueil();
-    virtual ~LauncherAccueil();
+
+    LauncherAccueil();                      // Cstor
+    virtual ~LauncherAccueil();             // Dstor
 
 
     // Lancement des simulations
@@ -58,6 +62,7 @@ public slots:
     void restart();
 
 
+// ========================== ATTRIBUTS ==============================
 
 protected:
 
@@ -72,10 +77,10 @@ protected:
 
     Grillage* m_grillage; // Le frérot
 
-    SupportADessin* m_support;
-    Integrateur* m_integ;
+    SupportADessin* m_support;              // Support de la simulation
+    Integrateur* m_integ;                   // Integrateur de la simulation
 
-    QWidget* m_simulation;
+    QWidget* m_simulation;                  // Fenetre de la simulation: soit un GLWidget, soit une console
 
 };
 

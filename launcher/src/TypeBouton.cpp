@@ -3,6 +3,9 @@
 TypeBouton::TypeBouton(Type type, QWidget* parent) : QPushButton(parent), m_type(type),
 m_barMVol(0), m_barRayon(0), m_barHauteur(0), m_pressed(false) {
 
+
+    /// CONSTRUCTEUR
+
     setFixedSize(940, 200);
     QHBoxLayout* mainlay = new QHBoxLayout;
     mainlay->setAlignment(Qt::AlignLeft);
@@ -252,12 +255,17 @@ m_barMVol(0), m_barRayon(0), m_barHauteur(0), m_pressed(false) {
         m_vZ->setPrefix("Phi :");
         break;
 
+    default:
+        return;
+
     }
 
 }
 
 
 void TypeBouton::changeStatut() {
+
+    /// Réagit au click
 
     if(m_pressed) {
         m_pressed = false;
@@ -273,6 +281,8 @@ void TypeBouton::changeStatut() {
 
 void TypeBouton::changeSkin(){
 
+    /// Change la couleur selon le statut
+
     if(m_pressed){
         setStyleSheet("background: cyan");
     }
@@ -287,5 +297,6 @@ void TypeBouton::changeSkin(){
 
 void TypeBouton::setPresse(bool presse) {
 
+    /// Modifie m_pressed
     m_pressed = presse;
 }

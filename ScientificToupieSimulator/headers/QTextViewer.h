@@ -19,6 +19,9 @@
 
 class QTextViewer : public SupportADessin, public Clonable
 {
+
+    /// Classe adaptant TextViewer au format GUI
+
 public :
 
 // =========
@@ -50,7 +53,7 @@ protected:
 
 // =========  ATTRIBUTS :
 
-    TextEdit& m_flux;
+    TextEdit& m_flux;       // Le flot est ici un TextEdit pour l'affichage Texte
 
 
 };

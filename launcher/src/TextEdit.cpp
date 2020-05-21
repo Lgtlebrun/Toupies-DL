@@ -21,6 +21,12 @@ TextEdit& TextEdit::operator<<(Systeme& s){
 }
 
 
+TextEdit& TextEdit::operator<<(std::string& s){
+
+    *this << QString::fromStdString(s);
+    return *this;
+}
+
 
 void TextEdit::closeEvent(QCloseEvent *event)
 {

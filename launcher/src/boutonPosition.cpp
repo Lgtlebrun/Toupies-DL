@@ -3,9 +3,13 @@
 BoutonPosition::BoutonPosition(Vecteur const& pos, QWidget* parent) : QPushButton("", parent), m_couleur(GRIS),
     m_pastille(0), m_position(pos) {
 
+    /// CONSTRUCTEUR
+
+    // Setup pastille
     m_pastille = new QLabel(this);
     m_pastille->setAlignment(Qt::AlignCenter);
 
+    // Setup layout
     QVBoxLayout* lay = new QVBoxLayout;
     lay->addWidget(m_pastille);
     this->setLayout(lay);
@@ -32,11 +36,6 @@ void BoutonPosition::changeCouleur(Couleur c){
         pix = pix.scaled(scale, Qt::KeepAspectRatio);
         break;
 
-    case ROUGE:
-        pix.load(":/icons/boutonRouge.png");
-        pix = pix.scaled(scale, Qt::KeepAspectRatio);
-        break;
-
     case BLEU:
         pix.load(":/icons/boutonBleu.png");
         pix = pix.scaled(scale, Qt::KeepAspectRatio);
@@ -51,10 +50,9 @@ void BoutonPosition::changeCouleur(Couleur c){
 
 void BoutonPosition::clickGestion(){
 
-    switch(m_couleur){
+    /// Emet le signal approprié en fonction du staut (Position occupée/libérée)
 
-    case ROUGE:
-        return;
+    switch(m_couleur){
 
     case GRIS:
         changeCouleur(BLEU);

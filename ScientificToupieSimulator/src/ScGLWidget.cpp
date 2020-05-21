@@ -2,10 +2,13 @@
 
 
 
-ScGLWidget::ScGLWidget(Systeme& S, std::string nomInteg, Vecteur const& POV, size_t indice, bool trace,
-           QWidget* parent) : GLWidget(S, POV, parent), m_indice(indice), m_trace(trace), m_nomInteg(nomInteg)
+ScGLWidget::ScGLWidget(Systeme& S, std::string nomInteg, Vecteur const& POV, bool trace,
+           QWidget* parent) : GLWidget(S, POV, parent), m_trace(trace), m_nomInteg(nomInteg)
 {
 
+    /// CONSTRUCTEUR
+
+    // Setup des flux vers les fichiers data
     std::string pathE("data/EnergieTotale_" + m_nomInteg + ".txt");
     std::string pathLa("data/L_a_" + m_nomInteg + ".txt");
     std::string pathLk("data/L_k_" + m_nomInteg + ".txt");
@@ -59,6 +62,10 @@ ScGLWidget::ScGLWidget(Systeme& S, std::string nomInteg, Vecteur const& POV, siz
 
 void ScGLWidget::paintGL(){
 
+    /// Surcharge de Paintgl
+    /// On execute la méthode habituelle,
+    /// Puis on dessine la trace si besoin est.
+
     GLWidget::paintGL();
 
     if(m_trace) {
@@ -72,6 +79,8 @@ void ScGLWidget::paintGL(){
 
 
 void ScGLWidget::saveData(){
+
+    /// Enregistrement des données du système
 
     fluxE << m_s.getCorps(0)->Energie() << std::endl;
     fluxLa << m_s.getCorps(0)->L_a() << std::endl;

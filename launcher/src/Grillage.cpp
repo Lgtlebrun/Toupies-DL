@@ -5,9 +5,15 @@
 Grillage::Grillage(QWidget* parent) :  QWidget(parent), m_typeChoisi(Null), m_BoxIntegrateur(0), m_bCone(0),
 m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_go(0), m_echelle(0), m_slider(0){
 
+    /// CONSTRUCTEUR <3 <3 <3
+
+ //Setup de l'icône
+ setWindowIcon(QIcon(":/icons/icone.gif"));
+
  setFixedSize(1900, 1200); // Un GRAND grillage
 
 
+ //Setup Layouts
  QVBoxLayout* mainLay = new QVBoxLayout;
  mainLay->setAlignment(Qt::AlignTop);
  mainLay->setSpacing(0);
@@ -58,6 +64,7 @@ m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_go(0), m_echelle(0), m_slider(
     m_BoxIntegrateur->addItem("Newmark");
     m_BoxIntegrateur->addItem("RK4");
 
+    m_BoxIntegrateur->setCurrentText("RK4");
 
     layIntegBis->addWidget(integrateur);
     layIntegBis->addWidget(m_BoxIntegrateur);
@@ -83,8 +90,8 @@ m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_go(0), m_echelle(0), m_slider(
             m_boutonsPos[j].push_back(b);
 
             QObject::connect(b, &QPushButton::clicked, b, &BoutonPosition::clickGestion);
-            QObject::connect(b, &BoutonPosition::newIntegrable, this, &Grillage::addObjet);
-            QObject::connect(b, &BoutonPosition::supprIntegrable, this, &Grillage::delObjet);
+            QObject::connect(b, &BoutonPosition::newObjet, this, &Grillage::addObjet);
+            QObject::connect(b, &BoutonPosition::supprObjet, this, &Grillage::delObjet);
 
             //NDP : Dernière commande de la boucle
             laygrille->addWidget(b,j,i);
@@ -183,6 +190,8 @@ m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_go(0), m_echelle(0), m_slider(
 
 Grillage::~Grillage(){
 
+    /// Destructeur
+
     for (auto& elt:m_sys){
         delete elt;
     }
@@ -193,6 +202,9 @@ Grillage::~Grillage(){
 
 void Grillage::clickTypeBouton() {
 
+    /// Slot réagissant au click sur un bouton type.
+
+    // Juste pour itérer <3 <3 <3
     std::vector<TypeBouton*> boutons({m_bCone, m_bChinoise, m_bBille, m_bOscillateur});
 
     Type newType(Null);
@@ -200,13 +212,13 @@ void Grillage::clickTypeBouton() {
     for (auto& elt : boutons) {
 
         if(elt->isPresse() && m_typeChoisi != elt->getType()){
-            newType = elt->getType();
+            newType = elt->getType();                               // Changement de type d'objet
         }
         else if(elt->isPresse() && m_typeChoisi == elt->getType()){
-            elt->setPresse(false);
+            elt->setPresse(false);                                  // Dépresse le bouton
         }
 
-        elt->changeSkin();
+        elt->changeSkin();              // Modification de la couleur dans tous les cas
     }
 
     m_typeChoisi = newType;
@@ -235,6 +247,9 @@ bool Grillage::isInOccupe(Vecteur const& v) {
 
 Vecteur Grillage::findNewPos(){
 
+    /// Fonction identifiant la position qui vient d'être occupée dans le grillage suite
+    /// au click sur un BoutonPosition.
+
     //On itère sur les boutons
 
     for(auto& ligne:m_boutonsPos){
@@ -252,7 +267,7 @@ Vecteur Grillage::findNewPos(){
         }
 
 
-
+    // Sécurité on est bien là posey soirée balcon salade de quinoa au vin bio <3
     QMessageBox::information(this, "probleme", "Erreur lors du placement. Objet placé en {0, 0, 0}");
     return Vecteur({0,0,0});
 }
@@ -272,7 +287,7 @@ bool Grillage::checkAllCaracs() const {
     switch(m_typeChoisi){
 
     case Null:
-        return false;
+        return false;   // Si aucun type n'est choisi, on laisse tomber
 
     case CONE:
         return ((m_bCone->getRayon() > 0) && (m_bCone->getHauteur() > 0) && (m_bCone->getMVol() > 0));
@@ -292,6 +307,12 @@ bool Grillage::checkAllCaracs() const {
 
 
 void Grillage::addObjet(){
+
+    /// Slot réagissant au signal newObjet un boutonPosition.
+    ///
+    /// Déclenche la création d'un nouvel objet physique qui sera ajouté à la longue liste
+    /// de chanceux qui intègreront le futur Systeme à simuler. Enfin, si ils ne se font pas
+    /// effacer par le slot delObjet bien sûr!
 
     Vecteur pos(findNewPos());
 
@@ -353,6 +374,10 @@ void Grillage::addObjet(){
 
 void Grillage::delObjet(){
 
+    /// Slot réagissant au signal supprObjet d'un BoutonPosition
+    ///
+    /// Supprime l'objet physique correspondant à la position nouvellement libérée.
+
     for(size_t k(0); k < m_sys.size(); k++){
 
         int i(m_sys[k]->getPosition().getCoord(0));
@@ -388,6 +413,9 @@ void Grillage::delObjet(){
 
 void Grillage::sendCaracErrorMess(){
 
+    /// Fonction envoyant un message d'erreur indiquant la faillite d'une condition obligatoire
+    /// sur l'objet physique à créer.
+
     switch(m_typeChoisi){
 
     case Null:
@@ -414,6 +442,8 @@ void Grillage::sendCaracErrorMess(){
 
 TypeBouton* Grillage::getSelectedButton() const{
 
+    /// Accesseur sur le TypeBouton actuellement sélectionné
+
     switch(m_typeChoisi){
 
     case Null:
@@ -437,6 +467,8 @@ TypeBouton* Grillage::getSelectedButton() const{
 
 
 INTEGRATEUR Grillage::getInteg() const {
+
+    /// Accesseur sur le type d'intégrateur sélectionné
 
     std::string integ(m_BoxIntegrateur->currentText().toStdString());
 

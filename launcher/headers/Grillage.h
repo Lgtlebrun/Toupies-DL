@@ -27,6 +27,15 @@ enum INTEGRATEUR {EC, NEWMARK, RK4};
 
 class Grillage : public QWidget{
 
+    /// Le frérot. Le rêve d'une vie. Un projet ébauché sous adrénaline, réalisé à grands frais de
+    /// séries de retard, mais en définitive accompli et fonctionnel. Joie.
+    ///
+    /// Fenetre secondaire précédant le lancement de la simulation. Permet la configuration du
+    /// système à simuler.
+    ///
+    /// Données traitées : Systeme à simuler, Objets physiques du systèmes, position de départ
+    /// et paramètres initiaux des objets physiques, intégrateur, dimensions de l'espace de simulation.
+
 public:
 
 
@@ -41,20 +50,22 @@ public:
     std::vector<ObjetPhysique*> getCorps() const {return m_sys;}
     int getEchelle() const {return m_echelle->value();}
 
-    // Gestion du choix d'un bouton-type (Cone, Bille...)
-    void clickTypeBouton();
 
     // Gestion des positions disponibles
-    bool isInOccupe(Vecteur const& v);          // Vérifie la disponibilité
+    bool isInOccupe(Vecteur const& v);          // Vérifie la disponibilité d'une position
     Vecteur findNewPos();                       // Identifie une position nouvellement occupée
-
-    // Gestion de la liste d'Intégrables
-    void addObjet();                       // Ajout d'un objet au futur systeme
-    void delObjet();                       // Suppression "   "
 
     // Gestion d'ensemble
     bool checkAllCaracs() const;                // Vérification du nouvel objet
     void sendCaracErrorMess();                  // Message d'erreur (utilitaire)
+
+public slots:
+    // Gestion du choix d'un bouton-type (Cone, Bille...)
+    void clickTypeBouton();
+
+    // Gestion de la liste d'Intégrables
+    void addObjet();                       // Ajout d'un objet au futur systeme
+    void delObjet();                       // Suppression "   "
 
 private:
 

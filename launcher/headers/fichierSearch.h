@@ -29,6 +29,7 @@ public:
 
     FichierSearch(std::string nom, QWidget* = nullptr);
 
+
     //Accesseurs
     Bloc2Boutons* getBlocBoutons() const;
     std::string getPath() const {return m_path;}

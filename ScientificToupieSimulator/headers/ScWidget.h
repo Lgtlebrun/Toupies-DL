@@ -26,13 +26,6 @@
 
 
 
-//QtCreator se défoule on dirait... Surtout ne touchons à rien.
-QT_BEGIN_NAMESPACE
-namespace Ui { class Widget; }
-QT_END_NAMESPACE
-
-
-
 enum Type{CONE, CHINOISE, CUSTOM, OH, BILLE};
 
 enum Mode{TEXTE, IMAGE, FICHIER};
@@ -40,43 +33,71 @@ enum Mode{TEXTE, IMAGE, FICHIER};
 
 class ScWidget : public QWidget
 {
+
+    /// FENETRE PRINCIPALE DE SCIENTIFIC TOUPIE SIMULATOR
+    ///
+    /// Visuel : Simple launcher permettant la configuration d'une simulation scientifique.
+    /// Les simulations ne peuvent contenir qu'un seul objet physique à la fois.
+    /// Plusieurs simulations peuvent être lancées simultanément, en choisissant plusieurs
+    /// intégrateurs.
+    ///
+    /// Gère le lancement et l'arrêt des simulations.
+    /// Apparaît au lancement de l'application et à la fermeture des simulations.
+
     Q_OBJECT
 
+
+// ========================== METHODES ==============================
+
 public:
-    ScWidget(QWidget *parent = nullptr);
+    ScWidget(QWidget *parent = nullptr);                // Cstor
 
-    ~ScWidget();
+    ~ScWidget();                                        // Dstor
 
-    bool checkAllCaracs();
-    ObjetPhysique* makeObjet() const;
 
+    // Lancement des simulations (selon le format d'affichage)
     void goFichier(double duree, double dt);
-    void goFichierBis();
+    void goFichierBis();                                // Appelée par le FichierSearch que lance goFichier(...)
     void goTexte(double duree, double dt);
     void goImage();
+
+    // Configuration et fabrication de l'objet physique à simuler
+    bool checkAllCaracs();                              // Vérifie que tous les champs indispensables à l'objet sont renseignés
+    ObjetPhysique* makeObjet() const;                   // Fabrique l'objet, retourne un pointeur dessus
+
+
+    // Sauvegarde des données
     void saveData(ObjetPhysique* O, size_t indice);
 
 
 public slots:
 
-   // void changeType();
+    // Appelés par les RadioButtons choisissant le type d'objet physique
     void setCone();
     void setChinoise();
     void setBille();
     void setOh();
     void setCustom();
+
+    // Appelé par le changement de mode d'affichage
     void modeChanged();
 
+    // Détruit les simulations, relance la fenêtre
     void restart();
 
+    // Appelée par le bouton Go: redirige vers la méthode "go" adaptée
     void go();
 
 
 
+
+// ========================= ATTRIBUTS ===============================
+
 private:
 
-    Ui::Widget *ui;
+    // ===== WIDGETS =====
 
+    // Labels illustrant les champs à renseigner
     QLabel* m_labRayon;
     QLabel* m_labHauteur;
     QLabel* m_labMasse;
@@ -84,13 +105,14 @@ private:
     QLabel* m_labParam;
     QLabel* m_labVitesse;
 
-
+    // Groupes réunissant les types de champ à renseigner
     QGroupBox* tgroupBox;
     QGroupBox* m_paramGroup;
     QGroupBox* m_inertGroup;
     QGroupBox* m_nomGroup;
 
 
+    // Champs à renseigner
     QLineEdit* m_duree;
     QLineEdit* m_dt;
     QLineEdit* m_lineNom;
@@ -107,31 +129,40 @@ private:
     QLineEdit* m_v2;
     QLineEdit* m_v3;
 
-    QComboBox* m_boxType;
+    // Choix du mode d'affichage
     QComboBox* m_boxMode;
 
+    // Choix des intégrateurs : cases à cocher
     QCheckBox* m_caseEC;
     QCheckBox* m_caseNewmark;
     QCheckBox* m_caseRK4;
 
+    // Affichage de la trace : case à cocher
     QCheckBox* m_caseTrace;
 
+    // Bouton go
     QPushButton* m_go;
 
-    FichierSearch* m_search;
-    TextEdit* m_console;
+    // MODE FICHIER
+    FichierSearch* m_search;                        // Choix du dossier où créer le fichier
 
-    std::vector<ScGLWidget*> m_simulations;
+    // MODE TEXTE
+    TextEdit* m_console;                            // Widget imitant une console
 
-    bool m_trace;
-    bool m_fichierPret;
-    Type m_type;
-    Mode m_mode;
-    SupportADessin* m_support;
-    ObjetPhysique* m_objet;
-    std::vector<Integrateur*> m_integ;
-    std::vector<std::string> m_nomInteg;
-    std::vector<Systeme> m_sys;
+
+    // ===== ATTRIBUTS STANDARDS =====
+
+    std::vector<ScGLWidget*> m_simulations;         // Collection de simulations en mode IMAGE
+
+    bool m_trace;                                   // Affichage ou non de la trace
+    bool m_fichierPret;                             // Mode fichier : retour du fichierSearch
+    Type m_type;                                    // Type d'objet phyisique choisi
+    Mode m_mode;                                    // Mode d'affichage choisi
+    SupportADessin* m_support;                      // Support de l'objet physique
+    ObjetPhysique* m_objet;                         // Objet physique à simuler
+    std::vector<Integrateur*> m_integ;              // Les intégrateurs choisis
+    std::vector<std::string> m_nomInteg;            // Noms des intégrateurs choisis
+    std::vector<Systeme> m_sys;                     // Systèmes à simuler (même objet, intégrateur spécifique)
 
 };
 

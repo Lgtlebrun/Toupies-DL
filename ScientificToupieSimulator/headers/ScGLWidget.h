@@ -7,32 +7,39 @@
 
 class ScGLWidget : public GLWidget {
 
+    /// Classe héritant de GLWidget permettant des fonctionnalités scientifiques:
+    /// Trace et sauvegarde de données
+
+
+// ========================== METHODES ==============================
+
 public:
 
-    ScGLWidget(Systeme& S, std::string nomInteg, Vecteur const& POV = Vecteur({4.5,-10.0,0.0}), size_t indice = 0, bool trace = false,
+    //  Cstor
+    ScGLWidget(Systeme& S, std::string nomInteg, Vecteur const& POV = Vecteur({4.5,-10.0,0.0}), bool trace = false,
                QWidget* parent = nullptr);
 
-    void setIndice(size_t i) {m_indice = i;}
-    size_t getIndice() const {return m_indice;}
 
+    //  Surcharge de paintGL : on permet l'affichage de la trace
     virtual void paintGL()                       override;
 
-    void saveData();
+    //  METHODES
+    void saveData();                                                // Sauvegarde des données
 
 
-
+// ========================= ATTRIBUTS ===============================
 
 private:
 
-    size_t m_indice;
-    bool m_trace;
+    bool m_trace;                   // Booléen décidant de l'affichage de la trace
 
-    std::string m_nomInteg;
+    std::string m_nomInteg;         // Nom de l'intégrateur utilisé
 
-    std::ofstream fluxE;
-    std::ofstream fluxLa;
-    std::ofstream fluxLk;
-    std::ofstream fluxPMixte;
+    //FLOTS
+    std::ofstream fluxE;            //  Vers le fichier Energie
+    std::ofstream fluxLa;           //  "" Moment cinétique La
+    std::ofstream fluxLk;           //  "" Lk
+    std::ofstream fluxPMixte;       //  "" Produit Mixte
 
 };
 

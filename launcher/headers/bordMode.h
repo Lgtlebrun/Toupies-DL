@@ -24,17 +24,25 @@ class BordMode : public QWidget {
     Q_OBJECT
 
 public:
-    BordMode(QWidget* = nullptr);
 
-    virtual ~BordMode() {}
+    BordMode(QWidget* = nullptr);           // Cstor
 
+    virtual ~BordMode() {}                  // Dstor
+
+
+// ======== ACCESSEURS ========
     QPushButton* getBouton(int);
     int getFormat() {return m_formatChoisi;}
     FichierSearch* getSearch() const {return m_search;}
 
-    void pathCheck(std::string);
+
+    void pathCheck(std::string);            // Vérification de la validité du path (mode fichier)
+
+// ======== SLOTS ========
+
 public slots:
 
+    // Réaction aux boutons : choix du mode d'affichage
     void setToText();
     void setToImage();
     void setToFichier();
@@ -43,14 +51,15 @@ public slots:
 
 protected:
 
-    FichierSearch* m_search;
-    QLabel* m_labelMode;
+    FichierSearch* m_search;            // Le bro qui va chercher le chemin d'accès
+    QLabel* m_labelMode;                // Label "Mode d'affichage :"
 
+    // Boutons "choix du mode d'affichage"
     QPushButton* m_b1;
     QPushButton* m_b2;
     QPushButton* m_b3;
 
-    FORMAT m_formatChoisi;
+    FORMAT m_formatChoisi;              // Le mode d'affichage
 
 };
 

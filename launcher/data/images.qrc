@@ -10,6 +10,7 @@
         <file>bille.gif</file>
         <file>oscillateur.gif</file>
         <file>oeil.png</file>
+        <file>icone.gif</file>
     </qresource>
     <qresource prefix="/txt">
         <file>Intermezzo.txt</file>
