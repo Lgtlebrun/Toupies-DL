@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>pastilleGrise.png</file>
+        <file>boutonBleu.png</file>
+        <file>tav.gif</file>
+        <file>toupie-bleue-marine.gif</file>
+        <file>chinoise.gif</file>
+        <file>cone.gif</file>
+        <file>bille.gif</file>
+        <file>oscillateur.gif</file>
+        <file>oeil.png</file>
+        <file>icone.gif</file>
+    </qresource>
+    <qresource prefix="/txt">
+        <file>Intermezzo.txt</file>
+    </qresource>
+    <qresource prefix="/police">
+        <file>agency-fb_.ttf</file>
+        <file>Cooper-Black_.ttf</file>
+    </qresource>
+</RCC>
