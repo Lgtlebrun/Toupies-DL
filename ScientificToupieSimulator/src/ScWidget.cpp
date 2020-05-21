@@ -380,7 +380,7 @@ ObjetPhysique* ScWidget::makeObjet() const {
 
         ptr = new Toupie(*m_support, m_lineNom->text().toStdString(), Vecteur({m_param1->text().toDouble(), m_param2->text().toDouble(), m_param3->text().toDouble()}),
                          Vecteur({m_v1->text().toDouble(), m_v2->text().toDouble(), m_v3->text().toDouble()}), Vecteur(), m_lineIA1->text().toDouble(), m_lineI3->text().toDouble(),
-                         m_lineMVol->text().toDouble(), m_lineMasse->text().toDouble(), m_lineRayon->text().toDouble());
+                         m_lineMasse->text().toDouble(), m_lineRayon->text().toDouble());
 
         break;
     }
@@ -675,7 +675,7 @@ bool ScWidget::checkAllCaracs(){
             return false;
         }
 
-        if(m_lineMVol->text().toDouble() == 0. || m_lineMasse->text().toDouble() == 0 || m_lineRayon->text().toDouble() == 0.){
+        if(m_lineMasse->text().toDouble() == 0 || m_lineRayon->text().toDouble() == 0.){
             QMessageBox::information(this, "Echec!", "Veuillez renseigner une masse, une masse volumique et la distance au sol du centre de masse.");
             return false;
         }
@@ -842,10 +842,10 @@ void ScWidget::setCustom() {
 
     m_labRayon->show();
     m_lineRayon->show();
-    m_labHauteur->show();
-    m_lineHauteur->show();
-    m_labMvol->show();
-    m_lineMVol->show();
+    m_labHauteur->hide();
+    m_lineHauteur->hide();
+    m_labMvol->hide();
+    m_lineMVol->hide();
     m_lineMasse->show();
     m_labMasse->show();
 
