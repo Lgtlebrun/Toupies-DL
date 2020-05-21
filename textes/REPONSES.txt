@@ -1,4 +1,4 @@
-Série projet 1
+
 
 QUESTION P1.1: 
 	
@@ -49,7 +49,16 @@ QUESTION P6.1:
 
 QUESTION P7.1:
 	
-	// DAVID
+	Les intégrateurs héritent des clonables. Ils possèdent alors une méthode clone qui renvoit un pointeur sur un Integrateur.
+	Le seul attribut des intégrateur est le temps : m_t. Il peut être utilisé si une équation différentielle devait dépendre du temps. En physique, 
+	cela semble certes pas très réaliste, mais pour résoudre une quelconque équation différentielle du deuxième ordre, cela pourrait être utile.
+	Les seules méthodes propres à la classe Integrateur (et qui sont les mêmes pour tout intégrateur, même pour les classes filles (Euler-Cromer, 
+	Newmark, RK4)) sont :
+		- void integre(Integrable& integrable, double const& dt) const; qui prend un Integrable et le change son paramètre et sa dérivée en fonction
+		de la méthode d'intégration (propre à la classe d'intégrateur qui appelle cette méthode) et du résultat de integrable.equEvol(m_t)
+		- void augmente(double const& dt); qui augmente m_t de dt. On n'aimerait pas que l'utilisateur se soucie de la gestion de m_t, donc nous
+		lui permettons de manipuler cet attribut uniquement par cette méthode
+		- double getTemps() const; qui permet renvoit m_t.
 	
  
 QUESTION P7.2:
@@ -90,7 +99,8 @@ QUESTION P8.4:
 
 QUESTION P11.1:
 	
-	Toutes ces méthodes devraient être placées dans Toupie, afin d'en faire hériter nos variantes de toupies.
+	Toutes ces méthodes devraient être placées dans Toupie, afin d'en faire hériter nos variantes de toupies. Mais nous les avons introduites dans
+	ObjetPhysique, une classe abstraite. Toupie hérite donc d'ObjetPhysique.
 
 QUESTION 13.1:
 
