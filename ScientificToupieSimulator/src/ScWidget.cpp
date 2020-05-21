@@ -843,8 +843,8 @@ void ScWidget::setCustom() {
     m_labRayon->show();
     m_lineRayon->show();
     m_labHauteur->show();
-    m_lineHauteur->show();
-    m_labMvol->show();
+    m_lineHauteur->hide();
+    m_labMvol->hide();
     m_lineMVol->show();
     m_lineMasse->show();
     m_labMasse->show();
