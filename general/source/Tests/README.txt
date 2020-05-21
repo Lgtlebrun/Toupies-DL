@@ -11,6 +11,9 @@ Un executable nommé "TestAll" sera alors construit.
 
 Lorsqu'un test échoue, un rapport d'erreur est écrit au format "Test[classe défaillante].txt".
 
+TestIntegrateur produit des fichiers textes contenant des données sur la Bille et l'oscillateur.
+Les deux fichiers octave à votre disposition permettent de les plotter.
+
 
 
 TestAll est une application console, à executer dans un terminal.

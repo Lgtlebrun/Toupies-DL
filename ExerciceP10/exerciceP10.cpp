@@ -1,5 +1,5 @@
 #include <QApplication>
-#include "glwidget.h"
+#include "../Qt_GL/glwidget.h"
 #include <iostream>
 #include "../general/headers/Tests/Bille.h"
 #include "../general/headers/TextViewer.h"
@@ -26,9 +26,9 @@ int main(int argc, char* argv[])
         // Un système est ensuite initialisé pour afficher les objets et les faire évoluer à l'aide de I
 
     Systeme S(Graphique,I);
-    S.addIntegrable(C);
-    S.addIntegrable(O);
-    S.addIntegrable(B);
+    S.addObjet(C);
+    S.addObjet(O);
+    S.addObjet(B);
 
         /* On initialise un GLWidget qui prend comme objet à faire évoluer le système, ce qui change le SupportADessin *
          * de Graphique à une vue_opengl                                                                              */

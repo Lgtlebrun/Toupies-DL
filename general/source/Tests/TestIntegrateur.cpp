@@ -83,7 +83,7 @@ bool TestIntegrateur::testBille() {
 
     Vecteur attendu({0.68, 0, 0.058574});           // nous vérifions que nous avons les mêmes résultats
 
-    if ((B.getParam()-attendu).norme() < 1e-14) {      // Opérateur surchargé : PREC = 1e-14
+    if ((B.getParam()-attendu).norme() > 1e-14) {      // Opérateur surchargé : PREC = 1e-14
 
         m_comment += "Erreur dans la classe IntegrateurEulerCromer sur la bille : Attendu :";
         m_comment += attendu.to_str();
