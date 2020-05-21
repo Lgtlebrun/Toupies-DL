@@ -1,0 +1,24 @@
+============================================== CONCEPTION UTS ==============================================
+
+Bloc2Boutons : widget contenant les boutons classiques "OK" et "Cancel"
+
+fichierSearch : Hérite de QDialog. Fenêtre modale qui permet de construire un chemin d'accès.
+
+TextEdit : Hérite de QTextEdit. Widget imitant une console (std::cout) en format GUI.
+
+QTextViewer : Hérite de SupportADessin. Imite TextViewer en format GUI.
+
+LauncherAccueil : Hérite de QWidget. Fenêtre principale de UTS.
+
+BordMode : Hérite de QWidget. Classe utilitaire gérant les boutons TEXTE, IMAGE, et FICHIER.
+
+Grillage : Hérite de QWidget. Le frérot. Le rêve d'une vie. Je l'ai déjà dit. On le saura.
+           Fenetre dédiée à la configuration du système à simuler.
+
+TypeBouton : Hérite de QPushButton. Bouton à presser définissant le type d'objet physique désiré à 
+	     positionner. Contient les champs à renseigner qui définiront les caractéristiques de l'objet. 
+
+Bouton Position : Hérite de QPushButton. Représente une position de l'espace simulable. Il y en a 100 dans
+		  le grillage.
+
+============================================================================================================
