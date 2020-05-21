@@ -88,9 +88,9 @@ class Vecteur{
     //=============================================================================================
 
 
-    double prodScalaire(Vecteur const &vecteur2) const;
+    double prodScalaire(Vecteur const &vecteur2) const;         // Produit vectoriel classique somme toutes
 
-    Vecteur prodVectoriel(Vecteur const& vecteur2) const;
+    Vecteur prodVectoriel(Vecteur const& vecteur2) const;       // Produit scalaire entre deux vecteurs
 
 private:
 
@@ -99,18 +99,12 @@ private:
         std::vector <double> m_coords;                 // Stockage des coordonn�es en tableau dynamique
 
 
-
-
     /* M�thodes n�cessaires en interne */
 
 
         Vecteur mult(double scalaire) const;                                // Multiplie un vecteur par un scalaire (un r�el)
 
-        Vecteur addition(Vecteur const& vecteur2) const;                    // Addition de deux vecteurs /!\ OBSOL�TE /!\
-
-    // Produit vectoriel classique somme toutes
-
-    // Produit scalaire entre deux vecteurs
+        Vecteur addition(Vecteur const& vecteur2) const;                    // Addition de deux vecteurs : OBSOL�TE
 
         Vecteur unitaire() const;                                           // Retourne le vecteur unitaire (m�me dimension, m�me sens)
 

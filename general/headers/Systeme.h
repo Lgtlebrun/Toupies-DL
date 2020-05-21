@@ -18,13 +18,10 @@ public:
 
 // =========
 
-    Systeme(SupportADessin& support, Integrateur&);                 // ctor de la classe Systeme. Il faut un support à
-                                                                    // dessin pour savoir où représenter les divers objets
-                                                                    // De plus, il faut choisir une méthode d'intégration
-                                                                    // numérique pour savoir comment faire évoluer le
-                                                                    // Systeme
-
-   // Systeme(SupportADessin& support, Integrateur&, std::vector<Integrable*>&);
+    Systeme(SupportADessin& support, Integrateur& Integr);
+    /* ctor de la classe Systeme. Il faut un support à dessin pour savoir où représenter les divers objets *
+     * De plus, il faut choisir une méthode d'intégration numérique pour savoir comment faire évoluer le   *
+     * Systeme                                                                                             */
 
     Systeme(Systeme const&);                                        // ctor de copie
 
@@ -34,8 +31,7 @@ public:
 
 // =========
 
-    virtual Systeme* clone() const;                                 // Renvoie un pointeur sur une copie polymorphique
-                                                                    // du Systeme
+    virtual Systeme* clone() const;                                 // Renvoie un pointeur sur une copie polymorphique du Systeme
 // =========
 
     virtual void dessine() override;                                // Permet d'afficher le système
@@ -44,8 +40,7 @@ public:
 
 // =========  ACCESSEURS/SETTEURS INTEGRABLES :
 
-    ObjetPhysique* getCorps(size_t k) const;                           // Permet d'accèder au kème intégrable. L'indice est
-                                                                    // le même que pour un vector
+    ObjetPhysique* getCorps(size_t k) const;        // Permet d'accèder au kème intégrable. L'indice est le même que pour un vector
 
     unsigned int getNbCorps() const;                                // Accesseur au nombre d'intégrables du système
 
@@ -57,10 +52,9 @@ public:
 
 // =========  EVOLUTION DU SYSTEME :
 
-    void evolue(double const&) ;                                    // Fait avancer chaque objet du système en concordance
-                                                                    // avec leurs équations d'évolution. Puis cela fait
-                                                                    // monter le temps de l'intégrateur de dt (qui est
-                                                                    // paramètre de la méthode)
+    void evolue(double const&) ;
+    /* Fait avancer chaque objet du système en concordance avec leurs équations d'évolution. Puis cela fait *
+     * monter le temps de l'intégrateur de dt (qui est paramètre de la méthode)                             */
 
 // =========  AFFICHAGE :
 

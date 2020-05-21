@@ -28,12 +28,10 @@ virtual ~Integrateur() {}                                       // dtor d'intég
 virtual Integrateur* clone() const = 0;                         // Renvoie un pointeur sur une copie polymorphique de l'intégrateur
 
 virtual void integre(Integrable& integrable, double const& dt) const =0;
-// Renvoit le vecteur dérivée seconde en le
-// calculant depuis l'équation d'évolution
-// associée à l'intégrable. Approximation avec
-// pas de temps dt. Virtuel pur car un intégrateur
-// ne fait pas sens en lui-même car il est
-// caractérisé par sa méthode d'approximation
+/* Renvoit le vecteur dérivée seconde en le calculant depuis l'équation d'évolution associée à l'intégrable. Approximation avec        *
+ * pas de temps dt. Virtuel pur car un intégrateur ne fait pas sens en lui-même car il est caractérisé par sa méthode d'approximation  */
+
+
 
 // =========  ACCESSEURS ET "SETTEURS" :
 
@@ -69,13 +67,12 @@ virtual ~IntegrateurEulerCromer() {}                                       // dt
 
 // =========
 
-virtual IntegrateurEulerCromer* clone() const;                  // Renvoie un pointeur sur une copie
-                                                                // polymorphique de l'intégrateur Euler-Cromer
+virtual IntegrateurEulerCromer* clone() const;       // Renvoie un pointeur sur une copie polymorphique de l'intégrateur Euler-Cromer
 
 // =========  INTEGRE :
 
-void integre(Integrable& integrable, double const& dt) const;   // Intègre nunmériquement avec un pas de temps dt
-                                                                // et via la méthode d'Euler-Cromer
+void integre(Integrable& integrable, double const& dt) const;
+// Intègre nunmériquement avec un pas de temps dt et via la méthode d'Euler-Cromer
 
 };
 
@@ -96,13 +93,12 @@ virtual ~IntegrateurNewmark() {}                                // dtor de Newma
 
 // =========
 
-virtual IntegrateurNewmark* clone() const;                      // Renvoie un pointeur sur une copie
-                                                                // polymorphique de l'intégrateur de Newmark
+virtual IntegrateurNewmark* clone() const;       // Renvoie un pointeur sur une copie polymorphique de l'intégrateur de Newmark
+
 // =========  INTEGRE :
 
 virtual void integre(Integrable& integrable, double const& dt) const;
-                                                                // Intègre numériquement avec un pas de temps
-                                                                // dt et via la méthode de Newmark
+// Intègre numériquement avec un pas de temps dt et via la méthode de Newmark
 
 };
 
@@ -115,12 +111,22 @@ class IntegrateurRK4: public Integrateur
 {
 public :
 
-IntegrateurRK4(double const& t0);
+// =========
 
-virtual ~IntegrateurRK4() {}
+    IntegrateurRK4(double const& t0);               // ctor de RK4
 
-virtual IntegrateurRK4* clone() const;
-virtual void integre(Integrable& integrable, double const& dt) const;
+    virtual ~IntegrateurRK4() {}                    // dtor de RK4
+
+// =========
+
+    virtual IntegrateurRK4* clone() const;          // Renvoie un pointeur sur une copie polymorphique de l'intégrateur RK4
+
+// =========  INTEGRE :
+
+    virtual void integre(Integrable& integrable, double const& dt) const;
+    // Intègre numériquement avec un pas de temps dt et via la méthode Runge Kutta 4
+
+
 };
 
 

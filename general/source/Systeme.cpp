@@ -69,6 +69,7 @@ void Systeme::dessine() {
 // =============================================================================================
 
 void Systeme::changeSupport(SupportADessin & sup) {
+/* Permet de faire changer de s$SUpportADessin à chaque objet du Systeme */
 
     Dessinable::changeSupport(sup);
 

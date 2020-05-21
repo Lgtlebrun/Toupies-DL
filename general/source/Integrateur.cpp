@@ -36,9 +36,10 @@ IntegrateurRK4* IntegrateurRK4::clone() const {
 
     /* Getteur et Setteur des intégrateurs */
 
- void Integrateur::augmente_t(double const& dt) {
+void Integrateur::augmente_t(double const& dt) {
 /* On ne laisse pas le choix à l'utilisateur d'augmenter le temps n'importe comment car le but est de trouver une *
  * solution à une équation différentielle                                                                        */
+
     m_t += dt ;
 
 }
@@ -53,6 +54,7 @@ double Integrateur::getTemps() const {
 
 void IntegrateurEulerCromer::integre(Integrable& integrable, double const& dt) const {
 /* Intègre numériquement selon la méthode d'Euler Cromer */
+
     integrable.setPpoint(integrable.getPpoint() + dt * integrable.equEvol(m_t));
     integrable.setParam( integrable.getParam() + dt * integrable.getPpoint() );
 
