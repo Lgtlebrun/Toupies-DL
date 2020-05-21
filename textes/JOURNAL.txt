@@ -114,7 +114,20 @@ Chapitre 11 : 18/04/2020
   aux billes de rebondir.
 
 
-Chapitre 12 : 18/05/20
+Chapitre 12 : 31/05/2020
+
+  Les extensions du projet se faisant techniques : trace, sauvegarde de données; il apparaît que ce n'est pas l'objet du launcher actuel de prendre en charge
+  de telles fonctionnalités. Ultimate Toupie Simulator doit rester grand public, ou il mourra. En adéquation avec ce principe et pour souligner son identité,
+  on ne le désignera plus qu'ainsi. Le terme "launcher" est d'arrière-garde. Son frère est en route, le tout juste baptisé Scientific Toupie Simulator. 
+
+
+Chapitre 13 : 01/05/2020
+
+  STS est né. Son interface minimaliste est à l'image des cortèges en période de confinement. Célébrons ceux qui travaillent en leur offrant le fruit du nôtre:
+  un launcher permettant un paramétrage beaucoup plus précis.
+
+
+Chapitre 14 : 18/05/20
 
   Après quelques semaines plus calmes, nos deux héros, ayant pris le temps de se reposer quelques semaines, ont repris sérieusement le projet. Ils étaient
   tellement investis qu'ils en oublièrent leur accolyte du premier jour : leur JOURNAL.txt.
