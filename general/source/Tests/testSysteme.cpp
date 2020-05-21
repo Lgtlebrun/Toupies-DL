@@ -68,8 +68,7 @@ bool TestSysteme::test_evol() {
     // Teste le comportement d'un systeme composé d'un cone simple en utilisant les résultats donnés à l'exercice P9
 
 
-    // Ouverture d'un fichier qui recevra les données du systeme
-    std::string file("StatsSys.txt");
+    std::string file("StatsSys.txt");               // Ouverture d'un fichier qui recevra les données du systeme
     std::ofstream statsSyst(file.c_str());
 
 

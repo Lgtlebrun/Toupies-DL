@@ -10,20 +10,31 @@ class Trace : public Dessinable {
 
 public:
 
-    Trace(SupportADessin& sup) : Dessinable(sup){}
+// =========
 
-    virtual Trace* clone() const override {return new Trace(*this);}
-    Vecteur getPoint(size_t i) const {return m_points[i];}
-    size_t size() const {return m_points.size();}
-    void addPoint(Vecteur const& v1);
-    virtual void dessine() override;
+    Trace(SupportADessin& sup) : Dessinable(sup){}          // ctor de Trace
 
+// =========
 
+    virtual Trace* clone() const override {return new Trace(*this);}   // Renvoie un pointeur sur une copie polymorphique de la Trace
 
+// =========
+
+    Vecteur getPoint(size_t i) const {return m_points[i];}            // Retourne le ième point de la trace
+
+    size_t size() const {return m_points.size();}                     // Retourne le nombres de points dans la trace
+
+    void addPoint(Vecteur const& v1);                                 // Ajoute un point à la liste
+
+    virtual void dessine() override;                                  // dessine la trace
+
+// ===========================================================================================
 
 private:
 
-    std::deque<Vecteur> m_points;
+// =========  ATTRIBUT :
+
+    std::deque<Vecteur> m_points;                                   // Liste des points
 
 };
 

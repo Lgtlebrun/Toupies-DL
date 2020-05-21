@@ -8,9 +8,8 @@
 
 
 class GLWidget : public QOpenGLWidget
-/* La fenêtre hérite de QOpenGLWidget ;
- * les événements (clavier, souris, temps) sont des méthodes virtuelles à redéfinir.
- */
+/* La fenêtre hérite de QOpenGLWidget
+ * les événements (clavier, souris, temps) sont des méthodes virtuelles à redéfinir. */
 {
 
 

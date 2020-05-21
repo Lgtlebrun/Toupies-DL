@@ -109,7 +109,7 @@ bool TestVecteur::test_norme(){
 
     if (abs(n - 3.0) > PREC){
 
-        m_comment += ("Erreur fonction norme. Attendu : 3.0 ; COnstaté : " + std::to_string(n) + "\n");
+        m_comment += ("Erreur fonction norme. Attendu : 3.0 ; Constaté : " + std::to_string(n) + "\n");
         return false;
     }
 

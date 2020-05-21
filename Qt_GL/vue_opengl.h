@@ -16,13 +16,28 @@
 class VueOpenGL : public SupportADessin {
  public:
   // méthode(s) de dessin (héritée(s) de SupportADessin)
+
   virtual void dessine(Systeme const& a_dessiner) override;
+    // Dessine un Systeme, objet physique par objet physique
+
   virtual void dessine(Bille const&) override;
+    // Dessine une sphère rouge
+
   virtual void dessine(ConeSimple const&) override;
+    // Dessine un cube. Le vert représente le haut de la toupie, le blanc le bas
+
   virtual void dessine(Oscillateur const&) override;
+    // Dessine une sphère cyan
+
   virtual void dessine(ToupieChinoise const&) override;
+    // Dessine une sphère bleu-vert avec une tige blanche, pointant vers un angle théta de 0 rad
+
   virtual void dessine(Toupie const&) override;
+    // Dessine la même chose que pour un cône simple
+
   virtual void dessine(const Trace &) override;
+    // Dessine une trace rouge
+
 
   // méthodes de (ré-)initialisation
   void init();
@@ -48,6 +63,8 @@ class VueOpenGL : public SupportADessin {
  private:
   // Un shader OpenGL encapsulé dans une classe Qt
   QOpenGLShaderProgram prog;
+
+  // Une sphère est encapsulée pour pouvoir en dessiner
   GLSphere m_sphere;
 
   // Caméra

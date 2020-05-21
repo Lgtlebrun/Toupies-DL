@@ -123,8 +123,9 @@ bool Matrice3::operator==(Matrice3 const& autre) const{
 
     for (size_t i(0); i < m_coords.size(); i++){
 
-        if (m_coords[i] != autre.m_coords[i])  {return false;}      // utilisation de la comparaison vectorielle
-                                                                    // qui a une precision de 1e-14
+        if (m_coords[i] != autre.m_coords[i])  {return false;}
+
+                // utilisation de la comparaison vectorielle qui a une precision maximale pour l'ordinateur
 
     }
 
@@ -183,8 +184,12 @@ double Matrice3::det() const {
 
     return sortie;
 
-    /* Utilise la définition du déterminant à l'aide des permutations de l'ensemble {0,1,2} pour arriver à ce code. *
-     * Plus d'explications dans le chapitre 4 de JOURNAL.txt */
+    /* Le déterminant est défini comme étant la somme sur les permutations sigma du groupe symétrique d'ordre n de *
+     * sgn(sigma) multiplié par le produit des A[i][sigma[i]]. Or, toute permutation paire de S_3 est une boucle   *
+     * (1,2,3) étant décalée (i.e (2,3,1) et (3,1,2)), tandis qu'une permutation impaire est une permutation où    *
+     * deux des éléments sont iterchangés (En effet, les permutations impaires sont (2,1,3), (3,2,1) et (1,3,2)).  *
+     * Ainsi, à l'aide des modulos, nous arrivons à transcrire cette idée. En effet, les permutations paires       *
+     * s'écrivent (k%3, (1+k)%3, (2+k)%3) et les impaires ((1+k)%3, k%3, (2+k)%3). d'où le corps de det().         */
 
 }
 
@@ -244,14 +249,25 @@ Matrice3 Matrice3::inv() const {
     return (1.0/deter) * cofacteurs;
 
 
-    /* Ce code utilise un algorithme pour calculer un inverse d'une matrice via la méthode des cofacteurs et ne marche  *
-     * Que dans le case des matrices 3x3. A la main, pour calculer un des coefficients de l'inverse, on "cache" une     *
-     * ligne et une colone. L'algorithme s'appuie alors sur le fait qu'en cachant l'une des colonnes (k), les colonnes  *
-     * restantes sont (k-1)%3 et (k+1)%3 (idem pour les lignes) puis utilise le "produit en croix" du déterminant d'une *
-     * matrice 2x2 pour calculer le terme de chaque case de la matrice des cofacteurs.                                  *
-
-
-               Plus de détails dans JOURNAL.txt                                                                         */
+    /* Nous avons écrit la méthode via les cofacteurs et d'une telle façon de que l'algorithme est seulement fait *
+     * en 9 étapes (les 9 cases de la matrice) alors qu'il serait de 27 étapes si codé autrement (calcul du       *
+     * déterminant non-compris). Quand nous calculons une matrice des cofacteurs à la main, nous nous occupons    *
+     * d'abord du contenu de la case, puis de son signe, puis de la transposer.                                   *
+     * Expliquons donc ceci dans cet ordre. Quand nous calculons la case de la matrice des cofacteurs, nous       *
+     * "cachons" les lignes et colonnes de la matrice dont on veut calculer l'inverse.                            *
+     * Ceci veut dire que si nous calculons Cof(A)[0][1], alors nous prenons les cases A[1][0], A[2][0], A[1][2]  *
+     * et A[2][2] pour calculer un determinant avec (nous sommes passé à une notation informatique). Notons que   *
+     * 1=(0+1)%3 et 2=(0-1)%3 (en maths).                                                                         *
+     * C'est donc ceci que nous faisons. Cof(A)[k][t]=produit des max et min de (k+-1)%3 et (t+-1)%3 - le produit *
+     * du max et du min. Or, en c++, le modulo est à valeur négative. Donc si c'est négatif, c'est forcément -1.  *
+     * Il faut alors changer le min en l'ancienne valeur du max et que le max ait la valeur 2 (car 2 est la       *
+     * valeur maximale, et c'est impossible que nous ayons 2 fois la même valeur).                                *
+     * Une fois ceci fait, il faut s'occuper du signe. Il est (-1)^(i+j) où i,j appartiennent à {1,2,3} en maths. *
+     * Or dans le code, k et t appartiennent à {0,1,2}. Nous nous retrouvons donc avec (-1)^((k+1)+(t+1))=        *
+     * (-1)^(k+t+2)=(-1)^(k+t)*(-1)^2=(-1)^(k+t), qui est le facteur devant le déterminant.                       *
+     * Nous avons donc, à ce stade, la matrice des cofacteurs, Cof(A).                                            *
+     * Pour reprendre la formule, il ne reste plus qu'à transposer la matrice pour avoir la matrice inverse. Donc *
+     * il nous suffit de dire que Cof(A^T)[k][t]=Cof(A)[t][k] et de multiplier Cof(A^T) par 1/det(A).             */
 
 
 

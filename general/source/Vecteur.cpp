@@ -242,12 +242,11 @@ double Vecteur::prodScalaire(Vecteur const& vecteur2) const{
     return sortie;
 }
 
+    /*  /!\ Méthode prévue pour des vecteurs à 3 dimensions seulement /!\  */
 
 Vecteur Vecteur::prodVectoriel(Vecteur const& vecteur2) const{
 
     /// Retourne le produit vectoriel de deux vecteurs
-
-    /*  /!\ Méthode prévue pour des vecteurs à 3 dimensions seulement /!\  */
 
     Vecteur sortie;
 
@@ -273,8 +272,7 @@ Vecteur Vecteur::prodVectoriel(Vecteur const& vecteur2) const{
 
 void Vecteur::rationnalise() {
 
-    /// Méthode permettant d'atteindre zéro
-    /// dans les opérations entre double
+    /// Méthode permettant d'atteindre zéro dans les opérations entre double
 
     for (auto& elt : m_coords){
 
@@ -428,13 +426,13 @@ const Vecteur Vecteur::operator^(Vecteur const& v2){
 
     /// Surcharge de l'opérateur "^" pour le produit vectoriel
 
-    /* En cas de dimensions incompatibles, on renvoie le vecteur nul
-                        (voir bloc catch)                         */
-
     try{
 
        return prodVectoriel(v2);
     }
+
+        /* En cas de dimensions incompatibles, on renvoie le vecteur nul
+                            (voir bloc catch)                         */
 
     catch(std::string const& alerte){
 
