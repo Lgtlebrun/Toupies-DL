@@ -21,11 +21,9 @@ public:
 
 // =========
 
-    bool testBille();                           // méthode qui teste la bille et les intégrateurs en comparant
-                                                // les calculs avec les résultats donnés sur progmaph
+    bool testBille();               // méthode qui teste la bille et les intégrateurs en comparant les calculs avec les résultats donnés sur progmaph
 
-    bool testOH();                              // méthode qui teste l'oscillateur harmonique et les intégrateurs
-                                                // en vérifiant avec l'écart de la solution y(t) = cos(t)
+    bool testOH();                  // méthode qui teste l'oscillateur harmonique et les intégrateurs en vérifiant avec l'écart de la solution y(t) = cos(t)
 
 };
 

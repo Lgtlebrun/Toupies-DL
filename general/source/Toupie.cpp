@@ -4,25 +4,48 @@
 
 
 Toupie::Toupie (SupportADessin& sup, std::string const& type, Vecteur const& angles, Vecteur const& anglespoint, Vecteur const& posA, double const& IA1, double const& I3, double const & masse, double const& d)
-/* Nous prenons un support à dessin et le type de Toupie en string. Param et vit sont les vecteurs liés à l'intégrateur *
- * tandis que posA est la position du point de contact entre la toupie et le sol. Les moments d'inertie IA1 et I3 sont  *
- * laissés en argument car ça ne fait aucun sens de le calculer pour une toupie générale. De même, la masse dépend de   *
- * la masse volumique mais aussi de la forme sur laquelle nous ne pouvons rien dire dans le cas général. d est la       *
- * distance du centre de masse au point de contact au sol. La distance de sécurité est dépendante du type de toupie,    *
- * d'où la raison pour laquelle elle est en argument                                                                    */
-    : ObjetPhysique(sup, type, angles.concatene(Vecteur({0.0,0.0,0.0})), anglespoint.concatene(posA)), m_IA1(IA1), m_I3(I3), m_masse(masse), m_d(d)
-{}
+/* Nous prenons en argument du ctor un support à dessin (là où sera affichée la toupie), un type  *
+ * de toupie, qui est un nom générique que l'on voudrait lui donner. Le vecteur angles doit       *
+ * contenir (theta, psy, phi) comme coordonnées. anglespoint contient la dérivée temporelle de    *
+ * ces angles, dans le même ordre. posA est la position (x,y,z) de la pointe de la toupie. IA1 et *
+ * I3 sont les moments d'inertie (même notation que dans le complément mathématique). masse est   *
+ * la masse de la toupie et d la distance entre le point de contact et le centre de masse de la   *
+ * toupie.                                                                                       */
+    : ObjetPhysique(sup, type, {0.0,0.0,0.0}, {0.0,0.0,0.0}), m_IA1(fabs(IA1)), m_I3(fabs(I3)), m_masse(fabs(masse)), m_d(fabs(d))
+{
+    // On veut des vecteurs de dimension 6, soit deux vecteurs de dimension 3 concaténés
+    while (angles.getDim()<3) {
+
+        angles.concatene({0.0});
+
+    }
+    while (anglespoint.getDim()<3) {
+
+        anglespoint.concatene({0.0});
+
+    }
+    while (posA.getDim()<3) {
+
+        posA.concatene({0.0});
+
+    }
+
+    m_P = {angles.getCoord(0), angles.getCoord(1), angles.getCoord(2), 0.0, 0.0, 0.0};
+
+    m_Ppoint = {anglespoint.getCoord(0), anglespoint.getCoord(1), anglespoint.getCoord(2), posA.getCoord(0), posA.getCoord(1), posA.getCoord(2)};
+
+}
 
 Toupie::~Toupie() {}
 
 Toupie* Toupie::clone() const {
-
+/* Renvoie un pointeur sur une copie polymorphique de la toupie */
     return new Toupie(*this);
 
 }
 
 void Toupie::dessine() {
-
+/* Plus de détails dans Systeme::dessine() */
     m_support->dessine(*this);
 
 }
@@ -39,14 +62,17 @@ std::ostream& operator<<(std::ostream& flux, Toupie const& C){
 // ===========================================================================================================
 
 Vecteur Toupie::equEvol(double const& temps) {
-/* Avec l'équation d'évolution en page 12 du complément mathématique, assumant donc distance centre de masse - *
- * point de contact = cste                                                                                     */
+/* Selon §6.3.1 du complément mathématique, pour une toupie générale */
 
 
-    Vecteur sortie;                // convention : (théta, psy, phi)
-                                  // initialisation au vecteur nul
+    Vecteur sortie;                 // convention : (théta, psy, phi)
+                                    // initialisation au vecteur nul
 
     m_P = modulo2Pi();
+    /* On remet le paramètre modulo 2PI pour éviter la divergence des fonctions trigonométriques */
+
+
+        // Initialisation des grandeurs importantes pour le calcul
 
     Vecteur o(omega());
 
@@ -57,6 +83,10 @@ Vecteur Toupie::equEvol(double const& temps) {
     Vecteur o_e(o-Vecteur({0.0,0.0,m_Ppoint.getCoord(2)}));
 
     Vecteur omegap(IA.inv()*(M_A- (o_e^(IA*o))));
+
+
+
+        // Selon (2) p.6 du complément mathématique
 
     if ( fabs(sin(m_P.getCoord(0))) >= PREC ) {
 
@@ -73,7 +103,12 @@ Vecteur Toupie::equEvol(double const& temps) {
 
     }
 
+
+        // On ajoute la vitesse du centre de masse de la toupie au vecteur d'accélération angulaire
+
     Vecteur v(-(AG()^omega()));
+
+
 
     return sortie.concatene(v);
 
@@ -82,19 +117,30 @@ Vecteur Toupie::equEvol(double const& temps) {
 // =====================================================================================================
 
 void Toupie::setParam(const Vecteur & newV) {
-
+/* On prend comme nouveau paramètre un vecteur de 6 dimensions (au moins) */
     m_P = newV;
 
+    while (m_P.getDim()<6) {m_P.concatene({0.0});}
+
     m_P = modulo2Pi();
+
+}
+void Toupie::setPpoint(const Vecteur & newV) {
+/* On prend comme nouveau paramètre dérivé un vecteur de 6 dimensions (au moins) */
+    m_Ppoint = newV;
+
+    while (m_Ppoint.getDim()<6) {m_Ppoint.concatene({0.0});}
 
 }
 
 Vecteur Toupie::getAngles() const {
 
+        //  Nous avons forcément 6 dimensions au vecteur, il y a donc aucun problème d'accès
     return {m_P.getCoord(0), m_P.getCoord(1), m_P.getCoord(2)};
 
 }
 void Toupie::setAngles(const Vecteur &newV) {
+/* C'est une méthode plus précise que setParam, le test est donc plus précis */
 
     if (newV.getDim() >= 3) {
 
@@ -104,14 +150,18 @@ void Toupie::setAngles(const Vecteur &newV) {
 
     }
 
+    m_P = modulo2Pi();
+
 }
 
 Vecteur Toupie::getAnglesp() const {
 
+        //  Nous avons forcément 6 dimensions au vecteur, il y a donc aucun problème d'accès
     return {m_Ppoint.getCoord(0), m_Ppoint.getCoord(1), m_Ppoint.getCoord(2)};
 
 }
 void Toupie::setAnglesp(const Vecteur &newV) {
+/* C'est une méthode plus précise que setPpoint, le test est donc plus précis */
 
     if (newV.getDim() >= 3) {
 
@@ -126,12 +176,12 @@ void Toupie::setAnglesp(const Vecteur &newV) {
 
 
 Vecteur Toupie::getPosition() const {
-/* Retourne le point de contact entre la toupie et le sol */
+/* Retourne le centre de masse */
     return  Vecteur({m_Ppoint.getCoord(3), m_Ppoint.getCoord(4), 0.0})+S().transp()*Vecteur({0.0,0.0,m_d});
 
 }
 void Toupie::setPosition(const Vecteur &newV) {
-
+/* Une méthode plus précise que setParam, donc on y va coordonnée par coordonnée */
     if (newV.getDim() >= 2) {
 
         m_Ppoint.setCoord(3, newV.getCoord(0));

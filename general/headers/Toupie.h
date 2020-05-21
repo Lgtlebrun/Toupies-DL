@@ -17,35 +17,44 @@ public:
 // =========
 
     Toupie(SupportADessin& sup, std::string const& nom, Vecteur const& angles, Vecteur const& anglesPoint, Vecteur const& position_Pointe, double const& IA1, double const& I3, double const& masse, double const& norme_AG);
-                                // Prend un support à dessin où afficher la toupie, un string pour la nomme,
-                                // 2 Vecteurs, le premier position et le second vitesse (avec theta psy phi comme
-                                // convention). Il prend ensuite I_A1, I_3 les moments d'inertie, la masse Volumique,
-                                // la masse puis la distance point de contact-sol
+/* Nous prenons en argument du ctor un support à dessin (là où sera affichée la toupie), un type  *
+* de toupie, qui est un nom générique que l'on voudrait lui donner. Le vecteur angles doit       *
+* contenir (theta, psy, phi) comme coordonnées. anglespoint contient la dérivée temporelle de    *
+* ces angles, dans le même ordre. posA est la position (x,y,z) de la pointe de la toupie. IA1 et *
+* I3 sont les moments d'inertie (même notation que dans le complément mathématique). masse est   *
+* la masse de la toupie et d la distance entre le point de contact et le centre de masse de la   *
+* toupie.                                                                                       */
 
     virtual ~Toupie();          // dtor
 
 // =========
 
-    virtual void dessine();
+    virtual void dessine();           // Permet l'affichage de la toupie dans son SupportADessin
 
-    virtual Toupie* clone() const;                  // Renvoie un pointeur sur une copie polymorphique de la toupie
+    virtual Toupie* clone() const;  // Renvoie un pointeur sur une copie polymorphique de la toupie
 
 // =========
 
-    void setParam(Vecteur const&);
+        // Méthodes set héritées d'Integrable
+
+    void setParam(Vecteur const& newParam);
+    void setPpoint(Vecteur const& newPpoint);
+
+
+        // Méthodes get et set spécifiques à une toupie
 
     virtual Vecteur getAngles() const;
-    virtual void setAngles(Vecteur const&);
+    virtual void setAngles(Vecteur const& newAngles);
 
     virtual Vecteur getAnglesp() const;
-    virtual void setAnglesp(Vecteur const&);
+    virtual void setAnglesp(Vecteur const& newAnglesp);
 
-    virtual Vecteur getPosition() const;                                // renvoie la position carthésienne du pt de contact
-    virtual void setPosition(Vecteur const&);                           // set la position carthésienne
+    virtual Vecteur getPosition() const;              // renvoie la position carthésienne du centre de masse
+    virtual void setPosition(Vecteur const& newPosA); // set la position carthésienne du point de contact
 
-    virtual Vecteur getVitesse() const;                                 // revoie la vitesse du point de contact
+    virtual Vecteur getVitesse() const;       // revoie la vitesse du centre de masse
 
-    virtual Vecteur AG() const;
+    virtual Vecteur AG() const;               // renvoie le vecteur point de contact-centre de masse
 
 // =========  EQUATION D'EVOLUTION :
 
@@ -53,8 +62,7 @@ public:
 
 // =========  AFFICHAGE :
 
-    virtual void statsCorps(std::ostream& sortie) const;                // Affichage de toutes les statistiques de
-                                                                        // la toupie
+    virtual void statsCorps(std::ostream& sortie) const;     // Affichage de toutes les statistiques de la toupie
 
 // =========  METHODES PERMETTANT DE MONTRER LES GRANDEURS PHYSIQUES :
 
@@ -86,22 +94,22 @@ protected:
 
 // =========  METHODES PROTECTED :
 
-    Vecteur modulo2Pi() const;                                                    // Remet le paramètre modulo Pi, afin d'éviter
-                                                                        // la divergence des fonctions sin et cos
-
-
+    Vecteur modulo2Pi() const;
+    // Remet le paramètre modulo Pi, afin d'éviter la divergence des fonctions sin et cos
 
     virtual Matrice3 TenseurInertie() const ;
+    // Calcule le tenseur d'intertie au point de contact avec le sol
 
     Vecteur omega() const;
+    // Caclule le vecteur omega défini dans le complément mathématique
 
     Matrice3 S() const;
+    // Matrice de passage de RG à RO
 
 };
 
 
-std::ostream& operator<<(std::ostream&, Toupie const&);             // surcharge de l'opérateur << pour afficher
-// un cône simple
+std::ostream& operator<<(std::ostream&, Toupie const& Toupy);  // surcharge de l'opérateur << pour afficher un cône simple
 
 
 

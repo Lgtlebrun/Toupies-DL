@@ -14,8 +14,7 @@ class TextViewer;
 // =========  DEFINITION DES CONSTANTES :
 
 
-extern const Vecteur g;                                 // g l'intensité de l'accélération gravitationnelle à la surface
-                                                        // de la terre
+extern const Vecteur g;                                 // g l'intensité de l'accélération gravitationnelle à la surface de la terre
 extern const double PREC;                               // une precision pour les égalités de double
 extern const double EPSILON;                            // "Erreur" que l'on se permet sur l'intégrateur de Newmark
 

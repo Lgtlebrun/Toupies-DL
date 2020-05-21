@@ -19,8 +19,7 @@ public:
 
 // =========
 
-    virtual bool run() = 0;                     // méthode abstraite permettant de lancer le test de chaque classe
-                                                // test
+    virtual bool run() = 0;                     // méthode abstraite permettant de lancer le test de chaque classe test
 
 // ========================================================================================
 

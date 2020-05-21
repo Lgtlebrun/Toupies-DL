@@ -12,30 +12,22 @@ public :
 
 // =========
 
-    Oscillateur(SupportADessin&, Vecteur const&, Vecteur const&, Vecteur const&, double const&);
-                                                                            // ctor d'Oscillateur. Il faut entrer un
-                                                                            // support à dessin sur lequel nous aimerions
-                                                                            // afficher l'oscillateur. En plus, le pre-
-                                                                            // mier vecteur est le vecteur de position
-                                                                            // initiale et le second celui de la vitesse
-                                                                            // initiale, le troisième est celui du centre
-                                                                            // du mouvement. Le double est le rayon de
-                                                                            // l'oscillateur
+    Oscillateur(SupportADessin& sup, Vecteur const& Position, Vecteur const& Vitesse, Vecteur const& Centre_du_mouvement, double const& rayon);
+/* ctor d'Oscillateur. Il faut entrer un support à dessin sur lequel nous aimerions afficher l'oscillateur.   *
+ * En plus, le premier vecteur est le vecteur de position initiale et le second celui de la vitesse initiale, *
+ * le troisième est celui du centre du mouvement. Le double est le rayon de l'oscillateur                     */
 
 
 // =========
 
-    virtual Oscillateur* clone() const;                                     // Renvoie un pointeur sur une copie
-                                                                            // polymorphique de l'oscillateur
-    virtual void dessine() override;                                        // permet un affichage customisé de la classe
-                                                                            // Oscillateur
+    virtual Oscillateur* clone() const;    // Renvoie un pointeur sur une copie polymorphique de l'oscillateur
+    virtual void dessine() override;       // permet un affichage customisé de la classe Oscillateur
 
     void statsCorps(std::ostream& sortie);
 
 // =========
 
-    virtual Vecteur equEvol(double const& temps);                           // Equation d'évolution de l'oscillateur
-                                                                            // harmonique
+    virtual Vecteur equEvol(double const& temps);           // Equation d'évolution de l'oscillateur harmonique
 
     virtual std::string getType() const;                                    // retourne le type de l'objet pour des
 
@@ -44,7 +36,7 @@ public :
     double getRayon() const;                                                // renvoit le rayon
 
     Vecteur getPosition() const;                                            // revoit la position du centre du mvt
-    void setPosition(Vecteur const&);
+    void setPosition(Vecteur const& newPosition);
 
 // =========
 
@@ -70,7 +62,7 @@ protected:
 // =======================  SURCHARGE D'OPERATEUR EXTERNE  ===============================================
 
 
-std::ostream& operator<<(std::ostream&, Oscillateur const&);               // sortie personnalisée
+std::ostream& operator<<(std::ostream& flux, Oscillateur const& O);               // sortie personnalisée
 
 
 

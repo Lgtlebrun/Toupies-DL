@@ -8,7 +8,7 @@ Bille::Bille(SupportADessin& S, Vecteur const& pos, Vecteur const& vit, double c
  * le launcher s'assure que r > 0. De plus, la distance de sécurité est dans les accolades pour permettre de ne *
  * pas prendre d'argument à la méthode, puisque setDistSecu() n'est dépendante que de l'objet et on ne veut pas *
  * qu'un utilisateur mal-intentionné fasse n'importe quoi. */
-        : ObjetPhysique(S, "Bille", pos, vit), m_rayon(r)
+        : ObjetPhysique(S, "Bille", pos, vit), m_rayon(fabs(r))
 {}
 
 
@@ -84,7 +84,7 @@ double Bille::getRayon() const {
 
 double Bille::Energie() const {
 
-    double masse(3.0/4*M_PI*pow(m_rayon, 3)*2.5);
+    double masse(3.0/4*M_PI*pow(m_rayon, 3)*2.5);  // masse volumique du verre
 
     return 1.0/2*masse*(getVitesse()*getVitesse())-masse*(g.prodScalaire(getPosition()));
 
