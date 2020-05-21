@@ -3,10 +3,9 @@
 
 ScWidget::ScWidget(QWidget *parent)
     : QWidget(parent)
-    , ui(new Ui::Widget), m_type(CUSTOM), m_mode(TEXTE), m_support(0), m_objet(0), m_console(0), m_fichierPret(false), m_trace(false)
+    , m_type(CUSTOM), m_mode(TEXTE), m_support(0), m_objet(0), m_console(0), m_fichierPret(false), m_trace(false)
 {
-    ui->setupUi(this);
-
+    /// CONSTRUCTEUR
 
 
     // Initialisation
@@ -337,12 +336,43 @@ ScWidget::ScWidget(QWidget *parent)
 
 ScWidget::~ScWidget()
 {
-    delete ui;
+    /// DESTRUCTEUR
+
+    if(m_support != nullptr){
+        delete m_support;
+        m_support = nullptr;
+    }
+
+    if(m_objet != nullptr){
+        delete m_objet;
+        m_objet = nullptr;
+    }
+
+    if(m_support != nullptr){
+        delete m_support;
+        m_support = nullptr;
+    }
+
+    for (auto& elt : m_integ){
+        if(elt != nullptr){
+            delete elt;
+            elt = nullptr;
+        }
+    }
+
+    for (auto& elt : m_simulations){
+        if(elt != nullptr){
+            delete elt;
+            elt = nullptr;
+        }
+    }
 }
 
 
 
 ObjetPhysique* ScWidget::makeObjet() const {
+
+    /// FABRICATION DE L'OBJET PHYSIQUE A SIMULER
 
     ObjetPhysique* ptr(0);
 
@@ -394,11 +424,18 @@ ObjetPhysique* ScWidget::makeObjet() const {
 
 void ScWidget::go(){
 
+    /// REAGIT AU BOUTON GO :
+    /// Si toutes les conditions sont réunies, lancement des simulations
+    /// Sinon, on n'exécute rien : checkAllCaracs() s'occupe de tout.
+
+
+    // Vérification des conditions obligatoires
+
     if(!checkAllCaracs()){
         return;
     }
 
-
+    // LANCEMENT
 
     // Il y a besoin d'un support par défaut pour fabriquer l'objet
     m_console = new TextEdit;
@@ -437,6 +474,8 @@ void ScWidget::go(){
         dt = m_dt->text().toDouble();
     }
 
+    // Gestion du mode d'affichage
+
     switch(m_mode){
 
     case TEXTE:
@@ -462,6 +501,8 @@ void ScWidget::go(){
 
 void ScWidget::goTexte(double duree, double dt){
 
+    /// LANCEMENT : MODE TEXTE
+
     m_console->show();
     QObject::connect(m_console, &TextEdit::restartStp, this, &ScWidget::restart);
 
@@ -485,12 +526,16 @@ void ScWidget::goTexte(double duree, double dt){
 
 void ScWidget::goFichier(double duree, double dt){
 
+    /// LANCEMENT : MODE FICHIER
 
+
+    // Sélection du dossier d'enregistrement
     if(!m_fichierPret) {
         m_search->open();
         QObject::connect(m_search, &FichierSearch::fichierPret, this, &ScWidget::goFichierBis);
 
-        return;}
+        return; // On retourne : le fichierSearch est une fenetre modale, elle ne se fermera qu'en émettant fichierPret
+    }
 
     std::ofstream flux(m_search->getPath());
     m_support = new TextViewer(flux);
@@ -522,6 +567,7 @@ void ScWidget::goFichier(double duree, double dt){
 
     }
 
+    // On redémarre la fenetre principale pour de nouvelles aventures !
     restart();
 
 
@@ -529,12 +575,18 @@ void ScWidget::goFichier(double duree, double dt){
 
 
 void ScWidget::goFichierBis(){
+
+    /// GESTION DU SIGNAL fichierPret PAR LE FICHIERSEARCH
+
     m_fichierPret = true;
     goFichier(m_duree->text().toDouble(), m_dt->text().toDouble());
 }
 
 
 void ScWidget::goImage(){
+
+    /// LANCEMENT : MODE IMAGE
+    /// Création et affichage de plusieurs ScGLWidget
 
     if(m_caseTrace->isChecked()) {
         m_trace = true;
@@ -545,7 +597,7 @@ void ScWidget::goImage(){
 
 
     for (size_t i(0); i < m_sys.size(); i++){
-        m_simulations.push_back(new ScGLWidget(m_sys[i], m_nomInteg[i], Vecteur({0.,-10, 0.}), i, m_trace));
+        m_simulations.push_back(new ScGLWidget(m_sys[i], m_nomInteg[i], Vecteur({0.,-10, 0.}), m_trace));
     }
 
     for(size_t i(0); i < m_simulations.size(); i++){
@@ -578,6 +630,8 @@ void ScWidget::goImage(){
 
 
 void ScWidget::restart(){
+
+    /// REDEMARRAGE POUR DE NOUVELLES AVENTURES
 
     for(auto& elt:m_simulations){
         elt->hide();
@@ -623,12 +677,15 @@ void ScWidget::restart(){
 
 bool ScWidget::checkAllCaracs(){
 
+    /// VERIFICATION DES CONDITIONS OBLIGATOIRES POUR LA SIMULATION
+
     if (!(m_caseEC->isChecked() || m_caseNewmark->isChecked() || m_caseRK4->isChecked())) {
         QMessageBox::information(this, "Echec!", "Veuillez sélectionner au moins un intégrateur.");
         return false;
     }
 
 
+    // En fonction du mode d'affichage
     switch(m_mode){
 
     case TEXTE:
@@ -646,6 +703,7 @@ bool ScWidget::checkAllCaracs(){
 
 
 
+    // En fonction du type d'objet physique sélectionné
     switch(m_type) {
 
 
@@ -691,6 +749,8 @@ bool ScWidget::checkAllCaracs(){
 
 void ScWidget::saveData(ObjetPhysique* O, size_t indice){
 
+    /// Enregistrement des données de l'objet physique
+
 
     std::string pathE("data/EnergieTotale_" + m_nomInteg[indice] + ".txt");
     std::string pathLa("data/L_a_"+ m_nomInteg[indice] + ".txt");
@@ -724,7 +784,7 @@ void ScWidget::saveData(ObjetPhysique* O, size_t indice){
 }
 
 
-
+// ====== AFFICHAGE EN FONCTION DU TYPE SELECTIONNE ======
 
 
 
@@ -857,9 +917,16 @@ void ScWidget::setCustom() {
     m_labRayon->setText("Distance du centre de masse :");
 }
 
+// ======================================================
+
+
 
 
 void ScWidget::modeChanged() {
+
+    /// Signal appelant le set[type] adapté au type d'objet physique sélectionné
+    ///
+    /// Effet : modification de l'affichage des champs à renseigner
 
     QString mode(m_boxMode->currentText());
 

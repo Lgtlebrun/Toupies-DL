@@ -19,6 +19,9 @@
 
 class QTextViewer : public SupportADessin, public Clonable
 {
+
+    /// Classe adaptant TextViewer au format GUI
+
 public :
 
 // =========
@@ -39,8 +42,9 @@ public :
     virtual void dessine(Oscillateur const&) ;
     virtual void dessine(ConeSimple const&) ;
     virtual void dessine(const ToupieChinoise &) ;
-    virtual void dessine(Toupie const&);
+    virtual void dessine(const Toupie &);
     virtual void dessine(Trace const&){}
+
 
 
 // =====================================================================================
@@ -49,7 +53,7 @@ protected:
 
 // =========  ATTRIBUTS :
 
-    TextEdit& m_flux;
+    TextEdit& m_flux;       // Le flot est ici un TextEdit pour l'affichage Texte
 
 
 };

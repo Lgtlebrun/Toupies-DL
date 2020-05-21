@@ -1,7 +1,6 @@
 <RCC>
     <qresource prefix="/icons">
         <file>pastilleGrise.png</file>
-        <file>boutonRouge.png</file>
         <file>boutonBleu.png</file>
         <file>tav.gif</file>
         <file>toupie-bleue-marine.gif</file>

@@ -34,7 +34,7 @@ SOURCES += \
     Qt_GL/sphere.cc \
     general/source/ObjetPhysique.cpp \
     general/source/Trace.cpp \
-    main.cpp
+    UltimateMain.cpp
 
 HEADERS += \
     general/headers/ToupieChinoise.h \

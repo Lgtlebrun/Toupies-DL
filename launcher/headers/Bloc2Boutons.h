@@ -8,6 +8,9 @@
 
 class Bloc2Boutons : public QWidget {
 
+    /// Widget groupant deux boutons "OK" et "CANCEL"
+
+
 public:
     Bloc2Boutons(QWidget* = nullptr);
     QPushButton* getBOk();

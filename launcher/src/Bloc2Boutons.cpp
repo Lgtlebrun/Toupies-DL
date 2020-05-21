@@ -2,6 +2,8 @@
 
 Bloc2Boutons::Bloc2Boutons(QWidget* parent) : QWidget(parent){
 
+    /// Cstor
+
     setFixedSize(210, 60);
 
     m_bOk = new QPushButton("Ok");
@@ -16,6 +18,9 @@ Bloc2Boutons::Bloc2Boutons(QWidget* parent) : QWidget(parent){
     blocBouton->addWidget(m_bCancel);
 
 }
+
+
+// ===== ACCESSEURS SUR LES BOUTONS ====
 
 QPushButton* Bloc2Boutons::getBOk() {return m_bOk;}
 

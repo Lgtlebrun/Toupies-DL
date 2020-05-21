@@ -12,7 +12,13 @@ QTextViewer *QTextViewer::clone() const {
     return new QTextViewer(*this);
 }
 
-// ===============================================================================================
+
+
+
+// ================= METHODES DESSINE ========================
+
+
+
 
 void QTextViewer::dessine(Systeme const& S) {
 /* Affiche textuellement chaque paramètre et vitesse de chaque toupie */
@@ -51,6 +57,6 @@ void QTextViewer::dessine(const ToupieChinoise & C)  {
     m_flux << QString::fromStdString(C.getParam().to_str());
 }
 
-void QTextViewer::dessine(Toupie const& T) {
+void QTextViewer::dessine(const Toupie & T)  {
     m_flux << QString::fromStdString(T.getParam().to_str());
 }

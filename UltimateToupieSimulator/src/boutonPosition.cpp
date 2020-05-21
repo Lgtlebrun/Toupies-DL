@@ -56,12 +56,12 @@ void BoutonPosition::clickGestion(){
 
     case GRIS:
         changeCouleur(BLEU);
-        emit newIntegrable();
+        emit newObjet();
         break;
 
     case BLEU:
         changeCouleur(GRIS);
-        emit supprIntegrable();
+        emit supprObjet();
         break;
     }
 }

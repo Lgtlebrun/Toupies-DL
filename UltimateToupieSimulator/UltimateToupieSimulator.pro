@@ -2,28 +2,20 @@ QT += core gui opengl widgets
 
 win32:LIBS += -lopengl32
 
-TARGET = Scientific-Toupie-Simulator
+TARGET = Ultimate-Toupie-Simulator
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
-
-CONFIG += c++11
-
-
-DEFINES += QT_DEPRECATED_WARNINGS
-
+INCLUDEPATH = ../general
 
 SOURCES += \
-    ../general/source/Trace.cpp \
-    src/ScGLWidget.cpp \
-    ScMain.cpp \
-    src/ScWidget.cpp \
-    src/QTextViewer.cpp \
-    src/TextEdit.cpp \
-    src/fichierSearch.cpp \
+    ../general/source/ToupieChinoise.cpp \
+    ../general/source/Matrice3.cpp \
     src/Bloc2Boutons.cpp \
-    ../Qt_GL/glwidget.cc \
-    ../Qt_GL/vue_opengl.cc \
-    ../Qt_GL/sphere.cc \
+    src/Grillage.cpp \
+    src/LauncherAccueil.cpp \
+    src/TextEdit.cpp \
+    src/TypeBouton.cpp \
+    src/bordMode.cpp \
+    src/fichierSearch.cpp \
     ../general/source/constantes.cpp \
     ../general/source/Integrable.cpp \
     ../general/source/Toupie.cpp \
@@ -35,22 +27,24 @@ SOURCES += \
     ../general/source/TextViewer.cpp \
     ../general/source/Tests/Bille.cpp \
     ../general/source/Tests/Oscillateur.cpp \
-    ../general/source/ToupieChinoise.cpp \
-    ../general/source/Matrice3.cpp \
-    ../general/source/ObjetPhysique.cpp
+    src/boutonPosition.cpp \
+    src/QTextViewer.cpp \
+    ../Qt_GL/glwidget.cc \
+    ../Qt_GL/vue_opengl.cc \
+    ../Qt_GL/sphere.cc \
+    ../general/source/ObjetPhysique.cpp \
+    ../general/source/Trace.cpp \
+    UltimateMain.cpp
 
 HEADERS += \
-    headers/ScGLWidget.h \
-    ../general/headers/Trace.h \
-    headers/ScWidget.h \
-    headers/QTextViewer.h \
-    headers/TextEdit.h \
-    headers/fichierSearch.h \
+    ../general/headers/ToupieChinoise.h \
     headers/Bloc2Boutons.h \
-    ../Qt_GL/glwidget.h \
-    ../Qt_GL/vue_opengl.h \
-    ../Qt_GL/sphere.h \
-    ../Qt_GL/vertex_shader.h \
+    headers/Grillage.h \
+    headers/LauncherAccueil.h \
+    headers/TextEdit.h \
+    headers/TypeBouton.h \
+    headers/bordMode.h \
+    headers/fichierSearch.h \
     ../general/headers/constantes.h \
     ../general/headers/Clonable.h \
     ../general/headers/Integrable.h \
@@ -65,15 +59,19 @@ HEADERS += \
     ../general/headers/TextViewer.h \
     ../general/headers/Tests/Bille.h \
     ../general/headers/Tests/Oscillateur.h \
-    ../general/headers/ToupieChinoise.h \
-    ../general/headers/ObjetPhysique.h
+    headers/boutonPosition.h \
+    headers/QTextViewer.h \
+    ../Qt_GL/glwidget.h \
+    ../Qt_GL/vue_opengl.h \
+    ../Qt_GL/sphere.h \
+    ../Qt_GL/vertex_shader.h \
+    ../general/headers/ObjetPhysique.h \
+    ../general/headers/Trace.h \
+
 
 
 RESOURCES += \
-    ../Qt_GL/resource.qrc \
-    polices/police.qrc
+    data/images.qrc \
+    ../Qt_GL/resource.qrc
 
-# Default rules for deployment.
-qnx: target.path = /tmp/$${TARGET}/bin
-else: unix:!android: target.path = /opt/$${TARGET}/bin
-!isEmpty(target.path): INSTALLS += target
+
