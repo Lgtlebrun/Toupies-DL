@@ -1,0 +1,98 @@
+Série projet 1
+
+QUESTION P1.1: 
+	
+	Les vecteurs sont représentés par un vector de double, qui est pour l'instant leur seul attribut. On a choisi le
+	tableau dynamique pour jouer sur les dimensions. A des fins évidentes d'encapsulation tous les attributs sont et
+	seront privés. Les méthodes sont pour l'instant toutes publiques, mais lorsqu'on aura surchargé les opérateurs
+	mathématiques comme ^ pour le produit vectoriel, on pourra se permettre d'en passer certaines comme additionner() 
+	en privé. Après implémentation des méthodes mathématiques vectorielles, on se rend compte qu'autour de 0, les opérations 
+	entre double amènent à des résultats non nuls très petits, embarassants pour l'affichage. D'où le rôle de la méthode
+	rationnalise(), qui permet de ramener à zéro les résultats plus petit que la précision des double.
+
+QUESTION P1.2:
+
+	Pour l'addition, nous avons choisi de prioriser la plus grande dimension : le vecteur de plus petite dimension
+	est considéré comme un vecteur de même dimension dont les coordonnées supplémentaires valent 0.
+	En jouant sur la variable d'itération dans les boucles for, on optimise facilement la complexité en O(n).
+
+	Pour le produit scalaire, cette manière de voir conduit à n'itérer que jusqu'à la plus petite dimension, les 
+	coordonnées manquantes au plus "petit" vecteur étant considérées comme des 0.
+
+QUESTION P4.1:
+	
+	Nous n'avons pas fait de constructeur de copie: par défaut, c++ s'en charge très bien. Notre classe Vecteur ne nécessitant
+	pas de copie profonde, nul besoin n'était.
+
+
+
+QUESTION P4.2:
+	
+
+	a) Au niveau des attributs il ne serait peut etre pas souhaitable de mélanger angles et longueur. Il serait judicieux de les séparer.
+	b) Le constructeur en coordonnées sphériques prendrait exactement les mêmes paramètres que le cosntructeur en coordonnées cartésiennes!
+	Pas idéal. Des solutions existent: élaborer une struct angle, par exemple, qui serait passée en paramètre, ou une méthode statique 
+	Vecteur::FromSpherique(double, double, double) qui appellerait un constructeur et effectuerait les modifications nécessaires. Mais tout cela 
+	est bien pesant. 
+
+QUESTION P4.3:
+
+	Nous avons introduit les opérateurs '<<' pour l'affichage et '==' pour la comparaison, très naturellement somme toute.
+
+
+
+QUESTION P6.1:
+
+	La classe ConeSimple hérite de la classe Toupie : Toupie est la classe mère, ConeSimple la classe fille. En effet, un cone simple
+	"est" une toupie.
+
+
+QUESTION P7.1:
+	
+	// DAVID
+	
+ 
+QUESTION P7.2:
+	
+	IntegrateurEulerCromer hérite naturellement de la classe Integrateur.
+
+
+QUESTION P8.1:
+
+	La méthode dessine() est virtuelle pure: les classes filles de SupportADessin surchargeront cette méthode ("virtuelle")
+	qui n'est pas définie dans le corps de la classe SupportADessin ("pure", notons le "= 0" dans le header de SupportADessin)
+
+
+QUESTION P8.2:
+
+	La classe Système doit pour ce faire contenir une collection hétérogène d'objets. Le procédé approprié est donc de lui fournir
+	en attribut un vector de pointeur sur notre classe Intégrable, dont héritent tous les objets (Toupie, Oscillateur...) que nous
+	voudrions pouvoir faire évoluer dans la simulation.
+
+
+QUESTION P8.3:
+
+	Les classes contenant des pointeurs en attribut posent problème au niveau du destructeur et de la copie. Il faut donc prendre garde
+	à la copie profonde dans la surcharge nécessaire de l'opérateur '=' et le constructeur de copie, et choisir une option quand au
+	destructeur. En effet de deux choses l'une : soit le constructeur de système prend en paramètre des pointeurs (peu ergonomique, mais
+	efficace) et la désallocation des pointeurs se fera dans le main par l'utilisateur, soit le constructeur prend en paramètre des références
+	sur des objets et se charge de générer lui-même des pointeurs sur une copie polymorphique de l'objet, qui seront désalloués dans le 
+	destructeurs via un delete. Cette manière de voir implique plus de copies, et donc plus de mémoire utilisée. Mais elle est plus ergonomique
+	et ne modifie pas les objets passés en paramètres, permettant éventuellement de multiples simulations. Nous avons donc choisi l'ergonomie.
+	D'où le rôle de notre méthode clone(), héritée de la classe Clonable dont héritent tous nos objets et la classe Systeme, et permettant la
+	copie polymorphique.
+
+
+QUESTION P8.4:
+	
+	cf Conception.
+
+
+QUESTION P11.1:
+	
+	Toutes ces méthodes devraient être placées dans Toupie, afin d'en faire hériter nos variantes de toupies.
+
+QUESTION 13.1:
+
+	Ces nouvelles fonctionnalités ne sont pas du tout gênantes du fait de l'utilisation de la méthode clone() décrite en 8.3.
+	Elles pourront être utilisées dans l'interface scientifique (voir Conception, Interfaces), en sélectionnant plusieurs integrateurs.
