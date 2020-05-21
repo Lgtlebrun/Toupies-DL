@@ -4,10 +4,9 @@
 
 ConeSimple::ConeSimple(SupportADessin& sup, Vecteur const& Angles, Vecteur const& AnglesPoint, Vecteur const& posA, double const& rayon, double const& hauteur, double const& masseVolumique)
 /* Nous pouvons calculer les moments d'inertie selon différents axes à base d'uniquement la masse volumique, le rayon *
- * et la hauteur du cône. De plus la distance de sécurité est définie comme étant la longueur de la paroi du cône     *
- * qui est calculée dans les accolades pour les mêmes raisons qu'expliqué dans le ctor de Bille.h                    */
+ * et la hauteur du cône.                                                                                            */
         : Toupie(sup, "Cone simple", Angles, AnglesPoint, posA, calculeIA1(rayon, hauteur, masseVolumique), calculeI3(rayon, hauteur, masseVolumique)
-                , masse(rayon, hauteur, masseVolumique), 3.0/4.0*hauteur), m_masseVolumique(masseVolumique), m_rayon(rayon), m_hauteur(hauteur)
+                , masse(rayon, hauteur, masseVolumique), 3.0/4.0*hauteur), m_masseVolumique(fabs(masseVolumique)), m_rayon(fabs(rayon)), m_hauteur(fabs(hauteur))
 {}
 
 
@@ -30,12 +29,13 @@ void ConeSimple::dessine() {
 
 Vecteur ConeSimple::equEvol(const double &temps) {
 /* Avec l'équation d'évolution en page 12 du complément mathématique, assumant donc distance centre de masse - *
- * point de contact = cste. Condition d'arrêt si la tranche du cône touche le sol On assume vA = 0             */
+ * point de contact = cste.                                                                                    */
 
     Vecteur sortie;                 // convention : (théta, psy, phi)
                                     // initialisation au vecteur nul
 
     m_P = modulo2Pi();
+    /* On remet le paramètre modulo 2PI pour éviter la divergence des fonctions trigonométriques */
 
     if ( fabs(m_IA1) < PREC ) {
 
@@ -44,15 +44,8 @@ Vecteur ConeSimple::equEvol(const double &temps) {
     }
     if (fabs(sin(m_P.getCoord(0))) < PREC ) {
 
-        return sortie;              // si la toupie a un angle à la verticale nul, alors, vu qu'il n'y a aucun frottement,
-                                    // la somme des force est nule, entraînant une accélération nulle
-
-    }
-    if (m_P.getCoord(0) >= M_PI/2) {
-
-        m_Ppoint = {0.0, 0.0, 0.0};
-
-        return {0.0, 0.0, 0.0};
+        return sortie;              /* si la toupie a un angle à la verticale nul, alors, vu qu'il n'y a aucun frottement,  *
+                                     * la somme des force est nulle, entraînant une accélération nulle                       */
 
     }
 
@@ -104,24 +97,37 @@ std::ostream& operator<<(std::ostream& flux, ConeSimple const& C){
 // ==================================================================================================
 
     /* Calcul de pleins de grandeurs physiques par des formules données dans le complément mathématico-physique *
-     * Nous ne permettons pas de set de ces garndeurs pusiqu'intrinsèques à l'objet dont les propriétés comme   *
+     * Nous ne permettons pas de set de ces grandeurs puisqu'intrinsèques à l'objet dont les propriétés comme   *
      * la forme et la masse sont supposées constantes par l'aproximation du solide indéformable                 */
 
 double ConeSimple::calculeIA1(double const& rayon, double const& hauteur, double const& masseVolumique) const {
 
-    return masse(rayon, hauteur, masseVolumique)*(3.0/20*rayon*rayon+3.0/5*hauteur*hauteur);
+    double r(fabs(rayon));
+    double h(fabs(hauteur));
+    double rho(fabs(masseVolumique));
+
+
+    return masse(r, h, rho)*(3.0/20*r*r+3.0/5*h*h);
 
 }
 
 double ConeSimple::calculeI3(double const& rayon, double const& hauteur, double const& masseVolumique) const {
 
-    return 3.0*masse(rayon, hauteur, masseVolumique)/10*rayon*rayon;
+    double r(fabs(rayon));
+    double h(fabs(hauteur));
+    double rho(fabs(masseVolumique));
+
+    return 3.0*masse(r, h, rho)/10*r*r;
 
 }
 
 double ConeSimple::masse(double const& rayon, double const& hauteur, double const& masseVolumique) const{
 
-    return 1.0/3*M_PI*rayon*rayon*hauteur*masseVolumique;
+    double r(fabs(rayon));
+    double h(fabs(hauteur));
+    double rho(fabs(masseVolumique));
+
+    return 1.0/3*M_PI*r*r*h*rho;
 
 }
 

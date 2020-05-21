@@ -3,8 +3,10 @@
 
 
 ToupieChinoise::ToupieChinoise(SupportADessin& sup, Vecteur const& angles, Vecteur const& anglesp, Vecteur const& posA, double const& rayon, double const& hauteur, double const& masseVolumique)
+/* Nous pouvons calculer les moments d'inertie selon différents axes à base d'uniquement la masse volumique, le rayon *
+ * et la hauteur du cône.                                                                                            */
     :Toupie(sup, "Toupie Chinoise", angles, anglesp, posA, 0.0, 0.0
-     , 0.0,rayon-hauteur), m_masseVolumique(masseVolumique), m_rayon(rayon), m_hauteur(hauteur)
+     , 0.0,rayon-hauteur), m_masseVolumique(fabs(masseVolumique)), m_rayon(fabs(rayon)), m_hauteur(fabs(hauteur))
 {
     if (2*m_rayon < m_hauteur) {
 
@@ -37,10 +39,13 @@ void ToupieChinoise::dessine() {
 
 
 Vecteur ToupieChinoise::equEvol(const double &temps) {
+/* Equations d'évolution tirées de §6.2 */
+
 
     Vecteur sortie({0.0,0.0,0.0,0.0,0.0,0.0});
 
     m_P = modulo2Pi();
+    /* On remet le paramètre modulo 2PI pour éviter la divergence des fonctions trigonométriques */
 
     double I1(calculeI1());
 
@@ -78,7 +83,7 @@ Vecteur ToupieChinoise::equEvol(const double &temps) {
 // ===================================================================================================
 
 void ToupieChinoise::statsCorps(std::ostream& sortie) {
-
+/* Affiche en détail les caractéristiques d'une ToupieChinoise */
     sortie << "parametre                :  " << getParam() << std::endl;
     sortie << "vitesse                  :  " << getPpoint() << std::endl;
 
@@ -105,7 +110,12 @@ std::ostream& operator<<(std::ostream& flux, ToupieChinoise const& C){
 
 // ======================================================================================================
 
+    /* Calcul de beaucoup de grandeurs physiques de la toupie, selon des formules trouvées dans le *
+     * complément mathématique                                                                     */
+
+
 double ToupieChinoise::calcule_d() const {
+/* Calcul de la distance séparant de centre de masse du point de contact avec le sol */
 
     Vecteur e_z({0.0,0.0,1.0});
     Vecteur e_theta({0.0,0.0,1.0});
@@ -119,7 +129,11 @@ double ToupieChinoise::calcule_d() const {
 
 double ToupieChinoise::calculeI3(const double & rayon, const double & hauteur, const double & masseVolumique) const {
 
-    return M_PI/30*masseVolumique*pow(2*rayon-hauteur, 3)*(2*rayon*rayon+3*hauteur*rayon+3*hauteur*hauteur);
+    double r(fabs(rayon));
+    double h(fabs(hauteur));
+    double rho(fabs(masseVolumique));
+
+    return M_PI/30*rho*pow(2*r-h, 3)*(2*r*r+3*h*r+3*h*h);
 
 }
 
@@ -128,11 +142,15 @@ double ToupieChinoise::calculeIA1(const double & rayon, const double & hauteur, 
 
     double d(calcule_d());
 
-    double integ_z(M_PI/15*masseVolumique*pow(2*rayon-hauteur, 2)*(pow(rayon,3)+hauteur*pow(rayon, 2)-3*pow(hauteur,2)*rayon+3*pow(hauteur,3)));
+    double r(fabs(rayon));
+    double h(fabs(hauteur));
+    double rho(fabs(masseVolumique));
 
-    double alpha(3.0/4*hauteur*hauteur/(rayon*(rayon*hauteur)));
+    double integ_z(M_PI/15*rho*pow(2*r-h, 2)*(pow(r,3)+h*pow(r, 2)-3*pow(h,2)*r+3*pow(h,3)));
 
-    return 1.0/2*m_I3+integ_z-m_masse*rayon*rayon*alpha*alpha+m_masse*d*d;
+    double alpha(3.0/4*h*h/(r*(r*h)));
+
+    return 1.0/2*m_I3+integ_z-m_masse*r*r*alpha*alpha+m_masse*d*d;
 
 }
 
@@ -153,14 +171,14 @@ Matrice3 ToupieChinoise::TenseurInertie() const {
     Vecteur PG(AG());
 
     Matrice3 I(I1, 0.0, 0.0
-                   , 0.0, I1, 0.0
-                   , 0.0, 0.0, m_I3);
+            , 0.0, I1, 0.0
+            , 0.0, 0.0, m_I3);
 
-    Matrice3 Delta(PG*PG, 0.0, 0.0
+    Matrice3 Delta( PG*PG, 0.0, 0.0
                    , 0.0, PG*PG, 0.0
                    , 0.0, 0.0, PG*PG);
 
-    Matrice3 PG_M(PG.getCoord(0), 0.0, 0.0
+    Matrice3 PG_M( PG.getCoord(0), 0.0, 0.0
                   , PG.getCoord(1), 0.0, 0.0
                   , PG.getCoord(2), 0.0, 0.0);
 
@@ -175,10 +193,15 @@ Matrice3 ToupieChinoise::TenseurInertie() const {
 
 double ToupieChinoise::masse(const double&  rayon, const double&  hauteur, const double & masseVolumique) const {
 
-    return M_PI*masseVolumique*(4.0/3*pow(rayon, 3)-hauteur*hauteur*(rayon-1.0/3*hauteur));
+    double r(fabs(rayon));
+    double h(fabs(hauteur));
+    double rho(fabs(masseVolumique));
+
+    return M_PI*rho*(4.0/3*pow(r, 3)-h*h*(r-1.0/3*h));
 
 }
 
+    // accesseur de rayon et hauteur
 
 double ToupieChinoise::getRayon() const {
 
@@ -192,6 +215,9 @@ double ToupieChinoise::getHauteur() const {
 
 }
 // ==========================================================================
+
+
+    /* Méthodes qui servent au calcul de equEvol */
 
 double ToupieChinoise::f1() {
 
@@ -248,6 +274,7 @@ void ToupieChinoise::setPosition(const Vecteur & newV) {
 }
 
 Vecteur ToupieChinoise::getVitesse() {
+/* Renoit la vitesse de translation de la toupie, qui dépend de la rotation de celle-ci */
 
     Vecteur vitesse(equEvol(0.0));
 

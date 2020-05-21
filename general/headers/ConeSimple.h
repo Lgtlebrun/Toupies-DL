@@ -16,9 +16,8 @@ public :
 // =========
 
     ConeSimple(SupportADessin& sup, Vecteur const& Angles, Vecteur const& AnglesPoint, Vecteur const& posA, double const& rayon, double const& hauteur, double const& masseVolumique);
-                                                        // Construit un cône simple à partir de là où nous voulons le
-                                                        // représenter, de sa position puis sa vitesse initiale puis de
-                                                        // son rayon, sa hauteur puis sa masse volumique
+/* Construit un cône simple à partir de là où nous voulons le représenter, de sa position puis sa vitesse initiale puis *
+ * de son rayon, sa hauteur puis sa masse volumique                                                                     */
 
     virtual ~ConeSimple();                              // dtor d'un cône simple
 
@@ -26,10 +25,9 @@ public :
 
     virtual ConeSimple* clone() const;                  // Renvoie un pointeur sur une copie polymorphique du cône
 
-    virtual void dessine() override;                    // méthode permettant un affichage personnalisé de la
-                                                        // classe ConeSimple
+    virtual void dessine() override;      // méthode permettant un affichage personnalisé de la classe ConeSimple
 
-    virtual Vecteur equEvol(const double &temps) override;
+    virtual Vecteur equEvol(const double &temps) override;   // Equation d'évolution d'un cône
 
 // =========  ACCESSEURS :
 
@@ -40,23 +38,21 @@ public :
 
     virtual void statsCorps(std::ostream& sortie) const;            // affiche dans un ostream les statistiques du cône
 
-// =====================================================================================
-
-
-    virtual double calculeIA1(double const&, double const&, double const&) const;
-
-// Calcule le moment d'inertie I_A1
-    virtual double calculeI3(double const&, double const&, double const&) const;
-
-    double masse(double const&, double const&, double const&) const;
-
-protected :
 
 // =========  CALCUL DE GRANDEURS PHYSIQUES :
 
+    virtual double calculeIA1(double const& rayon, double const& hauteur, double const& masseVolumique) const;
+    // Calcule le moment d'inertie I_A1
+
+    virtual double calculeI3(double const& rayon, double const& hauteur, double const& masseVolumique) const;
     // Calcule le moment d'inertie I_3
 
+    double masse(double const& rayon, double const& hauteur, double const& masseVolumique) const;
     // Calcule la masse de la toupie
+
+// ======================================================================================
+
+protected :
 
 // =========  ATTRIBUTS :
 
@@ -67,8 +63,7 @@ protected :
 };
 
 
-std::ostream& operator<<(std::ostream&, ConeSimple const&);             // surcharge de l'opérateur << pour afficher
-                                                                        // un cône simple
+std::ostream& operator<<(std::ostream&, ConeSimple const&); // surcharge de l'opérateur << pour afficher un cône simple
 
 
 

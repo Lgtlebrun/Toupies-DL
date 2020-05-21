@@ -4,7 +4,7 @@
 Oscillateur::Oscillateur(SupportADessin& S, Vecteur const & param, Vecteur const & vit, Vecteur const& Centre_du_mvt, double const& r)
  /* L'amplitude du mouvement dépend du centre du mouvement, que nous décidons de passer en paramètre. Tous les vecteur *
   * sont de dimension 3. Le raisonnement pour setDistSecu() est le même que pour Bille.cpp */
-        : ObjetPhysique(S, "Oscillateur harmonique", param, vit), m_centreMVT(Centre_du_mvt), m_rayon(r)
+        : ObjetPhysique(S, "Oscillateur harmonique", param, vit), m_centreMVT(Centre_du_mvt), m_rayon(fabs(r))
 {}
 
 
@@ -65,7 +65,14 @@ void Oscillateur::setPosition(Vecteur const & newV) {
 
     m_centreMVT = newV;
 
+    while (m_centreMVT.getDim()<3) {m_centreMVT.concatene({0.0});}
+
 }
+
+// ==========================================================================================
+
+    /* De la magie noire qui permet une expression plus ou moins arbitraire pour les grangeurs *
+     * physiques qui sont sensées être conservées                                              */
 
 double Oscillateur::Energie() const {
 /* En regardant l'expression dans equEvol, nous pouvons dire que c'est une force, dérivant d'un potentiel. *

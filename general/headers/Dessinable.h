@@ -16,13 +16,13 @@ public:
 
 // =========
 
-    Dessinable(SupportADessin& support);                    // ctor de Dessinable. prend un SupportADessin en argument
-                                                            // car nous aimerions savoir où le dessiner
+    Dessinable(SupportADessin& support);
+    // ctor de Dessinable. prend un SupportADessin en argument car nous aimerions savoir où le dessiner
 
 // =========
 
-    virtual void dessine() = 0;                             // méthode virtuelle pure permettant de dessiner
-                                                            // n'importe quel dessinable
+    virtual void dessine() = 0;
+    // méthode virtuelle pure permettant de dessiner n'importe quel dessinable
 
 // =========
 
