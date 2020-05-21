@@ -71,6 +71,7 @@ protected :
 
     double m_rayon;                                     // le rayon de la sphère tronquée
     double m_hauteur;                                   // sa hauteur de coupure
+    double m_masseVolumique;                // la masse volumique de la toupie
 
     // A noter: m_IA1 n'a pas le sens de IA1 pour cette toupie, puisque cela allogerait les calculs
 

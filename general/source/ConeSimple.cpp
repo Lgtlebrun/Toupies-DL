@@ -7,7 +7,7 @@ ConeSimple::ConeSimple(SupportADessin& sup, Vecteur const& Angles, Vecteur const
  * et la hauteur du cône. De plus la distance de sécurité est définie comme étant la longueur de la paroi du cône     *
  * qui est calculée dans les accolades pour les mêmes raisons qu'expliqué dans le ctor de Bille.h                    */
         : Toupie(sup, "Cone simple", Angles, AnglesPoint, posA, calculeIA1(rayon, hauteur, masseVolumique), calculeI3(rayon, hauteur, masseVolumique)
-                , masseVolumique, masse(rayon, hauteur, masseVolumique), 3.0/4.0*hauteur), m_rayon(rayon), m_hauteur(hauteur)
+                , masse(rayon, hauteur, masseVolumique), 3.0/4.0*hauteur), m_masseVolumique(masseVolumique), m_rayon(rayon), m_hauteur(hauteur)
 {}
 
 
@@ -48,13 +48,13 @@ Vecteur ConeSimple::equEvol(const double &temps) {
                                     // la somme des force est nule, entraînant une accélération nulle
 
     }
-    /* if (m_P.getCoord(0) >= M_PI/2) {
+    if (m_P.getCoord(0) >= M_PI/2) {
 
         m_Ppoint = {0.0, 0.0, 0.0};
 
         return {0.0, 0.0, 0.0};
 
-    } */
+    }
 
     sortie.setCoord(0, 1.0/m_IA1*(m_masse*g.norme()*m_d*sin(m_P.getCoord(0))+m_Ppoint.getCoord(1)*sin(m_P.getCoord(0))
                                                                              * ((m_IA1-m_I3)*m_Ppoint.getCoord(1)*cos(m_P.getCoord(0))-m_I3*m_Ppoint.getCoord(2) )) ) ;

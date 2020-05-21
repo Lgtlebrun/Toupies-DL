@@ -62,7 +62,7 @@ protected :
 
     double m_rayon;                                     // le rayon du cône
     double m_hauteur;                                   // sa hauteur
-
+    double m_masseVolumique;                            // la masse volumique de la toupie
 
 };
 

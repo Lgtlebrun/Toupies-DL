@@ -3,14 +3,14 @@
 #include <iostream>
 
 
-Toupie::Toupie (SupportADessin& sup, std::string const& type, Vecteur const& angles, Vecteur const& anglespoint, Vecteur const& posA, double const& IA1, double const& I3, double const& masseVolumique, double const & masse, double const& d)
+Toupie::Toupie (SupportADessin& sup, std::string const& type, Vecteur const& angles, Vecteur const& anglespoint, Vecteur const& posA, double const& IA1, double const& I3, double const & masse, double const& d)
 /* Nous prenons un support à dessin et le type de Toupie en string. Param et vit sont les vecteurs liés à l'intégrateur *
  * tandis que posA est la position du point de contact entre la toupie et le sol. Les moments d'inertie IA1 et I3 sont  *
  * laissés en argument car ça ne fait aucun sens de le calculer pour une toupie générale. De même, la masse dépend de   *
  * la masse volumique mais aussi de la forme sur laquelle nous ne pouvons rien dire dans le cas général. d est la       *
  * distance du centre de masse au point de contact au sol. La distance de sécurité est dépendante du type de toupie,    *
  * d'où la raison pour laquelle elle est en argument                                                                    */
-    : ObjetPhysique(sup, type, angles.concatene(Vecteur({0.0,0.0,0.0})), anglespoint.concatene(posA)), m_IA1(IA1), m_I3(I3), m_masse(masse), m_d(d), m_masseVolumique(masseVolumique)
+    : ObjetPhysique(sup, type, angles.concatene(Vecteur({0.0,0.0,0.0})), anglespoint.concatene(posA)), m_IA1(IA1), m_I3(I3), m_masse(masse), m_d(d)
 {}
 
 Toupie::~Toupie() {}
@@ -208,7 +208,6 @@ void Toupie::statsCorps(std::ostream& sortie) const {
     sortie << "Angles                   :  " << getAngles() << std::endl;
     sortie << "Vitesse angulaire        :  " << getAnglesp() << std::endl;
     sortie << "masse [kg]               :  " << m_masse << std::endl;
-    sortie << "masse volumique [kg m-3] :  " << m_masseVolumique << std::endl;
     sortie << "distance [m]             :  " << m_d << std::endl;
 
 }

@@ -4,7 +4,7 @@
 
 ToupieChinoise::ToupieChinoise(SupportADessin& sup, Vecteur const& angles, Vecteur const& anglesp, Vecteur const& posA, double const& rayon, double const& hauteur, double const& masseVolumique)
     :Toupie(sup, "Toupie Chinoise", angles, anglesp, posA, 0.0, 0.0
-     , masseVolumique, 0.0,rayon-hauteur), m_rayon(rayon), m_hauteur(hauteur)
+     , 0.0,rayon-hauteur), m_masseVolumique(masseVolumique), m_rayon(rayon), m_hauteur(hauteur)
 {
     if (2*m_rayon < m_hauteur) {
 
