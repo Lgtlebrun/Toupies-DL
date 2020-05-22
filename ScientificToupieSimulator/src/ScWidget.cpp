@@ -1,5 +1,4 @@
 #include "../headers/ScWidget.h"
-#include "ui_widget.h"
 
 ScWidget::ScWidget(QWidget *parent)
     : QWidget(parent)

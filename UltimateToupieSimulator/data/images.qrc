@@ -11,9 +11,6 @@
         <file>oeil.png</file>
         <file>icone.gif</file>
     </qresource>
-    <qresource prefix="/txt">
-        <file>Intermezzo.txt</file>
-    </qresource>
     <qresource prefix="/police">
         <file>agency-fb_.ttf</file>
         <file>Cooper-Black_.ttf</file>
