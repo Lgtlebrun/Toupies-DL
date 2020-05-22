@@ -1,0 +1,15 @@
+============================================== CONCEPTION STS ==============================================
+
+Bloc2Boutons : widget contenant les boutons classiques "OK" et "Cancel"
+
+fichierSearch : Hérite de QDialog. Fenêtre modale qui permet de construire un chemin d'accès.
+
+TextEdit : Hérite de QTextEdit. Widget imitant une console (std::cout) en format GUI.
+
+QTextViewer : Hérite de SupportADessin. Imite TextViewer en format GUI.
+
+ScGLWidget : Hérite de GLWidget. Permet des fonctionnalités scientifiques que GLWidget n'a pas.
+
+ScWidget : Hérite de QWidget. Fenêtre principale de STS.
+
+============================================================================================================
