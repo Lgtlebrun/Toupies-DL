@@ -54,10 +54,12 @@ class VueOpenGL : public SupportADessin {
   
   // méthode utilitaire offerte pour simplifier
   void dessineCube(QMatrix4x4 const& point_de_vue = QMatrix4x4() );
-  void dessineSphere(QMatrix4x4 const& point_de_vue,
+  void dessineSphere(QMatrix4x4 const& point_de_vue = QMatrix4x4(),
                        double rouge = 1.0, double vert = 1.0, double bleu = 1.0);
   void dessineLigne(Vecteur const& p1, Vecteur const& p2);
-  void dessineAxe(QMatrix4x4 const& point_de_vue
+  void dessineCone(double const& rayon, double const& hauteur,
+                   QMatrix4x4 const& point_de_vue = QMatrix4x4());
+  void dessineAxe(QMatrix4x4 const& point_de_vue = QMatrix4x4()
                   , double rouge=1.0, double vert=1.0, double bleu=1.0);
 
  private:

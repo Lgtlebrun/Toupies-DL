@@ -30,7 +30,11 @@ void VueOpenGL::dessine(ConeSimple const& C) {
 
     Vecteur enDegre(C.getAngles().rad_to_deg());
 
-    double hauteur(C.getHauteur()/2.0/sqrt(3.0));
+    double hauteur(C.getHauteur());
+
+    double rayon(C.getRayon());
+
+
 
     Vecteur a({sin(C.getAngles().getCoord(0))*sin(C.getAngles().getCoord(1))
                ,- sin(C.getAngles().getCoord(0))*cos(C.getAngles().getCoord(1))
@@ -38,9 +42,9 @@ void VueOpenGL::dessine(ConeSimple const& C) {
 
     Vecteur OA(C.getPosition()-C.AG());
 
-    matrice.translate(  OA.getCoord(0)+hauteur/2.0*a.getCoord(0)
-                          , OA.getCoord(1)+hauteur/2.0*a.getCoord(1)
-                          , OA.getCoord(2)+hauteur/2.0*a.getCoord(2));
+    matrice.translate(  OA.getCoord(0)
+                          , OA.getCoord(1)
+                          , OA.getCoord(2));
 
     matrice.rotate(enDegre.getCoord(2), a.getCoord(0), a.getCoord(1), a.getCoord(2));
 
@@ -48,13 +52,7 @@ void VueOpenGL::dessine(ConeSimple const& C) {
 
     matrice.rotate(enDegre.getCoord(1), 0.0, 0.0, 1.0);
 
-    matrice.translate(0.0, 0.0, hauteur);
-
-    matrice.rotate(90-180.0/M_PI*atan(1/sqrt(2.0)), 1.0, 1.0, 0.0);
-
-    matrice.scale(hauteur);
-
-    dessineCube(matrice);
+    dessineCone(rayon, hauteur, matrice);
 
 }
 void VueOpenGL::dessine(Oscillateur const& O) {
@@ -358,3 +356,64 @@ void VueOpenGL::dessineAxe(QMatrix4x4 const& point_de_vue
     glEnd();
 
 }
+// ====================================================================
+void VueOpenGL::dessineCone(double const& rayon, double const& hauteur, QMatrix4x4 const& pov) {
+
+    int n(27);
+
+    prog.setUniformValue("vue_modele", matrice_vue * pov);
+
+    glBegin(GL_TRIANGLES);
+
+    for (int k(0); k<n ; ++k) {
+
+        if (k%3 != 0) {
+
+            prog.setAttributeValue(CouleurId, 1.0, 1.0, 1.0);
+
+        } else if ((k/3)%3 == 0) {
+
+            prog.setAttributeValue(CouleurId, 1.0, 0.0, 1.0);
+
+        } else if ((k/3)%3 == 1) {
+
+            prog.setAttributeValue(CouleurId, 0.0, 1.0, 1.0);
+
+        } else if ((k/3)%3 == 2) {
+
+            prog.setAttributeValue(CouleurId, 1.0, 1.0, 0.0);
+
+        }
+        prog.setAttributeValue(SommetId, 0.0, 0.0, hauteur);
+        prog.setAttributeValue(SommetId, rayon*cos(2*M_PI*k/n), rayon*sin(2*M_PI*k/n), hauteur);
+        prog.setAttributeValue(SommetId, rayon*cos(2*M_PI*(k+1)/n), rayon*sin(2*M_PI*(k+1)/n), hauteur);
+
+
+
+        if (k%3 != 0) {
+
+            prog.setAttributeValue(CouleurId, 1.0, 1.0, 1.0);
+
+        } else if ((k/3)%3 == 0) {
+
+            prog.setAttributeValue(CouleurId, 1.0, 0.0, 1.0);
+
+        } else if ((k/3)%3 == 1) {
+
+            prog.setAttributeValue(CouleurId, 0.0, 1.0, 1.0);
+
+        } else if ((k/3)%3 == 2) {
+
+            prog.setAttributeValue(CouleurId, 1.0, 1.0, 0.0);
+
+        }
+        prog.setAttributeValue(SommetId, 0.0, 0.0, 0.0);
+        prog.setAttributeValue(SommetId, rayon*cos(2*M_PI*k/n), rayon*sin(2*M_PI*k/n), hauteur);
+        prog.setAttributeValue(SommetId, rayon*cos(2*M_PI*(k+1)/n), rayon*sin(2*M_PI*(k+1)/n), hauteur);
+
+    }
+
+    glEnd();
+
+}
+
