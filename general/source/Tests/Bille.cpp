@@ -22,25 +22,30 @@ Bille *Bille::clone() const {
 Vecteur Bille::equEvol(double const& temps) {
 /* F = mg = ma => a(t)=equEvol(t)=g */
 
-    if (getParam().getCoord(2)< 0.0 and getPpoint().getCoord(2) < 0 ) {
+    if (m_P.getCoord(2) == 0.0 and m_Ppoint.getCoord(2) <= 1e-2 ) {
 
-        /* Rebondissement */
-        setPpoint({getPpoint().getCoord(0), getPpoint().getCoord(1), -0.6 * getPpoint().getCoord(2)});
+    m_Ppoint = Vecteur({getPpoint().getCoord(0), getPpoint().getCoord(1), 0.0});
 
-        setPosition({getPosition().getCoord(0)
-                    , getPosition().getCoord(1)
-                    , 0.0});
+    m_P = Vecteur({getPosition().getCoord(0), getPosition().getCoord(1), 0.0});
+
+    return Vecteur({-0.6 * getPpoint().getCoord(0), -0.6 * getPpoint().getCoord(1), 0.0});
+
+}
+
+    if (m_P.getCoord(2)<= 0.0 and m_Ppoint.getCoord(2) < 0.0 ) {
+
+            /* Rebondissement */
+            m_Ppoint = Vecteur({getPpoint().getCoord(0), getPpoint().getCoord(1), -0.6 * getPpoint().getCoord(2)});
+
+            std::cout << "Vitesse : " << Vecteur({getPpoint().getCoord(0), getPpoint().getCoord(1), -0.6 * getPpoint().getCoord(2)}) << std::endl;
+
+            m_P = Vecteur({getPosition().getCoord(0), getPosition().getCoord(1), 0.0});
+
+            std::cout << "Position : " << Vecteur({getPosition().getCoord(0), getPosition().getCoord(1), 0.0}) << std::endl;
 
 
-    }
-    if (getParam().getCoord(2)<=0.0 and fabs(getPpoint().getCoord(2)) < 1.0 / 100 ) {
+        }
 
-        setPpoint({getPpoint().getCoord(0), getPpoint().getCoord(1), 0.0});
-
-        return {-0.6 * getPpoint().getCoord(0)
-                    , -0.6 * getPpoint().getCoord(1)
-                    , 0.0};
-    }
 
     return g;
 
