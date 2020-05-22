@@ -22,8 +22,8 @@ int main(){
 
         Systeme S(T, I);
 
-        S.addIntegrable(B);
-        S.addIntegrable(O);
+        S.addObjet(B);
+        S.addObjet(O);
 
         for (int k(0); k < 68; ++k) {
 
