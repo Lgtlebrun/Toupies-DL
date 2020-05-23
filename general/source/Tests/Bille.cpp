@@ -19,7 +19,7 @@ Bille *Bille::clone() const {
 
 // ============================================================================================
 
-Vecteur Bille::equEvol(double const& temps) {
+Vecteur Bille::equEvol() {
 /* F = mg = ma => a(t)=equEvol(t)=g */
 
     if (fabs(m_P.getCoord(2)) <= PREC and fabs(m_Ppoint.getCoord(2)) <= 1e-2 ) {

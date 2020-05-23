@@ -61,7 +61,7 @@ std::ostream& operator<<(std::ostream& flux, Toupie const& C){
 
 // ===========================================================================================================
 
-Vecteur Toupie::equEvol(double const& temps) {
+Vecteur Toupie::equEvol() {
 /* Selon §6.3.1 du complément mathématique, pour une toupie générale */
 
 

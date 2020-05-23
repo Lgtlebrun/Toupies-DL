@@ -27,7 +27,7 @@ void ConeSimple::dessine() {
 }
 
 
-Vecteur ConeSimple::equEvol(const double &temps) {
+Vecteur ConeSimple::equEvol() {
 /* Avec l'équation d'évolution en page 12 du complément mathématique, assumant donc distance centre de masse - *
  * point de contact = cste.                                                                                    */
 

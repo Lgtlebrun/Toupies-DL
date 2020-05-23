@@ -27,7 +27,7 @@ public :
 
     virtual void dessine() override;      // méthode permettant un affichage personnalisé de la classe ConeSimple
 
-    virtual Vecteur equEvol(const double &temps) override;   // Equation d'évolution d'un cône
+    virtual Vecteur equEvol() override;   // Equation d'évolution d'un cône
 
 // =========  ACCESSEURS :
 
