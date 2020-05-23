@@ -442,7 +442,6 @@ void ScWidget::go(){
 
     m_objet = makeObjet();
 
-
     //Setup des systèmes
 
     if (m_caseEC->isChecked()){
@@ -594,7 +593,6 @@ void ScWidget::goImage(){
         m_trace = false;
     }
 
-
     for (size_t i(0); i < m_sys.size(); i++){
         m_simulations.push_back(new ScGLWidget(m_sys[i], m_nomInteg[i], Vecteur({0.,-10, 0.}), m_trace));
     }
@@ -632,24 +630,24 @@ void ScWidget::goImage(){
 
 void ScWidget::restart(){
 
-    std::cerr << "restart";
     /// REDEMARRAGE POUR DE NOUVELLES AVENTURES
 
-    for(auto& elt:m_simulations){
-        elt->hide();
-        delete elt;
-        elt = nullptr;
+    for (size_t i(1); i <= m_simulations.size(); i++ ){
+
+         delete m_simulations.back();
+         m_simulations.back() = nullptr;
+         m_simulations.pop_back();
+         i--;
+         std::cerr << i;
     }
 
-    for (size_t i(0); i < m_simulations.size(); i++){
-        m_simulations.pop_back();
-    }
 
-    for (size_t i(0); i < m_sys.size(); i++){
+    for (size_t i(1); i <= m_sys.size(); i++){
         m_sys.pop_back();
+        i--;
     }
 
-    for (size_t i(0); i < m_integ.size(); i++ ){
+    for (size_t i(1); i <= m_integ.size(); i++ ){
 
          delete m_integ.back();
          m_integ.back() = nullptr;
@@ -657,11 +655,10 @@ void ScWidget::restart(){
          i--;
     }
 
-    std::cerr << m_integ.size();
 
-
-    for (size_t i(0); i < m_nomInteg.size(); i++){
+    for (size_t i(1); i <= m_nomInteg.size(); i++){
         m_nomInteg.pop_back();
+        i--;
     }
 
     delete m_objet;
