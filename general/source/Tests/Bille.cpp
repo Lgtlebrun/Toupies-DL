@@ -22,29 +22,38 @@ Bille *Bille::clone() const {
 Vecteur Bille::equEvol(double const& temps) {
 /* F = mg = ma => a(t)=equEvol(t)=g */
 
-    if (m_P.getCoord(2) == 0.0 and m_Ppoint.getCoord(2) <= 1e-2 ) {
+    if (fabs(m_P.getCoord(2)) <= PREC and fabs(m_Ppoint.getCoord(2)) <= 1e-2 ) {
 
-    m_Ppoint = Vecteur({getPpoint().getCoord(0), getPpoint().getCoord(1), 0.0});
+    /* Frottement */
 
-    m_P = Vecteur({getPosition().getCoord(0), getPosition().getCoord(1), 0.0});
+        m_Ppoint = Vecteur({getPpoint().getCoord(0), getPpoint().getCoord(1), 0.0});
 
-    return Vecteur({-0.6 * getPpoint().getCoord(0), -0.6 * getPpoint().getCoord(1), 0.0});
+        m_P = Vecteur({getPosition().getCoord(0), getPosition().getCoord(1), 0.0});
 
-}
+        return Vecteur({-0.6 * getPpoint().getCoord(0), -0.6 * getPpoint().getCoord(1), 0.0});
 
-    if (m_P.getCoord(2)<= 0.0 and m_Ppoint.getCoord(2) < 0.0 ) {
+    }
 
-            /* Rebondissement */
-            m_Ppoint = Vecteur({getPpoint().getCoord(0), getPpoint().getCoord(1), -0.6 * getPpoint().getCoord(2)});
+    // else pas nécessaire car il y a un return
 
-            std::cout << "Vitesse : " << Vecteur({getPpoint().getCoord(0), getPpoint().getCoord(1), -0.6 * getPpoint().getCoord(2)}) << std::endl;
+    if (m_P.getCoord(2)<= PREC and m_Ppoint.getCoord(2) <= 0 ) {
 
-            m_P = Vecteur({getPosition().getCoord(0), getPosition().getCoord(1), 0.0});
+    /* Rebond */
 
-            std::cout << "Position : " << Vecteur({getPosition().getCoord(0), getPosition().getCoord(1), 0.0}) << std::endl;
+        m_Ppoint = Vecteur({m_Ppoint.getCoord(0), m_Ppoint.getCoord(1), 0.6*fabs(m_Ppoint.getCoord(2))});
+
+        m_P = Vecteur({getPosition().getCoord(0), getPosition().getCoord(1), 0.0});
+
+        return Vecteur({0.0,0.0,0.0});
 
 
-        }
+    }
+
+    if (m_P.getCoord(2) == 0.0 and m_Ppoint.getCoord(2) >= 0) {
+
+        return {0.0,0.0,0.0};
+
+    }
 
 
     return g;
