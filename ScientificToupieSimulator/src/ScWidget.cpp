@@ -638,7 +638,6 @@ void ScWidget::restart(){
          m_simulations.back() = nullptr;
          m_simulations.pop_back();
          i--;
-         std::cerr << i;
     }
 
 
