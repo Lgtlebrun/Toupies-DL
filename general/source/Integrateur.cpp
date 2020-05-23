@@ -59,14 +59,16 @@ void IntegrateurEulerCromer::integre(Integrable& integrable, double const& dt) c
     integrable.setParam( integrable.getParam() + dt * integrable.getPpoint() );
 
 }
+
+
 void IntegrateurNewmark::integre(Integrable& integrable, double const& dt) const {
 /* Intègre numériquement selon la méthode de Newmark */
+
+    Vecteur s ( integrable.equEvol(m_t) ) ;
 
     Vecteur P_nmoins1 ( integrable.getParam() ) ;
 
     Vecteur Ppoint_nmoins1 ( integrable.getPpoint() ) ;
-
-    Vecteur s ( integrable.equEvol(m_t) ) ;
 
     Vecteur distance;
 
@@ -76,7 +78,6 @@ void IntegrateurNewmark::integre(Integrable& integrable, double const& dt) const
         Vecteur q(integrable.getParam());
 
         Vecteur r(integrable.equEvol(m_t + dt));
-
 
         integrable.setPpoint(Ppoint_nmoins1 + dt / 2.0 * (r + s)) ;
 
@@ -93,12 +94,16 @@ void IntegrateurNewmark::integre(Integrable& integrable, double const& dt) const
 void IntegrateurRK4::integre(Integrable& integrable, double const& dt) const {
 /* Intègre numériquement selon la méthode Runge-Kutta 4 */
 
+
+    Vecteur k1_(integrable.equEvol(m_t));
+        // Si on le met avant tout, c'est car c'est un artifice de calcul
+
     Vecteur Pnmoins1(integrable.getParam());
     Vecteur Ppnmoins1(integrable.getPpoint());
 
 
     Vecteur k1(Ppnmoins1);
-    Vecteur k1_(integrable.equEvol(m_t));
+
 
 
     Vecteur k2(Ppnmoins1+dt/2*k1_);
