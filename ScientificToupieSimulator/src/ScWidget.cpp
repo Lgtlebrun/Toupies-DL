@@ -464,6 +464,7 @@ void ScWidget::go(){
         m_sys.push_back(S);
     }
 
+
     double secondes (0);
     double dt (0);
 
@@ -598,6 +599,7 @@ void ScWidget::goImage(){
         m_simulations.push_back(new ScGLWidget(m_sys[i], m_nomInteg[i], Vecteur({0.,-10, 0.}), m_trace));
     }
 
+
     for(size_t i(0); i < m_simulations.size(); i++){
 
 
@@ -624,11 +626,13 @@ void ScWidget::goImage(){
     for(auto& elt:m_simulations){
         elt->showFullScreen();
     }
+
 }
 
 
 void ScWidget::restart(){
 
+    std::cerr << "restart";
     /// REDEMARRAGE POUR DE NOUVELLES AVENTURES
 
     for(auto& elt:m_simulations){
@@ -645,15 +649,16 @@ void ScWidget::restart(){
         m_sys.pop_back();
     }
 
-    for (auto& elt:m_integ){
-        delete elt;
-        elt = nullptr;
+    for (size_t i(0); i < m_integ.size(); i++ ){
+
+         delete m_integ.back();
+         m_integ.back() = nullptr;
+         m_integ.pop_back();
+         i--;
     }
 
+    std::cerr << m_integ.size();
 
-    for (size_t i(0); i < m_integ.size(); i++){
-        m_integ.pop_back();
-    }
 
     for (size_t i(0); i < m_nomInteg.size(); i++){
         m_nomInteg.pop_back();
