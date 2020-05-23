@@ -21,7 +21,7 @@ public :
 
     virtual ObjetPhysique* clone() const = 0;               // Elle est virtuelle pure car la classe l'est
 
-    virtual Vecteur equEvol(double const& temps) = 0;       // Un objet physique n'a pas d'équation d'évolution
+    virtual Vecteur equEvol() = 0;                          // Un objet physique n'a pas d'équation d'évolution
 
 // =========
 

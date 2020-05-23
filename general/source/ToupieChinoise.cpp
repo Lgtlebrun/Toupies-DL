@@ -38,7 +38,7 @@ void ToupieChinoise::dessine() {
 }
 
 
-Vecteur ToupieChinoise::equEvol(const double &temps) {
+Vecteur ToupieChinoise::equEvol() {
 /* Equations d'évolution tirées de §6.2 */
 
 
@@ -276,7 +276,7 @@ void ToupieChinoise::setPosition(const Vecteur & newV) {
 Vecteur ToupieChinoise::getVitesse() {
 /* Renoit la vitesse de translation de la toupie, qui dépend de la rotation de celle-ci */
 
-    Vecteur vitesse(equEvol(0.0));
+    Vecteur vitesse(equEvol());
 
     return {vitesse.getCoord(3) , vitesse.getCoord(4), 0.0};
 

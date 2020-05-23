@@ -58,7 +58,7 @@ public:
 
 // =========  EQUATION D'EVOLUTION :
 
-    virtual Vecteur equEvol(double const& temps) override;        // Equation d'évolution d'une toupie générale
+    virtual Vecteur equEvol() override;        // Equation d'évolution d'une toupie générale
 
 // =========  AFFICHAGE :
 

@@ -55,7 +55,7 @@ double Integrateur::getTemps() const {
 void IntegrateurEulerCromer::integre(Integrable& integrable, double const& dt) const {
 /* Intègre numériquement selon la méthode d'Euler Cromer */
 
-    integrable.setPpoint(integrable.getPpoint() + dt * integrable.equEvol(m_t));
+    integrable.setPpoint(integrable.getPpoint() + dt * integrable.equEvol());
     integrable.setParam( integrable.getParam() + dt * integrable.getPpoint() );
 
 }
@@ -64,7 +64,7 @@ void IntegrateurEulerCromer::integre(Integrable& integrable, double const& dt) c
 void IntegrateurNewmark::integre(Integrable& integrable, double const& dt) const {
 /* Intègre numériquement selon la méthode de Newmark */
 
-    Vecteur s ( integrable.equEvol(m_t) ) ;
+    Vecteur s ( integrable.equEvol() ) ;
 
     Vecteur P_nmoins1 ( integrable.getParam() ) ;
 
@@ -77,7 +77,7 @@ void IntegrateurNewmark::integre(Integrable& integrable, double const& dt) const
 
         Vecteur q(integrable.getParam());
 
-        Vecteur r(integrable.equEvol(m_t + dt));
+        Vecteur r(integrable.equEvol());
 
         integrable.setPpoint(Ppoint_nmoins1 + dt / 2.0 * (r + s)) ;
 
@@ -95,7 +95,7 @@ void IntegrateurRK4::integre(Integrable& integrable, double const& dt) const {
 /* Intègre numériquement selon la méthode Runge-Kutta 4 */
 
 
-    Vecteur k1_(integrable.equEvol(m_t));
+    Vecteur k1_(integrable.equEvol());
         // Si on le met avant tout, c'est car c'est un artifice de calcul
 
     Vecteur Pnmoins1(integrable.getParam());
@@ -109,19 +109,19 @@ void IntegrateurRK4::integre(Integrable& integrable, double const& dt) const {
     Vecteur k2(Ppnmoins1+dt/2*k1_);
     integrable.setParam(Pnmoins1+dt/2*k1);
     integrable.setPpoint(Ppnmoins1+dt/2*k1_);
-    Vecteur k2_(integrable.equEvol(m_t+dt/2));
+    Vecteur k2_(integrable.equEvol());
 
 
     Vecteur k3(Ppnmoins1+dt/2*k2_);
     integrable.setParam(Pnmoins1+dt/2*k2);
     integrable.setPpoint(Ppnmoins1+dt/2*k2_);
-    Vecteur k3_(integrable.equEvol(m_t+dt/2));
+    Vecteur k3_(integrable.equEvol());
 
 
     Vecteur k4(Ppnmoins1+dt*k3_);
     integrable.setParam(Pnmoins1+dt*k3);
     integrable.setPpoint(Ppnmoins1+dt*k3_);
-    Vecteur k4_(integrable.equEvol(m_t+dt));
+    Vecteur k4_(integrable.equEvol());
 
 
     integrable.setParam(Pnmoins1+dt/6*(k1+2*k2+2*k3+k4));

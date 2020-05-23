@@ -8,7 +8,7 @@ Oscillateur::Oscillateur(SupportADessin& S, Vecteur const & param, Vecteur const
 {}
 
 
-Vecteur Oscillateur::equEvol(double const &temps) {
+Vecteur Oscillateur::equEvol() {
 /* Cette expression permet un mouvement harmonique en 3D centrée en m_centreMVT */
     return -(m_P-m_centreMVT);
 

@@ -20,7 +20,7 @@ public:
 
     virtual void dessine() override;         // méthode permettant un affichage personnalisé de la classe ToupieChinoise
 
-    virtual Vecteur equEvol(const double &temps) override;  // Renvoit le vecteur d'accélération des paramètres
+    virtual Vecteur equEvol() override;      // Renvoit le vecteur d'accélération des paramètres
 
 // =========  ACCESSEURS :
 
