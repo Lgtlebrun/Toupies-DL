@@ -6,7 +6,7 @@ ToupieChinoise::ToupieChinoise(SupportADessin& sup, Vecteur const& angles, Vecte
 /* Nous pouvons calculer les moments d'inertie selon différents axes à base d'uniquement la masse volumique, le rayon *
  * et la hauteur du cône.                                                                                            */
     :Toupie(sup, "Toupie Chinoise", angles, anglesp, posA, 0.0, 0.0
-     , 0.0,rayon-hauteur), m_masseVolumique(fabs(masseVolumique)), m_rayon(fabs(rayon)), m_hauteur(fabs(hauteur))
+     , 0.0,rayon-hauteur), m_rayon(fabs(rayon)), m_hauteur(fabs(hauteur)), m_masseVolumique(fabs(masseVolumique))
 {
     if (2*m_rayon < m_hauteur) {
 

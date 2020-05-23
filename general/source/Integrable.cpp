@@ -6,7 +6,7 @@ Integrable::Integrable( SupportADessin& sup, std::string const& type, Vecteur co
  * des coordonnées généralisées (pour une toupie, param = (théta, psy, phi) alors que pos = (x,y,z)). Il faut un     *
  * SupportADessin pour savoir où le représenter. En plus de cela, la distance de sécurité est là pour s'assurer que  *
  * deux intégrables ne se superposent pas en représentation visuelle                                                */
-    : Dessinable(sup), m_type(type), m_P(param), m_Ppoint(parampoint)
+    : Dessinable(sup), m_P(param), m_Ppoint(parampoint), m_type(type)
 {}
 
 Integrable::~Integrable()

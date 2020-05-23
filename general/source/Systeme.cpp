@@ -136,7 +136,7 @@ std::ostream& operator<<(std::ostream& sortie, Systeme& s){
 void Systeme::affiche(std::ostream& sortie) {
 /* Méthode permettant un affichage de tous les intégrables, avec la spécialité de statsCorps, permettant donc *
  * un affichage personnalisé                                                                                  */
-    for (int k(0); k < m_corps.size() ; ++k) {
+    for (size_t k(0); k < m_corps.size() ; ++k) {
 
         sortie << "==== Corps " << k+1 << " :" << std::endl;
         sortie << m_corps[k]->getType() << std::endl;

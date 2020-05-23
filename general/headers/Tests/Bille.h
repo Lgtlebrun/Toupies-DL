@@ -26,7 +26,7 @@ public :
 
 // =========
 
-    virtual Vecteur equEvol(double const& temps);             // equation du mouvement d'une bille lâchée ou lancée
+    virtual Vecteur equEvol(double const& temps) override;    // equation du mouvement d'une bille lâchée ou lancée
 
     virtual std::string getType() const;                      // sert à donner le typer pour les méthodes qui affichent des billes
 

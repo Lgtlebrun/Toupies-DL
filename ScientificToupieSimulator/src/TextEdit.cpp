@@ -2,7 +2,7 @@
 
 TextEdit& TextEdit::operator<<(Systeme& s){
 /* Surchage de l'opérateur << permettant un affichage des statistiques dans n'importe quel ostream */
-    for (int k(0); k < s.getNbCorps() ; ++k) {
+    for (size_t k(0); k < s.getNbCorps() ; ++k) {
 
         *this << "==== Toupie " + QString::fromStdString(std::to_string(k+1)) + " :\n";
         *this<< QString::fromStdString(s.getCorps(k)->getType()) ;

@@ -1,7 +1,7 @@
 #include "../headers/TypeBouton.h"
 
-TypeBouton::TypeBouton(Type type, QWidget* parent) : QPushButton(parent), m_type(type),
-m_barMVol(0), m_barRayon(0), m_barHauteur(0), m_pressed(false) {
+TypeBouton::TypeBouton(Type type, QWidget* parent) : QPushButton(parent), m_pressed(false), m_type(type),
+ m_barRayon(0), m_barHauteur(0), m_barMVol(0){
 
 
     /// CONSTRUCTEUR

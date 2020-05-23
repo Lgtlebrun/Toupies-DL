@@ -6,7 +6,7 @@ ConeSimple::ConeSimple(SupportADessin& sup, Vecteur const& Angles, Vecteur const
 /* Nous pouvons calculer les moments d'inertie selon différents axes à base d'uniquement la masse volumique, le rayon *
  * et la hauteur du cône.                                                                                            */
         : Toupie(sup, "Cone simple", Angles, AnglesPoint, posA, calculeIA1(rayon, hauteur, masseVolumique), calculeI3(rayon, hauteur, masseVolumique)
-                , masse(rayon, hauteur, masseVolumique), 3.0/4.0*hauteur), m_masseVolumique(fabs(masseVolumique)), m_rayon(fabs(rayon)), m_hauteur(fabs(hauteur))
+                , masse(rayon, hauteur, masseVolumique), 3.0/4.0*hauteur), m_rayon(fabs(rayon)), m_hauteur(fabs(hauteur)), m_masseVolumique(fabs(masseVolumique))
 {}
 
 

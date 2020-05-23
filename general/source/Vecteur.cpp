@@ -202,16 +202,16 @@ Vecteur Vecteur::addition(Vecteur const& v2) const{
 
     double dim1(m_coords.size()), dim2(v2.m_coords.size());
 
-    size_t i(0);
+    unsigned int min(std::min(dim1, dim2)), max(std::max(dim1,dim2));
 
-    for (i; i < std::min(dim1, dim2); i++){
+    for (size_t i(0); i < min; i++){
 
             sortie.augmente(m_coords[i] + v2.m_coords[i]);      // Tant qu'il existe des coordonnées communes, on additionne
 
     }
 
 
-    for (i; i < std::max(dim1, dim2); i++){                     // Si diff de taille, on ajoute des coordonnées
+    for (size_t i(0); i < max; i++){                     // Si diff de taille, on ajoute des coordonnées
 
         if (i >= dim1) {sortie.augmente(v2.m_coords[i]);}
 
@@ -293,13 +293,13 @@ Vecteur& Vecteur::operator+=(Vecteur const& v2){
 
     size_t dim1(m_coords.size()), dim2(v2.m_coords.size());
 
-    size_t i(0);
+    unsigned int min(std::min(dim1, dim2)), max(std::max(dim1, dim2));
 
-    for (i; i < std::min(dim1, dim2); i++) {m_coords[i]=m_coords[i] + v2.m_coords[i];}
+    for (size_t i(0); i < min ; i++) {m_coords[i]=m_coords[i] + v2.m_coords[i];}
 
 
 
-    for (i; i < std::max(dim1, dim2); i++){
+    for (size_t i(0); i < max; i++){
 
         if (i >= dim1) {m_coords.push_back(v2.m_coords[i]);}
 

@@ -2,8 +2,8 @@
 #include <iostream>
 
 
-LauncherAccueil::LauncherAccueil() : m_titre(0), m_bord(0), m_grillage(0), m_integ(0), m_simulation(0),
-m_support(0){
+LauncherAccueil::LauncherAccueil() : m_titre(0), m_bord(0), m_grillage(0), m_support(0), m_integ(0),
+m_simulation(0){
 
     /// CONSTRUCTEUR
     /// Fenetre d'accueil, donc accueillante.

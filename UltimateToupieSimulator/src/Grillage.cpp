@@ -2,8 +2,8 @@
 
 
 
-Grillage::Grillage(QWidget* parent) :  QWidget(parent), m_typeChoisi(Null), m_BoxIntegrateur(0), m_bCone(0),
-m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_go(0), m_echelle(0), m_slider(0){
+Grillage::Grillage(QWidget* parent) :  QWidget(parent),  m_bCone(0),
+    m_bChinoise(0), m_bBille(0), m_bOscillateur(0), m_BoxIntegrateur(0),  m_typeChoisi(Null), m_slider(0), m_echelle(0), m_go(0){
 
     /// CONSTRUCTEUR <3 <3 <3
 
@@ -463,6 +463,7 @@ TypeBouton* Grillage::getSelectedButton() const{
 
     }
 
+    return nullptr; // Sécurité on est ienb
 }
 
 

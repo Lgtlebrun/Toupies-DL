@@ -2,7 +2,7 @@
 
 ScWidget::ScWidget(QWidget *parent)
     : QWidget(parent)
-    , m_type(CUSTOM), m_mode(TEXTE), m_support(0), m_objet(0), m_console(0), m_fichierPret(false), m_trace(false)
+    , m_console(0), m_trace(false), m_fichierPret(false), m_type(CUSTOM), m_mode(TEXTE), m_support(0), m_objet(0)
 {
     /// CONSTRUCTEUR
 
@@ -25,7 +25,7 @@ ScWidget::ScWidget(QWidget *parent)
     QLabel* titre = new QLabel("Toupie Simulator : Scientific Edition", this);
     titre -> setFixedSize(1460, 150);
     titre->setAlignment(Qt::AlignCenter);
-    titre->setFont(QFont(QString('Times New Roman'), 25, 25, true));
+    titre->setFont(QFont(QString("""Times New Roman"""), 25, 25, true));
 
     //Initialisation colonne gauche
 
@@ -163,7 +163,6 @@ ScWidget::ScWidget(QWidget *parent)
     QHBoxLayout* paramLay = new QHBoxLayout;
     QHBoxLayout* vitesseLay = new QHBoxLayout;
     QHBoxLayout* inertieLay = new QHBoxLayout;
-    QHBoxLayout* distanceGLay = new QHBoxLayout;
 
 
     // Nom
@@ -638,11 +637,11 @@ void ScWidget::restart(){
         elt = nullptr;
     }
 
-    for (auto& elt:m_simulations){
+    for (size_t i(0); i < m_simulations.size(); i++){
         m_simulations.pop_back();
     }
 
-    for (auto& elt:m_sys){
+    for (size_t i(0); i < m_sys.size(); i++){
         m_sys.pop_back();
     }
 
@@ -652,11 +651,11 @@ void ScWidget::restart(){
     }
 
 
-    for (auto& elt:m_integ){
+    for (size_t i(0); i < m_integ.size(); i++){
         m_integ.pop_back();
     }
 
-    for (auto& elt:m_nomInteg){
+    for (size_t i(0); i < m_nomInteg.size(); i++){
         m_nomInteg.pop_back();
     }
 
@@ -687,6 +686,8 @@ bool ScWidget::checkAllCaracs(){
     // En fonction du mode d'affichage
     switch(m_mode){
 
+    default:
+        break;
     case TEXTE:
     case FICHIER:
 
@@ -698,6 +699,8 @@ bool ScWidget::checkAllCaracs(){
             return false;
         }
         break;
+
+
     }
 
 

@@ -1,7 +1,7 @@
 #include "../headers/bordMode.h"
 
-BordMode::BordMode(QWidget* parent) : QWidget(parent), m_formatChoisi(TEXTE), m_b1(0), m_b2(0), m_b3(0), m_labelMode(0),
-m_search(0){
+BordMode::BordMode(QWidget* parent) : QWidget(parent), m_search(0), m_labelMode(0),
+m_b1(0), m_b2(0), m_b3(0) , m_formatChoisi(TEXTE){
 
     /// CONSTRUCTEUR
 
