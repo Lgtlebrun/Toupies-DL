@@ -1,0 +1,152 @@
+JOURNAL DE BORD 
+PROJET POO PH BA2 
+DAVID ROSSBOTH, LEONARD LEBRUN
+
+
+Chapitre 1:     27/02/2020
+  
+  L'aventure peut commencer. Les programmeurs se sont coordonnés via les outils Github et Gitbash, c'est donc armés jusqu'aux dents
+  qu'ils répondent à l'appel.
+
+
+Chapitre 2:     28/02/2020
+
+  C'est donc après un premier jour de préparation, que nous avons commencé à coder. Le fichier Vecteur.h définissant la classe Vecteur
+  a été écrit en premier, favorisant avant tout la simplicité et la sobriété, supposant que ce soit une classe fondamentale du projet.
+  Ceci permettra de ne pas avoir de détails superflus (comme des unités) dont on devrait prendre compte durant le reste de la conception.
+  Après une première écriture de Vecteur.cpp entreprise par David, Leonard a nettement amélioré le code pour parvenir à la dernière
+  version du code.
+  Leonard, motivé, a essayé de maîtriser une interface graphique. Bilan mitigé toutefois.
+
+  Dans la soirée, Léonard s'intéresse à la surcharge d'opérateur pour améliorer la maniabilité des vecteurs.
+
+
+Chapitre 3:	05.03.2020
+  
+  Durant les jours qui se sont écoulés depuis la dernière mise-à-jour, nous avons essayé de paufiner Vecteur.cpp et son header pour
+  que les opérateurs +=, -= et *= marchent. Une fois leur efficacité démontrée, nous avons remplacé le corps des opérateurs +, - et *
+  pour qu'ils dépendent des opérations élémentaires récemment créées.
+
+  Ainsi, les seuls moyens de faire des opérations arithmétiques sur les vecteurs sont les opérateurs surchargés.
+
+  Nous sommes donc heureux de pouvoir passer à la suite, sachant que notre classe Vecteur est opérationnelle.
+
+
+Chapitre 4:    08.03.2020
+
+  Ainsi, nous avons travaillé sur les méthodes en lien avec les matrices 3x3. Léonard a commencé par écrire les méthodes les plus
+  simples (*= pour la multipliction par scalaire, +=, etc) en les inscrivant directement sous forme d'opérateur. Il s'est aussi chargé
+  de la création des constructeurs pour les Matrice3.
+
+  Une fois qu'il avait terminé, David s'est posé la question de comment créer les méthodes det() et surtout inv(). Il s'est donc plongé
+  dans son cours d'algèbre. Il savait que la méthode la plus simple de procéder aurait juste été de faire une énorme formule pleine de
+  copier-coller. Mais cela aurait été inintéressant.
+
+
+Chapitre 5:    14/03/2020
+
+  C'est ainsi munis de la classe matrice que nous continuous, optimistes, le projet. Léonard développe la classe Toupie, tandis que David travaille sur
+  Integrateur.
+
+  Nous avons fait un choix crucial: nous décidons que l'intégrateur modifie la toupie, mais aussi que la toupie n'est pas le seul type d'objet modifiable
+  par un intégrateur. En effet, nous pourrions imaginer une bille, lancée dans les airs, une masse attachée par un ressort. Plus généralement, n'importe
+  quel objet (même purement mathématique) qui possède une équation différentielle régissant son évolution, que l'on essaierai d'approcher numériquement à
+  l'aide de méthodes de résolution numériques comme avec la méthode d'Euler-Cromer. Cette classe s'appelle "Integrable", dont héritent les toupies puisqu'
+  elles sont intégrables.
+
+  De plus, tout intégrateur est considéré comme une machine à résoudre des équations différentielles. On le met donc à un temps donné, et, en l'aidant à 
+  faire monter son temps, tout en le plaçant à une position initiale (t0, x(t0), x'(t0)) et, par x''(t)=f(t, x(t), x'(t)), nous avons les conditions 
+  initiales et la loi du mouvement des vecteurs paramètre et vitesse
+
+  L'intégrateur de Newmark a, de plus déjà été écrit par David.
+
+
+Chapitre 6:    28/03/2020
+
+  Pendnat la première semaine de confinement, où nous avons profité de notre avance pour ne pas être aussi investi dans le projet, Léonard a créé une classe
+  Unittest, permettant de faire des tests de chaque classe. Les tests créent des fichiers qui nous disent si les tests se sont bien passés comme prévu. Il a
+  préparé ceci pour Vecteur, Matrice3.
+
+  Nous avons d'ailleurs changé d'IDE : nous sommes passés de CodeBlocks à CLion, suite aux suggestions d'une amie commune.
+
+  Durant cette semaine, nous avons fait les exercices 8 et 9. Léonard ayant des bases beaucoup plus solides en pointeurs que ne les a David, le premier
+  a corrigé les erreurs exécrables de son ami.
+
+  De plus, nous avons préparé les classes de test des intégrateurs avec la bille jetée dans les airs et avec l'oscillateur harmonique. Ces tests se sont bien
+  montrés concluants. Nous pouvons désormais considérer l'intégrateur d'Euler-Cromer ainsi que la classe intégrable opérationnelle.
+
+  Il ne nous reste plus qu'à terminer la classe test de l'exercice 9 pour terminer la semaine.
+
+
+
+Chapitre 7 : 10/04/2020 
+
+  Au lendemain de la victoire remportée par les étudiants libres sur l'ennui confinatoire qui a tenté d'asservir et dégrader la personne humaine,
+  Léonard et David proclament à nouveau que leur projet sera le meilleur. C'est pour honorer ce serment que nos deux loubards s'engagent dans un sprint
+  effréné qui devait durer trois jours (pleins). La répartition des tâches était telle: David devait affronter l'exercice P10 et ses terribles .pro, quand
+  le L devait concevoir un launcher esthétiquement charmant. EDIT : ils ne se doutaient pas des épisodes à venir.
+
+
+Chapitre 8 : 12/04/2020
+
+  Au lendemain de deux jours pleins de setup pour utiliser Qt sur Clion complétement infructueux, le L s'avise finalement à adopter Qt Creator. La durée du sprint
+  est allongée de deux jours avec celle du confinement, de deux semaines celui-là. Le D, d'une performance redoutable, terrasse avec brio l'exercice P10, ouvrant
+  l'horizon pour de délicieuses simulations. Une réorganisation des répertoires est dans les cartons. La conception, de son côté, etst l'objet de passionnants
+  brainstormings en visio.
+
+
+Chapitre 9 : 13/04/2020
+
+  2h du mat, j'ai des frissons. Je compile tout et je monte le son. Le launcher marche, Léa s'arrache, je suis tout seul, tout seul, tout seul. MAIS
+  les gifs tournent. On est bien.
+
+
+Chapitre 10 : 14/04/2020
+
+  Grosse révision des .pro par le D pour réutiliser Qt-GL. Le L connecte les slots du launcher, le launcher initialise efficacement le SupportADessin.
+  On attend impatiemment son frère, le Grillage. J'aime ce nom. On va l'appeler comme ça. Ca fait Arcade.
+
+  
+Chapitre 11 : 18/04/2020
+
+  Après 4 jours de bataille acharnée, nos deux héros réussirent à dominer la bête : Le L avait, avec un succès remarquable, créé le launcher et l'avait
+  connecté aux différents types de simulation (graphique et textuelle) et, de son côté, le D avait créé la visualisation graphique, en plus de permettre
+  aux billes de rebondir.
+
+
+Chapitre 12 : 31/05/2020
+
+  Les extensions du projet se faisant techniques : trace, sauvegarde de données; il apparaît que ce n'est pas l'objet du launcher actuel de prendre en charge
+  de telles fonctionnalités. Ultimate Toupie Simulator doit rester grand public, ou il mourra. En adéquation avec ce principe et pour souligner son identité,
+  on ne le désignera plus qu'ainsi. Le terme "launcher" est d'arrière-garde. Son frère est en route, le tout juste baptisé Scientific Toupie Simulator. 
+
+
+Chapitre 13 : 01/05/2020
+
+  STS est né. Son interface minimaliste est à l'image des cortèges en période de confinement. Célébrons ceux qui travaillent en leur offrant le fruit du nôtre:
+  un launcher permettant un paramétrage beaucoup plus précis.
+
+
+Chapitre 14 : 18/05/20
+
+  Après quelques semaines plus calmes, nos deux héros, ayant pris le temps de se reposer quelques semaines, ont repris sérieusement le projet. Ils étaient
+  tellement investis qu'ils en oublièrent leur accolyte du premier jour : leur JOURNAL.txt.
+  Le L, tel le virtuose de QT qu'il est devenu, a créé un launcher scientifique au projet, permettant un affichage en profondeur d'un type particulier d'objet
+  physique. Puis, ce dernier coda la trace des toupies. Puis il créa un makefile, dossier vital au projet.
+  Le D, dans son coin, s'occupait de la partie mathématico-phyisque du projet, s'assurant que les intégrateurs, la toupie conique, la toupie générale et la
+  toupie chinoise se comportent de manière correcte.
+  La première visualisation avec la tarce fut lancée et nos deux compères, larmes perlant aux coins des yeux, sourièrent, constatant que leurs efforts avaient
+  porté leurs fruits. Ils terrassèrent le monstre qu'était le projet. Il ne fallait plus que ramener le trophée au village pour que l'on les acclame.
+  C'est donc ce qu'ils firent, une fois les fichiers du projet transférés sur la machine virtuelle du CO. Le stress était intense quand la commande qmake ne
+  voulait pas s'exécuter, mais, quelques minutes de débuggage plus tard, ScientificToupieSimulator se lança et alors, nos deux héros, satisfaits, sourièrent.
+
+  Il ne leur reste plus que le peauffinage du code à faire, ainsi que de s'assurer que tout ce qui doit être dans le projet y est et ils auront tout terminé.
+
+
+
+
+
+
+
+  
+
