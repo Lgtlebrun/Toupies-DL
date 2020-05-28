@@ -1,3 +1,2 @@
-Erreur dans le test d'IntegrateurRK4 : valeur attendue [0.026451 0.594739 5.094490]; Observé : [0.000000 0.523599 5.116815]
-Erreur dans le test d'IntegrateurNewmark : valeur attendue [0.026453 0.594753 5.094490]; Observé : [0.000000 0.523599 5.116815]
+Erreur dans le test d'IntegrateurNewmark : valeur attendue [0.594753 0.026453 5.094490]; Observé : [0.594739 0.026440 5.094498]
 

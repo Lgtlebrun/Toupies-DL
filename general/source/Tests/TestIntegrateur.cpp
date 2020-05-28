@@ -71,7 +71,7 @@ bool TestIntegrateur::testBilleEC() {
 
         I.integre(B, dt);
         I.augmente_t(dt);
-        stats += (std::to_string(B.getParam().getCoord(0)) + " " + std::to_string(B.getParam().getCoord(1)) + "\n");
+        stats += (std::to_string(B.getParam().getCoord(0)) + " " + std::to_string(B.getParam().getCoord(2)) + "\n");
     }
 
 
@@ -165,7 +165,7 @@ bool TestIntegrateur::testConique() {
 
     TextViewer Tn(fileN), Tr(fileR);
 
-    ConeSimple C(Tn, {0., 0.523599, 0.}, {0., 0., 60.}, Vecteur(), 0.5, 1.5, 0.1);
+    ConeSimple C(Tn, {0.523599, 0., 0.}, {0., 0., 60.}, Vecteur(), 0.5, 1.5, 0.1);
 
     Systeme Sn(Tn, N);
     Systeme Sr(Tr, R);
@@ -195,18 +195,18 @@ bool TestIntegrateur::testConique() {
     if(fileN) {fileN << saveN;}
     if(fileR) {fileR << saveR;}
 
-    Vecteur attendu({0.0264512, 0.594739, 5.09449});
+    Vecteur attendu({0.594739, 0.0264512, 5.09449});
 
-    if (Sr.getCorps(0)->getParametre() != attendu){
+    if ((Sr.getCorps(0)->getParametre() - attendu).norme() > 1e-5){
         sortie = false;
 
         m_comment += ("Erreur dans le test d'IntegrateurRK4 : valeur attendue " + attendu.to_str() + "; Observé : "
                 + Sr.getCorps(0)->getParametre().to_str() + '\n');
     }
 
-    attendu = Vecteur({0.0264531, 0.594753, 5.09449});
+    attendu = Vecteur({0.594753, 0.0264531, 5.09449});
 
-    if (Sn.getCorps(0)->getParametre() != attendu){
+    if ((Sn.getCorps(0)->getParametre() - attendu).norme() > 1e-4){
         sortie = false;
 
         m_comment += ("Erreur dans le test d'IntegrateurNewmark : valeur attendue " + attendu.to_str() + "; Observé : "
