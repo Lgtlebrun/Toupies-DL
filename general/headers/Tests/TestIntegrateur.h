@@ -21,10 +21,11 @@ public:
 
 // =========
 
-    bool testBille();               // méthode qui teste la bille et les intégrateurs en comparant les calculs avec les résultats donnés sur progmaph
+    bool testBilleEC();               // méthode qui teste la bille et les intégrateurs en comparant les calculs avec les résultats donnés sur progmaph
 
-    bool testOH();                  // méthode qui teste l'oscillateur harmonique et les intégrateurs en vérifiant avec l'écart de la solution y(t) = cos(t)
+    bool testOHEC();                  // méthode qui teste l'oscillateur harmonique et les intégrateurs en vérifiant avec l'écart de la solution y(t) = cos(t)
 
+    bool testConique();               // méthode qui teste la conique sur Newmark et RK4
 };
 
 

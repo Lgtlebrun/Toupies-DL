@@ -11,7 +11,7 @@ bool TestIntegrateur::run() {
 
     try {
 
-        m_success = (testBille() && testOH());
+        m_success = (testBilleEC() && testOHEC() && testConique());
 
     }
 
@@ -55,7 +55,7 @@ bool TestIntegrateur::run() {
 
 
 
-bool TestIntegrateur::testBille() {
+bool TestIntegrateur::testBilleEC() {
 
     IntegrateurEulerCromer I(0);
 
@@ -102,7 +102,7 @@ bool TestIntegrateur::testBille() {
 
 
 
-bool TestIntegrateur::testOH() {
+bool TestIntegrateur::testOHEC() {
 
     std::ofstream file("StatsOH.txt");
 
@@ -152,3 +152,66 @@ bool TestIntegrateur::testOH() {
 }
 
 
+
+bool TestIntegrateur::testConique() {
+
+    bool sortie(true);
+
+    IntegrateurNewmark N(0);
+    IntegrateurRK4 R(0);
+
+    std::ofstream fileN("StatsConiqueNewmark.txt");
+    std::ofstream fileR("StatsConiqueRK4.txt");
+
+    TextViewer Tn(fileN), Tr(fileR);
+
+    ConeSimple C(Tn, {0., 0.523599, 0.}, {0., 0., 60.}, Vecteur(), 0.5, 1.5, 0.1);
+
+    Systeme Sn(Tn, N);
+    Systeme Sr(Tr, R);
+
+    Sn.addObjet(C);
+    Sr.addObjet(C);
+
+    std::string saveN(""), saveR("");
+
+    double err_rel(0), dt(0.01);
+
+    saveN += (std::to_string(0) + ' ' + Sn.getCorps(0)->getParametre().to_mathString() + '\n');
+    saveR += (std::to_string(0) + ' ' + Sr.getCorps(0)->getParametre().to_mathString() + '\n');
+
+
+    for(size_t i(0); i < 19; i++){
+
+        Sr.evolue(dt);
+        Sn.evolue(dt);
+
+        saveN += (std::to_string(dt * (i+1)) + ' ' + Sn.getCorps(0)->getParametre().to_mathString() + '\n');
+        saveR += (std::to_string(dt * (i+1)) + ' ' + Sr.getCorps(0)->getParametre().to_mathString() + '\n');
+
+    }
+
+    // Enregistrement des résultats
+    if(fileN) {fileN << saveN;}
+    if(fileR) {fileR << saveR;}
+
+    Vecteur attendu({0.0264512, 0.594739, 5.09449});
+
+    if (Sr.getCorps(0)->getParametre() != attendu){
+        sortie = false;
+
+        m_comment += ("Erreur dans le test d'IntegrateurRK4 : valeur attendue " + attendu.to_str() + "; Observé : "
+                + Sr.getCorps(0)->getParametre().to_str() + '\n');
+    }
+
+    attendu = Vecteur({0.0264531, 0.594753, 5.09449});
+
+    if (Sn.getCorps(0)->getParametre() != attendu){
+        sortie = false;
+
+        m_comment += ("Erreur dans le test d'IntegrateurNewmark : valeur attendue " + attendu.to_str() + "; Observé : "
+                      + Sn.getCorps(0)->getParametre().to_str() + '\n');
+    }
+
+    return sortie;
+}

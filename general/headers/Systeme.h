@@ -52,7 +52,7 @@ public:
 
 // =========  EVOLUTION DU SYSTEME :
 
-    void evolue(double const&) ;
+    void evolue(double const& dt) ;
     /* Fait avancer chaque objet du système en concordance avec leurs équations d'évolution. Puis cela fait *
      * monter le temps de l'intégrateur de dt (qui est paramètre de la méthode)                             */
 

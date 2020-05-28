@@ -33,6 +33,19 @@ void Integrable::setParam(Vecteur const& newV){
     m_P = newV;
 }
 
+
+Vecteur Integrable::getParametre() const {
+
+    Vecteur v;
+    v.setCoord(0, m_P.getCoord(0));
+    v.setCoord(1, m_P.getCoord(1));
+    v.setCoord(2, m_P.getCoord(2));
+
+    return v;
+}
+
+
+
 Vecteur Integrable::getPpoint() const{
 
     return m_Ppoint;

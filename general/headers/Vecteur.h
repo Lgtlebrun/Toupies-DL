@@ -52,6 +52,8 @@ class Vecteur{
 
         std::string to_str() const;
 
+        std::string to_mathString() const;
+
 
         Vecteur rad_to_deg() const;                                         // Convertisseur
 

@@ -144,6 +144,24 @@ std::string Vecteur::to_str() const{
 }
 
 
+std::string Vecteur::to_mathString() const{
+
+    std::string sortie("");
+    sortie += std::to_string(getCoord(0));
+
+    sortie += ' ';
+
+    for (size_t i(1); i < getDim(); i++){
+
+        sortie += ' ';
+        sortie += std::to_string(getCoord(i));
+    }
+
+    return sortie;
+}
+
+
+
 Vecteur Vecteur::rad_to_deg() const {
 
     Vecteur sortie;

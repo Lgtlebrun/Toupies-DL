@@ -37,8 +37,10 @@ public:
 
 // =========  ACCESSEURS ET SETTEURS :
 
-    virtual Vecteur getParam() const;                                           // Renvoit le vecteur paramètre de l'intégrable
+    virtual Vecteur getParam() const;                                           // Renvoit le vecteur paramètre de l'intégrable AVEC primitive
     virtual void setParam(Vecteur const& newV);                                 // Set le vecteur paramètre de l'intégrable
+
+    virtual Vecteur getParametre() const;
 
 
     virtual Vecteur getPpoint() const;                                         // Renvoit le vecteur vitesse de l'intégrable
