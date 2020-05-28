@@ -27,7 +27,7 @@ virtual ~Integrateur() {}                                       // dtor d'intég
 
 virtual Integrateur* clone() const = 0;                         // Renvoie un pointeur sur une copie polymorphique de l'intégrateur
 
-virtual void integre(Integrable& integrable, double const& dt) const =0;
+virtual void integre(Integrable& integrable, double const& dt) =0;
 /* Renvoit le vecteur dérivée seconde en le calculant depuis l'équation d'évolution associée à l'intégrable. Approximation avec        *
  * pas de temps dt. Virtuel pur car un intégrateur ne fait pas sens en lui-même car il est caractérisé par sa méthode d'approximation  */
 
@@ -71,7 +71,7 @@ virtual IntegrateurEulerCromer* clone() const;       // Renvoie un pointeur sur 
 
 // =========  INTEGRE :
 
-void integre(Integrable& integrable, double const& dt) const;
+void integre(Integrable& integrable, double const& dt);
 // Intègre nunmériquement avec un pas de temps dt et via la méthode d'Euler-Cromer
 
 };
@@ -97,7 +97,7 @@ virtual IntegrateurNewmark* clone() const;       // Renvoie un pointeur sur une 
 
 // =========  INTEGRE :
 
-virtual void integre(Integrable& integrable, double const& dt) const;
+virtual void integre(Integrable& integrable, double const& dt);
 // Intègre numériquement avec un pas de temps dt et via la méthode de Newmark
 
 };
@@ -123,7 +123,7 @@ public :
 
 // =========  INTEGRE :
 
-    virtual void integre(Integrable& integrable, double const& dt) const;
+    virtual void integre(Integrable& integrable, double const& dt);
     // Intègre numériquement avec un pas de temps dt et via la méthode Runge Kutta 4
 
 
