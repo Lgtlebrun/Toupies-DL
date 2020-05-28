@@ -47,24 +47,37 @@ Vecteur ToupieChinoise::equEvol() {
     m_P = modulo2Pi();
     /* On remet le paramètre modulo 2PI pour éviter la divergence des fonctions trigonométriques */
 
+    m_d = calcule_d();
+
     double I1(calculeI1());
 
-    double alpha(3.0/4*m_hauteur*m_hauteur/(m_rayon*(m_rayon+m_hauteur)));
+    double thetapp(0.0);
 
-    double thetapp(sin(m_P.getCoord(0))/(I1+m_masse*m_rayon*m_rayon*(alpha-cos(m_P.getCoord(0))*(alpha-cos(m_P.getCoord(0)))+sin(m_P.getCoord(0)*sin(m_P.getCoord(0)))))
-                    *(m_Ppoint.getCoord(1)*m_Ppoint.getCoord(1)*(-m_masse*m_rayon*m_rayon*(alpha-cos(m_P.getCoord(0)))*(1-alpha*cos(m_P.getCoord(0)))+I1*cos(m_P.getCoord(0)))
-                    + f1()*m_Ppoint.getCoord(1)*(m_masse*m_rayon*m_rayon*(alpha*cos(m_P.getCoord(0))-1)-m_I3)-m_masse*m_rayon*m_rayon*m_Ppoint.getCoord(0)*m_Ppoint.getCoord(0)*alpha
-                    - m_masse*m_rayon*alpha*g.norme()));
+    if (I1+m_masse*m_rayon*m_rayon*(alpha()-cos(m_P.getCoord(0))*(alpha()-cos(m_P.getCoord(0)))+sin(m_P.getCoord(0))*sin(m_P.getCoord(0)))>PREC) {
+
+        thetapp = sin(m_P.getCoord(0))/(I1+m_masse*m_rayon*m_rayon*((alpha()-cos(m_P.getCoord(0)))*(alpha()-cos(m_P.getCoord(0)))+sin(m_P.getCoord(0))*sin(m_P.getCoord(0))))
+                  * (m_Ppoint.getCoord(1)*m_Ppoint.getCoord(1)*(-m_masse*m_rayon*m_rayon*(alpha()-cos(m_P.getCoord(0)))*(1-alpha()*cos(m_P.getCoord(0)))+I1*cos(m_P.getCoord(0)))
+                  + f1()*m_Ppoint.getCoord(1)*(m_masse*m_rayon*m_rayon*(alpha()*cos(m_P.getCoord(0))-1)-m_I3)-m_masse*m_rayon*m_rayon*m_Ppoint.getCoord(0)*m_Ppoint.getCoord(0)*alpha()
+                  - m_masse*m_rayon*alpha()*g.norme());
+
+
+    }
+
 
     sortie.setCoord(0, thetapp);
 
 
     sortie.setCoord(1, f2());
 
+    double phipp(0.0);
 
-    double phipp(m_Ppoint.getCoord(0)*m_Ppoint.getCoord(1)*sin(m_P.getCoord(0))-cos(m_P.getCoord(0))*f2()-f1()*m_Ppoint.getCoord(0)*sin(m_P.getCoord(0))
-                    *m_masse*m_rayon*m_rayon*(m_I3*(alpha-cos(m_P.getCoord(0)))+I1*cos(m_P.getCoord(0)))/f3());
+    if (fabs(f3()) > PREC) {
 
+        phipp = m_Ppoint.getCoord(0)*m_Ppoint.getCoord(1)*sin(m_P.getCoord(0))-cos(m_P.getCoord(0))*f2()-f1()*m_Ppoint.getCoord(0)*sin(m_P.getCoord(0))
+                *(m_masse*m_rayon*m_rayon*(m_I3*(alpha()-cos(m_P.getCoord(0)))+I1*cos(m_P.getCoord(0)))/f3());
+
+
+    }
 
     sortie.setCoord(2, phipp);
 
@@ -99,8 +112,11 @@ void ToupieChinoise::statsCorps(std::ostream& sortie) {
 
 }
 
-std::ostream& operator<<(std::ostream& flux, ToupieChinoise const& C){
+std::ostream& operator<<(std::ostream& flux, ToupieChinoise& C){
 /* Affichage générique via la surchage de l'opérateur << */
+
+    C.setAngles(C.getAngles());
+
     flux << "Type : " << C.getType() << "  ; Angles : " << C.getAngles() << "  ;  Derivées : " << C.getAnglesp()
         << "  ; Position : " << C.getPosition() << "  ; Energie : " << C.Energie() << "  ; L_a : " << C.L_a()
         << "  ; L_K : " << C.L_k() << "  ; det[omega, L, a ] : " << C.ProdMixte() << std::endl;
@@ -117,12 +133,7 @@ std::ostream& operator<<(std::ostream& flux, ToupieChinoise const& C){
 double ToupieChinoise::calcule_d() const {
 /* Calcul de la distance séparant de centre de masse du point de contact avec le sol */
 
-    Vecteur e_z({0.0,0.0,1.0});
-    Vecteur e_theta({0.0,0.0,1.0});
-
-    Vecteur v (m_rayon*S()*e_z - 3.0/4.0*m_hauteur*m_hauteur/(m_rayon+m_hauteur)*e_theta);
-
-    return v.norme();
+    return AG().norme();
 
 }
 
@@ -133,7 +144,7 @@ double ToupieChinoise::calculeI3(const double & rayon, const double & hauteur, c
     double h(fabs(hauteur));
     double rho(fabs(masseVolumique));
 
-    return M_PI/30*rho*pow(2*r-h, 3)*(2*r*r+3*h*r+3*h*h);
+    return M_PI/30*rho*pow(2*r-h, 3)*(2*r*r + 3*h*r + 3*h*h);
 
 }
 
@@ -148,9 +159,9 @@ double ToupieChinoise::calculeIA1(const double & rayon, const double & hauteur, 
 
     double integ_z(M_PI/15*rho*pow(2*r-h, 2)*(pow(r,3)+h*pow(r, 2)-3*pow(h,2)*r+3*pow(h,3)));
 
-    double alpha(3.0/4*h*h/(r*(r*h)));
+    double alpha(3.0/4*h*h/(r*(r+h)));
 
-    return 1.0/2*m_I3+integ_z-m_masse*r*r*alpha*alpha+m_masse*d*d;
+    return 1.0/2*m_I3 + integ_z - m_masse*r*r*alpha*alpha + m_masse*d*d;
 
 }
 
@@ -164,15 +175,11 @@ double ToupieChinoise::calculeI1() const {
 
 }
 
-Matrice3 ToupieChinoise::TenseurInertie() const {
-
-    double I1(calculeI1());
+Matrice3 ToupieChinoise::I_A() const {
 
     Vecteur PG(AG());
 
-    Matrice3 I(I1, 0.0, 0.0
-            , 0.0, I1, 0.0
-            , 0.0, 0.0, m_I3);
+    Matrice3 I(I_G());
 
     Matrice3 Delta( PG*PG, 0.0, 0.0
                    , 0.0, PG*PG, 0.0
@@ -190,6 +197,15 @@ Matrice3 ToupieChinoise::TenseurInertie() const {
 
 }
 
+Matrice3 ToupieChinoise::I_G() const {
+
+    double I1(calculeI1());
+
+    return Matrice3(I1, 0.0, 0.0
+                    , 0.0, I1, 0.0
+                    , 0.0, 0.0, m_I3);
+
+}
 
 double ToupieChinoise::masse(const double&  rayon, const double&  hauteur, const double & masseVolumique) const {
 
@@ -227,14 +243,12 @@ double ToupieChinoise::f1() {
 
 double ToupieChinoise::f2() {
 
-    double alpha (3.0/4.0*m_hauteur*m_hauteur/(m_rayon*(m_rayon+m_hauteur)));
-
     if (fabs(sin(m_P.getCoord(0))) < PREC) { return 0.0; }
     if (fabs(f3()) < PREC) { return 0.0; }
 
-    return m_Ppoint.getCoord(0)/sin(m_P.getCoord(0))*f1()*(m_I3*(m_I3+m_masse*m_rayon
-    *m_rayon*(1-alpha*cos(m_P.getCoord(0)))))/f3()
-    -2*m_Ppoint.getCoord(1)*m_Ppoint.getCoord(0)*cos(m_P.getCoord(0))/sin(m_P.getCoord(0));
+    return (m_Ppoint.getCoord(0)/sin(m_P.getCoord(0)))*f1()*((m_I3*(m_I3+m_masse*m_rayon
+         * m_rayon*(1-alpha()*cos(m_P.getCoord(0)))))/f3())
+         - 2*m_Ppoint.getCoord(1)*m_Ppoint.getCoord(0)*cos(m_P.getCoord(0))/sin(m_P.getCoord(0));
 
 }
 
@@ -243,10 +257,19 @@ double ToupieChinoise::f3() {
     double I1(calculeI1());
 
     return m_I3*I1+m_masse*m_rayon*m_rayon*I1*sin(m_P.getCoord(0))*sin(m_P.getCoord(0))
-    + m_masse*m_rayon*m_rayon*m_I3*pow(3.0/4*m_hauteur*m_hauteur/(m_rayon*(m_rayon+m_hauteur))-cos(m_P.getCoord(0)), 2);
+    + m_masse*m_rayon*m_rayon*m_I3*pow(alpha()-cos(m_P.getCoord(0)), 2);
 
 
 }
+
+
+double ToupieChinoise::alpha() {
+
+    return (3.0*m_hauteur*m_hauteur)/(4.0*m_rayon*(m_rayon+m_hauteur));
+
+}
+
+
 
 // =================================================================================================
 

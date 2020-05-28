@@ -57,13 +57,17 @@ protected :
 
     double calcule_d() const;                               // Calcule la norme de AG
 
-    Matrice3 TenseurInertie() const;                        // caclul du tenseur d'inertie en A
+    virtual Matrice3 I_A() const;                // caclul du tenseur d'inertie en A
+
+    virtual Matrice3 I_G() const;                // calcul du tenseur d'inertie en G
 
 // ========= FONCTIONS INTERMEDIAIRES :
 
     double f1();                                         // Méthodes associées au calcul de equEvol()
     double f2();
     double f3();
+
+    double alpha();
 
 // =========  ATTRIBUTS :
 
@@ -75,7 +79,7 @@ protected :
 };
 
 
-std::ostream& operator<<(std::ostream&, ToupieChinoise const& C);           // surcharge de l'opérateur << pour afficher
+std::ostream& operator<<(std::ostream&, ToupieChinoise & C);                // surcharge de l'opérateur << pour afficher
                                                                             // une toupie chinoise
 
 

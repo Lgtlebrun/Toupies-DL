@@ -78,7 +78,7 @@ Vecteur Toupie::equEvol() {
 
     Vecteur M_A({m_masse*g.norme()*m_d*sin(m_P.getCoord(0)),0.0,0.0});
 
-    Matrice3 IA(TenseurInertie());
+    Matrice3 IA(I_A());
 
     Vecteur o_e(o-Vecteur({0.0,0.0,m_Ppoint.getCoord(2)}));
 
@@ -125,6 +125,13 @@ void Toupie::setParam(const Vecteur & newV) {
     m_P = modulo2Pi();
 
 }
+Vecteur Toupie::getParam() const {
+
+    Vecteur param(modulo2Pi());
+
+    return param;
+
+}
 void Toupie::setPpoint(const Vecteur & newV) {
 /* On prend comme nouveau paramètre dérivé un vecteur de 6 dimensions (au moins) */
     m_Ppoint = newV;
@@ -136,7 +143,9 @@ void Toupie::setPpoint(const Vecteur & newV) {
 Vecteur Toupie::getAngles() const {
 
         //  Nous avons forcément 6 dimensions au vecteur, il y a donc aucun problème d'accès
-    return {m_P.getCoord(0), m_P.getCoord(1), m_P.getCoord(2)};
+    Vecteur param(modulo2Pi());
+
+    return {param.getCoord(0), param.getCoord(1), param.getCoord(2)};
 
 }
 void Toupie::setAngles(const Vecteur &newV) {
@@ -208,9 +217,7 @@ Vecteur Toupie::AG() const {
 
 double Toupie::Energie() const {
 
-    Matrice3 IG(m_IA1-m_masse*m_d*m_d, 0.0, 0.0
-                , 0.0, m_IA1-m_masse*m_d*m_d, 0.0
-                , 0.0, 0.0, m_I3);
+    Matrice3 IG(I_G());
 
     return 1.0/2*(m_masse*getVitesse().norme2()+omega()*(IG*omega())) - m_masse*g.prodScalaire(getPosition()) ;
 
@@ -221,17 +228,17 @@ double Toupie::L_a() const {
 
     Vecteur a(Vecteur({0.0,0.0,1.0}));
 
-    return a*(TenseurInertie()*omega());
+    return a*(I_A()*omega());
 
 }
 
 double Toupie::L_k() const {
 
-    Matrice3 I_O(S().transp()*TenseurInertie());
+    Matrice3 I_R(S().transp()*I_A());
 
     Vecteur o(omega());
 
-    return (I_O*o)*Vecteur({0.0,0.0,1.0});
+    return (I_R*o)*Vecteur({0.0,0.0,1.0});
 
 }
 
@@ -239,7 +246,7 @@ double Toupie::ProdMixte() const {
 
     Vecteur o(omega());
 
-    Vecteur L(TenseurInertie()*omega());
+    Vecteur L(I_G()*omega());
 
     Vecteur a(Vecteur({0.0,0.0,1.0}));
 
@@ -274,7 +281,7 @@ Vecteur Toupie::modulo2Pi() const{
 
         if (m_P.getCoord(k)<0) {
 
-            int n(m_P.getCoord(k)/(2*M_PI)+1);
+            int n(m_P.getCoord(k)/(2*M_PI)+2);
 
             sortie.setCoord(k, m_P.getCoord(k)+n*2*M_PI);
 
@@ -309,7 +316,7 @@ Matrice3 Toupie::S() const {
 }
 
 
-Matrice3 Toupie::TenseurInertie() const{
+Matrice3 Toupie::I_A() const{
 /* On suppose que le point de contact de la toupie est sensé être dans la même direction que l'axe */
     return Matrice3(m_IA1, 0.0, 0.0
                     , 0.0, m_IA1, 0.0
@@ -317,6 +324,13 @@ Matrice3 Toupie::TenseurInertie() const{
 
 }
 
+Matrice3 Toupie::I_G() const {
+
+    return Matrice3(m_IA1-m_masse*m_d*m_d, 0.0, 0.0
+                    , 0.0, m_IA1-m_masse*m_d*m_d, 0.0
+                    , 0.0, 0.0, m_I3);
+
+}
 
 Vecteur Toupie::omega() const {
 

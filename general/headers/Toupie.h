@@ -35,6 +35,8 @@ public:
 
 // =========
 
+    Vecteur getParam() const override;
+
         // Méthodes set héritées d'Integrable
 
     void setParam(Vecteur const& newParam);
@@ -97,8 +99,11 @@ protected:
     Vecteur modulo2Pi() const;
     // Remet le paramètre modulo Pi, afin d'éviter la divergence des fonctions sin et cos
 
-    virtual Matrice3 TenseurInertie() const ;
+    virtual Matrice3 I_A() const ;
     // Calcule le tenseur d'intertie au point de contact avec le sol
+
+    virtual Matrice3 I_G() const;
+    // calcule le tenseur d'inertie au centre de masse
 
     Vecteur omega() const;
     // Caclule le vecteur omega défini dans le complément mathématique
