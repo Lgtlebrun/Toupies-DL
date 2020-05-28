@@ -14,6 +14,8 @@ Lorsqu'un test échoue, un rapport d'erreur est écrit au format "Test[classe d�
 TestIntegrateur produit des fichiers textes contenant des données sur la Bille et l'oscillateur.
 Les deux fichiers octave à votre disposition permettent de les plotter.
 
+Les fichiers StatsConiqueNewmark et StatsConiqueRK4 permettent la comparaison de ces deux
+intégrateurs sur une simple toupie conique.
 
 
 TestAll est une application console, à executer dans un terminal.

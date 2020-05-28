@@ -78,7 +78,7 @@ bool TestSysteme::test_evol() {
     if(statsSyst) {
         TextViewer T(statsSyst);
 
-        ConeSimple Ct (T, {0,M_PI/6, 0}, {0,0,60}, {0.0,0.0,0.0}, 0.5, 1.5, 0.1);
+        ConeSimple Ct (T, {M_PI/6, 0, 0}, {0,0,60}, {0.0,0.0,0.0}, 0.5, 1.5, 0.1);
         IntegrateurEulerCromer It(0.0);
 
         Systeme S(T, It);
@@ -98,7 +98,7 @@ bool TestSysteme::test_evol() {
             It.augmente_t(dt);
 
 
-            double EcartConique(fabs(S.getCorps(0)->getParam().norme() - Ct.getParam().norme()));
+            double EcartConique(fabs((S.getCorps(0)->getParam() - Ct.getParam()).norme()));
 
             double t(It.getTemps());
 
