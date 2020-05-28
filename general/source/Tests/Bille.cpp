@@ -22,40 +22,6 @@ Bille *Bille::clone() const {
 Vecteur Bille::equEvol() {
 /* F = mg = ma => a(t)=equEvol(t)=g */
 
-    if (fabs(m_P.getCoord(2)) <= PREC and fabs(m_Ppoint.getCoord(2)) <= 1e-2 ) {
-
-    /* Frottement */
-
-        m_Ppoint = Vecteur({getPpoint().getCoord(0), getPpoint().getCoord(1), 0.0});
-
-        m_P = Vecteur({getPosition().getCoord(0), getPosition().getCoord(1), 0.0});
-
-        return Vecteur({-0.6 * getPpoint().getCoord(0), -0.6 * getPpoint().getCoord(1), 0.0});
-
-    }
-
-    // else pas nécessaire car il y a un return
-
-    if (m_P.getCoord(2)<= PREC and m_Ppoint.getCoord(2) <= 0 ) {
-
-    /* Rebond */
-
-        m_Ppoint = Vecteur({m_Ppoint.getCoord(0), m_Ppoint.getCoord(1), 0.6*fabs(m_Ppoint.getCoord(2))});
-
-        m_P = Vecteur({getPosition().getCoord(0), getPosition().getCoord(1), 0.0});
-
-        return Vecteur({0.0,0.0,0.0});
-
-
-    }
-
-    if (m_P.getCoord(2) == 0.0 and m_Ppoint.getCoord(2) >= 0) {
-
-        return {0.0,0.0,0.0};
-
-    }
-
-
     return g;
 
 }
